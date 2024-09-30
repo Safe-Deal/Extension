@@ -2,7 +2,7 @@
 const fs = require("fs");
 const { Translate } = require("@google-cloud/translate").v2;
 
-const apiKey = "AIzaSyDgAtTQgSF-smawbZBb1oI7gf1FgbYhGQY";
+const apiKey = "YOUR_API_KEY";
 
 const translate = new Translate({
   key: apiKey

@@ -1,0 +1,14 @@
+{
+  "should return a safe conclusion for a safe domain google.com": {
+    "date": "2024-09-22",
+    "status": "passed"
+  },
+  "should return a safe conclusion for a safe domain joinsafedeal.com": {
+    "date": "2024-09-22",
+    "status": "passed"
+  },
+  "should return a safe conclusion for a safe domain temu.com": {
+    "date": "2024-09-22",
+    "status": "passed"
+  }
+}

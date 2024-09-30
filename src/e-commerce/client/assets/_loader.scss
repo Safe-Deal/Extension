@@ -1,0 +1,118 @@
+.safe-deal-page-container {
+  #safe-deal-loader-element {
+    margin-top: 16px;
+    margin-bottom: 16px;
+
+    .safe-deal-loader-header {
+      border-top: 3.5px solid #e7e7e7;
+      border-right: 3.5px solid #e7e7e7;
+      border-bottom: 3.5px solid #e7e7e7;
+      border-left: 3.5px solid #e7e7e7;
+      border-image: initial;
+      border-radius: 8px 8px 0px 0px;
+    }
+
+    .text {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+    }
+  }
+
+  .safe-deal-loader {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    margin: 0px 0px;
+    padding: 0px 0px;
+
+    .text {
+      position: absolute;
+
+      .logo {
+        width: 50px;
+        height: 50px;
+      }
+    }
+
+    .loader {
+      position: relative;
+      top: calc(50% - 70px);
+      margin: auto;
+      width: 120px;
+      margin: auto;
+      width: 100px;
+
+      &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+      }
+    }
+
+    .circular {
+      animation: rotate 2s linear infinite;
+      height: 100%;
+      transform-origin: center center;
+      width: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+
+    .path {
+      stroke-dasharray: 1, 200;
+      stroke-dashoffset: 0;
+      animation:
+        dash 1.5s ease-in-out infinite,
+        color 6s ease-in-out infinite;
+      stroke-linecap: round;
+    }
+
+    @keyframes rotate {
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes dash {
+      0% {
+        stroke-dasharray: 1, 200;
+        stroke-dashoffset: 0;
+      }
+
+      50% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -35px;
+      }
+
+      100% {
+        stroke-dasharray: 89, 200;
+        stroke-dashoffset: -124px;
+      }
+    }
+
+    @keyframes color {
+      100%,
+      0% {
+        stroke: rgba(203, 3, 37, 1);
+      }
+
+      40% {
+        stroke: #387ef4;
+      }
+
+      66% {
+        stroke: rgba(16, 186, 145, 1);
+      }
+
+      80%,
+      90% {
+        stroke: rgba(255, 183, 67, 1);
+      }
+    }
+  }
+}

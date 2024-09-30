@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Shopping Assistant: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "Shopping Assistant: Uštedite vrijeme pomoću umjetne inteligencije. Otkrijte povijest cijena, izbjegnite skupe ponude, uočite..."
+  },
+  "appNameShort": {
+    "message": "Sigurna..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Sigurna ponuda",
+    "description": "Osjećajte se samouvjereno kada kupujete online"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal je pregledao ovu web stranicu i utvrdio da bi mogla biti opasna {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Napustite ovu web stranicu sada"
+  },
+  "anti_scam_stay": {
+    "message": "Ova stranica je pouzdana"
+  },
+  "anti_scam_confirm": {
+    "message": "Velika je vjerojatnost da je ovo web mjesto prijevara, lopov ili neka druga nezakonita aktivnost. Vjerujete li ovoj web stranici?"
+  },
+  "recommended_product": {
+    "message": "Preporučeni proizvod"
+  },
+  "unrecommended_product": {
+    "message": "Nepreporučeni proizvod"
+  },
+  "doubtful_product": {
+    "message": "Sumnjiv proizvod"
+  },
+  "insufficient_data": {
+    "message": "Zaključak neodređen"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Naznaka dobrog posla"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Naznaka sumnjivog posla"
+  },
+  "no_data": {
+    "message": "Trenutno nema podataka za prikaz"
+  },
+  "chart_title": {
+    "message": "Povijest cijena proizvoda"
+  },
+  "back_button": {
+    "message": "Prethodno"
+  },
+  "next_button": {
+    "message": "Sljedeći"
+  },
+  "start_using_button": {
+    "message": "Počnite koristiti SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "Dobro došli u Safe Deal"
+  },
+  "tour_step1_text_0": {
+    "message": ", Hvala što koristite naš softver."
+  },
+  "morning": {
+    "message": "jutro"
+  },
+  "day": {
+    "message": "dan"
+  },
+  "night": {
+    "message": "noć"
+  },
+  "hi": {
+    "message": "bok"
+  },
+  "good": {
+    "message": "Dobro"
+  },
+  "tour_step1_text_1": {
+    "message": "Ovdje je jedna od naših podržanih trgovina."
+  },
+  "tour_step1_text_2": {
+    "message": "Radi na isti način na drugim podržanim stranicama kao što su AliExpress, eBay, Amazon itd."
+  },
+  "tour_step1_text_3": {
+    "message": "Trebalo bi vam trebati otprilike minutu da objasnite kako funkcionira."
+  },
+  "tour_step1_lets_start": {
+    "message": "Započnimo"
+  },
+  "tour_step2_title": {
+    "message": "Preporuke za kupnju"
+  },
+  "tour_step2_text_0": {
+    "message": "Donošenje brzih i učinkovitih odluka o kupnji srce je našeg proizvoda; djelujemo kao semafor za online kupovinu."
+  },
+  "tour_step2_text_3": {
+    "message": "Naša umjetna inteligencija donosi odluku o proizvodima na temelju podataka u nekoliko sekundi. Na ovaj način dobivate brzi pokazatelj za mnoge proizvode u roku od nekoliko minuta, a ne satima ručne provjere."
+  },
+  "tour_step3_title": {
+    "message": "Sigurnost posla je važna"
+  },
+  "tour_step3_text_0": {
+    "message": "Možete mudro kupovati danas kako biste se uštedjeli na gnjavaži u budućnosti."
+  },
+  "tour_step3_text_1": {
+    "message": "Zeleni štit - Preporučena ponuda"
+  },
+  "tour_step3_text_2": {
+    "message": "Crveni štit - Nepreporučena ponuda"
+  },
+  "tour_step3_text_3": {
+    "message": "Žuti štit - Sumnjiv posao"
+  },
+  "tour_step5_title": {
+    "message": "Vaša privatnost je najvažnija"
+  },
+  "tour_step5_text_0": {
+    "message": "Korištenje naše usluge za vas je besplatno. Kada obavite kupnju, trgovina nam plaća malu naknadu kako bismo vas uputili do najboljeg proizvoda."
+  },
+  "tour_step5_text_1": {
+    "message": "Softver radi lokalno jer brinemo o vašoj privatnosti. Ne prikupljaju se podaci o vašoj aktivnosti."
+  },
+  "tour_feedback_title": {
+    "message": "Cijenimo vaše povratne informacije"
+  },
+  "tour_feedback_text": {
+    "message": "Javite se ako imate ideju, problem ili ako trebate razgovarati o poboljšanju: "
+  },
+  "or": {
+    "message": "ili"
+  },
+  "contact_form": {
+    "message": "Koristite obrazac za kontakt"
+  },
+  "by_email": {
+    "message": "Napiši E-mail"
+  },
+  "call_as_at": {
+    "message": "Telefonom +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Mnogi kupci visoko preporučuju proizvod"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Proizvod nije dovoljno preporučen od strane kupaca"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Recenzije su izuzetno pozitivne. Zvjezdice: {ProductRatingValue}, recenzije: {ProductReviewAmount}, ocjene: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Nedostatak recenzija ili loše recenzije. Zvjezdice: {ProductRatingValue}, recenzije: {ProductReviewAmount}, ocjene: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Recenzije su izuzetno pozitivne. Zvjezdice: {ProductRatingValue}, Narudžbe: {ProductOrdersAmount}, Recenzije: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Nedostatak recenzija ili loše recenzije. Zvjezdice: {ProductRatingValue}, Narudžbe: {ProductOrdersAmount}, Recenzije: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Recenzije su izuzetno pozitivne. Zvjezdice: {ProductRatingValue}, Narudžbe: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Nedostatak recenzija ili loše recenzije. Zvjezdice: {ProductRatingValue}, Narudžbe: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Trgovina je visoko ocijenjena. Zvjezdice: {ProductRatingValue}, Narudžbe: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Trgovina je loše ocijenjena. Zvjezdice: {ProductRatingValue}, Narudžbe: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Dobro etablirani prodavač, u poslu {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Prodavač početnik, u poslu {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Izvrsna politika povrata"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Politika povrata je loša"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Pouzdan prodavač"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Prodaje se izravno po marki"
+  },
+  "tooltip_order_safe": {
+    "message": "Veliki broj zadovoljnih kupaca"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Mali broj zadovoljnih kupaca"
+  },
+  "tooltip_rating_safe": {
+    "message": "Mnogi zadovoljni kupci ostavili su recenzije"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Mnogi ljuti kupci objavili su negativne recenzije"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Izvrsno vrijeme isporuke, najviše {daysToDeliver} dana"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Može potrajati do {daysToDeliver} dana da dobijete svoj paket."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Nejasno je kada će se isporuka dogoditi"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Većina kupaca trgovine je zadovoljna, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Mnogi kupci su nezadovoljni trgovinom, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Trgovini nedostaju povratne informacije od kupaca"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Pošaljite besplatno"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Šalje se uz naknadu ili je potrebno preuzimanje"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Ovaj proizvod ima razumnu cijenu"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Loš izbor mogućnosti kupnje"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Cijena je odlična, {priceDifVsAverage}% niža u odnosu na prosjek"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Cijena je korektna, {priceDifVsAverage}% niža u odnosu na prosjek"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Cijena je korektna, {priceDifVsAverage}% viša u odnosu na prosjek"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Skupa cijena, {priceDifVsAverage}% viša u odnosu na prosjek"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose - pouzdan proizvod s dobrom vrijednošću"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon prodaje i šalje ovaj proizvod"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Prodaje ili šalje Amazon, uključena treća strana"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart prodaje i šalje ovaj proizvod"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Povratne informacije izgledaju sjajno! {validAmount} autentično, {fakeAmount} neprirodno, {totalAmount} ukupno"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Povratne informacije izgledaju manipulirano! {validAmount} autentično, {fakeAmount} neprirodno, {totalAmount} ukupno"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Ovaj proizvod se jako dobro prodaje"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Prodaja proizvoda je relativno niska"
+  },
+  "popup_title": {
+    "message": "Vaš pametni pomoćnik za online kupovinu"
+  },
+  "loading_product": {
+    "message": "Proizvod u inspekciji"
+  },
+  "popup_footer_share": {
+    "message": "Recite svojim prijateljima i obitelji o SafeDealu"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Provjereno sigurna stranica. Podržite nas putem našeg affiliate linka."
+  },
+  "popup_top_tabs_home": {
+    "message": "Dom"
+  },
+  "popup_top_tabs_settings": {
+    "message": "postavke"
+  },
+  "supported_websites": {
+    "message": "Podržane web stranice"
+  },
+  "popup_benefits_tab": {
+    "message": "Značajke"
+  },
+  "popup_about_tab": {
+    "message": "Oko"
+  },
+  "popup_contact_us_tab": {
+    "message": "Kontaktirajte nas"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazon"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Premija"
+  },
+  "years_label": {
+    "message": "godine"
+  },
+  "year_label": {
+    "message": "1 godina"
+  },
+  "less_than_a_year": {
+    "message": "manje od godinu dana"
+  },
+  "explanations_price_history": {
+    "message": "Grafikon povijesti cijena proizvoda - To vam može pomoći da uočite stvarne popuste od lažnih. Vodimo evidenciju cijena i svakodnevno pratimo promjene te tako možemo iskoristiti akcijske i vremenski ograničene ponude."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Zaključak se temelji na: \n    1) Kako bismo dobili opći pregled preporuka za proizvode, primijenili smo različite statističke analize i tehnike umjetne inteligencije. \n    2) Recenzije i ocjene su analizirane i smatramo da je ocjena 4 i više pokazatelj izvrsnog proizvoda. \n    3) Značajan rezultat zahtijeva najmanje 100 narudžbi, stoga što više narudžbi analiziramo, više vjerujemo zaključku ocjene proizvoda."
+  },
+  "explanations_store_age": {
+    "message": "Naš sustav mjeri vjerodostojnost trgovine pomoću starosti trgovine, budući da su trgovine s više iskustva i pozitivnom reputacijom vjerodostojnije."
+  },
+  "explanations_store_rating": {
+    "message": "Provjeravamo ukupnu ocjenu povratnih informacija trgovine, što je viša ocjena, veće su šanse za dobivanje dobre usluge. Više od 91% povratnih informacija smatra se pozitivnim povratnim informacijama."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress klasificira prodavatelja kao vrlo pouzdanog prodavatelja, s velikim opsegom prodaje"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Amazonov bestseler je onaj koji ima najmanje 150 prodaja mjesečno i što više prodaje, lakše se osloniti na povratne informacije drugih kupaca."
+  },
+  "explanations_amazon_choice": {
+    "message": "Kupci često kupuju proizvode s oznakom Amazon's Choice. Imaju povoljnu cijenu, visoko su ocijenjeni i dostupni su za brzu dostavu iz Amazonovog skladišta."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Koristimo statističko modeliranje za pozicioniranje i prilagođavanje broja pozitivnih recenzija na temelju broja neprirodnih recenzija, tako da možete donijeti svoju odluku na temelju podataka visoke kvalitete. Algoritam nije savršen, ali ima visoke stope točnosti. Amazon je obavio dobar posao skupljajući stotine milijuna povratnih informacija, ali su ga mnogi brendovi odlučili zlorabiti, preplavivši ga nekvalitetnim i pristranim recenzijama kako bi pokušali povećati vlastitu zaradu. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Prodaje i šalje Amazon: Ove artikle naručio je Amazon kao inventar. Prodaju se i šalju izravno iz Amazonovog skladišta. Moći ćete dobiti artikl mnogo brže, a Amazon će izravno rješavati sve probleme s korisničkom službom."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Ovi artikli su u vlasništvu neovisne tvrtke treće strane i šalju se unaprijed u Amazonova skladišta. Kada ih kupite, Amazon vam ih šalje."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Kupcima je važno da znaju kada mogu očekivati da artikl stigne. Zato uvijek provjeravamo procijenjeni datum isporuke na eBayu. Procijenjeni datum isporuke temelji se na vremenu potrebnom prodavaču za pakiranje i otpremu artikala i vremenu isporuke poštanskih usluga. Smatramo da je 14 dana za domaće pošiljke i 30 dana za međunarodne pošiljke izvrsna vremena isporuke."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Besplatna dostava odličan je pokazatelj da će prodavač pružiti odličnu korisničku uslugu i poslati artikl na vrijeme kako je opisano."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Prihvaćanje povrata dobar je pokazatelj dobrog prodavatelja: ako primite artikl koji je oštećen ili neispravan, možete ga vratiti uz povrat novca."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Plativi povrati ili bez povrata: Samo ako proizvod nije stigao ispravno, možete ga vratiti uz povrat novca."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Prodavače koji pružaju izvrsnu korisničku uslugu u velikoj mjeri eBay označava značkom Najbolje ocijenjeno. To znači da imaju visoku ocjenu povratnih informacija i visok postotak pozitivnih povratnih informacija na eBayu, pa je sigurnije kupovati od njih."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Prodavači koji predstavljaju marku često se povezuju s izvrsnom uslugom za kupce. Obično imaju visoke povratne informacije i veliki postotak pozitivnih povratnih informacija na eBayu, što kupnju od njih čini sigurnijom opcijom."
+  },
+  "why_it_free": {
+    "message": "Zašto je besplatan za korištenje?"
+  },
+  "explanations_why_it_free": {
+    "message": "Zašto je korištenje Safe-Deal besplatno za vas?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Korištenje naše usluge za vas je besplatno. Kada obavite kupnju, trgovina nam plaća malu naknadu kako bismo vas uputili do najboljeg proizvoda."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Koristimo samo javno dostupne podatke, osiguravajući da nijedan brend ili trgovina ne utječe na naše preporuke."
+  },
+  "premium_features": {
+    "message": "Premium značajke"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Bez povezivanja, možete uključiti bilo koji program povrata novca koji želite"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Podrška putem osobnog telefona i e-pošte i poboljšano vrijeme obrade"
+  },
+  "premium_features_cost": {
+    "message": "Cijena - 2 USD mjesečno (naplaćuje se godišnje)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Prikupljeni novac koristi se za poboljšanje usluge i plaćanje infrastrukture."
+  },
+  "affiliated_websites": {
+    "message": "Povezane web stranice"
+  },
+  "buy_premium": {
+    "message": "Kupi Premium"
+  },
+  "opt_out": {
+    "message": "Isključi se"
+  },
+  "image": {
+    "message": "Slika"
+  },
+  "product_name": {
+    "message": "ime proizvoda"
+  },
+  "final_price": {
+    "message": "Konačna cijena"
+  },
+  "coupon": {
+    "message": "Kupon"
+  },
+  "you_saved": {
+    "message": "Iznos kupona"
+  },
+  "you_save": {
+    "message": "Vi poštedite"
+  },
+  "share": {
+    "message": "Udio"
+  },
+  "discounts_found": {
+    "message": "Pronađeni popusti"
+  },
+  "extension_not_available": {
+    "message": "Proširenje SafeDeal nije dostupno za ovu stranicu."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Potražite bilo koju drugu ključnu riječ da biste pronašli kupone i ponude."
+  },
+  "search_product": {
+    "message": "Traži proizvod"
+  },
+  "want_more_coupons": {
+    "message": "Želite više kupona?"
+  },
+  "click_here": {
+    "message": "Kliknite ovdje"
+  },
+  "coupon_header": {
+    "message": "Sigurna ponuda - kuponi i ponude"
+  },
+  "tab_header_analyze": {
+    "message": "Procjena proizvoda"
+  },
+  "tab_header_reviews": {
+    "message": "Recenzije Sažetak"
+  },
+  "click_to_reveal": {
+    "message": "Kliknite ili pritisnite {systemShortcut} za prebacivanje između minimalne i potpune analize."
+  },
+  "click_to_hide": {
+    "message": "Kliknite na ikonu ili pritisnite tipku 'Escape' za zatvaranje detaljnog prikaza."
+  },
+  "click_to_pin": {
+    "message": "Prikvačite ovu ploču kako bi ostala vidljiva pri osvježavanju i dok pregledavate"
+  },
+  "click_to_unpin": {
+    "message": "Otkvačite ovu ploču kako bi se sakrila kada kliknete negdje drugdje na stranici"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Još nema recenzija"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Još nema recenzija kupaca. Ovaj proizvod može biti nov ili nije popularan."
+  },
+  "reviews_pros": {
+    "message": "Pros"
+  },
+  "reviews_cons": {
+    "message": "Protiv"
+  },
+  "reviews_good_to_know": {
+    "message": "Dobro je znati"
+  },
+  "reviews_error": {
+    "message": "Ispričavamo se zbog neugodnosti. Čini se da je postupak sažimanja recenzije bio neuspješan. Kako biste riješili ovaj problem, obratite se timu za podršku Safe Deal za pomoć."
+  },
+  "deals_ali_express": {
+    "message": "Sigurna ponuda - Traženje ponuda"
+  },
+  "deals_ali_found": {
+    "message": "Pronađene ponude: "
+  },
+  "product": {
+    "message": "Proizvod"
+  },
+  "title": {
+    "message": "Titula"
+  },
+  "price": {
+    "message": "Cijena"
+  },
+  "deal_type": {
+    "message": "Vrsta posla"
+  },
+  "savings": {
+    "message": "Štednja"
+  },
+  "extra": {
+    "message": "Ekstra"
+  },
+  "shipping": {
+    "message": "dostava"
+  },
+  "rating": {
+    "message": "Ocjena"
+  },
+  "sold": {
+    "message": "prodano"
+  },
+  "reviews": {
+    "message": "Recenzije"
+  },
+  "mobile_app": {
+    "message": "Instalirajte našu mobilnu aplikaciju"
+  },
+  "tab_header_opinions": {
+    "message": "Mišljenja i komentari"
+  },
+  "opinions_title": {
+    "message": "Dajte svoje mišljenje ili pitajte zajednicu o ovom proizvodu"
+  },
+  "research_online": {
+    "message": "Provjeri"
+  },
+  "video_reviews": {
+    "message": "Video recenzije"
+  },
+  "reddit_reviews": {
+    "message": "Mišljenja na Redditu"
+  },
+  "web_reviews": {
+    "message": "Recenzije na internetu"
+  },
+  "shopping_reviews": {
+    "message": "Mjesta za kupovinu"
+  },
+  "product_photos": {
+    "message": "Fotografije proizvoda"
+  },
+  "product_purchase_query": {
+    "message": "kupujte online sada"
+  },
+  "product_reviews_query": {
+    "message": "detaljne recenzije"
+  }
+}

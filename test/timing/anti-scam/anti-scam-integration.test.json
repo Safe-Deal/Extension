@@ -1,0 +1,10 @@
+{
+  "ApiScamVoidUrl should mark sites accordingly": {
+    "date": "2024-09-22",
+    "status": "passed"
+  },
+  "ApiScamScamAdviser should mark sites accordingly": {
+    "date": "2024-09-22",
+    "status": "passed"
+  }
+}

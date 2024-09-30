@@ -1,0 +1,31 @@
+.title-popover {
+  &__cell {
+    display: flex !important;
+    white-space: nowrap !important;
+    line-height: inherit !important;
+  }
+  &__title {
+    text-wrap: wrap;
+  }
+  &__content {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 5px;
+  }
+  &__link {
+    font-size: 14px !important;
+    font-weight: 700;
+    text-decoration: none !important;
+    color: $title;
+  }
+  &__tags {
+    display: flex;
+    gap: 5px;
+    &__delivery {
+      font-size: 14px;
+      color: #937333;
+      font-weight: 700;
+    }
+  }
+}

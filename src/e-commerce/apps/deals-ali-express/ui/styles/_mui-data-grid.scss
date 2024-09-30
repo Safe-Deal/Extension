@@ -1,0 +1,42 @@
+.MuiDataGrid {
+  &-root {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  &-columnHeader {
+    background-color: $grey-100 !important;
+    height: 44px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+  }
+  &__final-price {
+    font-size: 18px;
+    font-weight: 700;
+    color: $title;
+    margin-right: 5px;
+  }
+  &__chip {
+    color: #fff !important;
+    min-width: 60px !important;
+    height: 25px !important;
+
+    &--green {
+      background-color: $primary-600 !important;
+    }
+    &--grey {
+      background-color: $grey-800 !important;
+    }
+  }
+  &__rating {
+    color: $grey-500;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &__score {
+      font-size: 18px;
+      font-weight: 700;
+      color: $grey-800;
+    }
+  }
+}

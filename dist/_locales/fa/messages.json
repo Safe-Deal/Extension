@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "دستیار خرید: AliExpress، Amazon، eBay"
+  },
+  "appDescription": {
+    "message": "دستیار خرید: صرفه جویی در زمان توسط هوش مصنوعی. تاریخچه قیمت را کشف کنید، از معاملات پرهزینه خودداری کنید، نظرات جعلی را مشاهده..."
+  },
+  "appNameShort": {
+    "message": "معامله ایمن"
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "معامله ایمن",
+    "description": "هنگام خرید آنلاین احساس اطمینان کنید"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal این وب سایت را بررسی کرده و تشخیص داده است که می تواند خطرناک باشد {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "اکنون این وب سایت را ترک کنید"
+  },
+  "anti_scam_stay": {
+    "message": "این سایت قابل اعتماد است"
+  },
+  "anti_scam_confirm": {
+    "message": "به احتمال زیاد این وب سایت کلاهبرداری، دزد یا فعالیت غیرقانونی دیگری است. به این وب سایت اعتماد دارید؟"
+  },
+  "recommended_product": {
+    "message": "محصول پیشنهادی"
+  },
+  "unrecommended_product": {
+    "message": "محصول توصیه نشده"
+  },
+  "doubtful_product": {
+    "message": "محصول مشکوک"
+  },
+  "insufficient_data": {
+    "message": "نتیجه گیری نامشخص"
+  },
+  "signal_of_a_good_deal": {
+    "message": "نشان از یک معامله خوب"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "نشانه ای از معامله مشکوک"
+  },
+  "no_data": {
+    "message": "در حال حاضر هیچ داده ای برای نمایش وجود ندارد"
+  },
+  "chart_title": {
+    "message": "تاریخچه قیمت محصول"
+  },
+  "back_button": {
+    "message": "قبلی"
+  },
+  "next_button": {
+    "message": "بعد"
+  },
+  "start_using_button": {
+    "message": "شروع به استفاده از SafeDeal کنید"
+  },
+  "tour_step1_title": {
+    "message": "به معامله ایمن خوش آمدید"
+  },
+  "tour_step1_text_0": {
+    "message": "، از اینکه از نرم افزار ما استفاده می کنید متشکریم."
+  },
+  "morning": {
+    "message": "صبح"
+  },
+  "day": {
+    "message": "روز"
+  },
+  "night": {
+    "message": "شب"
+  },
+  "hi": {
+    "message": "سلام"
+  },
+  "good": {
+    "message": "خوب"
+  },
+  "tour_step1_text_1": {
+    "message": "اینجا یکی از فروشگاه های پشتیبانی شده ما است."
+  },
+  "tour_step1_text_2": {
+    "message": "در سایر سایت های پشتیبانی شده مانند AliExpress، eBay، Amazon و غیره به همین صورت عمل می کند."
+  },
+  "tour_step1_text_3": {
+    "message": "توضیح اینکه چگونه کار می کند باید حدود یک دقیقه طول بکشد."
+  },
+  "tour_step1_lets_start": {
+    "message": "بیا شروع کنیم"
+  },
+  "tour_step2_title": {
+    "message": "توصیه های خرید"
+  },
+  "tour_step2_text_0": {
+    "message": "تصمیم گیری سریع و کارآمد برای خرید در قلب محصول ما قرار دارد. ما به عنوان چراغ راهنمایی برای خرید آنلاین عمل می کنیم."
+  },
+  "tour_step2_text_3": {
+    "message": "هوش مصنوعی ما در چند ثانیه تصمیمی مبتنی بر داده در مورد محصولات می گیرد. به این ترتیب، نشانگر سریع بسیاری از محصولات را در عرض چند دقیقه دریافت می‌کنید، نه چند ساعت پس از بررسی دستی."
+  },
+  "tour_step3_title": {
+    "message": "ایمنی معامله مهم است"
+  },
+  "tour_step3_text_0": {
+    "message": "می توانید امروز عاقلانه خرید کنید تا در آینده از دردسر جلوگیری کنید."
+  },
+  "tour_step3_text_1": {
+    "message": "سپر سبز - معامله پیشنهادی"
+  },
+  "tour_step3_text_2": {
+    "message": "سپر قرمز - معامله توصیه نشده"
+  },
+  "tour_step3_text_3": {
+    "message": "سپر زرد - معامله مشکوک"
+  },
+  "tour_step5_title": {
+    "message": "حریم خصوصی شما در درجه اول اهمیت قرار دارد"
+  },
+  "tour_step5_text_0": {
+    "message": "استفاده از خدمات ما برای شما رایگان است. هنگام خرید، فروشگاه برای راهنمایی شما به سمت بهترین محصول هزینه کمی به ما می پردازد."
+  },
+  "tour_step5_text_1": {
+    "message": "این نرم افزار به صورت محلی کار می کند زیرا ما به حفظ حریم خصوصی شما اهمیت می دهیم. هیچ اطلاعاتی در مورد فعالیت شما جمع آوری نمی شود."
+  },
+  "tour_feedback_title": {
+    "message": "ما برای بازخورد شما ارزش قائل هستیم"
+  },
+  "tour_feedback_text": {
+    "message": "اگر ایده ای دارید، مشکلی دارید یا اگر نیاز به بحث در مورد بهبود دارید، با ما تماس بگیرید: "
+  },
+  "or": {
+    "message": "یا"
+  },
+  "contact_form": {
+    "message": "از فرم تماس استفاده کنید"
+  },
+  "by_email": {
+    "message": "یک ایمیل بنویسید"
+  },
+  "call_as_at": {
+    "message": "با تلفن +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "بسیاری از مشتریان این محصول را به شدت توصیه می کنند"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "این محصول به اندازه کافی توسط مشتریان توصیه نمی شود"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "بررسی ها بسیار مثبت هستند. ستاره‌ها: {ProductRatingValue}، نظرات: {ProductReviewAmount}، رتبه‌بندی‌ها: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "کمبود نقد یا بررسی ضعیف ستاره‌ها: {ProductRatingValue}، نظرات: {ProductReviewAmount}، رتبه‌بندی‌ها: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "بررسی ها بسیار مثبت هستند. ستاره ها: {ProductRatingValue}، سفارشات: {ProductOrdersAmount}، نظرات: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "کمبود نقد یا بررسی ضعیف ستاره ها: {ProductRatingValue}، سفارشات: {ProductOrdersAmount}، نظرات: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "بررسی ها بسیار مثبت هستند. ستاره ها: {ProductRatingValue}، سفارشات: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "کمبود نقد یا بررسی ضعیف ستاره ها: {ProductRatingValue}، سفارشات: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "مغازه دارای امتیاز بالایی است. ستاره ها: {ProductRatingValue}، سفارشات: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "مغازه امتیاز ضعیفی دارد ستاره ها: {ProductRatingValue}، سفارشات: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "فروشنده معتبر در تجارت {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "فروشنده مبتدی، در تجارت {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "سیاست بازگشت عالی"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "سیاست بازگشت ضعیف است"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "فروشنده مطمئن"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "فروش مستقیم بر اساس برند"
+  },
+  "tooltip_order_safe": {
+    "message": "تعداد زیادی از مشتریان راضی"
+  },
+  "tooltip_order_un_safe": {
+    "message": "تعداد کمی مشتری خوشحال"
+  },
+  "tooltip_rating_safe": {
+    "message": "بسیاری از مشتریان راضی نظرات خود را ترک کرده اند"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "بسیاری از مشتریان عصبانی نظرات منفی را ارسال کردند"
+  },
+  "tooltip_delivery_safe": {
+    "message": "زمان تحویل عالی، حداکثر {daysToDeliver} روز"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "دریافت بسته شما ممکن است تا {daysToDeliver} روز طول بکشد."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "هنوز مشخص نیست که تحویل چه زمانی انجام می شود"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "اکثر مشتریان فروشگاه راضی هستند، {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "بسیاری از مشتریان از فروشگاه ناراضی هستند، {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "فروشگاه فاقد بازخورد مشتریان است"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "ارسال رایگان"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "ارسال با پرداخت هزینه یا تحویل الزامی است"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "این محصول قیمت مناسبی دارد"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "انتخاب ضعیف گزینه های خرید"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "قیمت عالی است، {priceDifVsAverage}% کمتر از میانگین است"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "قیمت منصفانه است، {priceDifVsAverage}% کمتر از میانگین است"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "قیمت منصفانه است، {priceDifVsAverage}% بالاتر از میانگین است"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "قیمتی گران، {priceDifVsAverage}% بالاتر از میانگین"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "آمازون انتخاب - یک محصول قابل اعتماد و با ارزش"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "آمازون این محصول را می فروشد و ارسال می کند"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "توسط آمازون، شخص ثالث درگیر فروخته یا ارسال شده است"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "والمارت این محصول را می فروشد و ارسال می کند"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "بازخوردها عالی به نظر می رسند! {validAmount} معتبر، {fakeAmount} غیر طبیعی، {totalAmount} کل"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "بازخوردها دستکاری شده به نظر می رسند! {validAmount} معتبر، {fakeAmount} غیر طبیعی، {totalAmount} کل"
+  },
+  "tooltip_bsr_safe": {
+    "message": "این محصول واقعا فروش خوبی دارد"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "فروش این محصول نسبتاً پایین است"
+  },
+  "popup_title": {
+    "message": "دستیار هوشمند شما برای خرید آنلاین"
+  },
+  "loading_product": {
+    "message": "محصول در بازرسی"
+  },
+  "popup_footer_share": {
+    "message": "به دوستان و خانواده خود در مورد SafeDeal بگویید"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "سایت امن تایید شده از طریق لینک وابسته ما را حمایت کنید."
+  },
+  "popup_top_tabs_home": {
+    "message": "صفحه اصلی"
+  },
+  "popup_top_tabs_settings": {
+    "message": "تنظیمات"
+  },
+  "supported_websites": {
+    "message": "وب سایت های پشتیبانی شده"
+  },
+  "popup_benefits_tab": {
+    "message": "امکانات"
+  },
+  "popup_about_tab": {
+    "message": "در باره"
+  },
+  "popup_contact_us_tab": {
+    "message": "با ما تماس بگیرید"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "آمازون"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "والمارت"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "حق بیمه"
+  },
+  "years_label": {
+    "message": "سال ها"
+  },
+  "year_label": {
+    "message": "1 سال"
+  },
+  "less_than_a_year": {
+    "message": "کمتر از یک سال"
+  },
+  "explanations_price_history": {
+    "message": "نمودار تاریخچه قیمت یک محصول - این به شما کمک می کند تخفیف های واقعی را از تخفیف های تقلبی تشخیص دهید. ما قیمت را ثبت می کنیم و سپس تغییرات را به صورت روزانه رصد می کنیم و امکان استفاده از فروش و پیشنهادات با زمان محدود را فراهم می کنیم."
+  },
+  "explanations_review_and_ratings": {
+    "message": "نتیجه گیری بر اساس: \n    1) برای به دست آوردن یک دیدگاه کلی از توصیه های محصول، ما از تکنیک های مختلف تجزیه و تحلیل آماری و هوش مصنوعی استفاده کردیم. \n    2) نظرات و رتبه بندی ها مورد تجزیه و تحلیل قرار گرفت و ما رتبه 4 و بالاتر را نشان دهنده یک محصول عالی می دانیم. \n    3) یک نتیجه معنی دار حداقل به 100 سفارش نیاز دارد، بنابراین هرچه سفارشات بیشتری را تجزیه و تحلیل کنیم، بیشتر به نتیجه رتبه بندی محصول اعتماد خواهیم کرد."
+  },
+  "explanations_store_age": {
+    "message": "سیستم ما اعتبار فروشگاه را با استفاده از سن فروشگاه اندازه‌گیری می‌کند، زیرا فروشگاه‌های با تجربه بیشتر و شهرت مثبت اعتبار بیشتری دارند."
+  },
+  "explanations_store_rating": {
+    "message": "ما امتیاز کلی بازخورد فروشگاه را بررسی می کنیم، هر چه امتیاز بالاتر باشد، شانس دریافت یک سرویس خوب بیشتر است. بیش از 91٪ بازخورد بازخورد مثبت در نظر گرفته می شود."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress فروشنده را به عنوان فروشنده بسیار قابل اعتماد، با حجم بالای فروش طبقه بندی می کند"
+  },
+  "explanations_amazon_bsr": {
+    "message": "پرفروش‌ترین کتاب آمازون، کتابی است که حداقل 150 فروش در ماه داشته باشد و هرچه فروش بیشتری داشته باشد، تکیه بر بازخورد سایر خریداران آسان‌تر می‌شود."
+  },
+  "explanations_amazon_choice": {
+    "message": "محصولاتی که دارای علامت انتخاب آمازون هستند اغلب توسط مشتریان خریداری می شوند. آنها قیمت مناسبی دارند، دارای امتیاز بالایی هستند و برای حمل سریع از انبار آمازون در دسترس هستند."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "ما از مدل‌سازی آماری برای موقعیت‌یابی و تنظیم تعداد بررسی‌های مثبت بر اساس تعداد بررسی‌های غیرطبیعی استفاده می‌کنیم، بنابراین می‌توانید تصمیم خود را بر اساس داده‌های با کیفیت بالا بگیرید. الگوریتم کامل نیست، اما نرخ دقت بالایی دارد. آمازون کار خوبی در جمع آوری صدها میلیون بازخورد انجام داده است، اما بسیاری از برندها از آن سوء استفاده کرده و آن را با کیفیت پایین و بررسی های جانبدارانه پر کرده اند تا سود خود را افزایش دهند. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "فروش و ارسال توسط آمازون: این اقلام به عنوان موجودی توسط آمازون سفارش داده شده است. آنها مستقیماً از یک انبار آمازون فروخته و ارسال می شوند. شما می‌توانید این مورد را بسیار سریع‌تر دریافت کنید و آمازون مستقیماً مشکلات مربوط به خدمات مشتری را حل خواهد کرد."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "این اقلام متعلق به یک تجارت مستقل و شخص ثالث هستند و زودتر از موعد به انبارهای آمازون ارسال می شوند. هنگام خرید آنها، آمازون آنها را برای شما ارسال می کند."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "برای خریداران مهم است که بدانند چه زمانی می توانند یک کالا را انتظار داشته باشند. به همین دلیل است که ما همیشه تاریخ تحویل تخمینی را در eBay بررسی می کنیم. تاریخ تحویل تخمینی بر اساس زمانی است که فروشنده برای بسته‌بندی و ارسال اقلام طول می‌کشد، و زمان تحویل از خدمات پستی. ما 14 روز برای محموله‌های داخلی و 30 روز برای محموله‌های بین‌المللی را به عنوان زمان‌های تحویل عالی در نظر می‌گیریم."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "حمل و نقل رایگان نشانه بسیار خوبی است که فروشنده خدمات عالی به مشتری ارائه می دهد و کالا را به موقع ارسال می کند."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "پذیرش بازپرداخت نشانه خوبی از یک فروشنده خوب است: اگر کالایی آسیب دیده یا نادرست دریافت کردید، می توانید آن را برای بازپرداخت بازگردانید."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "بازگشت قابل پرداخت یا عدم بازگشت: فقط در صورتی که محصول اشتباه وارد شده باشد می توانید آن را برای بازپرداخت بازگردانید."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "فروشندگانی که خدمات عالی به مشتریان را در مقیاس بزرگ ارائه می‌کنند توسط eBay با نشان رتبه‌بندی برتر معرفی می‌شوند. این بدان معنی است که آنها امتیاز بازخورد بالایی دارند و درصد بالایی از بازخورد مثبت در eBay دارند، بنابراین خرید از آنها امن تر است."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "فروشندگانی که نماینده یک نام تجاری هستند، اغلب با خدمات عالی به مشتریان مرتبط هستند. آنها معمولا نمرات بازخورد بالا و درصد زیادی از بازخورد مثبت در eBay دارند که خرید از آنها را به گزینه ای مطمئن تر تبدیل می کند."
+  },
+  "why_it_free": {
+    "message": "چرا استفاده از آن رایگان است؟"
+  },
+  "explanations_why_it_free": {
+    "message": "چرا استفاده از Safe-Deal برای شما رایگان است؟"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "استفاده از خدمات ما برای شما رایگان است. هنگام خرید، فروشگاه برای راهنمایی شما به سمت بهترین محصول هزینه کمی به ما می پردازد."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "ما فقط از داده‌های در دسترس عموم استفاده می‌کنیم و مطمئن می‌شویم که هیچ مارک یا فروشگاهی بر توصیه‌های ما تأثیر نمی‌گذارد."
+  },
+  "premium_features": {
+    "message": "ویژگی های پریمیوم"
+  },
+  "premium_features_no_affiliation": {
+    "message": "بدون وابستگی، می توانید هر برنامه بازگشت نقدی را که می خواهید وصل کنید"
+  },
+  "premium_features_enhanced_support": {
+    "message": "پشتیبانی تلفن و ایمیل شخصی و زمان پردازش پیشرفته"
+  },
+  "premium_features_cost": {
+    "message": "قیمت - 2 دلار در ماه (صورتحساب سالانه)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "پول جمع آوری شده برای بهبود خدمات و پرداخت زیرساخت ها استفاده می شود."
+  },
+  "affiliated_websites": {
+    "message": "وب سایت های وابسته"
+  },
+  "buy_premium": {
+    "message": "Premium را خریداری کنید"
+  },
+  "opt_out": {
+    "message": "انصراف دهید"
+  },
+  "image": {
+    "message": "تصویر"
+  },
+  "product_name": {
+    "message": "نام محصول"
+  },
+  "final_price": {
+    "message": "قیمت نهایی"
+  },
+  "coupon": {
+    "message": "کوپن"
+  },
+  "you_saved": {
+    "message": "مقدار کوپن"
+  },
+  "you_save": {
+    "message": "شما امان می دهید"
+  },
+  "share": {
+    "message": "اشتراک گذاری"
+  },
+  "discounts_found": {
+    "message": "تخفیف پیدا شد"
+  },
+  "extension_not_available": {
+    "message": "برنامه افزودنی SafeDeal برای این صفحه در دسترس نیست."
+  },
+  "search_for_any_other_keyword": {
+    "message": "برای یافتن کوپن ها و معاملات هر کلمه کلیدی دیگری را جستجو کنید."
+  },
+  "search_product": {
+    "message": "جستجوی محصول"
+  },
+  "want_more_coupons": {
+    "message": "کوپن های بیشتری می خواهید؟"
+  },
+  "click_here": {
+    "message": "اینجا کلیک کنید"
+  },
+  "coupon_header": {
+    "message": "معامله ایمن - کوپن ها و معاملات"
+  },
+  "tab_header_analyze": {
+    "message": "ارزیابی محصول"
+  },
+  "tab_header_reviews": {
+    "message": "خلاصه نظرات"
+  },
+  "click_to_reveal": {
+    "message": "برای جابجایی بین تحلیل کمینه و کامل، روی {systemShortcut} کلیک کنید یا فشار دهید."
+  },
+  "click_to_hide": {
+    "message": "روی نماد کلیک کنید یا کلید \"Escape\" را فشار دهید تا نمای دقیق بسته شود."
+  },
+  "click_to_pin": {
+    "message": "این پانل را پین کنید تا در هنگام بازخوانی و هنگام مرور، قابل مشاهده باشد"
+  },
+  "click_to_unpin": {
+    "message": "پین این پانل را بردارید تا هنگام کلیک کردن در جای دیگری از صفحه پنهان شود"
+  },
+  "reviews_no_reviews_header": {
+    "message": "هنوز نظری وجود ندارد"
+  },
+  "reviews_no_reviews_text": {
+    "message": "هنوز نظر مشتری وجود ندارد. این محصول ممکن است جدید باشد یا محبوب نباشد."
+  },
+  "reviews_pros": {
+    "message": "طرفداران"
+  },
+  "reviews_cons": {
+    "message": "منفی"
+  },
+  "reviews_good_to_know": {
+    "message": "خوب است بدانید"
+  },
+  "reviews_error": {
+    "message": "از اینکه به زحمت افتادید پوزش میخواهیم. به نظر می رسد که فرآیند جمع بندی بررسی ناموفق بوده است. برای حل این مشکل، لطفاً برای کمک با تیم پشتیبانی Safe Deal تماس بگیرید."
+  },
+  "deals_ali_express": {
+    "message": "معامله ایمن - یاب معاملات"
+  },
+  "deals_ali_found": {
+    "message": "معاملات یافت شده: "
+  },
+  "product": {
+    "message": "تولید - محصول"
+  },
+  "title": {
+    "message": "عنوان"
+  },
+  "price": {
+    "message": "قیمت"
+  },
+  "deal_type": {
+    "message": "نوع معامله"
+  },
+  "savings": {
+    "message": "پس انداز"
+  },
+  "extra": {
+    "message": "اضافی"
+  },
+  "shipping": {
+    "message": "حمل دریایی"
+  },
+  "rating": {
+    "message": "رتبه بندی"
+  },
+  "sold": {
+    "message": "فروخته شد"
+  },
+  "reviews": {
+    "message": "بررسی ها"
+  },
+  "mobile_app": {
+    "message": "برنامه موبایل ما را نصب کنید"
+  },
+  "tab_header_opinions": {
+    "message": "نظرات و نظرات"
+  },
+  "opinions_title": {
+    "message": "نظر خود را بگویید یا از جامعه در مورد این محصول بپرسید"
+  },
+  "research_online": {
+    "message": "وارسی"
+  },
+  "video_reviews": {
+    "message": "بررسی های ویدئویی"
+  },
+  "reddit_reviews": {
+    "message": "نظرات در Reddit"
+  },
+  "web_reviews": {
+    "message": "نظرات آنلاین"
+  },
+  "shopping_reviews": {
+    "message": "سایت های خرید"
+  },
+  "product_photos": {
+    "message": "عکس های محصول"
+  },
+  "product_purchase_query": {
+    "message": "هم اکنون آنلاین خرید کنید"
+  },
+  "product_reviews_query": {
+    "message": "بررسی های دقیق"
+  }
+}

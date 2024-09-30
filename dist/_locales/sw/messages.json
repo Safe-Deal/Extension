@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Msaidizi wa Ununuzi: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "Msaidizi wa Ununuzi: Okoa Muda kwa AI. Gundua Historia ya Bei, Epuka Ofa za Gharama, Doa Maoni Bandia, Ukadiriaji Mbaya wa..."
+  },
+  "appNameShort": {
+    "message": "Mpango..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Mpango Salama",
+    "description": "Jisikie ujasiri unaponunua mtandaoni"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal imekagua tovuti hii na kubaini kuwa inaweza kuwa hatari {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Ondoka kwenye tovuti hii sasa"
+  },
+  "anti_scam_stay": {
+    "message": "Tovuti hii inaaminika"
+  },
+  "anti_scam_confirm": {
+    "message": "Uwezekano mkubwa kwamba tovuti hii ni laghai, mwizi, au shughuli nyingine haramu. Je, unaiamini tovuti hii?"
+  },
+  "recommended_product": {
+    "message": "Bidhaa Iliyopendekezwa"
+  },
+  "unrecommended_product": {
+    "message": "Bidhaa Isiyopendekezwa"
+  },
+  "doubtful_product": {
+    "message": "Bidhaa yenye shaka"
+  },
+  "insufficient_data": {
+    "message": "Hitimisho bila kuamua"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Ishara ya mpango mzuri"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Dalili ya mpango unaotia shaka"
+  },
+  "no_data": {
+    "message": "Kwa sasa, hakuna data ya kuonyesha"
+  },
+  "chart_title": {
+    "message": "Historia ya Bei ya Bidhaa"
+  },
+  "back_button": {
+    "message": "Iliyotangulia"
+  },
+  "next_button": {
+    "message": "Inayofuata"
+  },
+  "start_using_button": {
+    "message": "Anza kutumia SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "Karibu kwenye Mpango Salama"
+  },
+  "tour_step1_text_0": {
+    "message": ", Asante kwa kutumia programu yetu."
+  },
+  "morning": {
+    "message": "asubuhi"
+  },
+  "day": {
+    "message": "siku"
+  },
+  "night": {
+    "message": "usiku"
+  },
+  "hi": {
+    "message": "Habari"
+  },
+  "good": {
+    "message": "Nzuri"
+  },
+  "tour_step1_text_1": {
+    "message": "Hapa kuna moja ya duka zetu zinazotumika."
+  },
+  "tour_step1_text_2": {
+    "message": "Inafanya kazi kwa njia sawa kwenye tovuti zingine zinazotumika kama vile AliExpress, eBay, Amazon, na zaidi."
+  },
+  "tour_step1_text_3": {
+    "message": "Inapaswa kuchukua kama dakika moja kuelezea jinsi inavyofanya kazi."
+  },
+  "tour_step1_lets_start": {
+    "message": "Tuanze"
+  },
+  "tour_step2_title": {
+    "message": "Mapendekezo ya Ununuzi"
+  },
+  "tour_step2_text_0": {
+    "message": "Kufanya maamuzi ya haraka na bora ya ununuzi ndio kiini cha bidhaa zetu; tunafanya kama taa ya trafiki kwa ununuzi wa mtandaoni."
+  },
+  "tour_step2_text_3": {
+    "message": "Upelelezi wetu wa Bandia hufanya uamuzi unaotokana na data kuhusu bidhaa katika sekunde chache. Kwa njia hii, unapata kiashirio cha haraka kwenye bidhaa nyingi ndani ya dakika, si saa za kukagua kwa mikono."
+  },
+  "tour_step3_title": {
+    "message": "Usalama wa mpango ni Muhimu"
+  },
+  "tour_step3_text_0": {
+    "message": "Unaweza kununua kwa busara leo ili kuokoa shida katika siku zijazo."
+  },
+  "tour_step3_text_1": {
+    "message": "Ngao ya kijani - Mpango uliopendekezwa"
+  },
+  "tour_step3_text_2": {
+    "message": "Ngao nyekundu - Mpango ambao haujapendekezwa"
+  },
+  "tour_step3_text_3": {
+    "message": "Ngao ya njano - Mpango wa shaka"
+  },
+  "tour_step5_title": {
+    "message": "Faragha yako ni muhimu"
+  },
+  "tour_step5_text_0": {
+    "message": "Kutumia huduma zetu ni bure kwako. Unapofanya ununuzi, duka hutulipa ada ndogo kwa kukuongoza kwenye bidhaa bora zaidi."
+  },
+  "tour_step5_text_1": {
+    "message": "Programu hufanya kazi ndani ya nchi kwa kuwa tunajali kuhusu faragha yako. Hakuna taarifa kuhusu shughuli yako inayokusanywa."
+  },
+  "tour_feedback_title": {
+    "message": "Tunathamini maoni yako"
+  },
+  "tour_feedback_text": {
+    "message": "Wasiliana ikiwa una wazo, tatizo, au ikiwa unahitaji kujadili uboreshaji: "
+  },
+  "or": {
+    "message": "au"
+  },
+  "contact_form": {
+    "message": "Tumia fomu ya mawasiliano"
+  },
+  "by_email": {
+    "message": "Andika barua pepe"
+  },
+  "call_as_at": {
+    "message": "Kwa Simu +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Wateja wengi walipendekeza sana bidhaa"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Bidhaa haipendekezi kutosha kwa wateja"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Maoni ni mazuri sana. Nyota: {ProductRatingValue}, Maoni: {ProductReviewAmount}, Ukadiriaji: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Hukagua upungufu au uhakiki hafifu. Nyota: {ProductRatingValue}, Maoni: {ProductReviewAmount}, Ukadiriaji: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Maoni ni mazuri sana. Nyota: {ProductRatingValue}, Maagizo: {ProductOrdersAmount}, Maoni: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Hukagua upungufu au uhakiki hafifu. Nyota: {ProductRatingValue}, Maagizo: {ProductOrdersAmount}, Maoni: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Maoni ni mazuri sana. Nyota: {ProductRatingValue}, Maagizo: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Hukagua upungufu au uhakiki hafifu. Nyota: {ProductRatingValue}, Maagizo: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Duka limekadiriwa sana. Nyota: {ProductRatingValue}, Maagizo: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Duka limekadiriwa vibaya. Nyota: {ProductRatingValue}, Maagizo: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Muuzaji aliyeimarika, katika biashara {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Muuzaji anayeanza, katika biashara {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Sera bora ya kurudi"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Sera ya kurudi ni duni"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Muuzaji wa kuaminika"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Inauzwa moja kwa moja na chapa"
+  },
+  "tooltip_order_safe": {
+    "message": "Idadi kubwa ya wateja walioridhika"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Idadi ndogo ya wateja wenye furaha"
+  },
+  "tooltip_rating_safe": {
+    "message": "Wateja wengi walioridhika wameacha maoni"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Wateja wengi wenye hasira walichapisha maoni hasi"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Wakati mzuri wa kujifungua, siku {daysToDeliver} zaidi"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Inaweza kuchukua hadi siku {daysToDeliver} kupata kifurushi chako."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Haijulikani ni lini utoaji utafanyika"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Wateja wengi wa duka wameridhika, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Wateja wengi hawajaridhika na duka, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Duka halina maoni kutoka kwa wateja"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Usafirishaji bila malipo"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Imesafirishwa kwa ada au kuchukua inahitajika"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Bidhaa hii ina bei nzuri"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Uchaguzi mbaya wa chaguzi za ununuzi"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Bei ni bora, {priceDifVsAverage}% chini ikilinganishwa na wastani"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Bei ni ya haki, {priceDifVsAverage}% chini ikilinganishwa na wastani"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Bei ni ya haki, {priceDifVsAverage}% juu ikilinganishwa na wastani"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Bei ghali, {priceDifVsAverage}% juu ikilinganishwa na wastani"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Chagua - Bidhaa ya kuaminika na yenye thamani nzuri"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon inauza na kusafirisha bidhaa hii"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Inauzwa au kusafirishwa na Amazon, mtu wa tatu anayehusika"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart inauza na kusafirisha bidhaa hii"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Maoni yanaonekana mazuri! {validAmount} halisi, {fakeAmount} isiyo ya asili, jumla ya {totalAmount}"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Maoni yanaonekana kudanganywa! {validAmount} halisi, {fakeAmount} isiyo ya asili, jumla ya {totalAmount}"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Bidhaa hii inauzwa vizuri sana"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Uuzaji wa bidhaa ni duni"
+  },
+  "popup_title": {
+    "message": "Msaidizi wako mahiri kwa ununuzi mtandaoni"
+  },
+  "loading_product": {
+    "message": "Bidhaa katika ukaguzi"
+  },
+  "popup_footer_share": {
+    "message": "Waambie marafiki na familia yako kuhusu SafeDeal"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Tovuti salama iliyothibitishwa. Tuunge mkono kupitia kiunga chetu cha ushirika."
+  },
+  "popup_top_tabs_home": {
+    "message": "Nyumbani"
+  },
+  "popup_top_tabs_settings": {
+    "message": "Mipangilio"
+  },
+  "supported_websites": {
+    "message": "Tovuti zinazotumika"
+  },
+  "popup_benefits_tab": {
+    "message": "Vipengele"
+  },
+  "popup_about_tab": {
+    "message": "Kuhusu"
+  },
+  "popup_contact_us_tab": {
+    "message": "Wasiliana nasi"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazon"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Premium"
+  },
+  "years_label": {
+    "message": "miaka"
+  },
+  "year_label": {
+    "message": "1 mwaka"
+  },
+  "less_than_a_year": {
+    "message": "chini ya mwaka mmoja"
+  },
+  "explanations_price_history": {
+    "message": "Grafu ya historia ya bei ya bidhaa - Hii inaweza kukusaidia kutambua punguzo halisi kutoka kwa zile bandia. Tunaweka rekodi ya bei na kisha kufuatilia mabadiliko kila siku, na hivyo kufanya iwezekane kufaidika na mauzo na ofa za muda mfupi."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Hitimisho linatokana na: \n    1) Ili kupata maoni ya jumla ya mapendekezo ya bidhaa, tulitumia uchanganuzi mbalimbali wa takwimu na mbinu za kijasusi za bandia. \n    2) Maoni na ukadiriaji vilichanganuliwa, na tunazingatia ukadiriaji wa 4 na zaidi kuwa kiashiria cha bidhaa bora. \n    3) Matokeo yenye maana yanahitaji angalau maagizo 100, kwa hivyo kadiri tunavyochanganua maagizo, ndivyo tunavyoamini zaidi hitimisho la ukadiriaji wa bidhaa."
+  },
+  "explanations_store_age": {
+    "message": "Mfumo wetu hupima uaminifu wa duka kwa kutumia umri wa duka, kwa kuwa maduka yaliyo na uzoefu zaidi na sifa nzuri yanaaminika zaidi."
+  },
+  "explanations_store_rating": {
+    "message": "Tunaangalia alama ya jumla ya maoni ya duka, jinsi alama inavyoongezeka, ndivyo uwezekano wa kupata huduma bora unavyoongezeka. Zaidi ya 91% ya maoni yanachukuliwa kuwa chanya."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress inaainisha muuzaji kama muuzaji anayeaminika sana, na kiasi kikubwa cha mauzo"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Amazon bestseller ni ile ambayo ina angalau mauzo 150 kwa mwezi na kadiri inavyozidi mauzo, ndivyo inavyokuwa rahisi kutegemea maoni ya wanunuzi wengine."
+  },
+  "explanations_amazon_choice": {
+    "message": "Bidhaa zilizo na alama ya Chaguo la Amazon hununuliwa mara kwa mara na wateja. Zina bei nzuri, zimekadiriwa sana, na zinapatikana kwa usafirishaji wa haraka kutoka ghala la Amazon."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Tunatumia Muundo wa Kitakwimu ili kuweka na kurekebisha idadi ya hakiki chanya kulingana na idadi ya hakiki zisizo za asili, ili uweze kufanya uamuzi wako kulingana na data ya ubora wa juu. Algorithm sio kamili, lakini ina viwango vya juu vya usahihi. Amazon imefanya kazi nzuri ya kukusanya mamia ya mamilioni ya maoni, lakini chapa nyingi zimechagua kuitumia vibaya, zikiijaza kwa ubora wa chini na ukaguzi wa upendeleo ili kujaribu kuongeza faida zao wenyewe. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Zinauzwa na Kusafirishwa na Amazon: Bidhaa hizi ziliagizwa kama orodha na Amazon. Zinauzwa na kusafirishwa moja kwa moja kutoka kwa ghala la Amazon. Utaweza kupata bidhaa kwa haraka zaidi, na Amazon itashughulikia masuala yoyote ya huduma kwa wateja moja kwa moja."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Bidhaa hizi zinamilikiwa na biashara inayojitegemea, ya mtu wa tatu na husafirishwa kabla ya muda hadi kwenye ghala za Amazon. Unapozinunua, Amazon hukuletea."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Ni muhimu kwa wanunuzi kujua wakati wanaweza kutarajia bidhaa kufika. Ndiyo maana huwa tunaangalia tarehe iliyokadiriwa ya uwasilishaji kwenye eBay. Tarehe iliyokadiriwa ya uwasilishaji inategemea muda anaochukua muuzaji kufunga na kusafirisha bidhaa, na wakati wa kujifungua kutoka kwa huduma za posta. Tunazingatia siku 14 kwa usafirishaji wa ndani na siku 30 kwa usafirishaji wa kimataifa kama nyakati bora za utoaji."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Usafirishaji bila malipo ni ishara nzuri kwamba muuzaji atatoa huduma bora kwa wateja na kusafirisha bidhaa kwa wakati kama ilivyoelezewa."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Kukubali kurudi ni dalili nzuri ya muuzaji mzuri: Ikiwa unapokea bidhaa iliyoharibika au isiyo sahihi, unaweza kuirejesha ili urejeshewe pesa."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Marejesho Yanayolipwa au Hakuna Marejesho: Ni ikiwa tu bidhaa ilifika vibaya ndipo unaweza kuirudisha ili kurejeshewa pesa."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Wauzaji wanaotoa huduma bora zaidi kwa wateja kwa kiwango kikubwa wamepewa chapa na eBay na beji Iliyokadiriwa Juu. Hii inamaanisha kuwa wana alama ya juu ya maoni na asilimia kubwa ya maoni chanya kwenye eBay, kwa hivyo ni salama kununua kutoka kwao."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Wauzaji wanaowakilisha chapa mara nyingi huhusishwa na huduma bora kwa wateja. Kawaida huwa na alama za juu za maoni na asilimia kubwa ya maoni chanya kwenye eBay, ambayo hufanya ununuzi kutoka kwao kuwa chaguo salama."
+  },
+  "why_it_free": {
+    "message": "Kwa nini ni bure kutumia?"
+  },
+  "explanations_why_it_free": {
+    "message": "Kwa nini ni kutumia Safe-Deal Bila Malipo Kwako?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Kutumia huduma zetu ni bure kwako. Unapofanya ununuzi, duka hutulipa ada ndogo kwa kukuongoza kwenye bidhaa bora zaidi."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Tunatumia data inayopatikana kwa umma pekee, kuhakikisha hakuna chapa au duka linaloathiri mapendekezo yetu."
+  },
+  "premium_features": {
+    "message": "Vipengele vya malipo"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Hakuna ushirika, unaweza kuunganisha mpango wowote wa kurejesha pesa unaotaka"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Usaidizi wa Simu ya Kibinafsi na Barua pepe & Muda ulioimarishwa wa usindikaji"
+  },
+  "premium_features_cost": {
+    "message": "Bei - 2 USD kwa mwezi (hutozwa kila mwaka)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Pesa zinazokusanywa hutumika kuboresha huduma na kulipia miundombinu."
+  },
+  "affiliated_websites": {
+    "message": "Wavuti Zilizounganishwa"
+  },
+  "buy_premium": {
+    "message": "Nunua Premium"
+  },
+  "opt_out": {
+    "message": "Chagua kutoka"
+  },
+  "image": {
+    "message": "Picha"
+  },
+  "product_name": {
+    "message": "Jina la bidhaa"
+  },
+  "final_price": {
+    "message": "Bei ya Mwisho"
+  },
+  "coupon": {
+    "message": "Kuponi"
+  },
+  "you_saved": {
+    "message": "Kiasi cha Kuponi"
+  },
+  "you_save": {
+    "message": "Wewe vipuri"
+  },
+  "share": {
+    "message": "Shiriki"
+  },
+  "discounts_found": {
+    "message": "Punguzo Limepatikana"
+  },
+  "extension_not_available": {
+    "message": "Kiendelezi cha SafeDeal hakipatikani kwa ukurasa huu."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Tafuta neno kuu lingine lolote ili kupata kuponi na ofa."
+  },
+  "search_product": {
+    "message": "Tafuta Bidhaa"
+  },
+  "want_more_coupons": {
+    "message": "Je, unataka Kuponi Zaidi?"
+  },
+  "click_here": {
+    "message": "Bonyeza hapa"
+  },
+  "coupon_header": {
+    "message": "Mpango Salama - Kuponi na Mikataba"
+  },
+  "tab_header_analyze": {
+    "message": "Tathmini ya Bidhaa"
+  },
+  "tab_header_reviews": {
+    "message": "Muhtasari wa Maoni"
+  },
+  "click_to_reveal": {
+    "message": "Bofya au ubofye {systemShortcut} ili kugeuza kati ya uchanganuzi mdogo na kamili."
+  },
+  "click_to_hide": {
+    "message": "Bofya kwenye ikoni au ubonyeze kitufe cha 'Escape' ili kufunga mwonekano wa kina."
+  },
+  "click_to_pin": {
+    "message": "Bandika kidirisha hiki ili kiendelee kuonekana wakati wa kuonyesha upya na unapovinjari"
+  },
+  "click_to_unpin": {
+    "message": "Bandua kidirisha hiki ili kijifiche unapobofya mahali pengine kwenye ukurasa"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Bado Hakuna Ukaguzi"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Bado hakuna maoni ya wateja. Bidhaa hii inaweza kuwa mpya au si maarufu."
+  },
+  "reviews_pros": {
+    "message": "Faida"
+  },
+  "reviews_cons": {
+    "message": "Hasara"
+  },
+  "reviews_good_to_know": {
+    "message": "Vizuri kujua"
+  },
+  "reviews_error": {
+    "message": "Tunaomba radhi kwa usumbufu. Inaonekana kwamba mchakato wa muhtasari wa ukaguzi haukufaulu. Ili kutatua suala hili, tafadhali wasiliana na Timu ya Usaidizi ya Mpango Salama kwa usaidizi."
+  },
+  "deals_ali_express": {
+    "message": "Mpango Salama - Kitafuta Mikataba"
+  },
+  "deals_ali_found": {
+    "message": "Ofa zimepatikana: "
+  },
+  "product": {
+    "message": "Bidhaa"
+  },
+  "title": {
+    "message": "Kichwa"
+  },
+  "price": {
+    "message": "Bei"
+  },
+  "deal_type": {
+    "message": "Aina ya Mkataba"
+  },
+  "savings": {
+    "message": "Akiba"
+  },
+  "extra": {
+    "message": "Ziada"
+  },
+  "shipping": {
+    "message": "Usafirishaji"
+  },
+  "rating": {
+    "message": "Ukadiriaji"
+  },
+  "sold": {
+    "message": "Inauzwa"
+  },
+  "reviews": {
+    "message": "Ukaguzi"
+  },
+  "mobile_app": {
+    "message": "Sakinisha Programu yetu ya Simu ya Mkononi"
+  },
+  "tab_header_opinions": {
+    "message": "Maoni na Maoni"
+  },
+  "opinions_title": {
+    "message": "Toa maoni yako au uulize jumuiya kuhusu bidhaa hii"
+  },
+  "research_online": {
+    "message": "Angalia"
+  },
+  "video_reviews": {
+    "message": "Uhakiki wa Video"
+  },
+  "reddit_reviews": {
+    "message": "Maoni katika Reddit"
+  },
+  "web_reviews": {
+    "message": "Ukaguzi Mtandaoni"
+  },
+  "shopping_reviews": {
+    "message": "Maeneo ya Ununuzi"
+  },
+  "product_photos": {
+    "message": "Picha za Bidhaa"
+  },
+  "product_purchase_query": {
+    "message": "nunua mtandaoni sasa"
+  },
+  "product_reviews_query": {
+    "message": "hakiki za kina"
+  }
+}

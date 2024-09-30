@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Asistent de cumpărături: AliExpress, Amazon"
+  },
+  "appDescription": {
+    "message": "Asistent de cumpărături: economisiți timp prin AI. Descoperiți istoricul prețurilor, evitați ofertele costisitoare,..."
+  },
+  "appNameShort": {
+    "message": "Ofertă..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Ofertă sigură",
+    "description": "Simțiți-vă încrezător când faceți cumpărături online"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal a examinat acest site și a stabilit că ar putea fi periculos {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Părăsiți acest site acum"
+  },
+  "anti_scam_stay": {
+    "message": "Acest site este de încredere"
+  },
+  "anti_scam_confirm": {
+    "message": "Probabilitate mare ca acest site să fie o înșelătorie, un hoț sau o altă activitate ilegală. Ai încredere în acest site?"
+  },
+  "recommended_product": {
+    "message": "Produs Recomandat"
+  },
+  "unrecommended_product": {
+    "message": "Produs nerecomandat"
+  },
+  "doubtful_product": {
+    "message": "Produs îndoielnic"
+  },
+  "insufficient_data": {
+    "message": "Concluzie nedeterminată"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Un indiciu al unei afaceri bune"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Un indiciu al unei înțelegeri discutabile"
+  },
+  "no_data": {
+    "message": "În prezent, nu există date de afișat"
+  },
+  "chart_title": {
+    "message": "Istoricul prețurilor produselor"
+  },
+  "back_button": {
+    "message": "Anterior"
+  },
+  "next_button": {
+    "message": "Următorul"
+  },
+  "start_using_button": {
+    "message": "Începeți să utilizați SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "Bun venit la Safe Deal"
+  },
+  "tour_step1_text_0": {
+    "message": ", Vă mulțumim că folosiți software-ul nostru."
+  },
+  "morning": {
+    "message": "dimineaţă"
+  },
+  "day": {
+    "message": "zi"
+  },
+  "night": {
+    "message": "noapte"
+  },
+  "hi": {
+    "message": "Bună"
+  },
+  "good": {
+    "message": "Bun"
+  },
+  "tour_step1_text_1": {
+    "message": "Iată unul dintre magazinele noastre acceptate."
+  },
+  "tour_step1_text_2": {
+    "message": "Funcționează în același mod pe alte site-uri acceptate, cum ar fi AliExpress, eBay, Amazon și multe altele."
+  },
+  "tour_step1_text_3": {
+    "message": "Ar trebui să dureze aproximativ un minut pentru a explica cum funcționează."
+  },
+  "tour_step1_lets_start": {
+    "message": "Să începem"
+  },
+  "tour_step2_title": {
+    "message": "Recomandări de achiziție"
+  },
+  "tour_step2_text_0": {
+    "message": "Luarea unor decizii de cumpărare rapide și eficiente este în centrul produsului nostru; acționăm ca un semafor pentru achizițiile online."
+  },
+  "tour_step2_text_3": {
+    "message": "Inteligența noastră artificială ia o decizie bazată pe date asupra produselor în câteva secunde. În acest fel, obțineți un indicator rapid pentru multe produse în câteva minute, nu ore de verificare manuală."
+  },
+  "tour_step3_title": {
+    "message": "Siguranța tranzacției este importantă"
+  },
+  "tour_step3_text_0": {
+    "message": "Puteți cumpăra cu înțelepciune astăzi pentru a economisi bătăi de cap în viitor."
+  },
+  "tour_step3_text_1": {
+    "message": "Scut verde - Ofertă recomandată"
+  },
+  "tour_step3_text_2": {
+    "message": "Red shield - Ofertă nerecomandată"
+  },
+  "tour_step3_text_3": {
+    "message": "Scut galben - Ofertă îndoielnică"
+  },
+  "tour_step5_title": {
+    "message": "Intimitatea ta este primordială"
+  },
+  "tour_step5_text_0": {
+    "message": "Utilizarea serviciului nostru este gratuită pentru dvs. Când faceți o achiziție, magazinul ne plătește o mică taxă pentru a vă îndruma către cel mai bun produs."
+  },
+  "tour_step5_text_1": {
+    "message": "Software-ul funcționează local, deoarece ne pasă de confidențialitatea dvs. Nu sunt colectate informații despre activitatea dvs."
+  },
+  "tour_feedback_title": {
+    "message": "Apreciem feedback-ul dvs"
+  },
+  "tour_feedback_text": {
+    "message": "Luați legătura dacă aveți o idee, o problemă sau dacă aveți nevoie să discutați despre o îmbunătățire: "
+  },
+  "or": {
+    "message": "sau"
+  },
+  "contact_form": {
+    "message": "Utilizați formularul de contact"
+  },
+  "by_email": {
+    "message": "Scrie un email"
+  },
+  "call_as_at": {
+    "message": "Prin telefon +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Mulți clienți au recomandat cu căldură produsul"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Produsul nu este suficient de recomandat de către clienți"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Recenziile sunt extrem de pozitive. Stele: {ProductRatingValue}, Recenzii: {ProductReviewAmount}, Evaluări: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Deficiență de recenzii sau recenzii slabe. Stele: {ProductRatingValue}, Recenzii: {ProductReviewAmount}, Evaluări: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Recenziile sunt extrem de pozitive. Stele: {ProductRatingValue}, Comenzi: {ProductOrdersAmount}, Recenzii: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Deficiență de recenzii sau recenzii slabe. Stele: {ProductRatingValue}, Comenzi: {ProductOrdersAmount}, Recenzii: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Recenziile sunt extrem de pozitive. Stele: {ProductRatingValue}, Comenzi: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Deficiență de recenzii sau recenzii slabe. Stele: {ProductRatingValue}, Comenzi: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Magazinul este foarte apreciat. Stele: {ProductRatingValue}, Comenzi: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Magazinul este prost evaluat. Stele: {ProductRatingValue}, Comenzi: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Vânzător bine stabilit, în afaceri {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Vânzător începător, în afaceri {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Politica de returnare excelenta"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Politica de returnare este slabă"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Un vânzător de încredere"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Vândut direct de marcă"
+  },
+  "tooltip_order_safe": {
+    "message": "Un număr mare de clienți mulțumiți"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Un număr mic de clienți mulțumiți"
+  },
+  "tooltip_rating_safe": {
+    "message": "Mulți clienți mulțumiți au lăsat recenzii"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Mulți clienți supărați au postat recenzii negative"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Timp de livrare excelent, cel mult {daysToDeliver} zile"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Poate dura până la {daysToDeliver} zile pentru a primi pachetul."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Nu este clar când va avea loc livrarea"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Majoritatea clienților magazinului sunt mulțumiți, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Mulți clienți sunt nemulțumiți de magazin, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Magazinul nu are feedback din partea clienților"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Expediați gratuit"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Se livrează contra cost sau se solicită ridicarea"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Acest produs are un preț rezonabil"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "O selecție slabă de opțiuni de cumpărare"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Prețul este excelent, {priceDifVsAverage}% mai mic în comparație cu media"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Prețul este corect, cu {priceDifVsAverage}% mai mic în comparație cu media"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Prețul este corect, {priceDifVsAverage}% mai mare în comparație cu media"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Un preț scump, cu {priceDifVsAverage}% mai mare în comparație cu media"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose - Un produs de încredere și de bună valoare"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon vinde și livrează acest produs"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Vândut sau expediat de Amazon, terță parte implicată"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart vinde și livrează acest produs"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Feedback-urile arată grozav! {validAmount} autentic, {fakeAmount} nenatural, {totalAmount} total"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Feedback-urile par manipulate! {validAmount} autentic, {fakeAmount} nenatural, {totalAmount} total"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Acest produs se vinde foarte bine"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Vânzările de produs sunt relativ scăzute"
+  },
+  "popup_title": {
+    "message": "Asistentul tău inteligent pentru cumpărături online"
+  },
+  "loading_product": {
+    "message": "Produs în inspecție"
+  },
+  "popup_footer_share": {
+    "message": "Spune-le prietenilor și familiei despre SafeDeal"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Site sigur verificat. Sprijină-ne prin linkul nostru de afiliat."
+  },
+  "popup_top_tabs_home": {
+    "message": "Acasă"
+  },
+  "popup_top_tabs_settings": {
+    "message": "Setări"
+  },
+  "supported_websites": {
+    "message": "Site-uri web acceptate"
+  },
+  "popup_benefits_tab": {
+    "message": "Caracteristici"
+  },
+  "popup_about_tab": {
+    "message": "Despre"
+  },
+  "popup_contact_us_tab": {
+    "message": "Contactaţi-ne"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazon"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Premium"
+  },
+  "years_label": {
+    "message": "ani"
+  },
+  "year_label": {
+    "message": "1 an"
+  },
+  "less_than_a_year": {
+    "message": "mai putin de un an"
+  },
+  "explanations_price_history": {
+    "message": "Graficul istoric al prețurilor unui produs - Acest lucru vă poate ajuta să identificați reduceri reale de la cele false. Păstrăm o evidență a prețului și apoi monitorizăm zilnic modificările, făcând posibil să profităm de vânzări și oferte pe timp limitat."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Concluzia se bazează pe: \n    1) Pentru a obține o imagine de ansamblu asupra recomandărilor de produse, am aplicat diverse tehnici de analiză statistică și inteligență artificială. \n    2) Au fost analizate recenzii și evaluări și considerăm că o evaluare de 4 și mai sus este o indicație a unui produs excelent. \n    3) Un rezultat semnificativ necesită cel puțin 100 de comenzi, așa că cu cât analizăm mai multe comenzi, cu atât avem mai multă încredere în concluzia de evaluare a produsului."
+  },
+  "explanations_store_age": {
+    "message": "Sistemul nostru măsoară credibilitatea magazinului folosind vârsta magazinului, deoarece magazinele cu mai multă experiență și reputații pozitive sunt mai credibile."
+  },
+  "explanations_store_rating": {
+    "message": "Verificăm scorul general de feedback al magazinului, cu cât scorul este mai mare, cu atât sunt mai mari șansele de a obține un serviciu bun. Peste 91% feedback este considerat feedback pozitiv."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress clasifică vânzătorul ca fiind un vânzător foarte de încredere, cu un volum mare de vânzări"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Un bestseller Amazon este unul care are cel puțin 150 de vânzări pe lună și cu cât are mai multe vânzări, cu atât devine mai ușor să te bazezi pe feedback-ul altor cumpărători."
+  },
+  "explanations_amazon_choice": {
+    "message": "Produsele marcate cu Amazon's Choice sunt cumpărate frecvent de clienți. Au un preț favorabil, sunt foarte apreciate și sunt disponibile pentru livrare rapidă din depozitul Amazon."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Folosim modelarea statistică pentru a poziționa și ajusta numărul de recenzii pozitive pe baza numărului de recenzii nenaturale, astfel încât să vă puteți lua decizia pe baza datelor de înaltă calitate. Algoritmul nu este perfect, dar are rate mari de precizie. Amazon a făcut o treabă bună strângând sute de milioane de feedback-uri, dar multe mărci au ales să abuzeze de el, inundându-l cu recenzii de calitate scăzută și părtinitoare pentru a încerca să-și sporească propriile profit. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Vândut și livrat de Amazon: Aceste articole au fost comandate ca inventar de Amazon. Sunt vândute și expediate direct dintr-un depozit Amazon. Veți putea obține articolul mult mai rapid, iar Amazon se va ocupa în mod direct de orice problemă de serviciu pentru clienți."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Aceste articole sunt deținute de o companie independentă, terță parte și sunt expediate în avans la depozitele Amazon. Când le cumpărați, Amazon vi le livrează."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Este important ca cumpărătorii să știe când se pot aștepta să sosească un articol. De aceea verificăm întotdeauna o dată estimată de livrare pe eBay. Data estimată a livrării se bazează pe timpul necesar vânzătorului pentru a împacheta și expedia articolele și timpul de livrare din serviciile poștale. Considerăm 14 zile pentru transporturile interne și 30 de zile pentru transporturile internaționale drept termeni de livrare excelente."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Livrarea gratuită este un indiciu excelent că un vânzător va oferi un serviciu excelent pentru clienți și va expedia articolul la timp, așa cum este descris."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Acceptarea retururilor este un bun indiciu al unui bun vânzător: dacă primiți un articol care este deteriorat sau incorect, îl puteți returna pentru rambursare."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Retururi plătibile sau fără retur: numai dacă produsul a sosit incorect, îl puteți returna pentru rambursare."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Vânzătorii care oferă servicii excelente pentru clienți la scară largă sunt marcați de eBay cu insigna Top Rated. Aceasta înseamnă că au un scor mare de feedback și un procent mare de feedback pozitiv pe eBay, așa că este mai sigur să cumperi de la ei."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Vânzătorii care reprezintă o marcă sunt adesea asociați cu un serviciu excelent pentru clienți. De obicei, au scoruri ridicate de feedback și un procent mare de feedback pozitiv pe eBay, ceea ce face să cumpărați de la ei o opțiune mai sigură."
+  },
+  "why_it_free": {
+    "message": "De ce este liber de utilizat?"
+  },
+  "explanations_why_it_free": {
+    "message": "De ce este gratuită utilizarea Safe-Deal pentru dvs.?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Utilizarea serviciului nostru este gratuită pentru dvs. Când faceți o achiziție, magazinul ne plătește o mică taxă pentru a vă îndruma către cel mai bun produs."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Folosim doar date disponibile public, asigurându-ne că nicio marcă sau magazin nu influențează recomandările noastre."
+  },
+  "premium_features": {
+    "message": "Caracteristici premium"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Fără afiliere, puteți conecta orice program de cashback doriți"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Asistență personală prin telefon și e-mail și timp de procesare îmbunătățit"
+  },
+  "premium_features_cost": {
+    "message": "Preț - 2 USD pe lună (facturat anual)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Banii colectați sunt folosiți pentru îmbunătățirea serviciului și plata infrastructurii."
+  },
+  "affiliated_websites": {
+    "message": "Site-uri web afiliate"
+  },
+  "buy_premium": {
+    "message": "Cumpărați Premium"
+  },
+  "opt_out": {
+    "message": "A renunța"
+  },
+  "image": {
+    "message": "Imagine"
+  },
+  "product_name": {
+    "message": "numele produsului"
+  },
+  "final_price": {
+    "message": "Pret final"
+  },
+  "coupon": {
+    "message": "Cupon"
+  },
+  "you_saved": {
+    "message": "Suma cuponului"
+  },
+  "you_save": {
+    "message": "Tu scuti"
+  },
+  "share": {
+    "message": "Acțiune"
+  },
+  "discounts_found": {
+    "message": "S-au găsit reduceri"
+  },
+  "extension_not_available": {
+    "message": "Extensia SafeDeal nu este disponibilă pentru această pagină."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Căutați orice alt cuvânt cheie pentru a găsi cupoane și oferte."
+  },
+  "search_product": {
+    "message": "Caută produs"
+  },
+  "want_more_coupons": {
+    "message": "Vrei mai multe cupoane?"
+  },
+  "click_here": {
+    "message": "Click aici"
+  },
+  "coupon_header": {
+    "message": "Ofertă sigură - Cupoane și oferte"
+  },
+  "tab_header_analyze": {
+    "message": "Evaluarea produsului"
+  },
+  "tab_header_reviews": {
+    "message": "Rezumat recenzii"
+  },
+  "click_to_reveal": {
+    "message": "Faceți clic sau apăsați pe {systemShortcut} pentru a comuta între analiza minimă și cea completă."
+  },
+  "click_to_hide": {
+    "message": "Faceți clic pe pictogramă sau apăsați tasta „Escape” pentru a închide vizualizarea detaliată."
+  },
+  "click_to_pin": {
+    "message": "Fixați acest panou pentru a-l păstra vizibil la reîmprospătare și în timp ce navigați"
+  },
+  "click_to_unpin": {
+    "message": "Anulați fixarea acestui panou, astfel încât să se ascundă când faceți clic în altă parte a paginii"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Nicio recenzie încă"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Încă nu există recenzii ale clienților. Acest produs poate fi nou sau nu este popular."
+  },
+  "reviews_pros": {
+    "message": "Pro"
+  },
+  "reviews_cons": {
+    "message": "Contra"
+  },
+  "reviews_good_to_know": {
+    "message": "Bine de stiut"
+  },
+  "reviews_error": {
+    "message": "Ne cerem scuze pentru neplăcerile create. Se pare că procesul de rezumare a revizuirii nu a avut succes. Pentru a rezolva această problemă, contactați echipa de asistență Safe Deal pentru asistență."
+  },
+  "deals_ali_express": {
+    "message": "Safe Deal - Deals Finder"
+  },
+  "deals_ali_found": {
+    "message": "Oferte găsite: "
+  },
+  "product": {
+    "message": "Produs"
+  },
+  "title": {
+    "message": "Titlu"
+  },
+  "price": {
+    "message": "Preț"
+  },
+  "deal_type": {
+    "message": "Tipul ofertei"
+  },
+  "savings": {
+    "message": "Economii"
+  },
+  "extra": {
+    "message": "Suplimentar"
+  },
+  "shipping": {
+    "message": "Transport"
+  },
+  "rating": {
+    "message": "Evaluare"
+  },
+  "sold": {
+    "message": "Vândut"
+  },
+  "reviews": {
+    "message": "Recenzii"
+  },
+  "mobile_app": {
+    "message": "Instalați aplicația noastră mobilă"
+  },
+  "tab_header_opinions": {
+    "message": "Opinii și comentarii"
+  },
+  "opinions_title": {
+    "message": "Spune-ți părerea sau întreabă comunitatea despre acest produs"
+  },
+  "research_online": {
+    "message": "Verifică"
+  },
+  "video_reviews": {
+    "message": "Recenzii video"
+  },
+  "reddit_reviews": {
+    "message": "Opinii în Reddit"
+  },
+  "web_reviews": {
+    "message": "Recenzii online"
+  },
+  "shopping_reviews": {
+    "message": "Site-uri de cumpărături"
+  },
+  "product_photos": {
+    "message": "Fotografii cu produse"
+  },
+  "product_purchase_query": {
+    "message": "cumpara online acum"
+  },
+  "product_reviews_query": {
+    "message": "recenzii detaliate"
+  }
+}

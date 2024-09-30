@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Iepirkšanās palīgs: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "Iepirkšanās palīgs: ietaupiet laiku, izmantojot AI. Atklājiet cenu vēsturi, izvairieties no dārgiem piedāvājumiem, atrodiet..."
+  },
+  "appNameShort": {
+    "message": "Drošs..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Drošs darījums",
+    "description": "Jūtieties pārliecināti, iepērkoties tiešsaistē"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal ir pārskatījis šo vietni un konstatējis, ka tā varētu būt bīstama {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Atstājiet šo vietni tūlīt"
+  },
+  "anti_scam_stay": {
+    "message": "Šī vietne ir uzticama"
+  },
+  "anti_scam_confirm": {
+    "message": "Liela iespējamība, ka šī vietne ir krāpniecība, zaglis vai kāda cita nelikumīga darbība. Vai uzticaties šai vietnei?"
+  },
+  "recommended_product": {
+    "message": "Ieteicamais produkts"
+  },
+  "unrecommended_product": {
+    "message": "Neieteicams produkts"
+  },
+  "doubtful_product": {
+    "message": "Apšaubāms produkts"
+  },
+  "insufficient_data": {
+    "message": "Secinājums nenoteikts"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Laba darījuma norāde"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Norāde uz apšaubāmu darījumu"
+  },
+  "no_data": {
+    "message": "Pašlaik nav datu, ko parādīt"
+  },
+  "chart_title": {
+    "message": "Preču cenu vēsture"
+  },
+  "back_button": {
+    "message": "Iepriekšējais"
+  },
+  "next_button": {
+    "message": "Nākamais"
+  },
+  "start_using_button": {
+    "message": "Sāciet lietot SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "Laipni lūdzam Safe Deal!"
+  },
+  "tour_step1_text_0": {
+    "message": ", Paldies, ka izmantojat mūsu programmatūru."
+  },
+  "morning": {
+    "message": "rīts"
+  },
+  "day": {
+    "message": "diena"
+  },
+  "night": {
+    "message": "nakts"
+  },
+  "hi": {
+    "message": "Sveiki"
+  },
+  "good": {
+    "message": "Labi"
+  },
+  "tour_step1_text_1": {
+    "message": "Šeit ir viens no mūsu atbalstītajiem veikaliem."
+  },
+  "tour_step1_text_2": {
+    "message": "Darbojas tādā pašā veidā citās atbalstītajās vietnēs, piemēram, AliExpress, eBay, Amazon un citās."
+  },
+  "tour_step1_text_3": {
+    "message": "Lai izskaidrotu, kā tas darbojas, ir jāpaiet apmēram minūtei."
+  },
+  "tour_step1_lets_start": {
+    "message": "Sāksim"
+  },
+  "tour_step2_title": {
+    "message": "Ieteikumi pirkšanai"
+  },
+  "tour_step2_text_0": {
+    "message": "Ātru un efektīvu pirkšanas lēmumu pieņemšana ir mūsu produkta pamatā; mēs darbojamies kā luksofors pirkumiem tiešsaistē."
+  },
+  "tour_step2_text_3": {
+    "message": "Mūsu mākslīgais intelekts dažu sekunžu laikā pieņem uz datiem pamatotu lēmumu par produktiem. Tādā veidā jūs saņemat ātru indikatoru par daudziem produktiem dažu minūšu laikā, nevis stundu laikā pēc manuālas pārbaudes."
+  },
+  "tour_step3_title": {
+    "message": "Darījuma drošība ir svarīga"
+  },
+  "tour_step3_text_0": {
+    "message": "Jūs varat iepirkties gudri jau šodien, lai izvairītos no problēmām nākotnē."
+  },
+  "tour_step3_text_1": {
+    "message": "Zaļais vairogs — ieteicamais darījums"
+  },
+  "tour_step3_text_2": {
+    "message": "Sarkans vairogs — neieteicams darījums"
+  },
+  "tour_step3_text_3": {
+    "message": "Dzeltenais vairogs — apšaubāms darījums"
+  },
+  "tour_step5_title": {
+    "message": "Jūsu privātums ir vissvarīgākais"
+  },
+  "tour_step5_text_0": {
+    "message": "Mūsu pakalpojuma izmantošana jums ir bez maksas. Veicot pirkumu, veikals mums maksā nelielu samaksu par to, lai jūs vadītu pie labākā produkta."
+  },
+  "tour_step5_text_1": {
+    "message": "Programmatūra darbojas lokāli, jo mums rūp jūsu privātums. Informācija par jūsu darbībām netiek apkopota."
+  },
+  "tour_feedback_title": {
+    "message": "Mēs novērtējam jūsu atsauksmes"
+  },
+  "tour_feedback_text": {
+    "message": "Sazinieties, ja jums ir ideja, problēma vai ja nepieciešams apspriest uzlabojumus: "
+  },
+  "or": {
+    "message": "vai"
+  },
+  "contact_form": {
+    "message": "Izmantojiet saziņas formu"
+  },
+  "by_email": {
+    "message": "Uzrakstiet e-pastu"
+  },
+  "call_as_at": {
+    "message": "Pa tālruni +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Daudzi klienti ļoti ieteica produktu"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Klienti produktu nav pietiekami ieteikuši"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Atsauksmes ir ārkārtīgi pozitīvas. Zvaigznītes: {ProductRatingAmount}, atsauksmes: {ProductReviewAmount}, vērtējumi: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Atsauksmju trūkums vai sliktas atsauksmes. Zvaigznītes: {ProductRatingAmount}, atsauksmes: {ProductReviewAmount}, vērtējumi: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Atsauksmes ir ārkārtīgi pozitīvas. Zvaigznes: {ProductRatingValue}, pasūtījumi: {ProductOrdersAmount}, atsauksmes: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Atsauksmju trūkums vai sliktas atsauksmes. Zvaigznes: {ProductRatingValue}, pasūtījumi: {ProductOrdersAmount}, atsauksmes: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Atsauksmes ir ārkārtīgi pozitīvas. Zvaigznītes: {ProductRatingValue}, pasūtījumi: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Atsauksmju trūkums vai sliktas atsauksmes. Zvaigznītes: {ProductRatingValue}, pasūtījumi: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Veikals ir augstu novērtēts. Zvaigznītes: {ProductRatingValue}, pasūtījumi: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Veikals ir slikti novērtēts. Zvaigznītes: {ProductRatingValue}, pasūtījumi: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Labi izveidots pārdevējs, kas darbojas {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Iesācējs pārdevējs uzņēmējdarbībā {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Lieliska atgriešanas politika"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Atgriešanas politika ir slikta"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Uzticama pārdevēja"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Pārdod tieši pēc zīmola"
+  },
+  "tooltip_order_safe": {
+    "message": "Liels skaits apmierinātu klientu"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Neliels skaits laimīgu klientu"
+  },
+  "tooltip_rating_safe": {
+    "message": "Daudzi apmierināti klienti ir atstājuši atsauksmes"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Daudzi dusmīgi klienti publicēja negatīvas atsauksmes"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Lielisks piegādes laiks, ne vairāk kā {daysToDeliver} dienas"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Paciņas saņemšana var ilgt līdz pat {daysToDeliver} dienām."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Nav skaidrs, kad piegāde notiks"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Lielākā daļa veikala klientu ir apmierināti, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Daudzi klienti ir neapmierināti ar veikalu, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Veikalam trūkst klientu atsauksmju"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Sūtīt bez maksas"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Sūts par maksu vai nepieciešama paņemšana"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Šis produkts ir par saprātīgu cenu"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Slikta pirkšanas iespēju izvēle"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Cena ir lieliska, par {priceDifVsAverage}% zemāka par vidējo"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Cena ir godīga, par {priceDifVsAverage}% zemāka, salīdzinot ar vidējo"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Cena ir godīga, par {priceDifVsAverage}% augstāka nekā vidējā"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Dārga cena, par {priceDifVsAverage}% augstāka salīdzinājumā ar vidējo"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose – uzticams un izdevīgs produkts"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon pārdod un piegādā šo produktu"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Pārdod vai nosūta Amazon, iesaistītā trešā puse"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart pārdod un piegādā šo produktu"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Atsauksmes izskatās lieliski! {validAmount} autentisks, {fakeAmount} nedabisks, kopā {totalAmount}"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Atsauksmes izskatās manipulētas! {validAmount} autentisks, {fakeAmount} nedabisks, kopā {totalAmount}"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Šis produkts tiek pārdots patiešām labi"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Produkta pārdošanas apjomi ir salīdzinoši zemi"
+  },
+  "popup_title": {
+    "message": "Jūsu viedais palīgs iepirkšanās tiešsaistē"
+  },
+  "loading_product": {
+    "message": "Prece pārbaudē"
+  },
+  "popup_footer_share": {
+    "message": "Pastāstiet draugiem un ģimenei par SafeDeal"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Pārbaudīta droša vietne. Atbalstiet mūs, izmantojot mūsu filiāles saiti."
+  },
+  "popup_top_tabs_home": {
+    "message": "Mājas"
+  },
+  "popup_top_tabs_settings": {
+    "message": "Iestatījumi"
+  },
+  "supported_websites": {
+    "message": "Atbalstītās vietnes"
+  },
+  "popup_benefits_tab": {
+    "message": "Iespējas"
+  },
+  "popup_about_tab": {
+    "message": "Par"
+  },
+  "popup_contact_us_tab": {
+    "message": "Sazinies ar mums"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazon"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Premium"
+  },
+  "years_label": {
+    "message": "gadiem"
+  },
+  "year_label": {
+    "message": "1 gads"
+  },
+  "less_than_a_year": {
+    "message": "mazāk par gadu"
+  },
+  "explanations_price_history": {
+    "message": "Produkta cenu vēstures grafiks — tas var palīdzēt pamanīt īstas atlaides no viltotām. Mēs reģistrējam cenu un pēc tam katru dienu uzraugām izmaiņas, ļaujot izmantot izpārdošanas un ierobežota laika piedāvājumus."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Secinājums ir balstīts uz: \n    1) Lai iegūtu vispārēju priekšstatu par produktu ieteikumiem, mēs izmantojām dažādas statistiskās analīzes un mākslīgā intelekta metodes. \n    2) Atsauksmes un vērtējumi tika analizēti, un mēs uzskatām, ka vērtējums 4 un augstāks ir lieliska produkta norāde. \n    3) jēgpilnam rezultātam ir nepieciešami vismaz 100 pasūtījumi, tāpēc, jo vairāk pasūtījumu analizējam, jo vairāk uzticamies preču vērtējuma slēdzienam."
+  },
+  "explanations_store_age": {
+    "message": "Mūsu sistēma mēra veikala uzticamību, izmantojot veikala vecumu, jo veikali ar lielāku pieredzi un pozitīvu reputāciju ir uzticamāki."
+  },
+  "explanations_store_rating": {
+    "message": "Mēs pārbaudām kopējo veikala atsauksmju vērtējumu, jo augstāks ir rezultāts, jo lielākas ir iespējas iegūt labu pakalpojumu. Vairāk nekā 91% atsauksmju tiek uzskatītas par pozitīvām atsauksmēm."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress pārdevēju klasificē kā ļoti uzticamu pārdevēju ar lielu pārdošanas apjomu"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Amazon bestsellers ir tāds, kurā mēnesī ir vismaz 150 pārdošanas gadījumu, un jo vairāk pārdošanas gadījumu tas ir, jo vieglāk ir paļauties uz citu pircēju atsauksmēm."
+  },
+  "explanations_amazon_choice": {
+    "message": "Klienti bieži pērk produktus, kas marķēti ar Amazon's Choice. Tiem ir izdevīga cena, tie ir augsti novērtēti, un tie ir pieejami ātrai nosūtīšanai no Amazon noliktavas."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Mēs izmantojam statistisko modelēšanu, lai pozicionētu un pielāgotu pozitīvo atsauksmju skaitu, pamatojoties uz nedabisku atsauksmju skaitu, lai jūs varētu pieņemt lēmumu, pamatojoties uz augstas kvalitātes datiem. Algoritms nav ideāls, taču tam ir augsts precizitātes līmenis. Amazon ir paveicis labu darbu, apkopojot simtiem miljonu atsauksmju, taču daudzi zīmoli ir izvēlējušies to ļaunprātīgi izmantot, pārpludinot to ar zemas kvalitātes un neobjektīvām atsauksmēm, lai mēģinātu palielināt savu peļņu. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Pārdod un nosūtīja Amazon: Amazon pasūtīja šīs preces kā krājumus. Tie tiek pārdoti un nosūtīti tieši no Amazon noliktavas. Jūs varēsiet iegūt preci daudz ātrāk, un Amazon tieši risinās visas klientu apkalpošanas problēmas."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Šīs preces pieder neatkarīgam trešās puses uzņēmumam, un tās tiek nosūtītas pirms laika uz Amazon noliktavām. Kad jūs tos pērkat, Amazon tos jums piegādā."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Pircējiem ir svarīgi zināt, kad viņi var sagaidīt preces saņemšanu. Tāpēc mēs vienmēr pārbaudām aptuveno piegādes datumu vietnē eBay. Paredzamais piegādes datums ir balstīts uz laiku, kas pārdevējam nepieciešams, lai iepakotu un nosūtītu preces, un piegādes laiku no pasta pakalpojumiem. Mēs uzskatām, ka 14 dienas iekšzemes sūtījumiem un 30 dienas starptautiskajiem sūtījumiem ir lielisks piegādes laiks."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Bezmaksas piegāde ir lieliska norāde, ka pārdevējs nodrošinās lielisku klientu apkalpošanu un nosūtīs preci laikā, kā aprakstīts."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Atgriešanas pieņemšana ir laba norāde par labu pārdevēju: ja saņemat preci, kas ir bojāta vai nepareiza, varat to atgriezt, lai saņemtu naudas atmaksu."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Apmaksājama atgriešana vai bez atgriešanas: tikai tad, ja prece ir saņemta nepareizi, varat to atgriezt, lai saņemtu atmaksu."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Pārdevējus, kuri nodrošina izcilu klientu apkalpošanu plašā mērogā, eBay apzīmē ar emblēmu Visaugstāk novērtētais. Tas nozīmē, ka viņiem ir augsts atsauksmju rādītājs un liels pozitīvu atsauksmju procentuālais daudzums vietnē eBay, tāpēc ir drošāk iegādāties no viņiem."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Pārdevēji, kas pārstāv zīmolu, bieži tiek saistīti ar izcilu klientu apkalpošanu. Viņiem parasti ir augsti atsauksmju rādītāji un liels skaits pozitīvu atsauksmju par eBay, kas padara iepirkšanos no viņiem par drošāku iespēju."
+  },
+  "why_it_free": {
+    "message": "Kāpēc to var izmantot bez maksas?"
+  },
+  "explanations_why_it_free": {
+    "message": "Kāpēc Safe-Deal izmantošana jums ir bez maksas?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Mūsu pakalpojuma izmantošana jums ir bez maksas. Veicot pirkumu, veikals mums maksā nelielu samaksu par to, lai jūs vadītu pie labākā produkta."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Mēs izmantojam tikai publiski pieejamus datus, nodrošinot, ka neviens zīmols vai veikals neietekmē mūsu ieteikumus."
+  },
+  "premium_features": {
+    "message": "Premium funkcijas"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Nav piederības, varat pievienot jebkuru naudas atmaksas programmu, kuru vēlaties"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Personīgais tālruņa un e-pasta atbalsts un palielināts apstrādes laiks"
+  },
+  "premium_features_cost": {
+    "message": "Cena - 2 USD mēnesī (rēķins tiek veikts katru gadu)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Iekasētā nauda tiek izmantota servisa uzlabošanai un infrastruktūras apmaksai."
+  },
+  "affiliated_websites": {
+    "message": "Saistītās vietnes"
+  },
+  "buy_premium": {
+    "message": "Pērciet Premium"
+  },
+  "opt_out": {
+    "message": "Atteikties"
+  },
+  "image": {
+    "message": "Attēls"
+  },
+  "product_name": {
+    "message": "produkta nosaukums"
+  },
+  "final_price": {
+    "message": "Galīgā cena"
+  },
+  "coupon": {
+    "message": "Kupons"
+  },
+  "you_saved": {
+    "message": "Kupona summa"
+  },
+  "you_save": {
+    "message": "Tu esi rezerves"
+  },
+  "share": {
+    "message": "Dalīties"
+  },
+  "discounts_found": {
+    "message": "Atlaides atrastas"
+  },
+  "extension_not_available": {
+    "message": "Šai lapai SafeDeal paplašinājums nav pieejams."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Meklējiet jebkuru citu atslēgvārdu, lai atrastu kuponus un piedāvājumus."
+  },
+  "search_product": {
+    "message": "Meklēt produktu"
+  },
+  "want_more_coupons": {
+    "message": "Vai vēlaties vairāk kuponu?"
+  },
+  "click_here": {
+    "message": "Noklikšķiniet šeit"
+  },
+  "coupon_header": {
+    "message": "Drošs piedāvājums — kuponi un piedāvājumi"
+  },
+  "tab_header_analyze": {
+    "message": "Produkta novērtēšana"
+  },
+  "tab_header_reviews": {
+    "message": "Atsauksmes Summary"
+  },
+  "click_to_reveal": {
+    "message": "Noklikšķiniet vai nospiediet {systemShortcut}, lai pārslēgtos starp minimālo un pilno analīzi."
+  },
+  "click_to_hide": {
+    "message": "Noklikšķiniet uz ikonas vai nospiediet taustiņu Escape, lai aizvērtu detalizēto skatu."
+  },
+  "click_to_pin": {
+    "message": "Piespraudiet šo paneli, lai tas būtu redzams atsvaidzināšanas un pārlūkošanas laikā"
+  },
+  "click_to_unpin": {
+    "message": "Atspraust šo paneli, lai tas tiktu paslēpts, noklikšķinot uz citu lapas vietu"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Vēl nav atsauksmju"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Vēl nav klientu atsauksmju. Šis produkts var būt jauns vai nav populārs."
+  },
+  "reviews_pros": {
+    "message": "Pros"
+  },
+  "reviews_cons": {
+    "message": "Mīnusi"
+  },
+  "reviews_good_to_know": {
+    "message": "Labi zināt"
+  },
+  "reviews_error": {
+    "message": "Mēs atvainojamies par sagādātajām neērtībām. Šķiet, ka pārskata apkopošanas process bija neveiksmīgs. Lai atrisinātu šo problēmu, sazinieties ar Safe Deal atbalsta komandu, lai saņemtu palīdzību."
+  },
+  "deals_ali_express": {
+    "message": "Drošs piedāvājums — piedāvājumu meklētājs"
+  },
+  "deals_ali_found": {
+    "message": "Atrasti piedāvājumi: "
+  },
+  "product": {
+    "message": "Produkts"
+  },
+  "title": {
+    "message": "Nosaukums"
+  },
+  "price": {
+    "message": "Cena"
+  },
+  "deal_type": {
+    "message": "Darījuma veids"
+  },
+  "savings": {
+    "message": "Ietaupījumi"
+  },
+  "extra": {
+    "message": "Papildus"
+  },
+  "shipping": {
+    "message": "Piegāde"
+  },
+  "rating": {
+    "message": "Vērtējums"
+  },
+  "sold": {
+    "message": "Pārdots"
+  },
+  "reviews": {
+    "message": "Atsauksmes"
+  },
+  "mobile_app": {
+    "message": "Instalējiet mūsu mobilo lietotni"
+  },
+  "tab_header_opinions": {
+    "message": "Viedokļi un komentāri"
+  },
+  "opinions_title": {
+    "message": "Izsakiet savu viedokli vai jautājiet sabiedrībai par šo produktu"
+  },
+  "research_online": {
+    "message": "Pārbaudiet"
+  },
+  "video_reviews": {
+    "message": "Video apskati"
+  },
+  "reddit_reviews": {
+    "message": "Viedokļi vietnē Reddit"
+  },
+  "web_reviews": {
+    "message": "Atsauksmes tiešsaistē"
+  },
+  "shopping_reviews": {
+    "message": "Iepirkšanās vietnes"
+  },
+  "product_photos": {
+    "message": "Produktu fotogrāfijas"
+  },
+  "product_purchase_query": {
+    "message": "pērciet tiešsaistē tagad"
+  },
+  "product_reviews_query": {
+    "message": "detalizētas atsauksmes"
+  }
+}

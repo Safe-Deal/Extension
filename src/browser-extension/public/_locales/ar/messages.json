@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "مساعد التسوق: AliExpress، أمازون، إيباي"
+  },
+  "appDescription": {
+    "message": "مساعد التسوق: توفير الوقت عن طريق الذكاء الاصطناعي. اكتشف تاريخ الأسعار، وتجنب الصفقات المكلفة، واكتشف التقييمات المزيفة،..."
+  },
+  "appNameShort": {
+    "message": "صفقة آمنة"
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "صفقة آمنة",
+    "description": "اشعر بالثقة عند التسوق عبر الإنترنت"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "قامت Safe-Deal بمراجعة موقع الويب هذا وقررت أنه قد يكون خطيرًا {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "اترك هذا الموقع الآن"
+  },
+  "anti_scam_stay": {
+    "message": "هذا الموقع جدير بالثقة"
+  },
+  "anti_scam_confirm": {
+    "message": "من المحتمل جدًا أن يكون موقع الويب هذا عملية احتيال أو لصًا أو أي نشاط غير قانوني آخر. هل تثق بهذا الموقع؟"
+  },
+  "recommended_product": {
+    "message": "المنتج الموصى به"
+  },
+  "unrecommended_product": {
+    "message": "منتج غير موصى به"
+  },
+  "doubtful_product": {
+    "message": "منتج مشكوك فيه"
+  },
+  "insufficient_data": {
+    "message": "الاستنتاج غير محدد"
+  },
+  "signal_of_a_good_deal": {
+    "message": "إشارة إلى صفقة جيدة"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "إشارة إلى صفقة مشكوك فيها"
+  },
+  "no_data": {
+    "message": "حاليا، لا توجد بيانات لعرضها"
+  },
+  "chart_title": {
+    "message": "تاريخ أسعار المنتج"
+  },
+  "back_button": {
+    "message": "سابق"
+  },
+  "next_button": {
+    "message": "التالي"
+  },
+  "start_using_button": {
+    "message": "ابدأ باستخدام SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "مرحبا بكم في الصفقة الآمنة"
+  },
+  "tour_step1_text_0": {
+    "message": "شكرًا لك على استخدام برنامجنا."
+  },
+  "morning": {
+    "message": "صباح"
+  },
+  "day": {
+    "message": "يوم"
+  },
+  "night": {
+    "message": "ليلة"
+  },
+  "hi": {
+    "message": "أهلاً"
+  },
+  "good": {
+    "message": "جيد"
+  },
+  "tour_step1_text_1": {
+    "message": "هنا أحد المتاجر المدعومة لدينا."
+  },
+  "tour_step1_text_2": {
+    "message": "يعمل بنفس الطريقة على المواقع المدعومة الأخرى مثل AliExpress، وeBay، وAmazon، والمزيد."
+  },
+  "tour_step1_text_3": {
+    "message": "يجب أن يستغرق الأمر حوالي دقيقة لشرح كيفية عمله."
+  },
+  "tour_step1_lets_start": {
+    "message": "هيا بنا نبدأ"
+  },
+  "tour_step2_title": {
+    "message": "توصيات الشراء"
+  },
+  "tour_step2_text_0": {
+    "message": "إن اتخاذ قرارات الشراء السريعة والفعالة هو جوهر منتجنا؛ نحن بمثابة إشارة المرور لعمليات الشراء عبر الإنترنت."
+  },
+  "tour_step2_text_3": {
+    "message": "يتخذ الذكاء الاصطناعي لدينا قرارًا يعتمد على البيانات بشأن المنتجات في بضع ثوانٍ. بهذه الطريقة، يمكنك الحصول على مؤشر سريع للعديد من المنتجات خلال دقائق، وليس ساعات من الفحص اليدوي."
+  },
+  "tour_step3_title": {
+    "message": "سلامة الصفقة أمر مهم"
+  },
+  "tour_step3_text_0": {
+    "message": "يمكنك التسوق بحكمة اليوم لتوفير المتاعب في المستقبل."
+  },
+  "tour_step3_text_1": {
+    "message": "الدرع الأخضر - الصفقة الموصى بها"
+  },
+  "tour_step3_text_2": {
+    "message": "الدرع الأحمر - صفقة غير موصى بها"
+  },
+  "tour_step3_text_3": {
+    "message": "الدرع الأصفر - صفقة مشكوك فيها"
+  },
+  "tour_step5_title": {
+    "message": "خصوصيتك أمر بالغ الأهمية"
+  },
+  "tour_step5_text_0": {
+    "message": "استخدام خدمتنا مجاني بالنسبة لك. عند إجراء عملية شراء، يدفع لنا المتجر رسومًا بسيطة لإرشادك إلى أفضل منتج."
+  },
+  "tour_step5_text_1": {
+    "message": "يعمل البرنامج محليًا لأننا نهتم بخصوصيتك. لا يتم جمع أي معلومات حول نشاطك."
+  },
+  "tour_feedback_title": {
+    "message": "نحن نقدر ملاحظاتك"
+  },
+  "tour_feedback_text": {
+    "message": "تواصل معنا إذا كانت لديك فكرة أو مشكلة أو إذا كنت بحاجة إلى مناقشة التحسين: "
+  },
+  "or": {
+    "message": "أو"
+  },
+  "contact_form": {
+    "message": "استخدم نموذج الاتصال"
+  },
+  "by_email": {
+    "message": "اكتب رسالة بريد الكتروني"
+  },
+  "call_as_at": {
+    "message": "عبر الهاتف +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "أوصى العديد من العملاء بشدة بالمنتج"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "لا ينصح العملاء بالمنتج بدرجة كافية"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "التعليقات إيجابية للغاية. النجوم: {ProductRatingValue}، المراجعات: {ProductReviewAmount}، التقييمات: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "نقص المراجعات أو المراجعات السيئة. النجوم: {ProductRatingValue}، المراجعات: {ProductReviewAmount}، التقييمات: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "التعليقات إيجابية للغاية. النجوم: {ProductRatingValue}، الطلبات: {ProductOrdersAmount}، المراجعات: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "نقص المراجعات أو المراجعات السيئة. النجوم: {ProductRatingValue}، الطلبات: {ProductOrdersAmount}، المراجعات: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "التعليقات إيجابية للغاية. النجوم: {ProductRatingValue}، الطلبات: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "نقص المراجعات أو المراجعات السيئة. النجوم: {ProductRatingValue}، الطلبات: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "المتجر حصل على تقييم عالي. النجوم: {ProductRatingValue}، الطلبات: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "تقييم المتجر ضعيف. النجوم: {ProductRatingValue}، الطلبات: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "بائع راسخ في مجال الأعمال التجارية {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "بائع مبتدئ، في مجال الأعمال التجارية {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "سياسة إرجاع ممتازة"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "سياسة الإرجاع سيئة"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "بائع موثوق"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "تباع مباشرة عن طريق العلامة التجارية"
+  },
+  "tooltip_order_safe": {
+    "message": "عدد كبير من العملاء الراضين"
+  },
+  "tooltip_order_un_safe": {
+    "message": "عدد قليل من العملاء السعداء"
+  },
+  "tooltip_rating_safe": {
+    "message": "لقد ترك العديد من العملاء الراضين تعليقاتهم"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "نشر العديد من العملاء الغاضبين تعليقات سلبية"
+  },
+  "tooltip_delivery_safe": {
+    "message": "وقت تسليم ممتاز، {daysToDeliviver} يوم على الأكثر"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "قد يستغرق الأمر ما يصل إلى {daysToDeliver} يومًا للحصول على الحزمة الخاصة بك."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "ومن غير الواضح متى سيتم التسليم"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "غالبية عملاء المتجر راضون، {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "العديد من العملاء غير راضين عن المتجر، {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "المتجر يفتقر إلى ردود الفعل من العملاء"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "السفينة مجانا"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "يتم الشحن مقابل رسوم أو الاستلام مطلوب"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "هذا المنتج بسعر معقول"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "سوء اختيار خيارات الشراء"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "السعر ممتاز، وهو أقل بنسبة {priceDifVsAverage}% مقارنة بالمتوسط"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "السعر عادل، وهو أقل بنسبة {priceDifVsAverage}% مقارنة بالمتوسط"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "السعر عادل، وهو أعلى بنسبة {priceDifVsAverage}% مقارنة بالمتوسط"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "سعر باهظ الثمن، {priceDifVsAverage}% أعلى مقارنة بالمتوسط"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "اختيار أمازون - منتج موثوق وذو قيمة جيدة"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "تبيع أمازون هذا المنتج وتشحنه"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "يتم بيعها أو شحنها من خلال أمازون، مع طرف ثالث معني"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "تقوم Walmart ببيع هذا المنتج وشحنه"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "ردود الفعل تبدو رائعة! {validAmount} أصلي، و{fakeAmount} غير طبيعي، وإجمالي {totalAmount}."
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "يبدو أن التعليقات تم التلاعب بها! {validAmount} أصلي، و{fakeAmount} غير طبيعي، وإجمالي {totalAmount}."
+  },
+  "tooltip_bsr_safe": {
+    "message": "هذا المنتج يباع بشكل جيد حقا"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "مبيعات المنتج منخفضة نسبيا"
+  },
+  "popup_title": {
+    "message": "مساعدك الذكي للتسوق عبر الإنترنت"
+  },
+  "loading_product": {
+    "message": "المنتج قيد الفحص"
+  },
+  "popup_footer_share": {
+    "message": "أخبر أصدقائك وعائلتك عن SafeDeal"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "موقع آمن تم التحقق منه. ادعمنا عبر الرابط التابع لنا."
+  },
+  "popup_top_tabs_home": {
+    "message": "بيت"
+  },
+  "popup_top_tabs_settings": {
+    "message": "إعدادات"
+  },
+  "supported_websites": {
+    "message": "المواقع المدعومة"
+  },
+  "popup_benefits_tab": {
+    "message": "سمات"
+  },
+  "popup_about_tab": {
+    "message": "عن"
+  },
+  "popup_contact_us_tab": {
+    "message": "اتصل بنا"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "أمازون"
+  },
+  "popup_ebay": {
+    "message": "موقع ئي باي"
+  },
+  "popup_walmart": {
+    "message": "وول مارت"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "غالي"
+  },
+  "years_label": {
+    "message": "سنين"
+  },
+  "year_label": {
+    "message": "1 سنة"
+  },
+  "less_than_a_year": {
+    "message": "أقل من سنة"
+  },
+  "explanations_price_history": {
+    "message": "الرسم البياني لسجل أسعار المنتج - يمكن أن يساعدك هذا في اكتشاف الخصومات الحقيقية من الخصومات المزيفة. نحتفظ بسجل للسعر ومن ثم نراقب التغيرات بشكل يومي، مما يجعل من الممكن الاستفادة من التخفيضات والعروض لفترة محدودة."
+  },
+  "explanations_review_and_ratings": {
+    "message": "الاستنتاج يعتمد على: \n    1) لاستخلاص نظرة شاملة لتوصيات المنتج، قمنا بتطبيق العديد من تقنيات التحليل الإحصائي والذكاء الاصطناعي. \n    2) تم تحليل المراجعات والتقييمات، ونعتبر التقييم 4 وما فوق مؤشرًا على منتج رائع. \n    3) تتطلب النتيجة ذات المعنى 100 طلب على الأقل، وبالتالي كلما زاد عدد الطلبات التي نقوم بتحليلها، زادت ثقتنا في استنتاج تصنيف المنتج أكثر."
+  },
+  "explanations_store_age": {
+    "message": "يقوم نظامنا بقياس مصداقية المتجر باستخدام عمر المتجر، نظرًا لأن المتاجر التي تتمتع بخبرة أكبر وسمعة إيجابية تكون أكثر مصداقية."
+  },
+  "explanations_store_rating": {
+    "message": "نحن نتحقق من النتيجة الإجمالية لتعليقات المتجر، وكلما ارتفعت النتيجة، زادت فرص الحصول على خدمة جيدة. أكثر من 91% من ردود الفعل تعتبر ردود فعل إيجابية."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "يصنف AliExpress البائع على أنه بائع موثوق به للغاية، مع حجم مبيعات مرتفع"
+  },
+  "explanations_amazon_bsr": {
+    "message": "الأكثر مبيعًا على أمازون هو الذي يحقق ما لا يقل عن 150 عملية بيع شهريًا، وكلما زادت مبيعاته، أصبح من الأسهل الاعتماد على تعليقات المشترين الآخرين."
+  },
+  "explanations_amazon_choice": {
+    "message": "يتم شراء المنتجات التي تحمل علامة Amazon's Choice بشكل متكرر من قبل العملاء. لديهم سعر مناسب، وتصنيف عالي، ومتوفرون للشحن السريع من مستودع أمازون."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "نحن نستخدم النمذجة الإحصائية لوضع وضبط عدد المراجعات الإيجابية بناءً على عدد المراجعات غير الطبيعية، حتى تتمكن من اتخاذ قرارك بناءً على بيانات عالية الجودة. الخوارزمية ليست مثالية، ولكن لديها معدلات دقة عالية. لقد قامت أمازون بعمل جيد في جمع مئات الملايين من التعليقات، لكن العديد من العلامات التجارية اختارت إساءة استخدامها، وإغراقها بمراجعات منخفضة الجودة ومتحيزة لمحاولة زيادة أرباحها. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "تم بيعها وشحنها بواسطة أمازون: تم طلب هذه العناصر كمخزون بواسطة أمازون. يتم بيعها وشحنها مباشرة من مستودع أمازون. ستتمكن من الحصول على العنصر بشكل أسرع بكثير، وستتعامل أمازون مع أي مشكلات تتعلق بخدمة العملاء مباشرةً."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "هذه العناصر مملوكة لشركة مستقلة تابعة لجهة خارجية ويتم شحنها مسبقًا إلى مستودعات أمازون. عند شرائها، تقوم أمازون بشحنها إليك."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "من المهم أن يعرف المشترون متى يمكنهم توقع وصول السلعة. لهذا السبب نتحقق دائمًا من تاريخ التسليم المقدر على موقع eBay. يعتمد تاريخ التسليم المقدر على الوقت الذي يستغرقه البائع لتعبئة العناصر وشحنها، ووقت التسليم من الخدمات البريدية. نحن نعتبر 14 يومًا للشحنات المحلية و30 يومًا للشحنات الدولية أوقات تسليم ممتازة."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "يعد الشحن المجاني مؤشرًا رائعًا على أن البائع سيقدم خدمة عملاء رائعة ويشحن العنصر في الوقت المحدد كما هو موضح."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "يعد قبول المرتجعات مؤشرًا جيدًا على البائع الجيد: إذا استلمت منتجًا تالفًا أو غير صحيح، فيمكنك إعادته واسترداد أموالك."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "إرجاع مستحق الدفع أو عدم إرجاع المنتج: فقط في حالة وصول المنتج بشكل غير صحيح، يمكنك إرجاعه واسترداد أموالك."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "البائعون الذين يقدمون خدمة عملاء ممتازة على نطاق واسع يتم تصنيفهم بواسطة eBay بشارة \"الأعلى تقييمًا\". وهذا يعني أن لديهم درجة عالية من ردود الفعل ونسبة عالية من التعليقات الإيجابية على موقع eBay، لذلك يعد الشراء منهم أكثر أمانًا."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "غالبًا ما يرتبط البائعون الذين يمثلون علامة تجارية بخدمة عملاء ممتازة. عادةً ما يحصلون على درجات عالية من التعليقات ونسبة كبيرة من التعليقات الإيجابية على موقع eBay، مما يجعل الشراء منهم خيارًا أكثر أمانًا."
+  },
+  "why_it_free": {
+    "message": "لماذا هو مجاني للاستخدام؟"
+  },
+  "explanations_why_it_free": {
+    "message": "لماذا يعد استخدام Safe-Deal مجانيًا بالنسبة لك؟"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "استخدام خدمتنا مجاني بالنسبة لك. عند إجراء عملية شراء، يدفع لنا المتجر رسومًا بسيطة لإرشادك إلى أفضل منتج."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "نحن نستخدم البيانات المتاحة للجمهور فقط، مما يضمن عدم تأثير أي علامة تجارية أو متجر على توصياتنا."
+  },
+  "premium_features": {
+    "message": "العضوية المميزة"
+  },
+  "premium_features_no_affiliation": {
+    "message": "لا يوجد أي انتماء، يمكنك توصيل أي برنامج استرداد نقدي تريده"
+  },
+  "premium_features_enhanced_support": {
+    "message": "الدعم الشخصي عبر الهاتف والبريد الإلكتروني وتحسين وقت المعالجة"
+  },
+  "premium_features_cost": {
+    "message": "السعر - 2 دولار أمريكي شهريًا (يتم إصدار الفاتورة سنويًا)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "يتم استخدام الأموال المجمعة لتحسين الخدمة ودفع تكاليف البنية التحتية."
+  },
+  "affiliated_websites": {
+    "message": "المواقع التابعة"
+  },
+  "buy_premium": {
+    "message": "شراء بريميوم"
+  },
+  "opt_out": {
+    "message": "انسحب"
+  },
+  "image": {
+    "message": "صورة"
+  },
+  "product_name": {
+    "message": "اسم المنتج"
+  },
+  "final_price": {
+    "message": "السعر النهائي"
+  },
+  "coupon": {
+    "message": "قسيمة"
+  },
+  "you_saved": {
+    "message": "مبلغ القسيمة"
+  },
+  "you_save": {
+    "message": "أنت تجنيب"
+  },
+  "share": {
+    "message": "يشارك"
+  },
+  "discounts_found": {
+    "message": "تم العثور على خصومات"
+  },
+  "extension_not_available": {
+    "message": "ملحق SafeDeal غير متوفر لهذه الصفحة."
+  },
+  "search_for_any_other_keyword": {
+    "message": "ابحث عن أي كلمة رئيسية أخرى للعثور على الكوبونات والصفقات."
+  },
+  "search_product": {
+    "message": "بحث عن المنتج"
+  },
+  "want_more_coupons": {
+    "message": "هل تريد المزيد من القسائم؟"
+  },
+  "click_here": {
+    "message": "انقر هنا"
+  },
+  "coupon_header": {
+    "message": "صفقة آمنة - كوبونات وصفقات"
+  },
+  "tab_header_analyze": {
+    "message": "تقييم المنتجات"
+  },
+  "tab_header_reviews": {
+    "message": "ملخص التعليقات"
+  },
+  "click_to_reveal": {
+    "message": "انقر أو اضغط على {systemShortcut} للتبديل بين التحليل الأدنى والكامل."
+  },
+  "click_to_hide": {
+    "message": "انقر على الأيقونة أو اضغط على مفتاح \"Escape\" لإغلاق العرض التفصيلي."
+  },
+  "click_to_pin": {
+    "message": "قم بتثبيت هذه اللوحة لإبقائها مرئية عند التحديث وأثناء التصفح"
+  },
+  "click_to_unpin": {
+    "message": "قم بإلغاء تثبيت هذه اللوحة حتى يتم إخفاؤها عند النقر في أي مكان آخر بالصفحة"
+  },
+  "reviews_no_reviews_header": {
+    "message": "لا توجد تعليقات حتى الآن"
+  },
+  "reviews_no_reviews_text": {
+    "message": "لا توجد تعليقات العملاء حتى الآن. قد يكون هذا المنتج جديدًا أو غير شائع."
+  },
+  "reviews_pros": {
+    "message": "الايجابيات"
+  },
+  "reviews_cons": {
+    "message": "سلبيات"
+  },
+  "reviews_good_to_know": {
+    "message": "جيد ان تعلم"
+  },
+  "reviews_error": {
+    "message": "نعتذر عن الإزعاج. يبدو أن عملية تلخيص المراجعة لم تنجح. لحل هذه المشكلة، يرجى الاتصال بفريق دعم الصفقة الآمنة للحصول على المساعدة."
+  },
+  "deals_ali_express": {
+    "message": "صفقة آمنة - الباحث عن الصفقات"
+  },
+  "deals_ali_found": {
+    "message": "العروض التي تم العثور عليها: "
+  },
+  "product": {
+    "message": "منتج"
+  },
+  "title": {
+    "message": "عنوان"
+  },
+  "price": {
+    "message": "سعر"
+  },
+  "deal_type": {
+    "message": "نوع الصفقة"
+  },
+  "savings": {
+    "message": "مدخرات"
+  },
+  "extra": {
+    "message": "إضافي"
+  },
+  "shipping": {
+    "message": "شحن"
+  },
+  "rating": {
+    "message": "تقييم"
+  },
+  "sold": {
+    "message": "مُباع"
+  },
+  "reviews": {
+    "message": "التعليقات"
+  },
+  "mobile_app": {
+    "message": "قم بتثبيت تطبيق الهاتف المحمول الخاص بنا"
+  },
+  "tab_header_opinions": {
+    "message": "الآراء والتعليقات"
+  },
+  "opinions_title": {
+    "message": "أعط رأيك أو اسأل المجتمع عن هذا المنتج"
+  },
+  "research_online": {
+    "message": "الدفع"
+  },
+  "video_reviews": {
+    "message": "مراجعات الفيديو"
+  },
+  "reddit_reviews": {
+    "message": "الآراء في رديت"
+  },
+  "web_reviews": {
+    "message": "المراجعات عبر الإنترنت"
+  },
+  "shopping_reviews": {
+    "message": "مواقع التسوق"
+  },
+  "product_photos": {
+    "message": "صور المنتج"
+  },
+  "product_purchase_query": {
+    "message": "شراء عبر الإنترنت الآن"
+  },
+  "product_reviews_query": {
+    "message": "مراجعات مفصلة"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "should correctly fetch delivery info for product": {
+    "date": "2024-09-22",
+    "status": "passed"
+  },
+  "should correctly fetch shop open year for product": {
+    "date": "2024-09-22",
+    "status": "passed"
+  },
+  "should correctly fetch both delivery info and shop open year for product": {
+    "date": "2024-09-22",
+    "status": "passed"
+  }
+}

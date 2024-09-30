@@ -1,0 +1,17 @@
+.safe-deal-page-container {
+  background-color: transparent;
+  .analyzer-inspecting {
+    position: absolute;
+    top: -6px;
+    left: 0px;
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    cursor: wait;
+  }
+
+  .analyzer-no-inspecting {
+    display: inline-block;
+    animation: none;
+  }
+}

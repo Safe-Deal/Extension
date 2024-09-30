@@ -1,0 +1,85 @@
+.floating-toolbar {
+  background-color: transparent !important;
+  position: fixed;
+  right: 26px;
+  padding: 0;
+  z-index: 99999;
+  cursor: pointer;
+  border-top-left-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+  border-top-right-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+  display: flex;
+  align-items: flex-start;
+  box-shadow: none;
+  font-family: $font-regular;
+  font-size: $font-regular-size;
+  font-weight: $font-regular-weight;
+
+  &__content {
+    display: flex;
+    flex-flow: column;
+    gap: 2px;
+  }
+
+  &__drag-handle {
+    position: absolute;
+    right: -22px;
+    min-height: 56px;
+    height: 100%;
+    width: 20px;
+    top: 0;
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: 1px solid rgba(16, 186, 145, 0.15);
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+    svg {
+      font-size: 18px;
+      color: #888;
+    }
+  }
+
+  &__action-buttons {
+    z-index: 1;
+    position: absolute;
+    top: 15px;
+
+    &--rtl {
+      direction: rtl !important;
+      left: 0px;
+      margin-left: 14px;
+    }
+
+    &--ltr {
+      direction: ltr !important;
+      inset-inline-end: 24px;
+      inset-inline-start: unset;
+    }
+
+    .MuiSvgIcon-root {
+      color: #ffffff;
+      font-size: 20px;
+      margin-inline-start: 8px;
+      cursor: pointer;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+
+  &__minimal-wrapper {
+    cursor: pointer;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+
+    &--list {
+      border-bottom-left-radius: 0px;
+    }
+  }
+}

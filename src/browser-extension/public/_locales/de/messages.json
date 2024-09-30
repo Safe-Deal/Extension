@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Einkaufsassistent: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "Einkaufsassistent: Sparen Sie Zeit durch KI. Entdecken Sie den Preisverlauf, vermeiden Sie teure Angebote, erkennen Sie..."
+  },
+  "appNameShort": {
+    "message": "Sicherer..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Sicherer Deal",
+    "description": "Fühlen Sie sich sicher, wenn Sie online einkaufen"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal hat diese Website überprüft und festgestellt, dass sie gefährlich sein könnte {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Diese Website jetzt verlassen"
+  },
+  "anti_scam_stay": {
+    "message": "Diese Seite ist vertrauenswürdig"
+  },
+  "anti_scam_confirm": {
+    "message": "Es besteht eine hohe Wahrscheinlichkeit, dass es sich bei dieser Website um Betrug, Diebstahl oder andere illegale Aktivitäten handelt. Sie vertrauen dieser Website?"
+  },
+  "recommended_product": {
+    "message": "Empfohlenes Produkt"
+  },
+  "unrecommended_product": {
+    "message": "Nicht empfohlenes Produkt"
+  },
+  "doubtful_product": {
+    "message": "Zweifelhaftes Produkt"
+  },
+  "insufficient_data": {
+    "message": "Fazit unbestimmt"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Ein Hinweis auf ein gutes Geschäft"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Ein Hinweis auf einen fragwürdigen Deal"
+  },
+  "no_data": {
+    "message": "Derzeit sind keine Daten anzuzeigen"
+  },
+  "chart_title": {
+    "message": "Produktpreisverlauf"
+  },
+  "back_button": {
+    "message": "Vorherige"
+  },
+  "next_button": {
+    "message": "Nächste"
+  },
+  "start_using_button": {
+    "message": "Beginnen Sie mit der Nutzung von SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "Willkommen bei Safe Deal"
+  },
+  "tour_step1_text_0": {
+    "message": ", Vielen Dank, dass Sie unsere Software verwenden."
+  },
+  "morning": {
+    "message": "Morgen"
+  },
+  "day": {
+    "message": "Tag"
+  },
+  "night": {
+    "message": "Nacht"
+  },
+  "hi": {
+    "message": "Hallo"
+  },
+  "good": {
+    "message": "Gut"
+  },
+  "tour_step1_text_1": {
+    "message": "Hier ist einer unserer unterstützten Shops."
+  },
+  "tour_step1_text_2": {
+    "message": "Funktioniert auf anderen unterstützten Websites wie AliExpress, eBay, Amazon und mehr auf die gleiche Weise."
+  },
+  "tour_step1_text_3": {
+    "message": "Die Erklärung der Funktionsweise sollte etwa eine Minute dauern."
+  },
+  "tour_step1_lets_start": {
+    "message": "Lass uns anfangen"
+  },
+  "tour_step2_title": {
+    "message": "Kaufempfehlungen"
+  },
+  "tour_step2_text_0": {
+    "message": "Schnelle und effiziente Kaufentscheidungen zu treffen, ist das Herzstück unseres Produkts; wir fungieren als Ampel für Online-Käufe."
+  },
+  "tour_step2_text_3": {
+    "message": "Unsere künstliche Intelligenz trifft in wenigen Sekunden eine datenbasierte Entscheidung über Produkte. Auf diese Weise erhalten Sie innerhalb von Minuten einen schnellen Indikator für viele Produkte, ohne stundenlang manuell prüfen zu müssen."
+  },
+  "tour_step3_title": {
+    "message": "Deal-Sicherheit ist wichtig"
+  },
+  "tour_step3_text_0": {
+    "message": "Sie können heute mit Bedacht einkaufen und sich in Zukunft Ärger ersparen."
+  },
+  "tour_step3_text_1": {
+    "message": "Grünes Schild - Empfohlenes Angebot"
+  },
+  "tour_step3_text_2": {
+    "message": "Rotes Schild - Nicht empfehlenswertes Angebot"
+  },
+  "tour_step3_text_3": {
+    "message": "Gelber Schild - Zweifelhafter Deal"
+  },
+  "tour_step5_title": {
+    "message": "Ihre Privatsphäre steht an erster Stelle"
+  },
+  "tour_step5_text_0": {
+    "message": "Die Nutzung unseres Services ist für Sie kostenlos. Bei einem Einkauf zahlt uns der Shop eine kleine Gebühr, damit wir Sie zum besten Produkt führen."
+  },
+  "tour_step5_text_1": {
+    "message": "Da uns Ihre Privatsphäre wichtig ist, arbeitet die Software lokal. Es werden keine Informationen über Ihre Aktivitäten gesammelt."
+  },
+  "tour_feedback_title": {
+    "message": "Wir schätzen Ihr Feedback"
+  },
+  "tour_feedback_text": {
+    "message": "Melden Sie sich bei uns, wenn Sie eine Idee oder ein Problem haben oder Verbesserungsbedarf haben:"
+  },
+  "or": {
+    "message": "oder"
+  },
+  "contact_form": {
+    "message": "Kontaktformular verwenden"
+  },
+  "by_email": {
+    "message": "Eine E-Mail schreiben"
+  },
+  "call_as_at": {
+    "message": "Per Telefon: +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Viele Kunden empfehlen das Produkt sehr"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Das Produkt wird von Kunden nicht ausreichend empfohlen"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Die Bewertungen sind äußerst positiv. Sterne: {ProductRatingValue}, Bewertungen: {ProductReviewAmount}, Bewertungen: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Mängel bei Bewertungen oder schlechte Bewertungen. Sterne: {ProductRatingValue}, Bewertungen: {ProductReviewAmount}, Bewertungen: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Die Bewertungen sind äußerst positiv. Sterne: {ProductRatingValue}, Bestellungen: {ProductOrdersAmount}, Bewertungen: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Mängel bei den Bewertungen oder schlechte Bewertungen. Sterne: {ProductRatingValue}, Bestellungen: {ProductOrdersAmount}, Bewertungen: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Die Bewertungen sind äußerst positiv. Sterne: {ProductRatingValue}, Bestellungen: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Mängel bei den Bewertungen oder schlechte Bewertungen. Sterne: {ProductRatingValue}, Bestellungen: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Der Shop hat eine hohe Bewertung. Sterne: {ProductRatingValue}, Bestellungen: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Der Shop ist schlecht bewertet. Sterne: {ProductRatingValue}, Bestellungen: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Gut etablierter Verkäufer, im Geschäft {shopOpenedYearValue} {yearsInBusinessIndicator}"
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Anfänger-Verkäufer, im Geschäft {shopOpenedYearValue} {yearsInBusinessIndicator}"
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Ausgezeichnete Rückgabebedingungen"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Die Rückgabebedingungen sind schlecht"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Ein zuverlässiger Verkäufer"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Direkt vom Hersteller verkauft"
+  },
+  "tooltip_order_safe": {
+    "message": "Eine große Anzahl zufriedener Kunden"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Eine kleine Anzahl zufriedener Kunden"
+  },
+  "tooltip_rating_safe": {
+    "message": "Viele zufriedene Kunden haben Bewertungen hinterlassen"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Viele verärgerte Kunden schrieben negative Bewertungen"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Ausgezeichnete Lieferzeit, höchstens {daysToDeliver} Tage"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Es kann bis zu {daysToDeliver} Tage dauern, bis Sie Ihr Paket erhalten."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Es ist unklar, wann die Lieferung erfolgen wird"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Die Mehrheit der Kunden des Ladens ist zufrieden, {percentOfPeople} %"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Viele Kunden sind mit dem Geschäft unzufrieden, {percentOfPeople} %"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Dem Geschäft fehlt das Feedback der Kunden"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Kostenloser Versand"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Versand gegen Gebühr oder Abholung erforderlich"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Dieses Produkt ist preiswert"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Eine schlechte Auswahl an Kaufoptionen"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Der Preis ist ausgezeichnet, {priceDifVsAverage} % niedriger als der Durchschnitt"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Der Preis ist fair, {priceDifVsAverage} % niedriger als der Durchschnitt"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Der Preis ist fair, {priceDifVsAverage} % höher als der Durchschnitt"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Ein teurer Preis, {priceDifVsAverage} % höher als der Durchschnitt"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose - Ein zuverlässiges und preiswertes Produkt"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon verkauft und versendet dieses Produkt"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Verkauft oder versendet von Amazon, Dritte beteiligt"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart verkauft und versendet dieses Produkt"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Feedbacks sieht super aus! {validAmount} authentisch, {fakeAmount} unnatürlich, {totalAmount} gesamt"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Feedbacks sehen manipuliert aus! {validAmount} authentisch, {fakeAmount} unnatürlich, {totalAmount} gesamt"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Dieses Produkt verkauft sich sehr gut"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Die Verkaufszahlen des Produkts sind relativ gering"
+  },
+  "popup_title": {
+    "message": "Ihr smarter Assistent für den Online-Einkauf"
+  },
+  "loading_product": {
+    "message": "Produkt in Prüfung"
+  },
+  "popup_footer_share": {
+    "message": "Erzählen Sie Ihren Freunden und Ihrer Familie von SafeDeal"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Verifizierte sichere Site. Unterstützen Sie uns über unseren Affiliate-Link."
+  },
+  "popup_top_tabs_home": {
+    "message": "Heim"
+  },
+  "popup_top_tabs_settings": {
+    "message": "Einstellungen"
+  },
+  "supported_websites": {
+    "message": "Unterstützte Websites"
+  },
+  "popup_benefits_tab": {
+    "message": "Merkmale"
+  },
+  "popup_about_tab": {
+    "message": "Um"
+  },
+  "popup_contact_us_tab": {
+    "message": "Kontaktiere uns"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazonas"
+  },
+  "popup_ebay": {
+    "message": "Ebay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Prämie"
+  },
+  "years_label": {
+    "message": "Jahre"
+  },
+  "year_label": {
+    "message": "1 Jahr"
+  },
+  "less_than_a_year": {
+    "message": "weniger als ein Jahr"
+  },
+  "explanations_price_history": {
+    "message": "Preisverlaufsdiagramm eines Produkts - So können Sie echte Rabatte von gefälschten unterscheiden. Wir zeichnen den Preis auf und überwachen dann täglich die Änderungen, sodass Sie von Verkäufen und zeitlich begrenzten Angeboten profitieren können."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Die Schlussfolgerung basiert auf: \n1) Um einen Gesamtüberblick über die Produktempfehlungen zu erhalten, haben wir verschiedene statistische Analyse- und künstliche Intelligenztechniken angewendet. \n2) Es wurden Rezensionen und Bewertungen analysiert und wir betrachten eine Bewertung von 4 und höher als Hinweis auf ein großartiges Produkt. \n3) Für ein aussagekräftiges Ergebnis sind mindestens 100 Bestellungen erforderlich. Je mehr Bestellungen wir also analysieren, desto mehr vertrauen wir der Schlussfolgerung zur Produktbewertung."
+  },
+  "explanations_store_age": {
+    "message": "Unser System misst die Glaubwürdigkeit eines Geschäfts anhand seines Alters, da Geschäfte mit mehr Erfahrung und einem besseren Ruf glaubwürdiger sind."
+  },
+  "explanations_store_rating": {
+    "message": "Wir prüfen die Gesamtbewertung des Shop-Feedbacks. Je höher die Bewertung, desto größer die Chance auf einen guten Service. Über 91 % der Rückmeldungen gelten als positives Feedback."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress stuft den Verkäufer als sehr zuverlässigen Verkäufer mit einem hohen Verkaufsvolumen ein"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Ein Amazon-Bestseller ist ein Artikel, der sich mindestens 150 Mal pro Monat verkauft. Und je häufiger er sich verkauft, desto einfacher kann man sich auf das Feedback anderer Käufer verlassen."
+  },
+  "explanations_amazon_choice": {
+    "message": "Produkte, die mit Amazon's Choice gekennzeichnet sind, werden häufig von Kunden gekauft. Sie haben einen günstigen Preis, werden hoch bewertet und sind für den schnellen Versand aus Amazons Lager verfügbar."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Wir verwenden statistische Modelle, um die Anzahl positiver Bewertungen basierend auf der Anzahl unnatürlicher Bewertungen zu positionieren und anzupassen, sodass Sie Ihre Entscheidung auf der Grundlage qualitativ hochwertiger Daten treffen können. Der Algorithmus ist nicht perfekt, weist jedoch hohe Genauigkeitsraten auf. Amazon hat gute Arbeit geleistet und Hunderte Millionen von Feedbacks gesammelt, aber viele Marken haben sich entschieden, ihn zu missbrauchen und ihn mit minderwertigen und voreingenommenen Bewertungen zu überfluten, um ihre eigenen Gewinne zu steigern."
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Verkauft und versendet von Amazon: Diese Artikel wurden von Amazon als Lagerbestand bestellt. Sie werden direkt von einem Amazon-Lager verkauft und versendet. Sie erhalten den Artikel viel schneller und Amazon kümmert sich direkt um alle Kundendienstprobleme."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Diese Artikel sind Eigentum eines unabhängigen Drittunternehmens und werden im Voraus an die Lager von Amazon geliefert. Wenn Sie sie kaufen, werden sie von Amazon an Sie versendet."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Für Käufer ist es wichtig zu wissen, wann sie mit der Lieferung eines Artikels rechnen können. Aus diesem Grund prüfen wir bei eBay immer das voraussichtliche Lieferdatum. Das voraussichtliche Lieferdatum basiert auf der Zeit, die der Verkäufer zum Verpacken und Versenden der Artikel benötigt, sowie auf der Lieferzeit der Postdienste. Wir erachten 14 Tage für Inlandssendungen und 30 Tage für Auslandssendungen als hervorragende Lieferzeiten."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Kostenloser Versand ist ein gutes Zeichen dafür, dass ein Verkäufer einen hervorragenden Kundenservice bietet und den Artikel wie beschrieben pünktlich versendet."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Die Annahme von Rücksendungen ist ein gutes Zeichen für einen seriösen Verkäufer: Wenn Sie einen beschädigten oder falschen Artikel erhalten, können Sie ihn gegen Erstattung des Kaufpreises zurückgeben."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Kostenpflichtige Rücksendung oder keine Rücksendung: Nur wenn das Produkt falsch angekommen ist, können Sie es gegen Erstattung des Kaufpreises zurücksenden."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Verkäufer, die in großem Umfang einen hervorragenden Kundenservice bieten, werden von eBay mit dem Abzeichen „Top Rated“ gekennzeichnet. Dies bedeutet, dass sie eine hohe Bewertungszahl und einen hohen Prozentsatz positiver Bewertungen auf eBay haben, sodass es sicherer ist, bei ihnen einzukaufen."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Verkäufer, die eine Marke repräsentieren, werden oft mit ausgezeichnetem Kundenservice in Verbindung gebracht. Sie haben in der Regel hohe Bewertungen und einen großen Prozentsatz positiver Bewertungen auf eBay, was den Einkauf bei ihnen zu einer sichereren Option macht."
+  },
+  "why_it_free": {
+    "message": "Warum ist die Nutzung kostenlos?"
+  },
+  "explanations_why_it_free": {
+    "message": "Warum ist die Nutzung von Safe-Deal für Sie kostenlos?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Die Nutzung unseres Services ist für Sie kostenlos. Bei einem Einkauf zahlt uns der Shop eine kleine Gebühr, damit wir Sie zum besten Produkt führen."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Wir verwenden nur öffentlich verfügbare Daten und stellen sicher, dass unsere Empfehlungen nicht von Marken oder Geschäften beeinflusst werden."
+  },
+  "premium_features": {
+    "message": "Premium-Funktionen"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Keine Zugehörigkeit, Sie können jedes gewünschte Cashback-Programm anschließen"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Persönlicher Telefon- und E-Mail-Support und verkürzte Bearbeitungszeit"
+  },
+  "premium_features_cost": {
+    "message": "Preis: 2 USD pro Monat (jährliche Abrechnung)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Mit dem eingenommenen Geld wird der Service verbessert und die Infrastruktur finanziert."
+  },
+  "affiliated_websites": {
+    "message": "Verbundene Websites"
+  },
+  "buy_premium": {
+    "message": "Premium kaufen"
+  },
+  "opt_out": {
+    "message": "Opt-out"
+  },
+  "image": {
+    "message": "Bild"
+  },
+  "product_name": {
+    "message": "Produktname"
+  },
+  "final_price": {
+    "message": "Endgültiger Preis"
+  },
+  "coupon": {
+    "message": "Coupon"
+  },
+  "you_saved": {
+    "message": "Gutscheinbetrag"
+  },
+  "you_save": {
+    "message": "Du schonst"
+  },
+  "share": {
+    "message": "Aktie"
+  },
+  "discounts_found": {
+    "message": "Rabatte gefunden"
+  },
+  "extension_not_available": {
+    "message": "Die SafeDeal-Erweiterung ist für diese Seite nicht verfügbar."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Suchen Sie nach einem beliebigen anderen Schlüsselwort, um Gutscheine und Angebote zu finden."
+  },
+  "search_product": {
+    "message": "Produkt suchen"
+  },
+  "want_more_coupons": {
+    "message": "Möchten Sie mehr Gutscheine?"
+  },
+  "click_here": {
+    "message": "Klicken Sie hier"
+  },
+  "coupon_header": {
+    "message": "Sicherer Deal - Gutscheine und Angebote"
+  },
+  "tab_header_analyze": {
+    "message": "Produktevaluation"
+  },
+  "tab_header_reviews": {
+    "message": "Zusammenfassung der Bewertungen"
+  },
+  "click_to_reveal": {
+    "message": "Klicken oder drücken Sie {systemShortcut}, um zwischen minimaler und vollständiger Analyse umzuschalten."
+  },
+  "click_to_hide": {
+    "message": "Klicken Sie auf das Symbol oder drücken Sie die Taste „Escape“, um die Detailansicht zu schließen."
+  },
+  "click_to_pin": {
+    "message": "Heften Sie dieses Fenster an, damit es beim Aktualisieren und beim Browsen sichtbar bleibt"
+  },
+  "click_to_unpin": {
+    "message": "Lösen Sie die Fixierung dieses Fensters, sodass es ausgeblendet wird, wenn Sie an eine andere Stelle auf der Seite klicken."
+  },
+  "reviews_no_reviews_header": {
+    "message": "Keine Bewertungen"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Noch keine Kundenbewertungen. Dieses Produkt ist möglicherweise neu oder nicht beliebt."
+  },
+  "reviews_pros": {
+    "message": "Pro"
+  },
+  "reviews_cons": {
+    "message": "Nachteile"
+  },
+  "reviews_good_to_know": {
+    "message": "Gut zu wissen"
+  },
+  "reviews_error": {
+    "message": "Wir entschuldigen uns für die Unannehmlichkeiten. Es scheint, dass der Prozess zur Zusammenfassung der Bewertungen nicht erfolgreich war. Um dieses Problem zu beheben, wenden Sie sich bitte an das Safe Deal-Supportteam."
+  },
+  "deals_ali_express": {
+    "message": "Sicheres Geschäft - Angebote Finder"
+  },
+  "deals_ali_found": {
+    "message": "Angebote gefunden:"
+  },
+  "product": {
+    "message": "Produkt"
+  },
+  "title": {
+    "message": "Titel"
+  },
+  "price": {
+    "message": "Preis"
+  },
+  "deal_type": {
+    "message": "Art des Deals"
+  },
+  "savings": {
+    "message": "Ersparnisse"
+  },
+  "extra": {
+    "message": "Extra"
+  },
+  "shipping": {
+    "message": "Versand"
+  },
+  "rating": {
+    "message": "Bewertungen"
+  },
+  "sold": {
+    "message": "Verkauft"
+  },
+  "reviews": {
+    "message": "Bewertungen"
+  },
+  "mobile_app": {
+    "message": "Installieren Sie unsere Mobile App"
+  },
+  "tab_header_opinions": {
+    "message": "Meinungen und Kommentare"
+  },
+  "opinions_title": {
+    "message": "Geben Sie Ihre Meinung ab oder fragen Sie die Community zu diesem Produkt"
+  },
+  "research_online": {
+    "message": "Kasse"
+  },
+  "video_reviews": {
+    "message": "Video-Rezensionen"
+  },
+  "reddit_reviews": {
+    "message": "Meinungen in Reddit"
+  },
+  "web_reviews": {
+    "message": "Rezensionen Online"
+  },
+  "shopping_reviews": {
+    "message": "Einkaufsseiten"
+  },
+  "product_photos": {
+    "message": "Produktfotos"
+  },
+  "product_purchase_query": {
+    "message": "jetzt online kaufen"
+  },
+  "product_reviews_query": {
+    "message": "detaillierte Bewertungen"
+  }
+}

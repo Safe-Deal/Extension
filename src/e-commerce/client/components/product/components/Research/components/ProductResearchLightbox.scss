@@ -1,0 +1,48 @@
+@import "./../../../../../assets/_variables";
+
+.sd-product-research {
+  &__dialog {
+    &-paper {
+      z-index: $z-index-max !important;
+    }
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    &-tab {
+      display: flex;
+      flex-grow: 1;
+      text-align: center;
+      vertical-align: middle;
+      align-items: center;
+      justify-content: center;
+      max-width: none;
+      min-width: 150px !important;
+
+      &-label {
+        display: flex;
+        text-align: center;
+        vertical-align: middle;
+        align-items: center;
+        justify-content: center;
+        column-gap: 8px;
+
+        &-icon {
+          display: inline-block;
+        }
+
+        &-title {
+          font-weight: bold;
+        }
+
+        &-link {
+          margin-top: -1px !important;
+        }
+      }
+    }
+  }
+}

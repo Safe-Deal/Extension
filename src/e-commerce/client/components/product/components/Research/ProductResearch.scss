@@ -1,0 +1,13 @@
+@import "./../../../../assets/_variables";
+
+.sd_product-research {
+  &__dialog {
+    .MuiDialog-paper {
+      width: calc(100% - 64px) !important;
+      height: calc(100% - 32px) !important;
+      max-width: none !important;
+      max-height: none !important;
+      z-index: $z-index-max !important;
+    }
+  }
+}

@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Indkøbsassistent: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "Shopping Assistant: Spar tid af AI. Oplev prishistorik, undgå dyre tilbud, spot falske anmeldelser, spotsælgers negative vurdering."
+  },
+  "appNameShort": {
+    "message": "Sikker Deal"
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Sikker Deal",
+    "description": "Føl dig selvsikker, når du handler online"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal har gennemgået denne hjemmeside og fastslået, at den kan være farlig {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Forlad denne hjemmeside nu"
+  },
+  "anti_scam_stay": {
+    "message": "Dette websted er troværdigt"
+  },
+  "anti_scam_confirm": {
+    "message": "Høj sandsynlighed for, at denne hjemmeside er en fidus, en tyv eller anden ulovlig aktivitet. Har du tillid til denne hjemmeside?"
+  },
+  "recommended_product": {
+    "message": "Anbefalet produkt"
+  },
+  "unrecommended_product": {
+    "message": "Ikke anbefalet produkt"
+  },
+  "doubtful_product": {
+    "message": "Tvivlsomt produkt"
+  },
+  "insufficient_data": {
+    "message": "Konklusion ubestemt"
+  },
+  "signal_of_a_good_deal": {
+    "message": "En indikation af en god handel"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "En indikation af en tvivlsom aftale"
+  },
+  "no_data": {
+    "message": "I øjeblikket er der ingen data at vise"
+  },
+  "chart_title": {
+    "message": "Produktprishistorie"
+  },
+  "back_button": {
+    "message": "Tidligere"
+  },
+  "next_button": {
+    "message": "Næste"
+  },
+  "start_using_button": {
+    "message": "Begynd at bruge SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "Velkommen til Safe Deal"
+  },
+  "tour_step1_text_0": {
+    "message": ", Tak fordi du bruger vores software."
+  },
+  "morning": {
+    "message": "morgen"
+  },
+  "day": {
+    "message": "dag"
+  },
+  "night": {
+    "message": "nat"
+  },
+  "hi": {
+    "message": "Hej"
+  },
+  "good": {
+    "message": "godt"
+  },
+  "tour_step1_text_1": {
+    "message": "Her er en af vores understøttede butikker."
+  },
+  "tour_step1_text_2": {
+    "message": "Fungerer på samme måde på andre understøttede websteder såsom AliExpress, eBay, Amazon og mere."
+  },
+  "tour_step1_text_3": {
+    "message": "Det bør tage omkring et minut at forklare, hvordan det fungerer."
+  },
+  "tour_step1_lets_start": {
+    "message": "Lad os komme igang"
+  },
+  "tour_step2_title": {
+    "message": "Købsanbefalinger"
+  },
+  "tour_step2_text_0": {
+    "message": "At træffe hurtige og effektive købsbeslutninger er kernen i vores produkt; vi fungerer som et trafiklys for online køb."
+  },
+  "tour_step2_text_3": {
+    "message": "Vores kunstige intelligens træffer en datadrevet beslutning om produkter på få sekunder. På denne måde får du en hurtig indikator på mange produkter inden for få minutter, ikke timers manuel kontrol."
+  },
+  "tour_step3_title": {
+    "message": "Aftalesikkerhed er vigtig"
+  },
+  "tour_step3_text_0": {
+    "message": "Du kan handle klogt i dag for at spare besvær i fremtiden."
+  },
+  "tour_step3_text_1": {
+    "message": "Grønt skjold - anbefalet tilbud"
+  },
+  "tour_step3_text_2": {
+    "message": "Rødt skjold - Uanbefalet aftale"
+  },
+  "tour_step3_text_3": {
+    "message": "Gult skjold - Tvivlsom aftale"
+  },
+  "tour_step5_title": {
+    "message": "Dit privatliv er altafgørende"
+  },
+  "tour_step5_text_0": {
+    "message": "Det er gratis for dig at bruge vores service. Når du foretager et køb, betaler butikken os et mindre gebyr for at guide dig til det bedste produkt."
+  },
+  "tour_step5_text_1": {
+    "message": "Softwaren fungerer lokalt, da vi bekymrer os om dit privatliv. Der indsamles ingen oplysninger om din aktivitet."
+  },
+  "tour_feedback_title": {
+    "message": "Vi værdsætter din feedback"
+  },
+  "tour_feedback_text": {
+    "message": "Kontakt os, hvis du har en idé, et problem, eller hvis du har brug for at diskutere en forbedring: "
+  },
+  "or": {
+    "message": "eller"
+  },
+  "contact_form": {
+    "message": "Brug kontaktformularen"
+  },
+  "by_email": {
+    "message": "Skriv en email"
+  },
+  "call_as_at": {
+    "message": "På telefon +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Mange kunder anbefalede varmt produktet"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Produktet anbefales ikke nok af kunderne"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Anmeldelser er yderst positive. Stjerner: {ProductRatingValue}, anmeldelser: {ProductReviewAmount}, bedømmelser: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Mangel på anmeldelser eller dårlige anmeldelser. Stjerner: {ProductRatingValue}, anmeldelser: {ProductReviewAmount}, bedømmelser: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Anmeldelser er yderst positive. Stjerner: {ProductRatingValue}, Ordrer: {ProductOrdersAmount}, Anmeldelser: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Mangel på anmeldelser eller dårlige anmeldelser. Stjerner: {ProductRatingValue}, Ordrer: {ProductOrdersAmount}, Anmeldelser: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Anmeldelser er yderst positive. Stjerner: {ProductRatingValue}, Ordrer: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Mangel på anmeldelser eller dårlige anmeldelser. Stjerner: {ProductRatingValue}, Ordrer: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Butikken er højt vurderet. Stjerner: {ProductRatingValue}, Ordrer: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Butikken er dårligt vurderet. Stjerner: {ProductRatingValue}, Ordrer: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Veletableret sælger, i erhvervslivet {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Begyndersælger, i erhvervslivet {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Fremragende returpolitik"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Returpolitikken er dårlig"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "En pålidelig sælger"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Sælges direkte efter mærke"
+  },
+  "tooltip_order_safe": {
+    "message": "Et stort antal tilfredse kunder"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Et lille antal glade kunder"
+  },
+  "tooltip_rating_safe": {
+    "message": "Mange tilfredse kunder har skrevet anmeldelser"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Mange vrede kunder sendte negative anmeldelser"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Fremragende leveringstid, højst {daysToDeliver} dage"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Det kan tage op til {daysToDeliver} dage at få din pakke."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Det er uklart, hvornår leveringen finder sted"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Størstedelen af butikkens kunder er tilfredse, {percentOfPeople} %"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Mange kunder er utilfredse med butikken, {percentOfPeople} %"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Butikken mangler feedback fra kunderne"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Send gratis"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Sendes mod gebyr eller kræves afhentning"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Dette produkt er rimeligt prissat"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Et dårligt udvalg af købsmuligheder"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Prisen er fremragende, {priceDifVsAverage} % lavere sammenlignet med gennemsnittet"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Prisen er rimelig, {priceDifVsAverage} % lavere sammenlignet med gennemsnittet"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Prisen er rimelig, {priceDifVsAverage} % højere sammenlignet med gennemsnittet"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "En dyr pris, {priceDifVsAverage} % højere sammenlignet med gennemsnittet"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Vælg - Et pålideligt og prisvenligt produkt"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon sælger og sender dette produkt"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Sælges eller sendes af Amazon, tredjepart involveret"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart sælger og sender dette produkt"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Feedback ser godt ud! {validAmount} autentisk, {fakeAmount} unaturlig, {totalAmount} i alt"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Tilbagemeldinger ser manipulerede ud! {validAmount} autentisk, {fakeAmount} unaturlig, {totalAmount} i alt"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Dette produkt sælger rigtig godt"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Salget af produktet er relativt lavt"
+  },
+  "popup_title": {
+    "message": "Din smarte assistent til online shopping"
+  },
+  "loading_product": {
+    "message": "Produkt i inspektion"
+  },
+  "popup_footer_share": {
+    "message": "Fortæl dine venner og familie om SafeDeal"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Bekræftet sikkert websted. Støt os via vores affiliate link."
+  },
+  "popup_top_tabs_home": {
+    "message": "Hjem"
+  },
+  "popup_top_tabs_settings": {
+    "message": "Indstillinger"
+  },
+  "supported_websites": {
+    "message": "Understøttede websteder"
+  },
+  "popup_benefits_tab": {
+    "message": "Funktioner"
+  },
+  "popup_about_tab": {
+    "message": "Om"
+  },
+  "popup_contact_us_tab": {
+    "message": "Kontakt os"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazon"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Præmie"
+  },
+  "years_label": {
+    "message": "flere år"
+  },
+  "year_label": {
+    "message": "1 år"
+  },
+  "less_than_a_year": {
+    "message": "mindre end et år"
+  },
+  "explanations_price_history": {
+    "message": "Et produkts prishistorikgraf - Dette kan hjælpe dig med at se reelle rabatter fra falske. Vi registrerer prisen og overvåger derefter ændringer på daglig basis, hvilket gør det muligt at udnytte udsalg og tidsbegrænsede tilbud."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Konklusionen er baseret på: \n    1) For at få et samlet overblik over produktanbefalinger har vi anvendt forskellige statistiske analyser og kunstig intelligens-teknikker. \n    2) Anmeldelser og bedømmelser blev analyseret, og vi anser en vurdering på 4 og derover for at være en indikation af et godt produkt. \n    3) Et meningsfuldt resultat kræver mindst 100 ordrer, så jo flere ordrer vi analyserer, jo mere stoler vi mere på produktbedømmelseskonklusionen."
+  },
+  "explanations_store_age": {
+    "message": "Vores system måler butikkens troværdighed ud fra butikkens alder, da butikker med mere erfaring og positivt omdømme er mere troværdige."
+  },
+  "explanations_store_rating": {
+    "message": "Vi tjekker den samlede butiksfeedbackscore, jo højere score, jo bedre er chancerne for at få en god service. Over 91 % feedback betragtes som positiv feedback."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress klassificerer sælgeren som en meget pålidelig sælger med et højt salgsvolumen"
+  },
+  "explanations_amazon_bsr": {
+    "message": "En Amazon bestseller er en, der har mindst 150 salg om måneden, og jo mere salg den har, jo lettere bliver det at stole på andre køberes feedback."
+  },
+  "explanations_amazon_choice": {
+    "message": "Produkter mærket Amazon's Choice købes ofte af kunder. De har en favorabel pris, er højt vurderet og er tilgængelige for hurtig forsendelse fra Amazons lager."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Vi bruger statistisk modellering til at positionere og justere antallet af positive anmeldelser baseret på antallet af unaturlige anmeldelser, så du kan træffe din beslutning baseret på data af høj kvalitet. Algoritmen er ikke perfekt, men har høje nøjagtighedsgrader. Amazon har gjort et godt stykke arbejde med at indsamle hundredvis af millioner af feedback, men mange mærker har valgt at misbruge det og oversvømme det med lav kvalitet og partiske anmeldelser for at forsøge at øge deres egen fortjeneste. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Solgt og afsendt af Amazon: Disse varer blev bestilt som inventar af Amazon. De bliver solgt og sendt direkte fra et Amazon-lager. Du vil være i stand til at få varen meget hurtigere, og Amazon vil håndtere eventuelle kundeserviceproblemer direkte."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Disse varer ejes af en uafhængig tredjepartsvirksomhed og sendes før tid til Amazons varehuse. Når du køber dem, sender Amazon dem til dig."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Det er vigtigt for købere at vide, hvornår de kan forvente, at en vare ankommer. Derfor tjekker vi altid en forventet leveringsdato på eBay. Den estimerede leveringsdato er baseret på den tid, det tager sælgeren at pakke og sende varer, og leveringstiden fra postvæsenet. Vi betragter 14 dage for indenlandske forsendelser og 30 dage for internationale forsendelser som fremragende leveringstider."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Gratis forsendelse er en god indikation på, at en sælger vil yde god kundeservice og sende varen til tiden som beskrevet."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "At acceptere returneringer er en god indikation af en god sælger: Hvis du modtager en vare, der er beskadiget eller forkert, kan du returnere den for at få pengene tilbage."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Returnering, der skal betales eller ingen retur: Kun hvis produktet ankom forkert, kan du returnere det for at få det refunderet."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Sælgere, der leverer fremragende kundeservice i stor skala, mærkes af eBay med det bedste bedømte badge. Det betyder, at de har en høj feedbackscore og en høj procentdel af positiv feedback på eBay, så det er mere sikkert at købe hos dem."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Sælgere, der repræsenterer et brand, forbindes ofte med fremragende kundeservice. De har normalt høje feedbackscore og en stor procentdel af positiv feedback på eBay, hvilket gør køb hos dem til en sikrere mulighed."
+  },
+  "why_it_free": {
+    "message": "Hvorfor er det gratis at bruge?"
+  },
+  "explanations_why_it_free": {
+    "message": "Hvorfor er det gratis for dig at bruge Safe-Deal?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Det er gratis for dig at bruge vores service. Når du foretager et køb, betaler butikken os et mindre gebyr for at guide dig til det bedste produkt."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Vi bruger kun offentligt tilgængelige data og sikrer, at intet mærke eller butik påvirker vores anbefalinger."
+  },
+  "premium_features": {
+    "message": "Premium funktioner"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Ingen tilknytning, du kan tilslutte ethvert cashback-program, du ønsker"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Personlig telefon- og e-mailsupport & Forbedret behandlingstid"
+  },
+  "premium_features_cost": {
+    "message": "Pris - 2 USD per måned (faktureres årligt)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "De indsamlede penge bruges til at forbedre servicen og betale for infrastruktur."
+  },
+  "affiliated_websites": {
+    "message": "Tilknyttede websteder"
+  },
+  "buy_premium": {
+    "message": "Køb Premium"
+  },
+  "opt_out": {
+    "message": "Fravælg"
+  },
+  "image": {
+    "message": "Billede"
+  },
+  "product_name": {
+    "message": "produktnavn"
+  },
+  "final_price": {
+    "message": "Endelig pris"
+  },
+  "coupon": {
+    "message": "Kupon"
+  },
+  "you_saved": {
+    "message": "Kuponbeløb"
+  },
+  "you_save": {
+    "message": "Du skåner"
+  },
+  "share": {
+    "message": "Del"
+  },
+  "discounts_found": {
+    "message": "Rabatter fundet"
+  },
+  "extension_not_available": {
+    "message": "SafeDeal Extension er ikke tilgængelig for denne side."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Søg efter et hvilket som helst andet søgeord for at finde kuponer og tilbud."
+  },
+  "search_product": {
+    "message": "Søg efter produkt"
+  },
+  "want_more_coupons": {
+    "message": "Vil du have flere kuponer?"
+  },
+  "click_here": {
+    "message": "Klik her"
+  },
+  "coupon_header": {
+    "message": "Safe Deal - Kuponer og tilbud"
+  },
+  "tab_header_analyze": {
+    "message": "Produktvurdering"
+  },
+  "tab_header_reviews": {
+    "message": "Oversigt over anmeldelser"
+  },
+  "click_to_reveal": {
+    "message": "Klik eller tryk på {systemShortcut} for at skifte mellem minimal og fuld analyse."
+  },
+  "click_to_hide": {
+    "message": "Klik på ikonet eller tryk på 'Escape'-tasten for at lukke den detaljerede visning."
+  },
+  "click_to_pin": {
+    "message": "Fastgør dette panel for at holde det synligt ved opdatering og mens du browser"
+  },
+  "click_to_unpin": {
+    "message": "Frigør dette panel, så det skjuler sig, når du klikker et andet sted på siden"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Ingen anmeldelser endnu"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Ingen kundeanmeldelser endnu. Dette produkt kan være nyt eller ikke populært."
+  },
+  "reviews_pros": {
+    "message": "Fordele"
+  },
+  "reviews_cons": {
+    "message": "Ulemper"
+  },
+  "reviews_good_to_know": {
+    "message": "Godt at vide"
+  },
+  "reviews_error": {
+    "message": "Vi beklager ulejligheden. Det ser ud til, at opsummeringsprocessen for gennemgangen var mislykket. For at løse dette problem skal du kontakte Safe Deal-supportteamet for at få hjælp."
+  },
+  "deals_ali_express": {
+    "message": "Safe Deal - Tilbudsfinder"
+  },
+  "deals_ali_found": {
+    "message": "Fundet tilbud: "
+  },
+  "product": {
+    "message": "Produkt"
+  },
+  "title": {
+    "message": "Titel"
+  },
+  "price": {
+    "message": "Pris"
+  },
+  "deal_type": {
+    "message": "Aftaletype"
+  },
+  "savings": {
+    "message": "Opsparing"
+  },
+  "extra": {
+    "message": "Ekstra"
+  },
+  "shipping": {
+    "message": "Forsendelse"
+  },
+  "rating": {
+    "message": "Bedømmelse"
+  },
+  "sold": {
+    "message": "Solgt"
+  },
+  "reviews": {
+    "message": "Anmeldelser"
+  },
+  "mobile_app": {
+    "message": "Installer vores mobilapp"
+  },
+  "tab_header_opinions": {
+    "message": "Meninger og kommentarer"
+  },
+  "opinions_title": {
+    "message": "Giv din mening eller spørg fællesskabet om dette produkt"
+  },
+  "research_online": {
+    "message": "Tjek ud"
+  },
+  "video_reviews": {
+    "message": "Videoanmeldelser"
+  },
+  "reddit_reviews": {
+    "message": "Udtalelser i Reddit"
+  },
+  "web_reviews": {
+    "message": "Anmeldelser online"
+  },
+  "shopping_reviews": {
+    "message": "Indkøbssteder"
+  },
+  "product_photos": {
+    "message": "Produktbilleder"
+  },
+  "product_purchase_query": {
+    "message": "køb online nu"
+  },
+  "product_reviews_query": {
+    "message": "detaljerede anmeldelser"
+  }
+}

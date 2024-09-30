@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Shopping Assistant: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "Shopping Assistant: Säästä aikaa tekoälyllä. Tutustu hintahistoriaan, vältä kalliita tarjouksia, löydä väärennetyt arvostelut,..."
+  },
+  "appNameShort": {
+    "message": "Turvallin..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Turvallinen sopimus",
+    "description": "Ole varma, kun teet ostoksia verkossa"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal on tarkistanut tämän verkkosivuston ja todennut sen olevan vaarallinen {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Poistu tältä sivustolta nyt"
+  },
+  "anti_scam_stay": {
+    "message": "Tämä sivusto on luotettava"
+  },
+  "anti_scam_confirm": {
+    "message": "Suuri todennäköisyys, että tämä sivusto on huijaus, varas tai jokin muu laiton toiminta. Luotatko tähän sivustoon?"
+  },
+  "recommended_product": {
+    "message": "Suositeltu tuote"
+  },
+  "unrecommended_product": {
+    "message": "Ei-suositeltu tuote"
+  },
+  "doubtful_product": {
+    "message": "Epäilyttävä tuote"
+  },
+  "insufficient_data": {
+    "message": "Päätelmä epäselvä"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Merkki hyvästä kaupasta"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Merkki kyseenalaisesta kaupasta"
+  },
+  "no_data": {
+    "message": "Tällä hetkellä ei ole näytettäviä tietoja"
+  },
+  "chart_title": {
+    "message": "Tuotteen hintahistoria"
+  },
+  "back_button": {
+    "message": "Edellinen"
+  },
+  "next_button": {
+    "message": "Seuraava"
+  },
+  "start_using_button": {
+    "message": "Aloita SafeDealin käyttö"
+  },
+  "tour_step1_title": {
+    "message": "Tervetuloa Safe Dealiin"
+  },
+  "tour_step1_text_0": {
+    "message": ", Kiitos ohjelmistomme käyttämisestä."
+  },
+  "morning": {
+    "message": "aamu"
+  },
+  "day": {
+    "message": "päivä"
+  },
+  "night": {
+    "message": "yö"
+  },
+  "hi": {
+    "message": "Hei"
+  },
+  "good": {
+    "message": "Hyvä"
+  },
+  "tour_step1_text_1": {
+    "message": "Tässä on yksi tuetuista myymälöistämme."
+  },
+  "tour_step1_text_2": {
+    "message": "Toimii samalla tavalla muilla tuetuilla sivustoilla, kuten AliExpress, eBay, Amazon ja muut."
+  },
+  "tour_step1_text_3": {
+    "message": "Sen toiminnan selittämiseen kuluu noin minuutti."
+  },
+  "tour_step1_lets_start": {
+    "message": "Aloitetaan"
+  },
+  "tour_step2_title": {
+    "message": "Ostosuositukset"
+  },
+  "tour_step2_text_0": {
+    "message": "Nopeiden ja tehokkaiden ostopäätösten tekeminen on tuotteemme ydin; toimimme liikennevalona verkko-ostoksille."
+  },
+  "tour_step2_text_3": {
+    "message": "Tekoälymme tekee tietoihin perustuvan päätöksen tuotteista muutamassa sekunnissa. Näin saat nopean ilmaisimen monista tuotteista muutamassa minuutissa, et tuntien manuaalisen tarkistuksen jälkeen."
+  },
+  "tour_step3_title": {
+    "message": "Kaupan turvallisuus on tärkeää"
+  },
+  "tour_step3_text_0": {
+    "message": "Voit tehdä ostoksia viisaasti tänään säästääksesi vaivaa tulevaisuudessa."
+  },
+  "tour_step3_text_1": {
+    "message": "Vihreä kilpi - Suositeltava sopimus"
+  },
+  "tour_step3_text_2": {
+    "message": "Punainen kilpi - ei-suositeltu sopimus"
+  },
+  "tour_step3_text_3": {
+    "message": "Keltainen kilpi - Epäilyttävä sopimus"
+  },
+  "tour_step5_title": {
+    "message": "Yksityisyytesi on ensiarvoisen tärkeää"
+  },
+  "tour_step5_text_0": {
+    "message": "Palvelumme käyttö on sinulle ilmaista. Kun teet ostoksen, kauppa maksaa meille pienen maksun, joka opastaa sinut parhaan tuotteen luo."
+  },
+  "tour_step5_text_1": {
+    "message": "Ohjelmisto toimii paikallisesti, koska välitämme yksityisyydestäsi. Tietoja toiminnastasi ei kerätä."
+  },
+  "tour_feedback_title": {
+    "message": "Arvostamme palautettasi"
+  },
+  "tour_feedback_text": {
+    "message": "Ota yhteyttä, jos sinulla on idea, ongelma tai jos haluat keskustella parannuksesta: "
+  },
+  "or": {
+    "message": "tai"
+  },
+  "contact_form": {
+    "message": "Käytä yhteydenottolomaketta"
+  },
+  "by_email": {
+    "message": "Kirjoittaa sähköposti"
+  },
+  "call_as_at": {
+    "message": "Puhelimella +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Monet asiakkaat suosittelivat tuotetta lämpimästi"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Asiakkaat eivät suosittele tuotetta tarpeeksi"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Arvostelut ovat erittäin positiivisia. Tähdet: {ProductRatingValue}, Arvostelut: {ProductReviewAmount}, Arviot: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Arvostelujen puute tai huonot arvostelut. Tähdet: {ProductRatingValue}, Arvostelut: {ProductReviewAmount}, Arviot: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Arvostelut ovat erittäin positiivisia. Tähdet: {ProductRatingValue}, tilaukset: {ProductOrdersAmount}, arvostelut: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Arvostelujen puute tai huonot arvostelut. Tähdet: {ProductRatingValue}, tilaukset: {ProductOrdersAmount}, arvostelut: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Arvostelut ovat erittäin positiivisia. Tähdet: {ProductRatingValue}, tilaukset: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Arvostelujen puute tai huonot arvostelut. Tähdet: {ProductRatingValue}, tilaukset: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Kauppa on erittäin arvostettu. Tähdet: {ProductRatingValue}, tilaukset: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Kauppa on huonosti arvioitu. Tähdet: {ProductRatingValue}, tilaukset: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Vakiintunut myyjä, toiminnassa {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Aloitteleva myyjä, toiminnassa {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Erinomainen palautuspolitiikka"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Palautuspolitiikka on huono"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Luotettava myyjä"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Myydään suoraan merkkikohtaisesti"
+  },
+  "tooltip_order_safe": {
+    "message": "Suuri määrä tyytyväisiä asiakkaita"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Pieni määrä tyytyväisiä asiakkaita"
+  },
+  "tooltip_rating_safe": {
+    "message": "Monet tyytyväiset asiakkaat ovat jättäneet arvosteluja"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Monet vihaiset asiakkaat lähettivät negatiivisia arvosteluja"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Erinomainen toimitusaika, enintään {daysToDeliver} päivää"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Paketin saaminen voi kestää {daysToDeliver} päivää."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "On epäselvää, milloin toimitus tapahtuu"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Suurin osa kaupan asiakkaista on tyytyväisiä, {percentOfPeople} %"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Monet asiakkaat ovat tyytymättömiä kauppaan, {percentOfPeople} %"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Myymälästä puuttuu palautetta asiakkailta"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Lähetys ilmaiseksi"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Toimitetaan maksua vastaan tai vaaditaan nouto"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Tämä tuote on kohtuuhintainen"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Huono valikoima ostovaihtoehtoja"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Hinta on erinomainen, {priceDifVsAverage} % keskimääräistä alhaisempi"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Hinta on kohtuullinen, {priceDifVsAverage} % keskimääräistä alhaisempi"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Hinta on kohtuullinen, {priceDifVsAverage} % korkeampi kuin keskimäärin"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Kallis hinta, {priceDifVsAverage} % korkeampi kuin keskimäärin"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose - Luotettava ja hyvä hinta-laatusuhde"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon myy ja toimittaa tämän tuotteen"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Amazon, kolmas osapuoli, myy tai toimittaa"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart myy ja toimittaa tämän tuotteen"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Palautteet näyttävät hyvältä! Aito {validAmount}, luonnoton {fakeAmount}, yhteensä {totalAmount}"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Palaute näyttää manipuloidulta! Aito {validAmount}, luonnoton {fakeAmount}, yhteensä {totalAmount}"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Tämä tuote menee todella hyvin kaupaksi"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Tuotteen myynti on suhteellisen vähäistä"
+  },
+  "popup_title": {
+    "message": "Älykäs avustajasi verkkokaupoissa"
+  },
+  "loading_product": {
+    "message": "Tuote tarkastuksessa"
+  },
+  "popup_footer_share": {
+    "message": "Kerro ystävillesi ja perheellesi SafeDealista"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Vahvistettu turvallinen sivusto. Tue meitä affiliate-linkkimme kautta."
+  },
+  "popup_top_tabs_home": {
+    "message": "Koti"
+  },
+  "popup_top_tabs_settings": {
+    "message": "asetukset"
+  },
+  "supported_websites": {
+    "message": "Tuetut verkkosivustot"
+  },
+  "popup_benefits_tab": {
+    "message": "ominaisuudet"
+  },
+  "popup_about_tab": {
+    "message": "Noin"
+  },
+  "popup_contact_us_tab": {
+    "message": "Ota meihin yhteyttä"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazon"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Premium"
+  },
+  "years_label": {
+    "message": "vuotta"
+  },
+  "year_label": {
+    "message": "1 vuosi"
+  },
+  "less_than_a_year": {
+    "message": "alle vuosi"
+  },
+  "explanations_price_history": {
+    "message": "Tuotteen hintahistoriakaavio – Tämä voi auttaa sinua havaitsemaan todellisia alennuksia väärennetyistä. Pidämme hinnasta kirjaa ja seuraamme sen jälkeen muutoksia päivittäin, mikä mahdollistaa alennusmyyntien ja rajoitetun ajan tarjousten hyödyntämisen."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Johtopäätös perustuu: \n    1) Saadaksemme yleiskuvan tuotesuosituksista käytimme erilaisia tilastollisia analyysi- ja tekoälytekniikoita. \n    2) Arvostelut ja arvosanat analysoitiin, ja pidämme arvosanaa 4 tai enemmän osoituksena erinomaisesta tuotteesta. \n    3) Merkittävä tulos vaatii vähintään 100 tilausta, joten mitä enemmän tilauksia analysoimme, sitä enemmän luotamme tuotearviointiin."
+  },
+  "explanations_store_age": {
+    "message": "Järjestelmämme mittaa myymälöiden uskottavuutta myymälän iän avulla, koska kokemuksella ja positiivisella maineella olevat kaupat ovat uskottavampia."
+  },
+  "explanations_store_rating": {
+    "message": "Tarkistamme myymäläpalautteen kokonaispistemäärän, mitä korkeampi pistemäärä, sitä paremmat mahdollisuudet saada hyvää palvelua. Yli 91 % palautteesta katsotaan positiiviseksi."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress luokittelee myyjän erittäin luotettavaksi myyjäksi, jolla on suuri myyntimäärä"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Amazonin bestseller on sellainen, jolla on vähintään 150 myyntiä kuukaudessa ja mitä enemmän myyntiä sillä on, sitä helpompi on luottaa muiden ostajien palautteeseen."
+  },
+  "explanations_amazon_choice": {
+    "message": "Asiakkaat ostavat usein Amazon's Choice -merkinnällä varustettuja tuotteita. Niillä on edullinen hinta, korkea arvosana ja nopea toimitus Amazonin varastosta."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Käytämme tilastollista mallintamista positiivisten arvostelujen sijoittamiseen ja säätämiseen luonnottomien arvostelujen määrän perusteella, jotta voit tehdä päätöksen korkealaatuisten tietojen perusteella. Algoritmi ei ole täydellinen, mutta sillä on korkea tarkkuus. Amazon on tehnyt hyvää työtä kerätäkseen satoja miljoonia palautetta, mutta monet tuotemerkit ovat päättäneet käyttää sitä väärin ja täyttäneet sen huonolaatuisilla ja puolueellisilla arvosteluilla yrittääkseen lisätä omia voittojaan. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Amazon myi ja toimittaa: Amazon tilasi nämä tuotteet varastoksi. Ne myydään ja lähetetään suoraan Amazonin varastosta. Saat tuotteen paljon nopeammin, ja Amazon hoitaa kaikki asiakaspalveluongelmat suoraan."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Nämä tuotteet ovat riippumattoman, kolmannen osapuolen yrityksen omistamia, ja ne toimitetaan etukäteen Amazonin varastoihin. Kun ostat ne, Amazon toimittaa ne sinulle."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Ostajien on tärkeää tietää, milloin he voivat odottaa tuotteen saapuvan. Siksi tarkistamme aina arvioidun toimituspäivän eBaysta. Arvioitu toimitusaika perustuu myyjältä tavaroiden pakkaamiseen ja lähettämiseen kuluvaan aikaan sekä postipalveluiden toimitusaikaan. Pidämme erinomaisina toimitusajoina 14 päivää kotimaan lähetyksissä ja 30 päivää kansainvälisissä lähetyksissä."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Ilmainen toimitus on loistava osoitus siitä, että myyjä tarjoaa erinomaista asiakaspalvelua ja toimittaa tuotteen kuvatulla tavalla ajoissa."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Palautuksen hyväksyminen on hyvä osoitus hyvästä myyjästä: Jos saat vaurioituneen tai virheellisen tuotteen, voit palauttaa sen saadaksesi rahat takaisin."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Maksettavat palautukset tai ei palautusta: Vain jos tuote on saapunut väärin, voit palauttaa sen rahasi takaisin."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Myyjät, jotka tarjoavat erinomaista asiakaspalvelua suuressa mittakaavassa, on eBay brändätty Top Rated -merkillä. Tämä tarkoittaa, että heillä on korkea palautepiste ja suuri prosenttiosuus positiivista palautetta eBayssa, joten heiltä on turvallisempaa ostaa."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Brändiä edustavat myyjät yhdistetään usein erinomaiseen asiakaspalveluun. Heillä on yleensä korkeat palautepisteet ja suuri prosenttiosuus positiivista palautetta eBayssa, mikä tekee ostamisesta heiltä turvallisemman vaihtoehdon."
+  },
+  "why_it_free": {
+    "message": "Miksi käyttö on ilmaista?"
+  },
+  "explanations_why_it_free": {
+    "message": "Miksi Safe-Dealin käyttö on sinulle ilmaista?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Palvelumme käyttö on sinulle ilmaista. Kun teet ostoksen, myymälä maksaa meille pienen maksun, joka opastaa sinut parhaan tuotteen luo."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Käytämme vain julkisesti saatavilla olevia tietoja varmistaaksemme, että mikään tuotemerkki tai kauppa ei vaikuta suosituksiimme."
+  },
+  "premium_features": {
+    "message": "Premium-ominaisuudet"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Ei sidoksia, voit liittää minkä tahansa haluamasi cashback-ohjelman"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Henkilökohtainen puhelin- ja sähköpostituki ja pidempi käsittelyaika"
+  },
+  "premium_features_cost": {
+    "message": "Hinta - 2 USD kuukaudessa (laskutetaan vuosittain)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Kerätyt varat käytetään palvelun parantamiseen ja infrastruktuurin maksamiseen."
+  },
+  "affiliated_websites": {
+    "message": "Yhteistyösivustot"
+  },
+  "buy_premium": {
+    "message": "Osta Premium"
+  },
+  "opt_out": {
+    "message": "Jättäytyä syrjään"
+  },
+  "image": {
+    "message": "Kuva"
+  },
+  "product_name": {
+    "message": "tuotteen nimi"
+  },
+  "final_price": {
+    "message": "Lopullinen hinta"
+  },
+  "coupon": {
+    "message": "Kuponki"
+  },
+  "you_saved": {
+    "message": "Kupongin määrä"
+  },
+  "you_save": {
+    "message": "Sinä säästät"
+  },
+  "share": {
+    "message": "Jaa"
+  },
+  "discounts_found": {
+    "message": "Alennukset löydetty"
+  },
+  "extension_not_available": {
+    "message": "SafeDeal-laajennus ei ole saatavilla tälle sivulle."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Hae millä tahansa muulla avainsanalla löytääksesi kuponkeja ja tarjouksia."
+  },
+  "search_product": {
+    "message": "Hae tuotetta"
+  },
+  "want_more_coupons": {
+    "message": "Haluatko lisää kuponkeja?"
+  },
+  "click_here": {
+    "message": "Klikkaa tästä"
+  },
+  "coupon_header": {
+    "message": "Turvallinen tarjous – kupongit ja tarjoukset"
+  },
+  "tab_header_analyze": {
+    "message": "Tuotteen arviointi"
+  },
+  "tab_header_reviews": {
+    "message": "Arvostelujen yhteenveto"
+  },
+  "click_to_reveal": {
+    "message": "Napsauta tai paina {systemShortcut} vaihtaaksesi minimaalisen ja täydellisen analyysin välillä."
+  },
+  "click_to_hide": {
+    "message": "Napsauta kuvaketta tai paina 'Escape'-näppäintä sulkeaksesi yksityiskohtainen näkymä."
+  },
+  "click_to_pin": {
+    "message": "Kiinnitä tämä paneeli, jotta se pysyy näkyvissä päivityksen ja selaamisen aikana"
+  },
+  "click_to_unpin": {
+    "message": "Irrota tämä paneeli, jotta se piiloutuu, kun napsautat muuta sivua"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Ei vielä arvosteluja"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Ei vielä asiakasarvosteluja. Tämä tuote voi olla uusi tai ei suosittu."
+  },
+  "reviews_pros": {
+    "message": "Plussat"
+  },
+  "reviews_cons": {
+    "message": "Haittoja"
+  },
+  "reviews_good_to_know": {
+    "message": "Hyvä tietää"
+  },
+  "reviews_error": {
+    "message": "Pahoittelemme aiheutunutta häiriötä. Näyttää siltä, että tarkastelun yhteenvetoprosessi epäonnistui. Voit ratkaista tämän ongelman ottamalla yhteyttä Safe Deal -tukitiimiin."
+  },
+  "deals_ali_express": {
+    "message": "Turvallinen tarjous – Tarjousten etsijä"
+  },
+  "deals_ali_found": {
+    "message": "Tarjouksia löytyi: "
+  },
+  "product": {
+    "message": "Tuote"
+  },
+  "title": {
+    "message": "Otsikko"
+  },
+  "price": {
+    "message": "Hinta"
+  },
+  "deal_type": {
+    "message": "Sopimuksen tyyppi"
+  },
+  "savings": {
+    "message": "Säästöjä"
+  },
+  "extra": {
+    "message": "ylimääräistä"
+  },
+  "shipping": {
+    "message": "laivaus"
+  },
+  "rating": {
+    "message": "Luokitus"
+  },
+  "sold": {
+    "message": "myyty"
+  },
+  "reviews": {
+    "message": "Arvostelut"
+  },
+  "mobile_app": {
+    "message": "Asenna mobiilisovelluksemme"
+  },
+  "tab_header_opinions": {
+    "message": "Mielipiteet & Kommentit"
+  },
+  "opinions_title": {
+    "message": "Kerro mielipiteesi tai kysy yhteisöltä tästä tuotteesta"
+  },
+  "research_online": {
+    "message": "Tarkista"
+  },
+  "video_reviews": {
+    "message": "Video-arvostelut"
+  },
+  "reddit_reviews": {
+    "message": "Mielipiteitä Redditissä"
+  },
+  "web_reviews": {
+    "message": "Arvostelut verkossa"
+  },
+  "shopping_reviews": {
+    "message": "Ostossivustot"
+  },
+  "product_photos": {
+    "message": "Tuotekuvat"
+  },
+  "product_purchase_query": {
+    "message": "osta verkossa nyt"
+  },
+  "product_reviews_query": {
+    "message": "yksityiskohtaiset arvostelut"
+  }
+}

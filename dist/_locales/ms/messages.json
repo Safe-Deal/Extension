@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Pembantu Beli-belah: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "Pembantu Beli-belah: Jimat Masa oleh AI. Temui Sejarah Harga, Elakkan Tawaran Mahal, Tinjau Ulasan Palsu, Penilaian Negatif..."
+  },
+  "appNameShort": {
+    "message": "Tawaran..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Tawaran Selamat",
+    "description": "Rasa yakin apabila anda membeli-belah dalam talian"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal telah menyemak tapak web ini dan menentukan bahawa ia boleh berbahaya {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Tinggalkan laman web ini sekarang"
+  },
+  "anti_scam_stay": {
+    "message": "Laman web ini boleh dipercayai"
+  },
+  "anti_scam_confirm": {
+    "message": "Kebarangkalian tinggi bahawa tapak web ini adalah penipuan, pencuri atau beberapa aktiviti haram yang lain. Anda mempercayai laman web ini?"
+  },
+  "recommended_product": {
+    "message": "Produk Disyorkan"
+  },
+  "unrecommended_product": {
+    "message": "Produk Tidak Disyorkan"
+  },
+  "doubtful_product": {
+    "message": "Produk Meragukan"
+  },
+  "insufficient_data": {
+    "message": "Kesimpulan tidak tentu"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Petunjuk tawaran yang baik"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Petunjuk perjanjian yang boleh dipersoalkan"
+  },
+  "no_data": {
+    "message": "Pada masa ini, tiada data untuk dipaparkan"
+  },
+  "chart_title": {
+    "message": "Sejarah Harga Produk"
+  },
+  "back_button": {
+    "message": "Sebelumnya"
+  },
+  "next_button": {
+    "message": "Seterusnya"
+  },
+  "start_using_button": {
+    "message": "Mula menggunakan SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "Selamat datang ke Safe Deal"
+  },
+  "tour_step1_text_0": {
+    "message": ", Terima kasih kerana menggunakan perisian kami."
+  },
+  "morning": {
+    "message": "pagi"
+  },
+  "day": {
+    "message": "hari"
+  },
+  "night": {
+    "message": "malam"
+  },
+  "hi": {
+    "message": "Hai"
+  },
+  "good": {
+    "message": "Baik"
+  },
+  "tour_step1_text_1": {
+    "message": "Berikut adalah salah satu kedai kami yang disokong."
+  },
+  "tour_step1_text_2": {
+    "message": "Berfungsi dengan cara yang sama pada tapak lain yang disokong seperti AliExpress, eBay, Amazon dan banyak lagi."
+  },
+  "tour_step1_text_3": {
+    "message": "Ia perlu mengambil masa kira-kira satu minit untuk menerangkan cara ia berfungsi."
+  },
+  "tour_step1_lets_start": {
+    "message": "Mari kita mulakan"
+  },
+  "tour_step2_title": {
+    "message": "Syor Pembelian"
+  },
+  "tour_step2_text_0": {
+    "message": "Membuat keputusan pembelian yang cepat dan cekap adalah teras produk kami; kami bertindak sebagai lampu isyarat untuk pembelian dalam talian."
+  },
+  "tour_step2_text_3": {
+    "message": "Kecerdasan Buatan kami membuat keputusan berdasarkan data tentang produk dalam beberapa saat. Dengan cara ini, anda mendapat penunjuk cepat pada banyak produk dalam beberapa minit, bukan jam pemeriksaan manual."
+  },
+  "tour_step3_title": {
+    "message": "Keselamatan berurusan adalah Penting"
+  },
+  "tour_step3_text_0": {
+    "message": "Anda boleh membeli-belah dengan bijak hari ini untuk menjimatkan kerumitan pada masa hadapan."
+  },
+  "tour_step3_text_1": {
+    "message": "Perisai hijau - Tawaran yang disyorkan"
+  },
+  "tour_step3_text_2": {
+    "message": "Perisai merah - Perjanjian yang tidak disyorkan"
+  },
+  "tour_step3_text_3": {
+    "message": "Perisai kuning - Perjanjian yang meragukan"
+  },
+  "tour_step5_title": {
+    "message": "Privasi anda adalah yang terpenting"
+  },
+  "tour_step5_text_0": {
+    "message": "Menggunakan perkhidmatan kami adalah percuma untuk anda. Apabila anda membuat pembelian, kedai membayar kami sedikit bayaran untuk membimbing anda kepada produk terbaik."
+  },
+  "tour_step5_text_1": {
+    "message": "Perisian ini berfungsi secara tempatan kerana kami mengambil berat tentang privasi anda. Tiada maklumat tentang aktiviti anda dikumpulkan."
+  },
+  "tour_feedback_title": {
+    "message": "Kami menghargai maklum balas anda"
+  },
+  "tour_feedback_text": {
+    "message": "Hubungi jika anda mempunyai idea, masalah atau jika anda perlu membincangkan penambahbaikan: "
+  },
+  "or": {
+    "message": "atau"
+  },
+  "contact_form": {
+    "message": "Gunakan borang hubungan"
+  },
+  "by_email": {
+    "message": "Tulis e-mel"
+  },
+  "call_as_at": {
+    "message": "Melalui Telefon +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Ramai pelanggan sangat mengesyorkan produk tersebut"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Produk tidak cukup disyorkan oleh pelanggan"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Ulasan sangat positif. Bintang: {ProductRatingValue}, Ulasan: {ProductReviewAmount}, Penilaian: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Kekurangan ulasan atau ulasan buruk. Bintang: {ProductRatingValue}, Ulasan: {ProductReviewAmount}, Penilaian: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Ulasan sangat positif. Bintang: {ProductRatingValue}, Pesanan: {ProductOrdersAmount}, Ulasan: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Kekurangan ulasan atau ulasan buruk. Bintang: {ProductRatingValue}, Pesanan: {ProductOrdersAmount}, Ulasan: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Ulasan sangat positif. Bintang: {ProductRatingValue}, Pesanan: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Kekurangan ulasan atau ulasan buruk. Bintang: {ProductRatingValue}, Pesanan: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Kedai itu dinilai tinggi. Bintang: {ProductRatingValue}, Pesanan: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Kedai itu dinilai buruk. Bintang: {ProductRatingValue}, Pesanan: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Penjual yang mapan, dalam perniagaan {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Penjual pemula, dalam perniagaan {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Polisi pemulangan yang sangat baik"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Polisi pemulangan adalah lemah"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Penjual yang boleh dipercayai"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Dijual terus mengikut jenama"
+  },
+  "tooltip_order_safe": {
+    "message": "Sebilangan besar pelanggan yang berpuas hati"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Sebilangan kecil pelanggan gembira"
+  },
+  "tooltip_rating_safe": {
+    "message": "Ramai pelanggan yang berpuas hati telah meninggalkan ulasan"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Ramai pelanggan yang marah menyiarkan ulasan negatif"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Masa penghantaran yang sangat baik, paling banyak {daysToDeliver} hari"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Ia boleh mengambil masa sehingga {daysToDeliver} hari untuk mendapatkan pakej anda."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Tidak jelas bila penghantaran akan dilakukan"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Majoriti pelanggan kedai berpuas hati, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Ramai Pelanggan tidak berpuas hati dengan kedai, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Kedai kekurangan maklum balas daripada pelanggan"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Hantar secara percuma"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Dihantar dengan bayaran atau pengambilan diperlukan"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Harga produk ini berpatutan"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Pilihan pilihan pembelian yang lemah"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Harganya sangat baik, {priceDifVsAverage}% lebih rendah berbanding purata"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Harga adalah adil, {priceDifVsAverage}% lebih rendah berbanding purata"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Harganya berpatutan, {priceDifVsAverage}% lebih tinggi berbanding purata"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Harga yang mahal, {priceDifVsAverage}% lebih tinggi berbanding purata"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose - Produk yang boleh dipercayai dan bernilai baik"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon menjual dan menghantar produk ini"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Dijual atau dihantar oleh Amazon, pihak ketiga yang terlibat"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart menjual dan menghantar produk ini"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Maklum balas kelihatan hebat! {validAmount} tulen, {fakeAmount} tidak asli, {totalAmount} jumlah"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Maklum balas kelihatan dimanipulasi! {validAmount} tulen, {fakeAmount} tidak asli, {totalAmount} jumlah"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Produk ini sangat laris"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Jualan produk agak rendah"
+  },
+  "popup_title": {
+    "message": "Pembantu pintar anda untuk membeli-belah dalam talian"
+  },
+  "loading_product": {
+    "message": "Produk dalam Pemeriksaan"
+  },
+  "popup_footer_share": {
+    "message": "Beritahu rakan dan keluarga anda tentang SafeDeal"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Tapak selamat yang disahkan. Sokong kami melalui pautan gabungan kami."
+  },
+  "popup_top_tabs_home": {
+    "message": "Rumah"
+  },
+  "popup_top_tabs_settings": {
+    "message": "tetapan"
+  },
+  "supported_websites": {
+    "message": "Laman web yang disokong"
+  },
+  "popup_benefits_tab": {
+    "message": "ciri-ciri"
+  },
+  "popup_about_tab": {
+    "message": "Tentang"
+  },
+  "popup_contact_us_tab": {
+    "message": "Hubungi Kami"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazon"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Premium"
+  },
+  "years_label": {
+    "message": "tahun"
+  },
+  "year_label": {
+    "message": "1 tahun"
+  },
+  "less_than_a_year": {
+    "message": "kurang setahun"
+  },
+  "explanations_price_history": {
+    "message": "Graf sejarah harga produk - Ini boleh membantu anda melihat diskaun sebenar daripada yang palsu. Kami menyimpan rekod harga dan kemudian memantau perubahan setiap hari, membolehkan anda memanfaatkan tawaran jualan dan masa terhad."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Kesimpulannya adalah berdasarkan: \n    1) Untuk mendapatkan pandangan keseluruhan tentang cadangan produk, kami menggunakan pelbagai analisis statistik dan teknik kecerdasan buatan. \n    2) Ulasan dan penilaian telah dianalisis dan kami menganggap penilaian 4 dan ke atas sebagai petunjuk produk yang hebat. \n    3) Hasil yang bermakna memerlukan sekurang-kurangnya 100 pesanan, jadi semakin banyak pesanan yang kami analisis, semakin kami lebih mempercayai kesimpulan penilaian produk."
+  },
+  "explanations_store_age": {
+    "message": "Sistem kami mengukur kredibiliti kedai menggunakan umur kedai, memandangkan kedai dengan lebih pengalaman dan reputasi positif lebih boleh dipercayai."
+  },
+  "explanations_store_rating": {
+    "message": "Kami menyemak keseluruhan skor maklum balas kedai, lebih tinggi skor, lebih baik peluang untuk mendapatkan perkhidmatan yang baik. Lebih 91% maklum balas dianggap maklum balas positif."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress mengklasifikasikan penjual sebagai penjual yang sangat dipercayai, dengan jumlah jualan yang tinggi"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Buku terlaris Amazon ialah yang mempunyai sekurang-kurangnya 150 jualan sebulan dan semakin banyak jualannya, semakin mudah untuk bergantung pada maklum balas pembeli lain."
+  },
+  "explanations_amazon_choice": {
+    "message": "Produk bertanda Pilihan Amazon sering dibeli oleh pelanggan. Mereka mempunyai harga yang menguntungkan, dinilai tinggi, dan tersedia untuk penghantaran cepat dari gudang Amazon."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Kami menggunakan Pemodelan Statistik untuk meletakkan dan melaraskan bilangan ulasan positif berdasarkan bilangan ulasan luar biasa, supaya anda boleh membuat keputusan anda berdasarkan data berkualiti tinggi. Algoritma ini tidak sempurna, tetapi mempunyai kadar ketepatan yang tinggi. Amazon telah melakukan kerja yang baik untuk mengumpulkan ratusan juta maklum balas, tetapi banyak jenama telah memilih untuk menyalahgunakannya, membanjirinya dengan ulasan berkualiti rendah dan berat sebelah untuk mencuba dan meningkatkan keuntungan mereka sendiri. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Dijual dan Dihantar oleh Amazon: Item ini telah dipesan sebagai inventori oleh Amazon. Mereka dijual dan dihantar terus dari gudang Amazon. Anda akan dapat mendapatkan item dengan lebih pantas, dan Amazon akan mengendalikan sebarang isu perkhidmatan pelanggan secara langsung."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Item ini dimiliki oleh perniagaan pihak ketiga yang bebas dan dihantar lebih awal ke gudang Amazon. Apabila anda membelinya, Amazon menghantarnya kepada anda."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Adalah penting untuk pembeli mengetahui bila mereka boleh menjangkakan item akan tiba. Itulah sebabnya kami sentiasa menyemak anggaran tarikh penghantaran di eBay. Anggaran tarikh penghantaran adalah berdasarkan masa yang diambil oleh penjual untuk mengemas dan menghantar barang, dan masa penghantaran daripada perkhidmatan pos. Kami menganggap 14 hari untuk penghantaran domestik dan 30 hari untuk penghantaran antarabangsa sebagai masa penghantaran yang sangat baik."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Penghantaran percuma adalah petunjuk yang bagus bahawa penjual akan menyediakan perkhidmatan pelanggan yang hebat dan menghantar item tepat pada masanya seperti yang diterangkan."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Menerima pemulangan ialah petunjuk yang baik tentang penjual yang baik: Jika anda menerima item yang rosak atau tidak betul, anda boleh mengembalikannya untuk bayaran balik."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Pemulangan Berbayar atau Tiada Pemulangan: Hanya jika produk tiba dengan betul boleh anda mengembalikannya untuk bayaran balik."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Penjual yang menyampaikan perkhidmatan pelanggan yang cemerlang secara besar-besaran dijenamakan oleh eBay dengan lencana Penilaian Teratas. Ini bermakna mereka mempunyai skor maklum balas yang tinggi dan peratusan maklum balas positif yang tinggi di eBay, jadi lebih selamat untuk membeli daripada mereka."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Penjual yang mewakili jenama sering dikaitkan dengan perkhidmatan pelanggan yang cemerlang. Mereka biasanya mempunyai skor maklum balas yang tinggi dan peratusan besar maklum balas positif di eBay, yang menjadikan pembelian daripada mereka sebagai pilihan yang lebih selamat."
+  },
+  "why_it_free": {
+    "message": "Mengapa percuma untuk digunakan?"
+  },
+  "explanations_why_it_free": {
+    "message": "Mengapa Menggunakan Safe-Deal Percuma untuk Anda?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Menggunakan perkhidmatan kami adalah percuma untuk anda. Apabila anda membuat pembelian, kedai membayar kami sedikit bayaran untuk membimbing anda kepada produk terbaik."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Kami menggunakan data yang tersedia untuk umum sahaja, memastikan tiada jenama atau kedai mempengaruhi pengesyoran kami."
+  },
+  "premium_features": {
+    "message": "Ciri premium"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Tiada gabungan, anda boleh pasang sebarang program pulangan tunai yang anda mahukan"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Sokongan Telefon dan E-mel Peribadi & Masa pemprosesan yang dipertingkatkan"
+  },
+  "premium_features_cost": {
+    "message": "Harga - 2 USD sebulan (dibilkan setiap tahun)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Wang yang dikumpul digunakan untuk menambah baik perkhidmatan dan membayar infrastruktur."
+  },
+  "affiliated_websites": {
+    "message": "Laman Web Gabungan"
+  },
+  "buy_premium": {
+    "message": "Beli Premium"
+  },
+  "opt_out": {
+    "message": "Pilih keluar"
+  },
+  "image": {
+    "message": "Gambar"
+  },
+  "product_name": {
+    "message": "Nama Produk"
+  },
+  "final_price": {
+    "message": "Harga Akhir"
+  },
+  "coupon": {
+    "message": "kupon"
+  },
+  "you_saved": {
+    "message": "Jumlah Kupon"
+  },
+  "you_save": {
+    "message": "Anda ganti"
+  },
+  "share": {
+    "message": "Kongsi"
+  },
+  "discounts_found": {
+    "message": "Diskaun Ditemui"
+  },
+  "extension_not_available": {
+    "message": "Sambungan SafeDeal tidak tersedia untuk halaman ini."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Cari sebarang kata kunci lain untuk mencari kupon dan tawaran."
+  },
+  "search_product": {
+    "message": "Cari Produk"
+  },
+  "want_more_coupons": {
+    "message": "Ingin Lebih Kupon?"
+  },
+  "click_here": {
+    "message": "Tekan di sini"
+  },
+  "coupon_header": {
+    "message": "Tawaran Selamat - Kupon & Tawaran"
+  },
+  "tab_header_analyze": {
+    "message": "Penilaian Produk"
+  },
+  "tab_header_reviews": {
+    "message": "Ringkasan Ulasan"
+  },
+  "click_to_reveal": {
+    "message": "Klik atau tekan {systemShortcut} untuk menogol antara analisis minimum dan penuh."
+  },
+  "click_to_hide": {
+    "message": "Klik pada ikon atau tekan kekunci 'Escape' untuk menutup paparan terperinci."
+  },
+  "click_to_pin": {
+    "message": "Sematkan panel ini untuk memastikan ia kelihatan semasa dimuat semula dan semasa anda menyemak imbas"
+  },
+  "click_to_unpin": {
+    "message": "Nyahsemat panel ini supaya ia akan bersembunyi apabila mengklik di tempat lain pada halaman"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Tiada Ulasan Lagi"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Tiada ulasan pelanggan lagi. Produk ini mungkin baru atau tidak popular."
+  },
+  "reviews_pros": {
+    "message": "Kebaikan"
+  },
+  "reviews_cons": {
+    "message": "Keburukan"
+  },
+  "reviews_good_to_know": {
+    "message": "Senang tahu"
+  },
+  "reviews_error": {
+    "message": "Kami memohon maaf atas kesulitan ini. Nampaknya proses rumusan semakan tidak berjaya. Untuk menyelesaikan isu ini, sila hubungi Pasukan Sokongan Safe Deal untuk mendapatkan bantuan."
+  },
+  "deals_ali_express": {
+    "message": "Tawaran Selamat - Pencari Tawaran"
+  },
+  "deals_ali_found": {
+    "message": "Tawaran ditemui: "
+  },
+  "product": {
+    "message": "produk"
+  },
+  "title": {
+    "message": "Tajuk"
+  },
+  "price": {
+    "message": "harga"
+  },
+  "deal_type": {
+    "message": "Jenis Tawaran"
+  },
+  "savings": {
+    "message": "Simpanan"
+  },
+  "extra": {
+    "message": "Tambahan"
+  },
+  "shipping": {
+    "message": "penghantaran"
+  },
+  "rating": {
+    "message": "Penilaian"
+  },
+  "sold": {
+    "message": "terjual"
+  },
+  "reviews": {
+    "message": "Ulasan"
+  },
+  "mobile_app": {
+    "message": "Pasang Apl Mudah Alih kami"
+  },
+  "tab_header_opinions": {
+    "message": "Pendapat & Ulasan"
+  },
+  "opinions_title": {
+    "message": "Berikan pendapat anda atau tanya komuniti tentang produk ini"
+  },
+  "research_online": {
+    "message": "Semak keluar"
+  },
+  "video_reviews": {
+    "message": "Ulasan Video"
+  },
+  "reddit_reviews": {
+    "message": "Pendapat dalam Reddit"
+  },
+  "web_reviews": {
+    "message": "Ulasan Dalam Talian"
+  },
+  "shopping_reviews": {
+    "message": "Tapak Beli-belah"
+  },
+  "product_photos": {
+    "message": "Foto Produk"
+  },
+  "product_purchase_query": {
+    "message": "beli dalam talian sekarang"
+  },
+  "product_reviews_query": {
+    "message": "ulasan terperinci"
+  }
+}

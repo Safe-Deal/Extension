@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Apsipirkimo asistentas: „AliExpress“"
+  },
+  "appDescription": {
+    "message": "Apsipirkimo asistentas: sutaupykite laiko naudodami AI. Atraskite kainų istoriją, venkite brangių pasiūlymų, raskite netikrų..."
+  },
+  "appNameShort": {
+    "message": "Saugus..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Saugus sandoris",
+    "description": "Apsipirkdami internetu pasitikėkite savimi"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "„Safe-Deal“ peržiūrėjo šią svetainę ir nustatė, kad ji gali būti pavojinga {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Palikite šią svetainę dabar"
+  },
+  "anti_scam_stay": {
+    "message": "Ši svetainė yra patikima"
+  },
+  "anti_scam_confirm": {
+    "message": "Didelė tikimybė, kad ši svetainė yra sukčiavimas, vagis ar kita neteisėta veikla. Ar pasitikite šia svetaine?"
+  },
+  "recommended_product": {
+    "message": "Rekomenduojamas produktas"
+  },
+  "unrecommended_product": {
+    "message": "Nerekomenduojama prekė"
+  },
+  "doubtful_product": {
+    "message": "Abejotinas produktas"
+  },
+  "insufficient_data": {
+    "message": "Išvada neapibrėžta"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Gero sandorio požymis"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Abejotino sandorio požymis"
+  },
+  "no_data": {
+    "message": "Šiuo metu rodytinų duomenų nėra"
+  },
+  "chart_title": {
+    "message": "Prekės kainų istorija"
+  },
+  "back_button": {
+    "message": "Ankstesnis"
+  },
+  "next_button": {
+    "message": "Kitas"
+  },
+  "start_using_button": {
+    "message": "Pradėkite naudoti „SafeDeal“."
+  },
+  "tour_step1_title": {
+    "message": "Sveiki atvykę į saugų sandorį"
+  },
+  "tour_step1_text_0": {
+    "message": ", Dėkojame, kad naudojatės mūsų programine įranga."
+  },
+  "morning": {
+    "message": "ryto"
+  },
+  "day": {
+    "message": "dieną"
+  },
+  "night": {
+    "message": "naktis"
+  },
+  "hi": {
+    "message": "Sveiki"
+  },
+  "good": {
+    "message": "Gerai"
+  },
+  "tour_step1_text_1": {
+    "message": "Čia yra viena iš mūsų palaikomų parduotuvių."
+  },
+  "tour_step1_text_2": {
+    "message": "Taip pat veikia kitose palaikomose svetainėse, tokiose kaip „AliExpress“, „eBay“, „Amazon“ ir kt."
+  },
+  "tour_step1_text_3": {
+    "message": "Turėtų užtrukti maždaug minutę, kol paaiškinsite, kaip tai veikia."
+  },
+  "tour_step1_lets_start": {
+    "message": "Pradėkime"
+  },
+  "tour_step2_title": {
+    "message": "Pirkimo rekomendacijos"
+  },
+  "tour_step2_text_0": {
+    "message": "Greitas ir efektyvus pirkimo sprendimų priėmimas yra mūsų gaminio pagrindas; veikiame kaip šviesoforas perkant internetu."
+  },
+  "tour_step2_text_3": {
+    "message": "Mūsų dirbtinis intelektas per kelias sekundes priima duomenimis pagrįstą sprendimą dėl produktų. Tokiu būdu gausite greitą daugelio produktų indikatorių per kelias minutes, o ne po kelių valandų rankinio tikrinimo."
+  },
+  "tour_step3_title": {
+    "message": "Sandorio saugumas yra svarbus"
+  },
+  "tour_step3_text_0": {
+    "message": "Galite apsipirkti išmintingai šiandien, kad išvengtumėte rūpesčių ateityje."
+  },
+  "tour_step3_text_1": {
+    "message": "Žalias skydas – rekomenduojamas sandoris"
+  },
+  "tour_step3_text_2": {
+    "message": "Raudonas skydas – nerekomenduojamas sandoris"
+  },
+  "tour_step3_text_3": {
+    "message": "Geltonas skydas – abejotinas sandoris"
+  },
+  "tour_step5_title": {
+    "message": "Jūsų privatumas yra svarbiausias"
+  },
+  "tour_step5_text_0": {
+    "message": "Mūsų paslauga jums nemokama. Kai perkate, parduotuvė sumoka mums nedidelį mokestį, kad nukreiptume jus į geriausią produktą."
+  },
+  "tour_step5_text_1": {
+    "message": "Programinė įranga veikia vietoje, nes mums rūpi jūsų privatumas. Jokia informacija apie jūsų veiklą nerenkama."
+  },
+  "tour_feedback_title": {
+    "message": "Vertiname jūsų atsiliepimus"
+  },
+  "tour_feedback_text": {
+    "message": "Susisiekite, jei turite idėją, problemų ar reikia aptarti patobulinimą: "
+  },
+  "or": {
+    "message": "arba"
+  },
+  "contact_form": {
+    "message": "Naudokite kontaktinę formą"
+  },
+  "by_email": {
+    "message": "Parašyk elektroninį laišką"
+  },
+  "call_as_at": {
+    "message": "Telefonu +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Daugelis klientų labai rekomendavo produktą"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Produktas nėra pakankamai rekomenduojamas klientų"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Atsiliepimai yra labai teigiami. Žvaigždutės: {ProductRatingValue}, atsiliepimai: {ProductReviewAmount}, įvertinimai: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Atsiliepimų trūkumas arba prastos apžvalgos. Žvaigždutės: {ProductRatingValue}, atsiliepimai: {ProductReviewAmount}, įvertinimai: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Atsiliepimai yra labai teigiami. Žvaigždutės: {ProductRatingValue}, užsakymai: {ProductOrdersAmount}, atsiliepimai: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Atsiliepimų trūkumas arba prastos apžvalgos. Žvaigždutės: {ProductRatingValue}, užsakymai: {ProductOrdersAmount}, atsiliepimai: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Atsiliepimai yra labai teigiami. Žvaigždutės: {ProductRatingValue}, užsakymai: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Atsiliepimų trūkumas arba prastos apžvalgos. Žvaigždutės: {ProductRatingValue}, užsakymai: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Parduotuvė puikiai įvertinta. Žvaigždutės: {ProductRatingValue}, užsakymai: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Parduotuvė yra prastai įvertinta. Žvaigždutės: {ProductRatingValue}, užsakymai: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Įsitikinęs pardavėjas, dirbantis {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Pradedantis pardavėjas, versle {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Puiki grąžinimo politika"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Grąžinimo politika prasta"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Patikimas pardavėjas"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Parduodama tiesiogiai pagal prekės ženklą"
+  },
+  "tooltip_order_safe": {
+    "message": "Didelis patenkintų klientų skaičius"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Mažas skaičius laimingų klientų"
+  },
+  "tooltip_rating_safe": {
+    "message": "Daugelis patenkintų klientų paliko atsiliepimus"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Daugelis piktų klientų paskelbė neigiamų atsiliepimų"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Puikus pristatymo laikas, daugiausia {daysToDeliver} d"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Gali užtrukti iki {daysToDeliver} d., kol gausite siuntinį."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Kada bus pristatymas, neaišku"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Dauguma parduotuvės klientų yra patenkinti, {percentOfPeople} %"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Daugelis klientų nepatenkinti parduotuve, {percentOfPeople} %"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Parduotuvėje trūksta klientų atsiliepimų"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Siunčiu nemokamai"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Siunčiamas už mokestį arba būtinas atsiėmimas"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Šis produktas yra prieinama kaina"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Prastas pirkimo variantų pasirinkimas"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Kaina puiki, {priceDifVsAverage} % mažesnė, palyginti su vidutine"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Kaina sąžininga, {priceDifVsAverage} % mažesnė, palyginti su vidutine"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Kaina sąžininga, {priceDifVsAverage} % didesnė nei vidutinė"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Brangi kaina, {priceDifVsAverage} % didesnė nei vidutinė"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "„Amazon Choose“ – patikimas ir geros vertės produktas"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "„Amazon“ parduoda ir pristato šį produktą"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Parduoda arba išsiunčia Amazon, dalyvaujanti trečioji šalis"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "„Walmart“ parduoda ir pristato šį produktą"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Atsiliepimai atrodo puikiai! {validAmount} autentiškas, {fakeAmount} nenatūralus, iš viso {totalAmount}"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Atsiliepimai atrodo manipuliuojami! {validAmount} autentiškas, {fakeAmount} nenatūralus, iš viso {totalAmount}"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Šis produktas parduodamas tikrai gerai"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Produkto pardavimas yra palyginti mažas"
+  },
+  "popup_title": {
+    "message": "Jūsų išmanusis padėjėjas apsipirkti internetu"
+  },
+  "loading_product": {
+    "message": "Prekė tikrinama"
+  },
+  "popup_footer_share": {
+    "message": "Papasakokite draugams ir šeimos nariams apie „SafeDeal“."
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Patvirtinta saugi svetainė. Palaikykite mus per mūsų filialo nuorodą."
+  },
+  "popup_top_tabs_home": {
+    "message": "Namai"
+  },
+  "popup_top_tabs_settings": {
+    "message": "Nustatymai"
+  },
+  "supported_websites": {
+    "message": "Palaikomos svetainės"
+  },
+  "popup_benefits_tab": {
+    "message": "funkcijos"
+  },
+  "popup_about_tab": {
+    "message": "Apie"
+  },
+  "popup_contact_us_tab": {
+    "message": "Susisiekite su mumis"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazon"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Premija"
+  },
+  "years_label": {
+    "message": "metų"
+  },
+  "year_label": {
+    "message": "1 metai"
+  },
+  "less_than_a_year": {
+    "message": "mažiau nei metus"
+  },
+  "explanations_price_history": {
+    "message": "Produkto kainų istorijos grafikas – tai gali padėti pastebėti tikras nuolaidas iš netikrų. Mes registruojame kainą ir kasdien stebime pokyčius, todėl galime pasinaudoti išpardavimais ir riboto laiko pasiūlymais."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Išvada grindžiama: \n    1) Norėdami susidaryti bendrą produkto rekomendacijų vaizdą, taikėme įvairias statistinės analizės ir dirbtinio intelekto metodus. \n    2) Atsiliepimai ir įvertinimai buvo išanalizuoti, o 4 ir aukštesnis įvertinimas yra puikaus produkto požymis. \n    3) Prasmingam rezultatui reikia bent 100 užsakymų, todėl kuo daugiau užsakymų analizuojame, tuo labiau pasitikime prekės įvertinimo išvada."
+  },
+  "explanations_store_age": {
+    "message": "Mūsų sistema vertina parduotuvės patikimumą pagal parduotuvės amžių, nes parduotuvės, turinčios daugiau patirties ir teigiamą reputaciją, yra patikimesnės."
+  },
+  "explanations_store_rating": {
+    "message": "Tikriname bendrą parduotuvės atsiliepimų balą, kuo didesnis balas, tuo didesnė tikimybė gauti gerą paslaugą. Daugiau nei 91% atsiliepimų laikomi teigiamais atsiliepimais."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "„AliExpress“ pardavėją klasifikuoja kaip labai patikimą pardavėją, kurio pardavimai yra dideli"
+  },
+  "explanations_amazon_bsr": {
+    "message": "„Amazon“ bestseleris yra tas, kuris parduoda mažiausiai 150 per mėnesį ir kuo daugiau pardavimų, tuo lengviau pasikliauti kitų pirkėjų atsiliepimais."
+  },
+  "explanations_amazon_choice": {
+    "message": "Produktus, pažymėtus Amazon's Choice, klientai dažnai perka. Jie turi palankią kainą, yra gerai įvertinti ir greitai pristatomi iš „Amazon“ sandėlio."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Naudojame statistinį modeliavimą, kad pozicionuotume ir koreguotume teigiamų atsiliepimų skaičių pagal nenatūralių atsiliepimų skaičių, kad galėtumėte priimti sprendimą remdamiesi aukštos kokybės duomenimis. Algoritmas nėra tobulas, tačiau turi aukštus tikslumo rodiklius. „Amazon“ padarė gerą darbą surinkdama šimtus milijonų atsiliepimų, tačiau daugelis prekių ženklų nusprendė tuo piktnaudžiauti, užtvindydami žemos kokybės ir šališkus atsiliepimus, kad padidintų savo pelną. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Pardavė ir išsiuntė „Amazon“: šias prekes „Amazon“ užsakė kaip atsargas. Jie parduodami ir siunčiami tiesiai iš „Amazon“ sandėlio. Galėsite gauti prekę daug greičiau, o „Amazon“ tiesiogiai spręs visas klientų aptarnavimo problemas."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Šios prekės priklauso nepriklausomam trečiosios šalies verslui ir iš anksto išsiunčiamos į „Amazon“ sandėlius. Kai juos perkate, „Amazon“ jums juos pristato."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Pirkėjams svarbu žinoti, kada jie gali tikėtis prekės pristatymo. Štai kodėl mes visada tikriname numatomą pristatymo datą „eBay“. Numatoma pristatymo data priklauso nuo laiko, per kurį pardavėjas supakuoja ir išsiunčia prekes, ir pristatymo iš pašto tarnybų laiką. 14 dienų vidaus siuntoms ir 30 dienų tarptautiniams siuntoms laikome puikiu pristatymo laiku."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Nemokamas pristatymas yra puikus požymis, kad pardavėjas suteiks puikų klientų aptarnavimą ir pristatys prekę laiku, kaip aprašyta."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Grąžinimų priėmimas yra geras gero pardavėjo požymis: jei gaunate sugadintą ar netinkamą prekę, galite ją grąžinti ir susigrąžinti pinigus."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Mokėtinas grąžinimas arba negrąžinimas: tik tuo atveju, jei prekė buvo pristatyta netinkamai, galite ją grąžinti, kad būtų grąžinti pinigai."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Pardavėjai, teikiantys puikų klientų aptarnavimą dideliu mastu, „eBay“ yra ženklinami geriausiu įvertinimo ženkleliu. Tai reiškia, kad jie turi aukštą atsiliepimų balą ir didelį teigiamų atsiliepimų procentą „eBay“, todėl yra saugiau pirkti iš jų."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Prekės ženklui atstovaujantys pardavėjai dažnai asocijuojasi su puikiu klientų aptarnavimu. Paprastai jie turi aukštus atsiliepimų balus ir didelį procentą teigiamų atsiliepimų apie „eBay“, todėl pirkti iš jų yra saugesnis pasirinkimas."
+  },
+  "why_it_free": {
+    "message": "Kodėl galima nemokamai naudotis?"
+  },
+  "explanations_why_it_free": {
+    "message": "Kodėl „Safe-Deal“ naudojimas jums nemokamas?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Mūsų paslauga jums nemokama. Kai perkate, parduotuvė sumoka mums nedidelį mokestį, kad nukreiptume jus į geriausią produktą."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Naudojame tik viešai prieinamus duomenis, užtikrindami, kad joks prekės ženklas ar parduotuvė nepadarytų įtakos mūsų rekomendacijoms."
+  },
+  "premium_features": {
+    "message": "Aukščiausios kokybės funkcijos"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Jokio ryšio, galite prijungti bet kurią norimą pinigų grąžinimo programą"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Asmeninis palaikymas telefonu ir el. paštu bei pailgintas apdorojimo laikas"
+  },
+  "premium_features_cost": {
+    "message": "Kaina - 2 USD per mėnesį (sąskaita kasmet)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Surinkti pinigai skiriami paslaugai gerinti ir infrastruktūros apmokėjimui."
+  },
+  "affiliated_websites": {
+    "message": "Susijusios svetainės"
+  },
+  "buy_premium": {
+    "message": "Pirkite Premium"
+  },
+  "opt_out": {
+    "message": "Atsisakyti"
+  },
+  "image": {
+    "message": "Vaizdas"
+  },
+  "product_name": {
+    "message": "produkto pavadinimas"
+  },
+  "final_price": {
+    "message": "Galutinė kaina"
+  },
+  "coupon": {
+    "message": "Kuponas"
+  },
+  "you_saved": {
+    "message": "Kupono suma"
+  },
+  "you_save": {
+    "message": "Tu atsargus"
+  },
+  "share": {
+    "message": "Dalintis"
+  },
+  "discounts_found": {
+    "message": "Rastos nuolaidos"
+  },
+  "extension_not_available": {
+    "message": "Šiame puslapyje SafeDeal plėtinys nepasiekiamas."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Ieškokite bet kurio kito raktinio žodžio, kad rastumėte kuponus ir pasiūlymus."
+  },
+  "search_product": {
+    "message": "Ieškoti produkto"
+  },
+  "want_more_coupons": {
+    "message": "Norite daugiau kuponų?"
+  },
+  "click_here": {
+    "message": "Paspauskite čia"
+  },
+  "coupon_header": {
+    "message": "Saugus pasiūlymas – kuponai ir pasiūlymai"
+  },
+  "tab_header_analyze": {
+    "message": "Produkto įvertinimas"
+  },
+  "tab_header_reviews": {
+    "message": "Atsiliepimų santrauka"
+  },
+  "click_to_reveal": {
+    "message": "Spustelėkite arba paspauskite {systemShortcut}, kad perjungtumėte tarp minimalios analizės ir visos analizės."
+  },
+  "click_to_hide": {
+    "message": "Spustelėkite piktogramą arba paspauskite klavišą „Escape“, kad uždarytumėte išsamų vaizdą."
+  },
+  "click_to_pin": {
+    "message": "Prisekite šį skydelį, kad jis būtų matomas atnaujinant ir naršant"
+  },
+  "click_to_unpin": {
+    "message": "Atsegkite šį skydelį, kad jis būtų paslėptas spustelėjus kitoje puslapio vietoje"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Atsiliepimų dar nėra"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Klientų atsiliepimų dar nėra. Šis produktas gali būti naujas arba nepopuliarus."
+  },
+  "reviews_pros": {
+    "message": "Argumentai \"už\""
+  },
+  "reviews_cons": {
+    "message": "Minusai"
+  },
+  "reviews_good_to_know": {
+    "message": "Gera žinoti"
+  },
+  "reviews_error": {
+    "message": "Mes atsiprašome dėl nepatogumų. Atrodo, kad peržiūros apibendrinimo procesas buvo nesėkmingas. Norėdami išspręsti šią problemą, susisiekite su saugaus sandorio palaikymo komanda."
+  },
+  "deals_ali_express": {
+    "message": "Saugus pasiūlymas – pasiūlymų ieškiklis"
+  },
+  "deals_ali_found": {
+    "message": "Rasti pasiūlymai: "
+  },
+  "product": {
+    "message": "Produktas"
+  },
+  "title": {
+    "message": "Pavadinimas"
+  },
+  "price": {
+    "message": "Kaina"
+  },
+  "deal_type": {
+    "message": "Sandorio tipas"
+  },
+  "savings": {
+    "message": "Taupymas"
+  },
+  "extra": {
+    "message": "Papildomai"
+  },
+  "shipping": {
+    "message": "Siuntimas"
+  },
+  "rating": {
+    "message": "Įvertinimas"
+  },
+  "sold": {
+    "message": "Parduota"
+  },
+  "reviews": {
+    "message": "Atsiliepimai"
+  },
+  "mobile_app": {
+    "message": "Įdiekite mūsų mobiliąją programėlę"
+  },
+  "tab_header_opinions": {
+    "message": "Nuomonės ir komentarai"
+  },
+  "opinions_title": {
+    "message": "Išsakykite savo nuomonę arba paklauskite bendruomenės apie šį produktą"
+  },
+  "research_online": {
+    "message": "Patikrinkite"
+  },
+  "video_reviews": {
+    "message": "Vaizdo įrašų apžvalgos"
+  },
+  "reddit_reviews": {
+    "message": "Nuomonės Reddit"
+  },
+  "web_reviews": {
+    "message": "Atsiliepimai internete"
+  },
+  "shopping_reviews": {
+    "message": "Apsipirkimo svetainės"
+  },
+  "product_photos": {
+    "message": "Produkto nuotraukos"
+  },
+  "product_purchase_query": {
+    "message": "pirkite internetu dabar"
+  },
+  "product_reviews_query": {
+    "message": "išsamios apžvalgos"
+  }
+}

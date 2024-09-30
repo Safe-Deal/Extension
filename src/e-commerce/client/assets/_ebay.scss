@@ -1,0 +1,55 @@
+.safe-deal-page-container__ebay {
+  .safe-deal-product-work-done {
+  }
+
+  li.s-item {
+    border-radius: 3px !important;
+  }
+
+  .srp-results.srp-grid {
+    .s-item__image-section {
+      padding-right: 4px !important;
+      padding-bottom: 4px !important;
+      width: 100% !important;
+      // height: 100% !important;
+      left: 0 !important;
+      top: 0 !important;
+    }
+  }
+
+  .border-sd-ebay-container-grid {
+    position: absolute !important;
+    border: 3.5px solid transparent !important;
+    width: 102.5% !important;
+    height: 101.4% !important;
+    left: -3px !important;
+    top: -3px !important;
+    border-radius: 8px !important;
+  }
+
+  #LeftSummaryPanel {
+    .sd-reason-bad::first-letter {
+      padding-right: 1px;
+    }
+  }
+
+  .border-sd-ebay-container-list {
+    position: absolute !important;
+    border: 3.5px solid transparent !important;
+    width: calc(100% + 5px) !important;
+    height: calc(100% + 1px) !important;
+    // left: 0px !important;
+    top: 0 !important;
+    padding-right: 4px !important;
+    padding-bottom: 4px !important;
+    border-radius: 16px !important;
+  }
+
+  .safe-deal-image-wholesale-product {
+    position: absolute;
+    bottom: 50px;
+    right: 25px;
+    width: 30px;
+    cursor: context-menu;
+  }
+}

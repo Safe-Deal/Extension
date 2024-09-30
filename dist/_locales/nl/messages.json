@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Winkelassistent: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "Winkelassistent: bespaar tijd door AI. Ontdek de prijsgeschiedenis, vermijd dure deals, ontdek valse beoordelingen, spot de..."
+  },
+  "appNameShort": {
+    "message": "Veilige deal"
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Veilige deal",
+    "description": "Voel u zelfverzekerd als u online winkelt"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal heeft deze website beoordeeld en vastgesteld dat deze gevaarlijk kan zijn {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Verlaat nu deze website"
+  },
+  "anti_scam_stay": {
+    "message": "Deze site is betrouwbaar"
+  },
+  "anti_scam_confirm": {
+    "message": "Grote kans dat deze website een oplichterij, een dief of een andere illegale activiteit is. Vertrouw je deze website?"
+  },
+  "recommended_product": {
+    "message": "Aanbevolen product"
+  },
+  "unrecommended_product": {
+    "message": "Niet aanbevolen product"
+  },
+  "doubtful_product": {
+    "message": "Twijfelachtig product"
+  },
+  "insufficient_data": {
+    "message": "Conclusie onbepaald"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Een indicatie van een goede deal"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Een indicatie van een twijfelachtige deal"
+  },
+  "no_data": {
+    "message": "Momenteel zijn er geen gegevens om weer te geven"
+  },
+  "chart_title": {
+    "message": "Geschiedenis van productprijzen"
+  },
+  "back_button": {
+    "message": "Vorig"
+  },
+  "next_button": {
+    "message": "Volgende"
+  },
+  "start_using_button": {
+    "message": "Maak gebruik van SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "Welkom bij Veilig Deal"
+  },
+  "tour_step1_text_0": {
+    "message": ", Bedankt voor het gebruik van onze software."
+  },
+  "morning": {
+    "message": "ochtend"
+  },
+  "day": {
+    "message": "dag"
+  },
+  "night": {
+    "message": "nacht"
+  },
+  "hi": {
+    "message": "Hoi"
+  },
+  "good": {
+    "message": "Goed"
+  },
+  "tour_step1_text_1": {
+    "message": "Hier is een van onze ondersteunde winkels."
+  },
+  "tour_step1_text_2": {
+    "message": "Werkt op dezelfde manier op andere ondersteunde sites zoals AliExpress, eBay, Amazon en meer."
+  },
+  "tour_step1_text_3": {
+    "message": "Het duurt ongeveer een minuut om uit te leggen hoe het werkt."
+  },
+  "tour_step1_lets_start": {
+    "message": "Laten we beginnen"
+  },
+  "tour_step2_title": {
+    "message": "Aankoopaanbevelingen"
+  },
+  "tour_step2_text_0": {
+    "message": "Het maken van snelle en efficiënte aankoopbeslissingen vormt de kern van ons product; wij fungeren als stoplicht voor online aankopen."
+  },
+  "tour_step2_text_3": {
+    "message": "Onze Artificial Intelligence neemt binnen enkele seconden een datagedreven beslissing over producten. Op deze manier krijgt u binnen enkele minuten een snelle indicatie van veel producten, in plaats van urenlange handmatige controle."
+  },
+  "tour_step3_title": {
+    "message": "Dealveiligheid is belangrijk"
+  },
+  "tour_step3_text_0": {
+    "message": "U kunt vandaag verstandig winkelen om gedoe in de toekomst te besparen."
+  },
+  "tour_step3_text_1": {
+    "message": "Groen schild - Aanbevolen deal"
+  },
+  "tour_step3_text_2": {
+    "message": "Rood schild - Niet aanbevolen deal"
+  },
+  "tour_step3_text_3": {
+    "message": "Geel schild - twijfelachtige deal"
+  },
+  "tour_step5_title": {
+    "message": "Uw privacy staat voorop"
+  },
+  "tour_step5_text_0": {
+    "message": "Het gebruik van onze service is voor u gratis. Wanneer u een aankoop doet, betaalt de winkel ons een kleine vergoeding om u naar het beste product te begeleiden."
+  },
+  "tour_step5_text_1": {
+    "message": "De software werkt lokaal omdat wij uw privacy belangrijk vinden. Er wordt geen informatie over uw activiteit verzameld."
+  },
+  "tour_feedback_title": {
+    "message": "Wij waarderen uw feedback"
+  },
+  "tour_feedback_text": {
+    "message": "Neem contact met ons op als u een idee, een probleem of een verbetering heeft: "
+  },
+  "or": {
+    "message": "of"
+  },
+  "contact_form": {
+    "message": "Gebruik contactformulier"
+  },
+  "by_email": {
+    "message": "Een email schrijven"
+  },
+  "call_as_at": {
+    "message": "Telefonisch +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Veel klanten hebben het product ten zeerste aanbevolen"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Het product wordt niet genoeg aanbevolen door klanten"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Recensies zijn uiterst positief. Sterren: {ProductRatingValue}, recensies: {ProductReviewAmount}, beoordelingen: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Recensies ontbreken of slechte recensies. Sterren: {ProductRatingValue}, recensies: {ProductReviewAmount}, beoordelingen: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Recensies zijn uiterst positief. Sterren: {ProductRatingValue}, bestellingen: {ProductOrdersAmount}, recensies: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Recensies ontbreken of slechte recensies. Sterren: {ProductRatingValue}, bestellingen: {ProductOrdersAmount}, recensies: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Recensies zijn uiterst positief. Sterren: {ProductRatingValue}, bestellingen: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Recensies ontbreken of slechte recensies. Sterren: {ProductRatingValue}, bestellingen: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "De winkel wordt hoog gewaardeerd. Sterren: {ProductRatingValue}, bestellingen: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "De winkel wordt slecht beoordeeld. Sterren: {ProductRatingValue}, bestellingen: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Gerenommeerde verkoper, actief in het bedrijfsleven {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Beginnende verkoper, actief in het bedrijfsleven {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Uitstekend retourbeleid"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Het retourbeleid is slecht"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Een betrouwbare verkoper"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Direct per merk verkocht"
+  },
+  "tooltip_order_safe": {
+    "message": "Een groot aantal tevreden klanten"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Een klein aantal tevreden klanten"
+  },
+  "tooltip_rating_safe": {
+    "message": "Veel tevreden klanten hebben beoordelingen achtergelaten"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Veel boze klanten plaatsten negatieve recensies"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Uitstekende levertijd, maximaal {daysToDeliver} dagen"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Het kan tot {daysToDeliver} dagen duren voordat u uw pakket ontvangt."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Het is onduidelijk wanneer de levering zal plaatsvinden"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "De meerderheid van de klanten van de winkel is tevreden, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Veel klanten zijn ontevreden over de winkel, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "De winkel mist feedback van klanten"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Gratis verzenden"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Verzending tegen vergoeding of afhalen vereist"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Dit product is redelijk geprijsd"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Een slechte selectie van koopopties"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "De prijs is uitstekend, {priceDifVsAverage}% lager vergeleken met het gemiddelde"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "De prijs is redelijk, {priceDifVsAverage}% lager vergeleken met het gemiddelde"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "De prijs is redelijk, {priceDifVsAverage}% hoger vergeleken met het gemiddelde"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Een dure prijs, {priceDifVsAverage}% hoger vergeleken met het gemiddelde"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose - Een betrouwbaar en voordelig product"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon verkoopt en verzendt dit product"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Verkocht of verzonden door Amazon, betrokken derde partij"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart verkoopt en verzendt dit product"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Feedback ziet er goed uit! {validAmount} authentiek, {fakeAmount} onnatuurlijk, {totalAmount} totaal"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Feedback ziet er gemanipuleerd uit! {validAmount} authentiek, {fakeAmount} onnatuurlijk, {totalAmount} totaal"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Dit product verkoopt heel goed"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "De verkoop van het product is relatief laag"
+  },
+  "popup_title": {
+    "message": "Uw slimme assistent voor online winkelen"
+  },
+  "loading_product": {
+    "message": "Product in inspectie"
+  },
+  "popup_footer_share": {
+    "message": "Vertel uw vrienden en familie over SafeDeal"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Geverifieerde veilige site. Steun ons via onze affiliatelink."
+  },
+  "popup_top_tabs_home": {
+    "message": "Thuis"
+  },
+  "popup_top_tabs_settings": {
+    "message": "Instellingen"
+  },
+  "supported_websites": {
+    "message": "Ondersteunde websites"
+  },
+  "popup_benefits_tab": {
+    "message": "Functies"
+  },
+  "popup_about_tab": {
+    "message": "Over"
+  },
+  "popup_contact_us_tab": {
+    "message": "Neem contact met ons op"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazone"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Premie"
+  },
+  "years_label": {
+    "message": "jaar"
+  },
+  "year_label": {
+    "message": "1 jaar"
+  },
+  "less_than_a_year": {
+    "message": "minder dan een jaar"
+  },
+  "explanations_price_history": {
+    "message": "De prijsgeschiedenisgrafiek van een product - Dit kan u helpen echte kortingen te onderscheiden van valse kortingen. We houden de prijs bij en houden de wijzigingen dagelijks in de gaten, waardoor het mogelijk is om te profiteren van uitverkoop en tijdelijke aanbiedingen."
+  },
+  "explanations_review_and_ratings": {
+    "message": "De conclusie is gebaseerd op: \n    1) Om een algemeen beeld van de productaanbevelingen te krijgen, hebben we verschillende statistische analyse- en kunstmatige-intelligentietechnieken toegepast. \n    2) Recensies en beoordelingen zijn geanalyseerd en wij beschouwen een beoordeling van 4 en hoger als een indicatie van een geweldig product. \n    3) Voor een betekenisvol resultaat zijn minimaal 100 bestellingen nodig, dus hoe meer bestellingen we analyseren, hoe meer we de conclusie van de productbeoordeling vertrouwen."
+  },
+  "explanations_store_age": {
+    "message": "Ons systeem meet de geloofwaardigheid van de winkel aan de hand van de leeftijd van de winkel, omdat winkels met meer ervaring en een positieve reputatie geloofwaardiger zijn."
+  },
+  "explanations_store_rating": {
+    "message": "We controleren de algehele winkelfeedbackscore, hoe hoger de score, hoe groter de kans op een goede service. Ruim 91% van de feedback wordt als positieve feedback beschouwd."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress classificeert de verkoper als een zeer betrouwbare verkoper, met een hoog verkoopvolume"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Een Amazon-bestseller is een bestseller die minimaal 150 verkopen per maand heeft en hoe meer verkopen, hoe gemakkelijker het wordt om te vertrouwen op de feedback van andere kopers."
+  },
+  "explanations_amazon_choice": {
+    "message": "Producten gemarkeerd met Amazon's Choice worden vaak door klanten gekocht. Ze hebben een gunstige prijs, worden hoog gewaardeerd en zijn beschikbaar voor snelle verzending vanuit het magazijn van Amazon."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Wij gebruiken Statistische Modellering om het aantal positieve beoordelingen te positioneren en aan te passen op basis van het aantal onnatuurlijke beoordelingen, zodat u uw beslissing kunt nemen op basis van hoogwaardige gegevens. Het algoritme is niet perfect, maar heeft een hoge nauwkeurigheid. Amazon heeft goed werk geleverd door honderden miljoenen feedback te verzamelen, maar veel merken hebben ervoor gekozen om hier misbruik van te maken door het te overspoelen met lage kwaliteit en bevooroordeelde recensies in een poging hun eigen winst te vergroten. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Verkocht en verzonden door Amazon: deze artikelen zijn door Amazon als voorraad besteld. Ze worden rechtstreeks vanuit een Amazon-magazijn verkocht en verzonden. Je kunt het artikel veel sneller krijgen en Amazon zal eventuele problemen met de klantenservice rechtstreeks afhandelen."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Deze artikelen zijn eigendom van een onafhankelijk bedrijf van derden en worden van tevoren naar de magazijnen van Amazon verzonden. Wanneer je ze koopt, verzendt Amazon ze naar je."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Voor kopers is het belangrijk om te weten wanneer ze een artikel kunnen verwachten. Daarom controleren we altijd de geschatte leverdatum op eBay. De geschatte leverdatum is gebaseerd op de tijd die de verkoper nodig heeft om de artikelen in te pakken en te verzenden, en de levertijd van postdiensten. Wij beschouwen 14 dagen voor binnenlandse zendingen en 30 dagen voor internationale zendingen als uitstekende levertijden."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Gratis verzending is een goede indicatie dat een verkoper een geweldige klantenservice zal bieden en het artikel op tijd zal verzenden zoals beschreven."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Het accepteren van retourzendingen is een goede indicatie van een goede verkoper: als u een artikel ontvangt dat beschadigd of onjuist is, kunt u het retourneren en uw geld terugkrijgen."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Betaalbare retourzendingen of geen retourzendingen: Alleen als het product verkeerd is aangekomen, kunt u het retourneren voor terugbetaling."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Verkopers die op grote schaal uitstekende klantenservice leveren, worden door eBay gebrandmerkt met de Top Rated-badge. Dit betekent dat ze een hoge feedbackscore en een hoog percentage positieve feedback op eBay hebben, dus het is veiliger om bij hen te kopen."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Verkopers die een merk vertegenwoordigen, worden vaak geassocieerd met een uitstekende klantenservice. Ze hebben meestal hoge feedbackscores en een groot percentage positieve feedback op eBay, waardoor kopen bij hen een veiligere optie is."
+  },
+  "why_it_free": {
+    "message": "Waarom is het gratis te gebruiken?"
+  },
+  "explanations_why_it_free": {
+    "message": "Waarom is het gebruik van Safe-Deal Free voor u?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Het gebruik van onze service is voor u gratis. Wanneer u een aankoop doet, betaalt de winkel ons een kleine vergoeding om u naar het beste product te begeleiden."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "We gebruiken alleen openbaar beschikbare gegevens, zodat geen enkel merk of winkel onze aanbevelingen beïnvloedt."
+  },
+  "premium_features": {
+    "message": "Premium eigenschappen"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Geen aansluiting, u kunt elk gewenst cashback-programma aansluiten"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Persoonlijke telefoon- en e-mailondersteuning en verbeterde verwerkingstijd"
+  },
+  "premium_features_cost": {
+    "message": "Prijs - 2 USD per maand (jaarlijks gefactureerd)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Het ingezamelde geld wordt gebruikt om de dienstverlening te verbeteren en de infrastructuur te betalen."
+  },
+  "affiliated_websites": {
+    "message": "Aangesloten websites"
+  },
+  "buy_premium": {
+    "message": "Aankooppremie"
+  },
+  "opt_out": {
+    "message": "Afmelden"
+  },
+  "image": {
+    "message": "Afbeelding"
+  },
+  "product_name": {
+    "message": "productnaam"
+  },
+  "final_price": {
+    "message": "Uiteindelijke prijs"
+  },
+  "coupon": {
+    "message": "Coupon"
+  },
+  "you_saved": {
+    "message": "Couponbedrag"
+  },
+  "you_save": {
+    "message": "Jij spaart"
+  },
+  "share": {
+    "message": "Deel"
+  },
+  "discounts_found": {
+    "message": "Kortingen gevonden"
+  },
+  "extension_not_available": {
+    "message": "SafeDeal-extensie is niet beschikbaar voor deze pagina."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Zoek naar een ander trefwoord om kortingsbonnen en aanbiedingen te vinden."
+  },
+  "search_product": {
+    "message": "Zoek product"
+  },
+  "want_more_coupons": {
+    "message": "Wilt u meer kortingsbonnen?"
+  },
+  "click_here": {
+    "message": "Klik hier"
+  },
+  "coupon_header": {
+    "message": "Veilige deal - kortingsbonnen en aanbiedingen"
+  },
+  "tab_header_analyze": {
+    "message": "Productevaluatie"
+  },
+  "tab_header_reviews": {
+    "message": "Recensies Samenvatting"
+  },
+  "click_to_reveal": {
+    "message": "Klik of druk op {systemShortcut} om te schakelen tussen minimale en volledige analyse."
+  },
+  "click_to_hide": {
+    "message": "Klik op het icoon of druk op de 'Escape'-toets om de detailweergave te sluiten."
+  },
+  "click_to_pin": {
+    "message": "Zet dit paneel vast om het zichtbaar te houden tijdens het vernieuwen en tijdens het browsen"
+  },
+  "click_to_unpin": {
+    "message": "Maak dit paneel los, zodat het verborgen wordt als u ergens anders op de pagina klikt"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Nog geen beoordelingen"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Nog geen klantbeoordelingen. Dit product is mogelijk nieuw of niet populair."
+  },
+  "reviews_pros": {
+    "message": "Pluspunten"
+  },
+  "reviews_cons": {
+    "message": "Nadelen"
+  },
+  "reviews_good_to_know": {
+    "message": "Goed om te weten"
+  },
+  "reviews_error": {
+    "message": "Onze excuses voor het ongemak. Het lijkt erop dat het samenvatten van de beoordelingen niet is gelukt. Om dit probleem op te lossen, kunt u contact opnemen met het Safe Deal-ondersteuningsteam voor hulp."
+  },
+  "deals_ali_express": {
+    "message": "Veilige deal - Dealszoeker"
+  },
+  "deals_ali_found": {
+    "message": "Gevonden aanbiedingen: "
+  },
+  "product": {
+    "message": "Product"
+  },
+  "title": {
+    "message": "Titel"
+  },
+  "price": {
+    "message": "Prijs"
+  },
+  "deal_type": {
+    "message": "Dealtype"
+  },
+  "savings": {
+    "message": "Besparingen"
+  },
+  "extra": {
+    "message": "Extra"
+  },
+  "shipping": {
+    "message": "Verzenden"
+  },
+  "rating": {
+    "message": "Beoordeling"
+  },
+  "sold": {
+    "message": "Verkocht"
+  },
+  "reviews": {
+    "message": "Recensies"
+  },
+  "mobile_app": {
+    "message": "Installeer onze mobiele app"
+  },
+  "tab_header_opinions": {
+    "message": "Meningen en commentaar"
+  },
+  "opinions_title": {
+    "message": "Geef uw mening of vraag de community over dit product"
+  },
+  "research_online": {
+    "message": "Uitchecken"
+  },
+  "video_reviews": {
+    "message": "Videorecensies"
+  },
+  "reddit_reviews": {
+    "message": "Meningen op Reddit"
+  },
+  "web_reviews": {
+    "message": "Recensies online"
+  },
+  "shopping_reviews": {
+    "message": "Winkelsites"
+  },
+  "product_photos": {
+    "message": "Productfoto's"
+  },
+  "product_purchase_query": {
+    "message": "koop nu online"
+  },
+  "product_reviews_query": {
+    "message": "gedetailleerde recensies"
+  }
+}

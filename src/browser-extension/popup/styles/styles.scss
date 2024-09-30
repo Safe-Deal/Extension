@@ -1,0 +1,27 @@
+@import "abstracts/index";
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap");
+
+html,
+body {
+  height: auto;
+  border-radius: 8px;
+  padding: 0;
+  margin: 0;
+  font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+*,
+html,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+button,
+input,
+textarea,
+select {
+  font-family: "Plus Jakarta Sans", sans-serif;
+}

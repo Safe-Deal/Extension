@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "የግዢ ረዳት: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "የግዢ ረዳት፡ ጊዜን በ AI ይቆጥቡ። የዋጋ ታሪክን ያግኙ፣ ውድ ቅናሾችን ያስወግዱ፣ ስፖት የውሸት ግምገማዎች፣ የስፖት ሻጭ አሉታዊ ደረጃ።"
+  },
+  "appNameShort": {
+    "message": "ደህንነቱ..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "ደህንነቱ የተጠበቀ ስምምነት",
+    "description": "በመስመር ላይ ሲገዙ በራስ መተማመን ይሰማዎት"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal ይህን ድር ጣቢያ ገምግሞ አደገኛ ሊሆን እንደሚችል ወስኗል {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "ይህን ድር ጣቢያ አሁኑኑ ይልቀቁ"
+  },
+  "anti_scam_stay": {
+    "message": "ይህ ጣቢያ ታማኝ ነው።"
+  },
+  "anti_scam_confirm": {
+    "message": "ይህ ድህረ ገጽ ማጭበርበር፣ ሌባ ወይም ሌላ ህገወጥ ተግባር የመሆን እድሉ ከፍተኛ ነው። ይህን ድህረ ገጽ ታምናለህ?"
+  },
+  "recommended_product": {
+    "message": "የሚመከር ምርት"
+  },
+  "unrecommended_product": {
+    "message": "የማይመከር ምርት"
+  },
+  "doubtful_product": {
+    "message": "አጠራጣሪ ምርት"
+  },
+  "insufficient_data": {
+    "message": "መደምደሚያ የማይታወቅ"
+  },
+  "signal_of_a_good_deal": {
+    "message": "የጥሩ ስምምነት ምልክት"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "አጠራጣሪ ስምምነት ምልክት"
+  },
+  "no_data": {
+    "message": "በአሁኑ ጊዜ ምንም የሚታይ ውሂብ የለም።"
+  },
+  "chart_title": {
+    "message": "የምርት ዋጋ ታሪክ"
+  },
+  "back_button": {
+    "message": "ቀዳሚ"
+  },
+  "next_button": {
+    "message": "ቀጥሎ"
+  },
+  "start_using_button": {
+    "message": "SafeDealን መጠቀም ይጀምሩ"
+  },
+  "tour_step1_title": {
+    "message": "ወደ Safe Deal እንኳን በደህና መጡ"
+  },
+  "tour_step1_text_0": {
+    "message": ", የእኛን ሶፍትዌር ስለተጠቀሙ እናመሰግናለን."
+  },
+  "morning": {
+    "message": "ጠዋት"
+  },
+  "day": {
+    "message": "ቀን"
+  },
+  "night": {
+    "message": "ለሊት"
+  },
+  "hi": {
+    "message": "ሃይ"
+  },
+  "good": {
+    "message": "ጥሩ"
+  },
+  "tour_step1_text_1": {
+    "message": "ከኛ ከሚደገፉ ሱቆች ውስጥ አንዱ እዚህ አለ።"
+  },
+  "tour_step1_text_2": {
+    "message": "እንደ AliExpress፣ eBay፣ Amazon እና ሌሎችም ባሉ ሌሎች የሚደገፉ ጣቢያዎች ላይ በተመሳሳይ መንገድ ይሰራል።"
+  },
+  "tour_step1_text_3": {
+    "message": "እንዴት እንደሚሰራ ለማብራራት አንድ ደቂቃ ያህል ሊወስድ ይገባል."
+  },
+  "tour_step1_lets_start": {
+    "message": "እንጀምር"
+  },
+  "tour_step2_title": {
+    "message": "የግዢ ምክሮች"
+  },
+  "tour_step2_text_0": {
+    "message": "ፈጣን እና ቀልጣፋ የግዢ ውሳኔዎችን ማድረግ የምርታችን እምብርት ነው። ለመስመር ላይ ግዢ እንደ የትራፊክ መብራት እንሰራለን።"
+  },
+  "tour_step2_text_3": {
+    "message": "የእኛ አርቲፊሻል ኢንተለጀንስ በጥቂት ሰከንዶች ውስጥ በምርቶች ላይ በውሂብ ላይ የተመሰረተ ውሳኔ ያደርጋል። በዚህ መንገድ ለብዙ ምርቶች ፈጣን አመልካች በደቂቃዎች ውስጥ ያገኛሉ እንጂ በሰዓታት በእጅ መፈተሽ አይደለም።"
+  },
+  "tour_step3_title": {
+    "message": "የድርድር ደህንነት አስፈላጊ ነው።"
+  },
+  "tour_step3_text_0": {
+    "message": "ለወደፊቱ ችግርን ለመቆጠብ ዛሬ በጥበብ መግዛት ይችላሉ።"
+  },
+  "tour_step3_text_1": {
+    "message": "አረንጓዴ ጋሻ - የሚመከር ስምምነት"
+  },
+  "tour_step3_text_2": {
+    "message": "ቀይ ጋሻ - የማይመከር ስምምነት"
+  },
+  "tour_step3_text_3": {
+    "message": "ቢጫ ጋሻ - አጠራጣሪ ስምምነት"
+  },
+  "tour_step5_title": {
+    "message": "የእርስዎ ግላዊነት ከሁሉም በላይ ነው።"
+  },
+  "tour_step5_text_0": {
+    "message": "አገልግሎታችንን መጠቀም ለእርስዎ ነፃ ነው። ግዢ ሲፈጽሙ መደብሩ እርስዎን ወደ ምርጡ ምርት ለመምራት ትንሽ ክፍያ ይከፍለናል።"
+  },
+  "tour_step5_text_1": {
+    "message": "ለእርስዎ ግላዊነት ስለምንጨነቅ ሶፍትዌሩ በአገር ውስጥ ይሰራል። ስለ እንቅስቃሴዎ ምንም መረጃ አልተሰበሰበም።"
+  },
+  "tour_feedback_title": {
+    "message": "የእርስዎን አስተያየት እናከብራለን"
+  },
+  "tour_feedback_text": {
+    "message": "ሀሳብ፣ ችግር ወይም ማሻሻያ ላይ መወያየት ካስፈለገዎት ያነጋግሩ፡ "
+  },
+  "or": {
+    "message": "ወይም"
+  },
+  "contact_form": {
+    "message": "የእውቂያ ቅጽ ይጠቀሙ"
+  },
+  "by_email": {
+    "message": "ኢሜይል ይጻፉ"
+  },
+  "call_as_at": {
+    "message": "በስልክ +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "ብዙ ደንበኞች ምርቱን በጣም ይመክራሉ"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "ምርቱ በደንበኞች በበቂ ሁኔታ አይመከርም"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "ግምገማዎች በጣም አዎንታዊ ናቸው። ኮከቦች፡ {ProductRatingValue}፣ ግምገማዎች፡ {ProductReviewAmount}፣ ደረጃ አሰጣጦች፡ {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "የግምገማዎች እጥረት ወይም ደካማ ግምገማዎች። ኮከቦች፡ {ProductRatingValue}፣ ግምገማዎች፡ {ProductReviewAmount}፣ ደረጃዎች፡ {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "ግምገማዎች በጣም አዎንታዊ ናቸው። ኮከቦች፡ {ProductRatingValue}፣ ትዕዛዞች፡ {ProductOrdersAmount}፣ ግምገማዎች፡ {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "የግምገማዎች እጥረት ወይም ደካማ ግምገማዎች። ኮከቦች፡ {ProductRatingValue}፣ ትዕዛዞች፡ {ProductOrdersAmount}፣ ግምገማዎች፡ {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "ግምገማዎች በጣም አዎንታዊ ናቸው። ኮከቦች፡ {ProductRatingValue}፣ ትዕዛዞች፡ {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "የግምገማዎች እጥረት ወይም ደካማ ግምገማዎች። ኮከቦች፡ {ProductRatingValue}፣ ትዕዛዞች፡ {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "ሱቁ ከፍተኛ ደረጃ ተሰጥቶታል። ኮከቦች፡ {ProductRatingValue}፣ ትዕዛዞች፡ {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "ሱቁ ዝቅተኛ ደረጃ ተሰጥቶታል። ኮከቦች፡ {ProductRatingValue}፣ ትዕዛዞች፡ {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "በደንብ የተመሰረተ ሻጭ፣ በቢዝነስ ውስጥ {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "ጀማሪ ሻጭ፣ በቢዝነስ ውስጥ {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "በጣም ጥሩ የመመለሻ ፖሊሲ"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "የመመለሻ ፖሊሲ ደካማ ነው።"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "አስተማማኝ ሻጭ"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "በቀጥታ በብራንድ የተሸጠ"
+  },
+  "tooltip_order_safe": {
+    "message": "ብዙ ቁጥር ያላቸው እርካታ ያላቸው ደንበኞች"
+  },
+  "tooltip_order_un_safe": {
+    "message": "ደስተኛ ደንበኞች አነስተኛ ቁጥር"
+  },
+  "tooltip_rating_safe": {
+    "message": "ብዙ ደስተኛ ደንበኞች ግምገማዎችን ትተዋል።"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "ብዙ የተናደዱ ደንበኞች አሉታዊ ግምገማዎችን አውጥተዋል።"
+  },
+  "tooltip_delivery_safe": {
+    "message": "በጣም ጥሩ የማድረሻ ጊዜ፣ ቢበዛ {daysToDeliver} ቀናት"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "ጥቅልዎን ለማግኘት እስከ {daysToDeliver} ቀናት ሊወስድ ይችላል።"
+  },
+  "tooltip_delivery_unknown": {
+    "message": "ርክክብ መቼ እንደሚካሄድ ግልጽ አይደለም"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "አብዛኛዎቹ የመደብሩ ደንበኞች ረክተዋል፣ {ፐርሰንትOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "ብዙ ደንበኞች በመደብሩ እርካታ የላቸውም፣ {ፐርሰንትOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "መደብሩ ከደንበኞች አስተያየት ይጎድለዋል።"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "በነጻ ይላኩ።"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "ለክፍያ ወይም ለማንሳት ተልኳል።"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "ይህ ምርት በተመጣጣኝ ዋጋ ነው"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "ደካማ የግዢ አማራጮች ምርጫ"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "ዋጋው በጣም ጥሩ ነው፣ ከአማካይ ጋር ሲነጻጸር {priceDifVsAverage}% ያነሰ ነው።"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "ዋጋው ፍትሃዊ ነው፣ ከአማካይ ጋር ሲነጻጸር {priceDifVsAverage}% ያነሰ ነው።"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "ዋጋው ፍትሃዊ ነው፣ ከአማካይ ጋር ሲነጻጸር {priceDifVsAverage}% ከፍ ያለ ነው።"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "ከአማካይ ጋር ሲነጻጸር ውድ ዋጋ፣ {priceDifVsAverage}% ከፍ ያለ"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Select - አስተማማኝ እና ጥሩ ዋጋ ያለው ምርት"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "አማዞን ይህንን ምርት ይሸጣል እና ይልካል።"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "በሶስተኛ ወገን በአማዞን የተሸጠ ወይም የተላከ"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "ዋልማርት ይህንን ምርት ይሸጣል እና ይልካል።"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "አስተያየቶች በጣም ጥሩ ይመስላል! {validAmount} ትክክለኛ፣ {fakeAmount} ከተፈጥሮ ውጪ የሆነ፣ {totalAmount} ድምር"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "አስተያየቶች የተቀነባበሩ ይመስላሉ! {validAmount} ትክክለኛ፣ {fakeAmount} ከተፈጥሮ ውጪ የሆነ፣ {totalAmount} ድምር"
+  },
+  "tooltip_bsr_safe": {
+    "message": "ይህ ምርት በጥሩ ሁኔታ እየተሸጠ ነው።"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "የምርት ሽያጭ በአንጻራዊ ሁኔታ ዝቅተኛ ነው"
+  },
+  "popup_title": {
+    "message": "ለመስመር ላይ ግብይት ብልህ ረዳትዎ"
+  },
+  "loading_product": {
+    "message": "የምርት ምርመራ"
+  },
+  "popup_footer_share": {
+    "message": "ስለ SafeDeal ለጓደኞችዎ እና ለቤተሰብዎ ይንገሩ"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "የተረጋገጠ አስተማማኝ ጣቢያ። በተዛማጅ ማገናኛ በኩል ይደግፉን።"
+  },
+  "popup_top_tabs_home": {
+    "message": "ቤት"
+  },
+  "popup_top_tabs_settings": {
+    "message": "ቅንብሮች"
+  },
+  "supported_websites": {
+    "message": "የሚደገፉ ድር ጣቢያዎች"
+  },
+  "popup_benefits_tab": {
+    "message": "ዋና መለያ ጸባያት"
+  },
+  "popup_about_tab": {
+    "message": "ስለ"
+  },
+  "popup_contact_us_tab": {
+    "message": "አግኙን"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "አማዞን"
+  },
+  "popup_ebay": {
+    "message": "ኢቤይ"
+  },
+  "popup_walmart": {
+    "message": "ዋልማርት"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "ፕሪሚየም"
+  },
+  "years_label": {
+    "message": "ዓመታት"
+  },
+  "year_label": {
+    "message": "1 ዓመት"
+  },
+  "less_than_a_year": {
+    "message": "ከአንድ አመት ያነሰ"
+  },
+  "explanations_price_history": {
+    "message": "የምርት ዋጋ ታሪክ ግራፍ - ይህ ከሐሰተኛ ቅናሾች እውነተኛ ቅናሾችን ለመለየት ይረዳዎታል። የዋጋውን መዝገብ እንይዛለን እና በየእለቱ ለውጦችን እንከታተላለን፣ ይህም የሽያጭ እና የተገደበ ጊዜ ቅናሾችን ለመጠቀም ያስችላል።"
+  },
+  "explanations_review_and_ratings": {
+    "message": "መደምደሚያው በሚከተሉት ላይ የተመሰረተ ነው. \n    1) የምርት ምክሮችን አጠቃላይ እይታ ለማግኘት የተለያዩ ስታቲስቲካዊ ትንታኔዎችን እና አርቲፊሻል ኢንተለጀንስ ቴክኒኮችን ተግባራዊ አድርገናል። \n    2) ግምገማዎች እና ደረጃዎች ተተነተኑ፣ እና 4 እና ከዚያ በላይ የተሰጠው ደረጃ በጣም ጥሩ ምርት እንደሆነ እንቆጥረዋለን። \n    3) ትርጉም ያለው ውጤት ቢያንስ 100 ትዕዛዞችን ይፈልጋል ፣ ስለዚህ ብዙ ትዕዛዞችን በምንመረምር ቁጥር የምርት ደረጃ መደምደሚያውን የበለጠ እናምናለን።"
+  },
+  "explanations_store_age": {
+    "message": "የበለጠ ልምድ እና መልካም ስም ያላቸው መደብሮች የበለጠ እምነት የሚጣልባቸው በመሆናቸው ስርዓታችን የመደብሩን ዕድሜ በመጠቀም የማከማቻ ታማኝነትን ይለካል።"
+  },
+  "explanations_store_rating": {
+    "message": "አጠቃላይ የመደብር ግብረመልስ ውጤትን እንፈትሻለን፣ ውጤቱም ከፍ ባለ መጠን ጥሩ አገልግሎት የማግኘት ዕድሉ የተሻለ ይሆናል። ከ 91% በላይ ግብረመልስ እንደ አዎንታዊ ግብረመልስ ይቆጠራል."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress ከፍተኛ የሽያጭ መጠን ያለው ሻጩን በጣም አስተማማኝ ሻጭ አድርጎ ይመድባል"
+  },
+  "explanations_amazon_bsr": {
+    "message": "የአማዞን ምርጥ ሻጭ በወር ቢያንስ 150 ሽያጭ ያለው እና ብዙ ሽያጮች ያለው ሲሆን በሌሎች ገዢዎች አስተያየት ላይ መታመን ቀላል ይሆናል።"
+  },
+  "explanations_amazon_choice": {
+    "message": "የአማዞን ምርጫ ምልክት የተደረገባቸው ምርቶች በተደጋጋሚ በደንበኞች ይገዛሉ. ምቹ ዋጋ አላቸው፣ ከፍተኛ ደረጃ የተሰጣቸው እና ከአማዞን መጋዘን ለፈጣን ጭነት ይገኛሉ።"
+  },
+  "explanations_amazon_review_meta": {
+    "message": "ከተፈጥሮ ውጪ በሆኑ ግምገማዎች ብዛት ላይ በመመስረት የአዎንታዊ ግምገማዎችን ቁጥር ለማስቀመጥ እና ለማስተካከል ስታቲስቲክስ ሞዴሊንግ እንጠቀማለን፣ ስለዚህ ውሳኔዎን ከፍተኛ ጥራት ባለው ውሂብ ላይ በመመስረት እንዲወስኑ። አልጎሪዝም ፍጹም አይደለም, ነገር ግን ከፍተኛ ትክክለኛነት ደረጃዎች አሉት. አማዞን በመቶ ሚሊዮኖች የሚቆጠሩ ግብረመልሶችን በመሰብሰብ ጥሩ ስራ ሰርቷል፣ ነገር ግን ብዙ ብራንዶች አላግባብ መጠቀምን መርጠዋል፣ አነስተኛ ጥራት ያላቸውን እና አድሏዊ ግምገማዎችን በማጥለቅለቅ የራሳቸውን ትርፍ ለማሳደግ። "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "በአማዞን ተሽጦ የሚላክ፡ እነዚህ ዕቃዎች በአማዞን እንደ ክምችት ተደርገዋል። የሚሸጡት እና የሚላኩት በቀጥታ ከአማዞን መጋዘን ነው። ንጥሉን በበለጠ ፍጥነት ማግኘት ይችላሉ, እና Amazon ማንኛውንም የደንበኞች አገልግሎት ጉዳዮችን በቀጥታ ያስተናግዳል."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "እነዚህ እቃዎች በገለልተኛ፣ የሶስተኛ ወገን ንግድ ባለቤትነት የተያዙ እና ቀድመው ወደ አማዞን መጋዘኖች ይላካሉ። ሲገዙ አማዞን ይልካል።"
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "ለገዢዎች አንድ ዕቃ መቼ እንደሚመጣ መጠበቅ እንደሚችሉ ማወቅ አስፈላጊ ነው. ለዚያም ነው ሁልጊዜ በEBay ላይ የሚገመተውን የመላኪያ ቀን የምንመረምረው። የተገመተው የመላኪያ ቀን ሻጩ እቃዎችን ለማሸግ እና ለማጓጓዝ በሚወስደው ጊዜ እና ከፖስታ አገልግሎቶች የመላኪያ ጊዜ ላይ የተመሰረተ ነው.ለሀገር ውስጥ ጭነት 14 ቀናት እና ለአለም አቀፍ ጭነት 30 ቀናት እንደ ምርጥ የመላኪያ ጊዜ እንቆጥራለን."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "ነጻ መላኪያ አንድ ሻጭ ጥሩ የደንበኞች አገልግሎት እንደሚሰጥ እና እቃውን በተገለጸው ጊዜ እንደሚልክ ትልቅ ማሳያ ነው።"
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "ተመላሽ መቀበል የጥሩ ሻጭ ጥሩ ማሳያ ነው፡ የተበላሸ ወይም የተሳሳተ እቃ ከተቀበልክ ለተመላሽ ገንዘብ መመለስ ትችላለህ።"
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "የሚከፈል ተመላሽ ወይም ምንም ተመላሽ የለም፡ ምርቱ በስህተት ከደረሰ ብቻ ነው ለተመላሽ ገንዘብ መመለስ የሚችሉት።"
+  },
+  "explanations_ebay_top_rated": {
+    "message": "እጅግ በጣም ጥሩ የደንበኛ አገልግሎትን በሰፊው የሚያቀርቡ ሻጮች በከፍተኛ ደረጃ የተሰጠው ባጅ በኢቤይ ምልክት ተሰጥቷቸዋል። ይህ ማለት ከፍተኛ የግብረመልስ ነጥብ እና በኢቤይ ላይ ከፍተኛ አዎንታዊ ግብረመልስ አላቸው፣ ስለዚህ ከእነሱ መግዛት የበለጠ ደህንነቱ የተጠበቀ ነው።"
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "የምርት ስም የሚወክሉ ሻጮች ብዙውን ጊዜ ከምርጥ የደንበኞች አገልግሎት ጋር የተቆራኙ ናቸው። ብዙውን ጊዜ ከፍተኛ የግብረመልስ ውጤቶች እና በ eBay ላይ ብዙ አዎንታዊ ግብረመልስ አላቸው፣ ይህም ከእነሱ መግዛትን የበለጠ ደህንነቱ የተጠበቀ አማራጭ ያደርገዋል።"
+  },
+  "why_it_free": {
+    "message": "ለመጠቀም ነፃ የሆነው ለምንድነው?"
+  },
+  "explanations_why_it_free": {
+    "message": "ለምንድነው ደህንነቱ የተጠበቀ ስምምነትን መጠቀም ለእርስዎ ነፃ የሆነው?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "አገልግሎታችንን መጠቀም ለእርስዎ ነፃ ነው። ግዢ ሲፈጽሙ መደብሩ እርስዎን ወደ ምርጡ ምርት ለመምራት ትንሽ ክፍያ ይከፍለናል።"
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "ምንም የምርት ስም ወይም ሱቅ በአስተያየታችን ላይ ተጽዕኖ እንደማይኖረው በማረጋገጥ በይፋ የሚገኝ ውሂብን ብቻ እንጠቀማለን።"
+  },
+  "premium_features": {
+    "message": "የፕሪሚየም ባህሪያት"
+  },
+  "premium_features_no_affiliation": {
+    "message": "ምንም ግንኙነት የለም፣ የሚፈልጉትን ማንኛውንም የገንዘብ ተመላሽ ፕሮግራም መሰካት ይችላሉ።"
+  },
+  "premium_features_enhanced_support": {
+    "message": "የግል ስልክ እና የኢሜል ድጋፍ እና የተሻሻለ የማስኬጃ ጊዜ"
+  },
+  "premium_features_cost": {
+    "message": "ዋጋ - በወር 2 ዶላር (በዓመት የሚከፈል)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "የተሰበሰበው ገንዘብ አገልግሎቱን ለማሻሻል እና ለመሠረተ ልማት ክፍያ የሚውል ነው።"
+  },
+  "affiliated_websites": {
+    "message": "ተዛማጅ ድር ጣቢያዎች"
+  },
+  "buy_premium": {
+    "message": "ፕሪሚየም ይግዙ"
+  },
+  "opt_out": {
+    "message": "መርጠህ ውጣ"
+  },
+  "image": {
+    "message": "ምስል"
+  },
+  "product_name": {
+    "message": "የምርት ስም"
+  },
+  "final_price": {
+    "message": "የመጨረሻ ዋጋ"
+  },
+  "coupon": {
+    "message": "ኩፖን"
+  },
+  "you_saved": {
+    "message": "የኩፖን መጠን"
+  },
+  "you_save": {
+    "message": "አንተ ተረፍ"
+  },
+  "share": {
+    "message": "አጋራ"
+  },
+  "discounts_found": {
+    "message": "ቅናሾች ተገኝተዋል"
+  },
+  "extension_not_available": {
+    "message": "SafeDeal ቅጥያ ለዚህ ገጽ አይገኝም።"
+  },
+  "search_for_any_other_keyword": {
+    "message": "ኩፖኖችን እና ቅናሾችን ለማግኘት ሌላ ማንኛውንም ቁልፍ ቃል ይፈልጉ።"
+  },
+  "search_product": {
+    "message": "ምርትን ይፈልጉ"
+  },
+  "want_more_coupons": {
+    "message": "ተጨማሪ ኩፖኖች ይፈልጋሉ?"
+  },
+  "click_here": {
+    "message": "እዚህ ጠቅ ያድርጉ"
+  },
+  "coupon_header": {
+    "message": "ደህንነቱ የተጠበቀ ስምምነት - ኩፖኖች እና ቅናሾች"
+  },
+  "tab_header_analyze": {
+    "message": "የምርት ግምገማ"
+  },
+  "tab_header_reviews": {
+    "message": "የግምገማዎች ማጠቃለያ"
+  },
+  "click_to_reveal": {
+    "message": "በትንሹ እና ሙሉ ትንታኔ መካከል ለመቀያየር {systemShortcut}ን ጠቅ ያድርጉ ወይም ይጫኑ።"
+  },
+  "click_to_hide": {
+    "message": "ዝርዝር እይታውን ለመዝጋት አዶውን ጠቅ ያድርጉ ወይም 'Escape' የሚለውን ቁልፍ ይጫኑ።"
+  },
+  "click_to_pin": {
+    "message": "ይህን ፓነል በማደስ ላይ እና በሚያስሱበት ጊዜ እንዲታይ ይሰኩት"
+  },
+  "click_to_unpin": {
+    "message": "በገጹ ላይ ሌላ ቦታ ሲጫኑ እንዲደበቅ ይህን ፓነል ይንቀሉት"
+  },
+  "reviews_no_reviews_header": {
+    "message": "ገና ምንም ግምገማዎች የሉም"
+  },
+  "reviews_no_reviews_text": {
+    "message": "እስካሁን ምንም የደንበኛ ግምገማዎች የሉም። ይህ ምርት አዲስ ወይም ታዋቂ ላይሆን ይችላል።"
+  },
+  "reviews_pros": {
+    "message": "ጥቅም"
+  },
+  "reviews_cons": {
+    "message": "Cons"
+  },
+  "reviews_good_to_know": {
+    "message": "ሊታወቅ የሚገባው"
+  },
+  "reviews_error": {
+    "message": "ለተፈጠረው ችግር ይቅርታ እንጠይቃለን. የግምገማው ማጠቃለያ ሂደት ያልተሳካ ይመስላል። ይህንን ችግር ለመፍታት፣ ለእርዳታ የSafe Deal Support ቡድንን በደግነት ያነጋግሩ።"
+  },
+  "deals_ali_express": {
+    "message": "ደህንነቱ የተጠበቀ ስምምነት - ቅናሾች ፈላጊ"
+  },
+  "deals_ali_found": {
+    "message": "ቅናሾች ተገኝተዋል፡- "
+  },
+  "product": {
+    "message": "ምርት"
+  },
+  "title": {
+    "message": "ርዕስ"
+  },
+  "price": {
+    "message": "ዋጋ"
+  },
+  "deal_type": {
+    "message": "የድርድር ዓይነት"
+  },
+  "savings": {
+    "message": "ቁጠባዎች"
+  },
+  "extra": {
+    "message": "ተጨማሪ"
+  },
+  "shipping": {
+    "message": "ማጓጓዣ"
+  },
+  "rating": {
+    "message": "ደረጃ መስጠት"
+  },
+  "sold": {
+    "message": "የተሸጠ"
+  },
+  "reviews": {
+    "message": "ግምገማዎች"
+  },
+  "mobile_app": {
+    "message": "የሞባይል መተግበሪያችንን ይጫኑ"
+  },
+  "tab_header_opinions": {
+    "message": "አስተያየት እና አስተያየት"
+  },
+  "opinions_title": {
+    "message": "ስለዚህ ምርት አስተያየትዎን ይስጡ ወይም ማህበረሰቡን ይጠይቁ"
+  },
+  "research_online": {
+    "message": "ጨርሰህ ውጣ"
+  },
+  "video_reviews": {
+    "message": "የቪዲዮ ግምገማዎች"
+  },
+  "reddit_reviews": {
+    "message": "በ Reddit ውስጥ ያሉ አስተያየቶች"
+  },
+  "web_reviews": {
+    "message": "ግምገማዎች መስመር"
+  },
+  "shopping_reviews": {
+    "message": "የግዢ ጣቢያዎች"
+  },
+  "product_photos": {
+    "message": "የምርት ፎቶዎች"
+  },
+  "product_purchase_query": {
+    "message": "አሁን በመስመር ላይ ይግዙ"
+  },
+  "product_reviews_query": {
+    "message": "ዝርዝር ግምገማዎች"
+  }
+}

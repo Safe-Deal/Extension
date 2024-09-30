@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Помощник при пазаруване: AliExpress, Amazon"
+  },
+  "appDescription": {
+    "message": "Асистент за пазаруване: Спестете време от AI. Открийте историята на цените, избягвайте скъпи сделки, забелязвайте фалшиви отзиви,..."
+  },
+  "appNameShort": {
+    "message": "Безопасна..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Безопасна сделка",
+    "description": "Чувствайте се уверени, когато пазарувате онлайн"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal прегледа този уебсайт и установи, че може да бъде опасен {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Напуснете този уебсайт сега"
+  },
+  "anti_scam_stay": {
+    "message": "Този сайт е надежден"
+  },
+  "anti_scam_confirm": {
+    "message": "Голяма вероятност този уебсайт да е измама, крадец или друга незаконна дейност. Имате ли доверие на този уебсайт?"
+  },
+  "recommended_product": {
+    "message": "Препоръчан продукт"
+  },
+  "unrecommended_product": {
+    "message": "Непрепоръчителен продукт"
+  },
+  "doubtful_product": {
+    "message": "Съмнителен продукт"
+  },
+  "insufficient_data": {
+    "message": "Заключение неопределено"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Индикация за добра сделка"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Индикация за съмнителна сделка"
+  },
+  "no_data": {
+    "message": "В момента няма данни за показване"
+  },
+  "chart_title": {
+    "message": "История на цените на продукта"
+  },
+  "back_button": {
+    "message": "Предишен"
+  },
+  "next_button": {
+    "message": "Следващия"
+  },
+  "start_using_button": {
+    "message": "Започнете да използвате SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "Добре дошли в Safe Deal"
+  },
+  "tour_step1_text_0": {
+    "message": ", Благодарим ви, че използвате нашия софтуер."
+  },
+  "morning": {
+    "message": "сутрин"
+  },
+  "day": {
+    "message": "ден"
+  },
+  "night": {
+    "message": "нощ"
+  },
+  "hi": {
+    "message": "здрасти"
+  },
+  "good": {
+    "message": "добре"
+  },
+  "tour_step1_text_1": {
+    "message": "Ето един от поддържаните от нас магазини."
+  },
+  "tour_step1_text_2": {
+    "message": "Работи по същия начин на други поддържани сайтове като AliExpress, eBay, Amazon и други."
+  },
+  "tour_step1_text_3": {
+    "message": "Трябва да отнеме около минута, за да обясните как работи."
+  },
+  "tour_step1_lets_start": {
+    "message": "Да започваме"
+  },
+  "tour_step2_title": {
+    "message": "Препоръки за покупка"
+  },
+  "tour_step2_text_0": {
+    "message": "Вземането на бързи и ефективни решения за покупка е в основата на нашия продукт; ние действаме като светофар за онлайн покупки."
+  },
+  "tour_step2_text_3": {
+    "message": "Нашият изкуствен интелект взема базирано на данни решение за продукти за няколко секунди. По този начин получавате бърз индикатор за много продукти в рамките на минути, а не часове ръчна проверка."
+  },
+  "tour_step3_title": {
+    "message": "Безопасността на сделката е важна"
+  },
+  "tour_step3_text_0": {
+    "message": "Можете да пазарувате разумно днес, за да си спестите проблеми в бъдеще."
+  },
+  "tour_step3_text_1": {
+    "message": "Зелен щит - Препоръчителна сделка"
+  },
+  "tour_step3_text_2": {
+    "message": "Червен щит - Непрепоръчана сделка"
+  },
+  "tour_step3_text_3": {
+    "message": "Жълт щит - Съмнителна сделка"
+  },
+  "tour_step5_title": {
+    "message": "Вашата поверителност е от първостепенно значение"
+  },
+  "tour_step5_text_0": {
+    "message": "Използването на нашата услуга е безплатно за вас. Когато правите покупка, магазинът ни плаща малка такса, за да ви насочим към най-добрия продукт."
+  },
+  "tour_step5_text_1": {
+    "message": "Софтуерът работи локално, тъй като се грижим за вашата поверителност. Не се събира информация за вашата дейност."
+  },
+  "tour_feedback_title": {
+    "message": "Ние ценим вашите отзиви"
+  },
+  "tour_feedback_text": {
+    "message": "Свържете се, ако имате идея, проблем или ако трябва да обсъдите подобрение: "
+  },
+  "or": {
+    "message": "или"
+  },
+  "contact_form": {
+    "message": "Използвайте формата за контакт"
+  },
+  "by_email": {
+    "message": "Напишете имейл"
+  },
+  "call_as_at": {
+    "message": "По телефон +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Много клиенти горещо препоръчват продукта"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Продуктът не се препоръчва достатъчно от клиентите"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Отзивите са изключително положителни. Звезди: {ProductRatingValue}, Рецензии: {ProductReviewAmount}, Оценки: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Недостиг на рецензии или лоши рецензии. Звезди: {ProductRatingValue}, Рецензии: {ProductReviewAmount}, Оценки: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Отзивите са изключително положителни. Звезди: {ProductRatingValue}, Поръчки: {ProductOrdersAmount}, Рецензии: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Недостиг на рецензии или лоши рецензии. Звезди: {ProductRatingValue}, Поръчки: {ProductOrdersAmount}, Рецензии: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Отзивите са изключително положителни. Звезди: {ProductRatingValue}, Поръчки: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Недостиг на рецензии или лоши рецензии. Звезди: {ProductRatingValue}, Поръчки: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Магазинът е с висока оценка. Звезди: {ProductRatingValue}, Поръчки: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Магазинът е с лоша оценка. Звезди: {ProductRatingValue}, Поръчки: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Добре установен продавач, в бизнеса {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Начинаещ продавач, в бизнеса {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Отлична политика за връщане"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Политиката за връщане е лоша"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Надежден продавач"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Продава се директно по марка"
+  },
+  "tooltip_order_safe": {
+    "message": "Голям брой доволни клиенти"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Малък брой доволни клиенти"
+  },
+  "tooltip_rating_safe": {
+    "message": "Много доволни клиенти са оставили отзиви"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Много ядосани клиенти публикуваха отрицателни отзиви"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Отлично време за доставка, най-много {daysToDeliver} дни"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Може да отнеме до {daysToDeliver} дни, за да получите пакета си."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Не е ясно кога ще стане доставката"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "По-голямата част от клиентите на магазина са доволни, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Много клиенти са недоволни от магазина, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "В магазина липсва обратна връзка от клиентите"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Изпратете безплатно"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Изпраща се срещу заплащане или се изисква получаване"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Този продукт е на разумна цена"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Лош избор от опции за закупуване"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Цената е отлична, {priceDifVsAverage}% по-ниска от средната"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Цената е справедлива, {priceDifVsAverage}% по-ниска от средната"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Цената е справедлива, {priceDifVsAverage}% по-висока от средната"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Скъпа цена, {priceDifVsAverage}% по-висока от средната"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose - надежден продукт с добра цена"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon продава и доставя този продукт"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Продадено или изпратено от Amazon, участва трета страна"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart продава и доставя този продукт"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Отзивите изглеждат страхотно! {validAmount} автентичен, {fakeAmount} неестествен, {totalAmount} общо"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Отзивите изглеждат манипулирани! {validAmount} автентичен, {fakeAmount} неестествен, {totalAmount} общо"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Този продукт се продава наистина добре"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Продажбите на продукта са относително ниски"
+  },
+  "popup_title": {
+    "message": "Вашият интелигентен помощник за онлайн пазаруване"
+  },
+  "loading_product": {
+    "message": "Продукт в проверка"
+  },
+  "popup_footer_share": {
+    "message": "Кажете на приятелите и семейството си за SafeDeal"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Проверен безопасен сайт. Подкрепете ни чрез нашата партньорска връзка."
+  },
+  "popup_top_tabs_home": {
+    "message": "У дома"
+  },
+  "popup_top_tabs_settings": {
+    "message": "Настройки"
+  },
+  "supported_websites": {
+    "message": "Поддържани уебсайтове"
+  },
+  "popup_benefits_tab": {
+    "message": "Характеристика"
+  },
+  "popup_about_tab": {
+    "message": "относно"
+  },
+  "popup_contact_us_tab": {
+    "message": "Свържете се с нас"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazon"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Премиум"
+  },
+  "years_label": {
+    "message": "години"
+  },
+  "year_label": {
+    "message": "Една година"
+  },
+  "less_than_a_year": {
+    "message": "по-малко от година"
+  },
+  "explanations_price_history": {
+    "message": "Графика на хронологията на цената на даден продукт - Това може да ви помогне да забележите истински отстъпки от фалшиви. Ние поддържаме запис на цената и след това наблюдаваме промените на дневна база, което прави възможно да се възползвате от разпродажби и оферти за ограничено време."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Заключението се основава на: \n    1) За да извлечем цялостен поглед върху препоръките за продукти, ние приложихме различни статистически анализи и техники за изкуствен интелект. \n    2) Отзивите и оценките бяха анализирани и ние считаме оценка от 4 и повече за индикация за страхотен продукт. \n    3) Смислен резултат изисква поне 100 поръчки, така че колкото повече поръчки анализираме, толкова повече се доверяваме на заключението за оценка на продукта."
+  },
+  "explanations_store_age": {
+    "message": "Нашата система измерва достоверността на магазина, като използва възрастта на магазина, тъй като магазините с повече опит и положителна репутация са по-надеждни."
+  },
+  "explanations_store_rating": {
+    "message": "Ние проверяваме общия резултат от обратната връзка на магазина, колкото по-висок е резултатът, толкова по-добри са шансовете за получаване на добра услуга. Над 91% отзиви се считат за положителни."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress класифицира продавача като много надежден продавач с голям обем продажби"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Бестселър на Amazon е този, който има най-малко 150 продажби на месец и колкото повече продажби има, толкова по-лесно става да разчитате на отзивите на други купувачи."
+  },
+  "explanations_amazon_choice": {
+    "message": "Продукти, маркирани като Amazon's Choice, често се купуват от клиенти. Те имат изгодна цена, високо оценени и са достъпни за бърза доставка от склада на Amazon."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Ние използваме статистическо моделиране, за да позиционираме и коригираме броя на положителните отзиви въз основа на броя на неестествените отзиви, така че да можете да вземете решението си въз основа на висококачествени данни. Алгоритъмът не е перфектен, но има високи нива на точност. Amazon свърши добра работа със събирането на стотици милиони отзиви, но много марки избраха да злоупотребяват с него, наводнявайки го с ниско качество и пристрастни отзиви, за да се опитат да увеличат собствените си печалби. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Продадени и изпратени от Amazon: Тези артикули са поръчани като инвентар от Amazon. Те се продават и изпращат директно от склад на Amazon. Ще можете да получите артикула много по-бързо и Amazon ще се занимава директно с всички проблеми с обслужването на клиенти."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Тези артикули са собственост на независим бизнес от трета страна и се изпращат предварително до складовете на Amazon. Когато ги закупите, Amazon ви ги изпраща."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "За купувачите е важно да знаят кога могат да очакват даден артикул да пристигне. Ето защо винаги проверяваме очакваната дата на доставка в eBay. Очакваната дата за доставка се основава на времето, необходимо на продавача да опакова и изпрати артикулите, и времето за доставка от пощенските услуги. Считаме, че 14 дни за вътрешни пратки и 30 дни за международни пратки са отлични времена за доставка."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Безплатната доставка е чудесна индикация, че продавачът ще осигури отлично обслужване на клиентите и ще изпрати артикула навреме, както е описано."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Приемането на връщания е добра индикация за добър продавач: Ако получите артикул, който е повреден или неправилен, можете да го върнете за възстановяване на сумата."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Платими връщания или без връщания: Само ако продуктът е пристигнал неправилно, можете да го върнете за възстановяване на сумата."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Продавачите, които предоставят отлично обслужване на клиентите в голям мащаб, са брандирани от eBay със значката Най-висок рейтинг. Това означава, че те имат висок резултат за обратна връзка и висок процент положителни отзиви в eBay, така че е по-безопасно да купувате от тях."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Продавачите, които представляват марка, често се свързват с отлично обслужване на клиентите. Те обикновено имат високи резултати за обратна връзка и голям процент положителни отзиви в eBay, което прави покупката от тях по-безопасна опция."
+  },
+  "why_it_free": {
+    "message": "Защо е безплатен за използване?"
+  },
+  "explanations_why_it_free": {
+    "message": "Защо използването на Safe-Deal е безплатно за вас?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Използването на нашата услуга е безплатно за вас. Когато правите покупка, магазинът ни плаща малка такса, за да ви насочим към най-добрия продукт."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Ние използваме само публично достъпни данни, като гарантираме, че никоя марка или магазин не оказва влияние върху нашите препоръки."
+  },
+  "premium_features": {
+    "message": "Премиум функции"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Без партньорство, можете да включите всяка програма за връщане на пари, която искате"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Поддръжка по личен телефон и имейл и подобрено време за обработка"
+  },
+  "premium_features_cost": {
+    "message": "Цена - 2 USD на месец (таксува се годишно)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Събраните средства се използват за подобряване на услугата и заплащане на инфраструктура."
+  },
+  "affiliated_websites": {
+    "message": "Свързани уебсайтове"
+  },
+  "buy_premium": {
+    "message": "Купете Premium"
+  },
+  "opt_out": {
+    "message": "Отказ"
+  },
+  "image": {
+    "message": "Изображение"
+  },
+  "product_name": {
+    "message": "Име на продукта"
+  },
+  "final_price": {
+    "message": "Крайна цена"
+  },
+  "coupon": {
+    "message": "Купон"
+  },
+  "you_saved": {
+    "message": "Сума на купона"
+  },
+  "you_save": {
+    "message": "Вие спестявате"
+  },
+  "share": {
+    "message": "Дял"
+  },
+  "discounts_found": {
+    "message": "Намерени отстъпки"
+  },
+  "extension_not_available": {
+    "message": "Разширението SafeDeal не е налично за тази страница."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Търсете всяка друга ключова дума, за да намерите купони и сделки."
+  },
+  "search_product": {
+    "message": "Търсене на продукт"
+  },
+  "want_more_coupons": {
+    "message": "Искате още купони?"
+  },
+  "click_here": {
+    "message": "Натисни тук"
+  },
+  "coupon_header": {
+    "message": "Безопасна сделка - купони и сделки"
+  },
+  "tab_header_analyze": {
+    "message": "Оценка на продукта"
+  },
+  "tab_header_reviews": {
+    "message": "Резюме на отзивите"
+  },
+  "click_to_reveal": {
+    "message": "Щракнете или натиснете {systemShortcut}, за да превключите между минимален и пълен анализ."
+  },
+  "click_to_hide": {
+    "message": "Кликнете върху иконата или натиснете клавиша 'Escape', за да затворите подробния изглед."
+  },
+  "click_to_pin": {
+    "message": "Закачете този панел, за да бъде видим при опресняване и докато разглеждате"
+  },
+  "click_to_unpin": {
+    "message": "Откачете този панел, така че да се скрие, когато щракнете другаде на страницата"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Все още няма отзиви"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Все още няма отзиви от клиенти. Този продукт може да е нов или да не е популярен."
+  },
+  "reviews_pros": {
+    "message": "Професионалисти"
+  },
+  "reviews_cons": {
+    "message": "минуси"
+  },
+  "reviews_good_to_know": {
+    "message": "Добре е да се знае"
+  },
+  "reviews_error": {
+    "message": "Извиняваме се за причиненото неудобство. Изглежда, че процесът на обобщаване на прегледа е бил неуспешен. За да разрешите този проблем, любезно се свържете с екипа за поддръжка на Safe Deal за съдействие."
+  },
+  "deals_ali_express": {
+    "message": "Безопасна сделка - Търсене на сделки"
+  },
+  "deals_ali_found": {
+    "message": "Намерени сделки: "
+  },
+  "product": {
+    "message": "Продукт"
+  },
+  "title": {
+    "message": "Заглавие"
+  },
+  "price": {
+    "message": "Цена"
+  },
+  "deal_type": {
+    "message": "Тип сделка"
+  },
+  "savings": {
+    "message": "Спестявания"
+  },
+  "extra": {
+    "message": "Екстра"
+  },
+  "shipping": {
+    "message": "Доставка"
+  },
+  "rating": {
+    "message": "Рейтинг"
+  },
+  "sold": {
+    "message": "Продаден"
+  },
+  "reviews": {
+    "message": "Отзиви"
+  },
+  "mobile_app": {
+    "message": "Инсталирайте нашето мобилно приложение"
+  },
+  "tab_header_opinions": {
+    "message": "Мнения и коментари"
+  },
+  "opinions_title": {
+    "message": "Дайте вашето мнение или попитайте общността за този продукт"
+  },
+  "research_online": {
+    "message": "Разгледайте"
+  },
+  "video_reviews": {
+    "message": "Видео ревюта"
+  },
+  "reddit_reviews": {
+    "message": "Мнения в Reddit"
+  },
+  "web_reviews": {
+    "message": "Отзиви онлайн"
+  },
+  "shopping_reviews": {
+    "message": "Сайтове за пазаруване"
+  },
+  "product_photos": {
+    "message": "Продуктови снимки"
+  },
+  "product_purchase_query": {
+    "message": "купете онлайн сега"
+  },
+  "product_reviews_query": {
+    "message": "подробни прегледи"
+  }
+}

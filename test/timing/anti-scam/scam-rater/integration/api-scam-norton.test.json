@@ -1,0 +1,6 @@
+{
+  "should return safe for a safe domain - temu.com": {
+    "date": "2024-09-22",
+    "status": "passed"
+  }
+}

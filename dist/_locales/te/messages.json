@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "షాపింగ్ అసిస్టెంట్: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "షాపింగ్ అసిస్టెంట్: AI ద్వారా సమయాన్ని ఆదా చేయండి. ధర చరిత్రను కనుగొనండి, ఖరీదైన డీల్‌లను నివారించండి, నకిలీ సమీక్షలను..."
+  },
+  "appNameShort": {
+    "message": "సేఫ్ డీల్"
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "సేఫ్ డీల్",
+    "description": "మీరు ఆన్‌లైన్‌లో షాపింగ్ చేసినప్పుడు నమ్మకంగా ఉండండి"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "సేఫ్-డీల్ ఈ వెబ్‌సైట్‌ను సమీక్షించింది మరియు ఇది ప్రమాదకరమైన {SafeVsUnsafePercentageAmount} అని నిర్ధారించింది!"
+  },
+  "anti_scam_leave": {
+    "message": "ఇప్పుడే ఈ వెబ్‌సైట్‌ను వదిలివేయండి"
+  },
+  "anti_scam_stay": {
+    "message": "ఈ సైట్ నమ్మదగినది"
+  },
+  "anti_scam_confirm": {
+    "message": "ఈ వెబ్‌సైట్ స్కామ్, దొంగ లేదా ఇతర చట్టవిరుద్ధమైన కార్యకలాపంగా ఉండే అధిక సంభావ్యత. మీరు ఈ వెబ్‌సైట్‌ను విశ్వసిస్తున్నారా?"
+  },
+  "recommended_product": {
+    "message": "సిఫార్సు చేయబడిన ఉత్పత్తి"
+  },
+  "unrecommended_product": {
+    "message": "సిఫార్సు చేయని ఉత్పత్తి"
+  },
+  "doubtful_product": {
+    "message": "సందేహాస్పద ఉత్పత్తి"
+  },
+  "insufficient_data": {
+    "message": "తీర్మానం అనిశ్చితం"
+  },
+  "signal_of_a_good_deal": {
+    "message": "మంచి ఒప్పందానికి సూచన"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "సందేహాస్పద ఒప్పందం యొక్క సూచన"
+  },
+  "no_data": {
+    "message": "ప్రస్తుతం, ప్రదర్శించడానికి డేటా ఏదీ లేదు"
+  },
+  "chart_title": {
+    "message": "ఉత్పత్తి ధర చరిత్ర"
+  },
+  "back_button": {
+    "message": "మునుపటి"
+  },
+  "next_button": {
+    "message": "తరువాత"
+  },
+  "start_using_button": {
+    "message": "SafeDealని ఉపయోగించడం ప్రారంభించండి"
+  },
+  "tour_step1_title": {
+    "message": "సురక్షిత ఒప్పందానికి స్వాగతం"
+  },
+  "tour_step1_text_0": {
+    "message": ", మా సాఫ్ట్‌వేర్‌ని ఉపయోగించినందుకు ధన్యవాదాలు."
+  },
+  "morning": {
+    "message": "ఉదయం"
+  },
+  "day": {
+    "message": "రోజు"
+  },
+  "night": {
+    "message": "రాత్రి"
+  },
+  "hi": {
+    "message": "హాయ్"
+  },
+  "good": {
+    "message": "మంచిది"
+  },
+  "tour_step1_text_1": {
+    "message": "మా మద్దతు ఉన్న దుకాణాల్లో ఒకటి ఇక్కడ ఉంది."
+  },
+  "tour_step1_text_2": {
+    "message": "AliExpress, eBay, Amazon మరియు మరిన్ని వంటి ఇతర మద్దతు ఉన్న సైట్‌లలో అదే విధంగా పని చేస్తుంది."
+  },
+  "tour_step1_text_3": {
+    "message": "ఇది ఎలా పని చేస్తుందో వివరించడానికి ఒక నిమిషం పట్టాలి."
+  },
+  "tour_step1_lets_start": {
+    "message": "ప్రారంభిద్దాం"
+  },
+  "tour_step2_title": {
+    "message": "కొనుగోలు సిఫార్సులు"
+  },
+  "tour_step2_text_0": {
+    "message": "త్వరిత మరియు సమర్థవంతమైన కొనుగోలు నిర్ణయాలు తీసుకోవడం మా ఉత్పత్తి యొక్క గుండె వద్ద ఉంది; మేము ఆన్‌లైన్ కొనుగోళ్లకు ట్రాఫిక్ లైట్‌గా వ్యవహరిస్తాము."
+  },
+  "tour_step2_text_3": {
+    "message": "మా ఆర్టిఫిషియల్ ఇంటెలిజెన్స్ కొన్ని సెకన్లలో ఉత్పత్తులపై డేటా ఆధారిత నిర్ణయాన్ని తీసుకుంటుంది. ఈ విధంగా, మీరు మాన్యువల్ చెకింగ్ గంటలలో కాకుండా నిమిషాల్లోనే అనేక ఉత్పత్తులపై శీఘ్ర సూచికను పొందుతారు."
+  },
+  "tour_step3_title": {
+    "message": "డీల్ భద్రత ముఖ్యం"
+  },
+  "tour_step3_text_0": {
+    "message": "భవిష్యత్తులో అవాంతరాలను ఆదా చేయడానికి మీరు ఈ రోజు తెలివిగా షాపింగ్ చేయవచ్చు."
+  },
+  "tour_step3_text_1": {
+    "message": "గ్రీన్ షీల్డ్ - సిఫార్సు చేయబడిన ఒప్పందం"
+  },
+  "tour_step3_text_2": {
+    "message": "రెడ్ షీల్డ్ - సిఫార్సు చేయని ఒప్పందం"
+  },
+  "tour_step3_text_3": {
+    "message": "పసుపు కవచం - సందేహాస్పద ఒప్పందం"
+  },
+  "tour_step5_title": {
+    "message": "మీ గోప్యత ప్రధానమైనది"
+  },
+  "tour_step5_text_0": {
+    "message": "మా సేవను ఉపయోగించడం మీకు ఉచితం. మీరు కొనుగోలు చేసినప్పుడు, ఉత్తమమైన ఉత్పత్తికి మిమ్మల్ని మార్గనిర్దేశం చేసేందుకు స్టోర్ మాకు చిన్న రుసుమును చెల్లిస్తుంది."
+  },
+  "tour_step5_text_1": {
+    "message": "మేము మీ గోప్యత గురించి శ్రద్ధ వహిస్తున్నందున సాఫ్ట్‌వేర్ స్థానికంగా పని చేస్తుంది. మీ కార్యాచరణకు సంబంధించిన సమాచారం ఏదీ సేకరించబడలేదు."
+  },
+  "tour_feedback_title": {
+    "message": "మేము మీ అభిప్రాయానికి విలువనిస్తాము"
+  },
+  "tour_feedback_text": {
+    "message": "మీకు ఏదైనా ఆలోచన, సమస్య ఉంటే లేదా మీరు మెరుగుదల గురించి చర్చించాల్సి ఉంటే సంప్రదించండి: "
+  },
+  "or": {
+    "message": "లేదా"
+  },
+  "contact_form": {
+    "message": "సంప్రదింపు ఫారమ్‌ని ఉపయోగించండి"
+  },
+  "by_email": {
+    "message": "ఒక ఇమెయిల్ వ్రాయండి"
+  },
+  "call_as_at": {
+    "message": "ఫోన్ +1-650-646-3794 ద్వారా"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "చాలా మంది వినియోగదారులు ఉత్పత్తిని బాగా సిఫార్సు చేసారు"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "ఉత్పత్తిని వినియోగదారులు తగినంతగా సిఫార్సు చేయలేదు"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "సమీక్షలు చాలా సానుకూలంగా ఉన్నాయి. నక్షత్రాలు: {ProductRatingValue}, సమీక్షలు: {ProductReviewAmount}, రేటింగ్‌లు: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "సమీక్షల లోపం లేదా పేలవమైన సమీక్షలు. నక్షత్రాలు: {ProductRatingValue}, సమీక్షలు: {ProductReviewAmount}, రేటింగ్‌లు: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "సమీక్షలు చాలా సానుకూలంగా ఉన్నాయి. నక్షత్రాలు: {ProductRatingValue}, ఆర్డర్‌లు: {ProductOrdersAmount}, సమీక్షలు: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "సమీక్షల లోపం లేదా పేలవమైన సమీక్షలు. నక్షత్రాలు: {ProductRatingValue}, ఆర్డర్‌లు: {ProductOrdersAmount}, సమీక్షలు: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "సమీక్షలు చాలా సానుకూలంగా ఉన్నాయి. నక్షత్రాలు: {ProductRatingValue}, ఆర్డర్‌లు: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "సమీక్షల లోపం లేదా పేలవమైన సమీక్షలు. నక్షత్రాలు: {ProductRatingValue}, ఆర్డర్‌లు: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "దుకాణం అధిక రేట్ చేయబడింది. నక్షత్రాలు: {ProductRatingValue}, ఆర్డర్‌లు: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "దుకాణం పేలవంగా రేట్ చేయబడింది. నక్షత్రాలు: {ProductRatingValue}, ఆర్డర్‌లు: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "బాగా స్థిరపడిన విక్రేత, వ్యాపారంలో {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "ప్రారంభ విక్రేత, వ్యాపారంలో {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "అద్భుతమైన రిటర్న్ పాలసీ"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "రిటర్న్ పాలసీ పేలవంగా ఉంది"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "నమ్మదగిన విక్రేత"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "నేరుగా బ్రాండ్ ద్వారా విక్రయించబడింది"
+  },
+  "tooltip_order_safe": {
+    "message": "పెద్ద సంఖ్యలో సంతృప్తి చెందిన కస్టమర్లు"
+  },
+  "tooltip_order_un_safe": {
+    "message": "తక్కువ సంఖ్యలో సంతోషంగా ఉన్న కస్టమర్‌లు"
+  },
+  "tooltip_rating_safe": {
+    "message": "చాలా మంది సంతృప్తి చెందిన కస్టమర్‌లు రివ్యూలు ఇచ్చారు"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "చాలా మంది కోపంతో ఉన్న కస్టమర్‌లు ప్రతికూల సమీక్షలను పోస్ట్ చేసారు"
+  },
+  "tooltip_delivery_safe": {
+    "message": "అద్భుతమైన డెలివరీ సమయం, గరిష్టంగా {daysToDeliver} రోజులు"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "మీ ప్యాకేజీని పొందడానికి గరిష్టంగా {daysToDeliver} రోజులు పట్టవచ్చు."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "డెలివరీ ఎప్పుడు జరుగుతుందనే దానిపై స్పష్టత లేదు"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "స్టోర్ కస్టమర్లలో ఎక్కువ మంది సంతృప్తి చెందారు, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "చాలా మంది కస్టమర్‌లు స్టోర్ పట్ల అసంతృప్తిగా ఉన్నారు, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "దుకాణానికి కస్టమర్ల నుండి ఫీడ్‌బ్యాక్ లేదు"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "ఉచితంగా రవాణా చేయండి"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "రుసుము లేదా పికప్ అవసరం కోసం రవాణా చేయబడింది"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "ఈ ఉత్పత్తి సరసమైన ధర"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "కొనుగోలు ఎంపికల పేలవమైన ఎంపిక"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "ధర అద్భుతమైనది, సగటుతో పోలిస్తే {priceDifVsAverage}% తక్కువ"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "ధర సరసమైనది, సగటుతో పోలిస్తే {priceDifVsAverage}% తక్కువ"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "ధర సరసమైనది, సగటుతో పోలిస్తే {priceDifVsAverage}% ఎక్కువ"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "ఖరీదైన ధర, సగటుతో పోలిస్తే {priceDifVsAverage}% ఎక్కువ"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon ఎంచుకోండి - నమ్మదగిన మరియు మంచి-విలువ ఉత్పత్తి"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon ఈ ఉత్పత్తిని విక్రయిస్తుంది మరియు రవాణా చేస్తుంది"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "అమెజాన్ ద్వారా విక్రయించబడింది లేదా రవాణా చేయబడింది, మూడవ పక్షం పాల్గొంటుంది"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart ఈ ఉత్పత్తిని విక్రయిస్తుంది మరియు రవాణా చేస్తుంది"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "ఫీడ్‌బ్యాక్‌లు చాలా బాగున్నాయి! {validAmount} ప్రామాణికమైనది, {fakeAmount} అసహజమైనది, మొత్తం {totalAmount}"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "అభిప్రాయాలు తారుమారు చేయబడినట్లు కనిపిస్తున్నాయి! {validAmount} ప్రామాణికమైనది, {fakeAmount} అసహజమైనది, మొత్తం {totalAmount}"
+  },
+  "tooltip_bsr_safe": {
+    "message": "ఈ ఉత్పత్తి బాగా అమ్ముడవుతోంది"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "ఉత్పత్తి యొక్క అమ్మకాలు సాపేక్షంగా తక్కువ"
+  },
+  "popup_title": {
+    "message": "ఆన్‌లైన్ షాపింగ్ కోసం మీ స్మార్ట్ అసిస్టెంట్"
+  },
+  "loading_product": {
+    "message": "తనిఖీలో ఉత్పత్తి"
+  },
+  "popup_footer_share": {
+    "message": "SafeDeal గురించి మీ స్నేహితులు మరియు కుటుంబ సభ్యులకు తెలియజేయండి"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "ధృవీకరించబడిన సురక్షిత సైట్. మా అనుబంధ లింక్ ద్వారా మాకు మద్దతు ఇవ్వండి."
+  },
+  "popup_top_tabs_home": {
+    "message": "హోమ్"
+  },
+  "popup_top_tabs_settings": {
+    "message": "సెట్టింగ్‌లు"
+  },
+  "supported_websites": {
+    "message": "మద్దతు ఉన్న వెబ్‌సైట్‌లు"
+  },
+  "popup_benefits_tab": {
+    "message": "లక్షణాలు"
+  },
+  "popup_about_tab": {
+    "message": "గురించి"
+  },
+  "popup_contact_us_tab": {
+    "message": "మమ్మల్ని సంప్రదించండి"
+  },
+  "popup_ali_express": {
+    "message": "అలీఎక్స్‌ప్రెస్"
+  },
+  "popup_amazon": {
+    "message": "అమెజాన్"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "వాల్మార్ట్"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "ప్రీమియం"
+  },
+  "years_label": {
+    "message": "సంవత్సరాలు"
+  },
+  "year_label": {
+    "message": "1 సంవత్సరం"
+  },
+  "less_than_a_year": {
+    "message": "ఒక సంవత్సరం కంటే తక్కువ"
+  },
+  "explanations_price_history": {
+    "message": "ఉత్పత్తి ధర చరిత్ర గ్రాఫ్ - ఇది నకిలీ వాటి నుండి నిజమైన తగ్గింపులను గుర్తించడంలో మీకు సహాయపడుతుంది. మేము ధర యొక్క రికార్డును ఉంచుతాము మరియు రోజువారీగా మార్పులను పర్యవేక్షిస్తాము, అమ్మకాలు మరియు పరిమిత-సమయ ఆఫర్‌ల ప్రయోజనాన్ని పొందడం సాధ్యమవుతుంది."
+  },
+  "explanations_review_and_ratings": {
+    "message": "ముగింపు ఆధారంగా: \n    1) ఉత్పత్తి సిఫార్సుల యొక్క మొత్తం వీక్షణను పొందడానికి, మేము వివిధ గణాంక విశ్లేషణ మరియు కృత్రిమ మేధస్సు పద్ధతులను వర్తింపజేసాము. \n    2) సమీక్షలు మరియు రేటింగ్‌లు విశ్లేషించబడ్డాయి మరియు మేము 4 మరియు అంతకంటే ఎక్కువ ఉన్న రేటింగ్‌ను గొప్ప ఉత్పత్తికి సూచనగా పరిగణిస్తాము. \n    3) అర్ధవంతమైన ఫలితానికి కనీసం 100 ఆర్డర్‌లు అవసరం, కాబట్టి మేము ఎంత ఎక్కువ ఆర్డర్‌లను విశ్లేషిస్తామో, ఉత్పత్తి రేటింగ్ ముగింపును మేము ఎక్కువగా విశ్వసిస్తాము."
+  },
+  "explanations_store_age": {
+    "message": "మా సిస్టమ్ స్టోర్ యొక్క వయస్సును ఉపయోగించి స్టోర్ విశ్వసనీయతను కొలుస్తుంది, ఎందుకంటే ఎక్కువ అనుభవం మరియు సానుకూల కీర్తి ఉన్న స్టోర్‌లు మరింత విశ్వసనీయంగా ఉంటాయి."
+  },
+  "explanations_store_rating": {
+    "message": "మేము మొత్తం స్టోర్ ఫీడ్‌బ్యాక్ స్కోర్‌ను తనిఖీ చేస్తాము, ఎక్కువ స్కోర్, మంచి సేవను పొందే అవకాశాలు మెరుగ్గా ఉంటాయి. 91% కంటే ఎక్కువ ఫీడ్‌బ్యాక్ పాజిటివ్ ఫీడ్‌బ్యాక్‌గా పరిగణించబడుతుంది."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress అమ్మకందారుని చాలా నమ్మకమైన విక్రేతగా వర్గీకరిస్తుంది, అమ్మకాల యొక్క అధిక పరిమాణంతో"
+  },
+  "explanations_amazon_bsr": {
+    "message": "అమెజాన్ బెస్ట్ సెల్లర్ అంటే నెలకు కనీసం 150 అమ్మకాలు మరియు ఎక్కువ అమ్మకాలు ఉంటే, ఇతర కొనుగోలుదారుల ఫీడ్‌బ్యాక్‌పై ఆధారపడటం సులభం అవుతుంది."
+  },
+  "explanations_amazon_choice": {
+    "message": "Amazon's Choice అని గుర్తించబడిన ఉత్పత్తులను తరచుగా కస్టమర్‌లు కొనుగోలు చేస్తారు. అవి అనుకూలమైన ధరను కలిగి ఉన్నాయి, అధిక రేటింగ్‌ను కలిగి ఉన్నాయి మరియు Amazon యొక్క గిడ్డంగి నుండి త్వరిత షిప్పింగ్ కోసం అందుబాటులో ఉన్నాయి."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "మేము అసహజ సమీక్షల సంఖ్య ఆధారంగా సానుకూల సమీక్షల సంఖ్యను ఉంచడానికి మరియు సర్దుబాటు చేయడానికి స్టాటిస్టికల్ మోడలింగ్‌ని ఉపయోగిస్తాము, కాబట్టి మీరు అధిక-నాణ్యత డేటా ఆధారంగా మీ నిర్ణయం తీసుకోవచ్చు. అల్గోరిథం ఖచ్చితమైనది కాదు, కానీ అధిక ఖచ్చితత్వ రేట్లు కలిగి ఉంది. Amazon వందల మిలియన్ల ఫీడ్‌బ్యాక్‌లను సేకరించడంలో మంచి పని చేసింది, కానీ చాలా బ్రాండ్‌లు దానిని దుర్వినియోగం చేయడానికి ఎంచుకున్నాయి, తక్కువ నాణ్యత మరియు పక్షపాత సమీక్షలతో తమ సొంత లాభాలను పెంచుకోవడానికి ప్రయత్నించాయి. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "అమెజాన్ ద్వారా విక్రయించబడింది మరియు రవాణా చేయబడింది: ఈ వస్తువులు అమెజాన్ ద్వారా జాబితాగా ఆర్డర్ చేయబడ్డాయి. అవి నేరుగా అమెజాన్ గిడ్డంగి నుండి విక్రయించబడతాయి మరియు రవాణా చేయబడతాయి. మీరు ఐటెమ్‌ను చాలా వేగంగా పొందగలుగుతారు మరియు అమెజాన్ ఏవైనా కస్టమర్ సర్వీస్ సమస్యలను నేరుగా హ్యాండిల్ చేస్తుంది."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "ఈ ఐటెమ్‌లు స్వతంత్ర, థర్డ్-పార్టీ వ్యాపారానికి చెందినవి మరియు అమెజాన్ గిడ్డంగులకు ముందుగానే రవాణా చేయబడతాయి. మీరు వాటిని కొనుగోలు చేసినప్పుడు, Amazon వాటిని మీకు రవాణా చేస్తుంది."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "కొనుగోలుదారులు ఒక వస్తువు ఎప్పుడు వస్తుందని ఆశించవచ్చో తెలుసుకోవడం ముఖ్యం. అందుకే మేము ఎల్లప్పుడూ eBayలో అంచనా వేసిన డెలివరీ తేదీని తనిఖీ చేస్తాము. వస్తువులను ప్యాక్ చేయడానికి మరియు రవాణా చేయడానికి విక్రేత తీసుకునే సమయం మరియు పోస్టల్ సేవల నుండి డెలివరీ సమయం ఆధారంగా అంచనా వేయబడిన డెలివరీ తేదీ ఆధారపడి ఉంటుంది. మేము దేశీయ షిప్‌మెంట్‌లకు 14 రోజులు మరియు అంతర్జాతీయ షిప్‌మెంట్‌లకు 30 రోజులను అద్భుతమైన డెలివరీ సమయాలుగా పరిగణిస్తాము."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "ఉచిత షిప్పింగ్ అనేది విక్రేత గొప్ప కస్టమర్ సేవను అందిస్తాడని మరియు వివరించిన విధంగా వస్తువును సమయానికి రవాణా చేస్తారనే గొప్ప సూచన."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "రిటర్న్‌లను అంగీకరించడం మంచి విక్రేతకు మంచి సూచన: మీరు దెబ్బతిన్న లేదా తప్పుగా ఉన్న వస్తువును స్వీకరిస్తే, మీరు దానిని వాపసు కోసం తిరిగి ఇవ్వవచ్చు."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "చెల్లించవలసిన రిటర్న్‌లు లేదా రిటర్న్‌లు లేవు: ఉత్పత్తి తప్పుగా వచ్చినట్లయితే మాత్రమే మీరు దానిని వాపసు కోసం తిరిగి ఇవ్వగలరు."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "పెద్ద స్థాయిలో అద్భుతమైన కస్టమర్ సేవను అందించే విక్రేతలు టాప్ రేటెడ్ బ్యాడ్జ్‌తో eBay ద్వారా బ్రాండ్ చేయబడతారు. దీనర్థం వారు eBayలో అధిక ఫీడ్‌బ్యాక్ స్కోర్ మరియు అధిక శాతం సానుకూల అభిప్రాయాన్ని కలిగి ఉన్నారు, కాబట్టి వారి నుండి కొనుగోలు చేయడం సురక్షితం."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "బ్రాండ్‌కు ప్రాతినిధ్యం వహించే విక్రేతలు తరచుగా అద్భుతమైన కస్టమర్ సేవతో అనుబంధం కలిగి ఉంటారు. వారు సాధారణంగా అధిక ఫీడ్‌బ్యాక్ స్కోర్‌లను కలిగి ఉంటారు మరియు eBayలో ఎక్కువ శాతం సానుకూల అభిప్రాయాన్ని కలిగి ఉంటారు, ఇది వారి నుండి కొనుగోలు చేయడం సురక్షితమైన ఎంపికగా చేస్తుంది."
+  },
+  "why_it_free": {
+    "message": "ఎందుకు ఉపయోగించడానికి ఉచితం?"
+  },
+  "explanations_why_it_free": {
+    "message": "సేఫ్-డీల్‌ని ఉపయోగించడం మీకు ఎందుకు ఉచితం?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "మా సేవను ఉపయోగించడం మీకు ఉచితం. మీరు కొనుగోలు చేసినప్పుడు, ఉత్తమమైన ఉత్పత్తికి మిమ్మల్ని మార్గనిర్దేశం చేసేందుకు స్టోర్ మాకు చిన్న రుసుమును చెల్లిస్తుంది."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "మేము పబ్లిక్‌గా అందుబాటులో ఉన్న డేటాను మాత్రమే ఉపయోగిస్తాము, బ్రాండ్ లేదా షాప్ మా సిఫార్సులను ప్రభావితం చేయదని నిర్ధారిస్తాము."
+  },
+  "premium_features": {
+    "message": "ప్రీమియం ఫీచర్లు"
+  },
+  "premium_features_no_affiliation": {
+    "message": "అనుబంధం లేదు, మీకు కావలసిన క్యాష్‌బ్యాక్ ప్రోగ్రామ్‌ను మీరు ప్లగ్ చేయవచ్చు"
+  },
+  "premium_features_enhanced_support": {
+    "message": "వ్యక్తిగత ఫోన్ మరియు ఇమెయిల్ మద్దతు & మెరుగైన ప్రాసెసింగ్ సమయం"
+  },
+  "premium_features_cost": {
+    "message": "ధర - నెలకు 2 USD (సంవత్సరానికి బిల్లు)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "సేకరించిన డబ్బు సేవను మెరుగుపరచడానికి మరియు మౌలిక సదుపాయాల కోసం చెల్లించడానికి ఉపయోగించబడుతుంది."
+  },
+  "affiliated_websites": {
+    "message": "అనుబంధ వెబ్‌సైట్‌లు"
+  },
+  "buy_premium": {
+    "message": "ప్రీమియం కొనుగోలు చేయండి"
+  },
+  "opt_out": {
+    "message": "తీసుకోబడింది"
+  },
+  "image": {
+    "message": "చిత్రం"
+  },
+  "product_name": {
+    "message": "ఉత్పత్తి నామం"
+  },
+  "final_price": {
+    "message": "ఆఖరి ధర"
+  },
+  "coupon": {
+    "message": "కూపన్"
+  },
+  "you_saved": {
+    "message": "కూపన్ మొత్తం"
+  },
+  "you_save": {
+    "message": "మీరు విడిచిపెట్టండి"
+  },
+  "share": {
+    "message": "షేర్ చేయండి"
+  },
+  "discounts_found": {
+    "message": "తగ్గింపులు కనుగొనబడ్డాయి"
+  },
+  "extension_not_available": {
+    "message": "ఈ పేజీకి SafeDeal పొడిగింపు అందుబాటులో లేదు."
+  },
+  "search_for_any_other_keyword": {
+    "message": "కూపన్లు మరియు డీల్‌లను కనుగొనడానికి ఏదైనా ఇతర కీవర్డ్ కోసం శోధించండి."
+  },
+  "search_product": {
+    "message": "శోధన ఉత్పత్తి"
+  },
+  "want_more_coupons": {
+    "message": "మరిన్ని కూపన్‌లు కావాలా?"
+  },
+  "click_here": {
+    "message": "ఇక్కడ నొక్కండి"
+  },
+  "coupon_header": {
+    "message": "సురక్షిత డీల్ - కూపన్‌లు & డీల్‌లు"
+  },
+  "tab_header_analyze": {
+    "message": "ఉత్పత్తి మూల్యాంకనం"
+  },
+  "tab_header_reviews": {
+    "message": "సమీక్షల సారాంశం"
+  },
+  "click_to_reveal": {
+    "message": "కనిష్ట మరియు పూర్తి విశ్లేషణ మధ్య టోగుల్ చేయడానికి {systemShortcut}ని క్లిక్ చేయండి లేదా నొక్కండి."
+  },
+  "click_to_hide": {
+    "message": "వివరణాత్మక వీక్షణను మూసివేయడానికి చిహ్నంపై క్లిక్ చేయండి లేదా 'ఎస్కేప్' కీని నొక్కండి."
+  },
+  "click_to_pin": {
+    "message": "రిఫ్రెష్‌లో మరియు మీరు బ్రౌజ్ చేస్తున్నప్పుడు కనిపించేలా ఉంచడానికి ఈ ప్యానెల్‌ను పిన్ చేయండి"
+  },
+  "click_to_unpin": {
+    "message": "ఈ ప్యానెల్‌ని అన్‌పిన్ చేయండి, తద్వారా పేజీలో ఎక్కడైనా క్లిక్ చేసినప్పుడు అది దాచబడుతుంది"
+  },
+  "reviews_no_reviews_header": {
+    "message": "ఇంకా రివ్యూలు లేవు"
+  },
+  "reviews_no_reviews_text": {
+    "message": "ఇంకా కస్టమర్ రివ్యూలు లేవు. ఈ ఉత్పత్తి కొత్తది కావచ్చు లేదా జనాదరణ పొందకపోవచ్చు."
+  },
+  "reviews_pros": {
+    "message": "ప్రోస్"
+  },
+  "reviews_cons": {
+    "message": "ప్రతికూలతలు"
+  },
+  "reviews_good_to_know": {
+    "message": "తెలుసుకోవడం మంచిది"
+  },
+  "reviews_error": {
+    "message": "అసౌకర్యానికి మేము చింతిస్తున్నాము. సమీక్ష సారాంశం ప్రక్రియ విజయవంతం కాలేదని తెలుస్తోంది. ఈ సమస్యను పరిష్కరించడానికి, దయచేసి సహాయం కోసం సేఫ్ డీల్ సపోర్ట్ టీమ్‌ని సంప్రదించండి."
+  },
+  "deals_ali_express": {
+    "message": "సేఫ్ డీల్ - డీల్స్ ఫైండర్"
+  },
+  "deals_ali_found": {
+    "message": "డీల్‌లు కనుగొనబడ్డాయి: "
+  },
+  "product": {
+    "message": "ఉత్పత్తి"
+  },
+  "title": {
+    "message": "శీర్షిక"
+  },
+  "price": {
+    "message": "ధర"
+  },
+  "deal_type": {
+    "message": "డీల్ రకం"
+  },
+  "savings": {
+    "message": "పొదుపు"
+  },
+  "extra": {
+    "message": "అదనపు"
+  },
+  "shipping": {
+    "message": "షిప్పింగ్"
+  },
+  "rating": {
+    "message": "రేటింగ్"
+  },
+  "sold": {
+    "message": "విక్రయించబడింది"
+  },
+  "reviews": {
+    "message": "సమీక్షలు"
+  },
+  "mobile_app": {
+    "message": "మా మొబైల్ యాప్‌ను ఇన్‌స్టాల్ చేయండి"
+  },
+  "tab_header_opinions": {
+    "message": "అభిప్రాయాలు & వ్యాఖ్యానం"
+  },
+  "opinions_title": {
+    "message": "ఈ ఉత్పత్తి గురించి మీ అభిప్రాయాన్ని తెలియజేయండి లేదా సంఘాన్ని అడగండి"
+  },
+  "research_online": {
+    "message": "తనిఖీ చేయండి"
+  },
+  "video_reviews": {
+    "message": "వీడియో సమీక్షలు"
+  },
+  "reddit_reviews": {
+    "message": "రెడ్డిట్‌లో అభిప్రాయాలు"
+  },
+  "web_reviews": {
+    "message": "ఆన్‌లైన్‌లో సమీక్షలు"
+  },
+  "shopping_reviews": {
+    "message": "షాపింగ్ సైట్లు"
+  },
+  "product_photos": {
+    "message": "ఉత్పత్తి ఫోటోలు"
+  },
+  "product_purchase_query": {
+    "message": "ఇప్పుడు ఆన్‌లైన్‌లో కొనుగోలు చేయండి"
+  },
+  "product_reviews_query": {
+    "message": "వివరణాత్మక సమీక్షలు"
+  }
+}

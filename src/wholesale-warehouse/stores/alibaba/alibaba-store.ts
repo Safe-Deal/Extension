@@ -11,7 +11,7 @@ const preprocessAlibabaData = (dom: ParsedHtml): any => {
   let detailData = null;
 
   // Loop through script tags to find one that includes "window.detailData"
-  for (let script of scripts) {
+  for (const script of scripts) {
     if (script.textContent.includes("window.detailData")) {
       // Extract the JSON string
       const matches = script.textContent.match(/window\.detailData\s*=\s*({[^]*?})(?=\s*window\.)/);

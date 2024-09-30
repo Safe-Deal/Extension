@@ -21,10 +21,10 @@ import { ScamConclusion, ScamSiteType } from "./types/anti-scam";
         debug(`AntiScam :: Received ${JSON.stringify(result)}`);
         if (result.type === ScamSiteType.DANGEROUS) {
           paintAntiScam(result);
-          debug(`AntiScam :: Painting.... Done.`);
+          debug("AntiScam :: Painting.... Done.");
         } else if (result.type === ScamSiteType.SAFE) {
           markAsSafe();
-          debug(`AntiScam :: Marked as Safe.`);
+          debug("AntiScam :: Marked as Safe.");
         }
       } else {
         debug(`AntiScam :: No data returned nothing to paint!! result:${JSON.stringify(result)}`);

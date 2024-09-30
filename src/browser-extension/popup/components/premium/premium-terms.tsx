@@ -4,7 +4,14 @@ import { t } from "../../../../constants/messages";
 export default function PremiumTerms({ toggle }: { toggle: () => void }) {
   return (
     <div className="mdl-card__supporting-text" style={{ marginBottom: "0", paddingBottom: "0" }}>
-      <h4 style={{ paddingTop: "0", marginTop: "0", marginBottom: "3px", paddingBottom: "3px" }}>
+      <h4
+        style={{
+          paddingTop: "0",
+          marginTop: "0",
+          marginBottom: "3px",
+          paddingBottom: "3px"
+        }}
+      >
         {t("premium_features")}
       </h4>
       <ul style={{ paddingTop: "0", marginTop: "0" }}>

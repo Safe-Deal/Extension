@@ -10,8 +10,12 @@ describe("AliExpress Product Downloader", () => {
   });
 
   it.skip("Remote Fetch AliExpress Integration test", async () => {
-    const url = `https://www.aliexpress.us/item/3256805440519445.html?gatewayAdapt=glo2usa4itemAdapt`;
-    const downloader = new AliExpressProductDownloader({ id: "1005005626834197", domain: "aliexpress.com", url });
+    const url = "https://www.aliexpress.us/item/3256805440519445.html?gatewayAdapt=glo2usa4itemAdapt";
+    const downloader = new AliExpressProductDownloader({
+      id: "1005005626834197",
+      domain: "aliexpress.com",
+      url
+    });
     const result = await downloader.download();
     expect(result).toBeDefined();
 

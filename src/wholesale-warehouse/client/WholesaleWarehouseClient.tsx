@@ -12,7 +12,10 @@ import { ProductMinimal } from "../../e-commerce/client/components/product/Produ
 import { ProductFull } from "../../e-commerce/client/components/product/ProductFull";
 
 const WholesaleWarehouseClient = (): ReactNode => {
-  const [state, setState] = useState<{ processedItems: AnalyzedItem[]; progress: Progress }>({
+  const [state, setState] = useState<{
+    processedItems: AnalyzedItem[];
+    progress: Progress;
+  }>({
     processedItems: [],
     progress: DEFAULT_PROGRESS
   });

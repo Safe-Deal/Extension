@@ -70,7 +70,10 @@ export const registerGetResponse = (
         totalAnalyzed: 1,
         totalLeft: left
       });
-      const analyzedItem: AnalyzedItem = { id: response.productId, data: response.conclusionProductEntity[0] };
+      const analyzedItem: AnalyzedItem = {
+        id: response.productId,
+        data: response.conclusionProductEntity[0]
+      };
       updateItems([analyzedItem]);
 
       const displaySitePage: DisplaySite = new DisplaySiteFactory().create(response);

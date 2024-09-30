@@ -107,7 +107,13 @@ const getReviewsFromProductEbay = async (data: any) => {
   const { reviewsTitle, reviewsContent, allImagesBigResolution, rating, totalReviews } =
     await fetchAllProductReviewsEbay(dom);
 
-  return { reviewsTitle, reviewsContent, allImagesBigResolution, rating, totalReviews };
+  return {
+    reviewsTitle,
+    reviewsContent,
+    allImagesBigResolution,
+    rating,
+    totalReviews
+  };
 };
 
 const analyze = async (data: ReviewSummaryData): Promise<ReviewsResponse> => {

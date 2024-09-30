@@ -26,7 +26,7 @@ const infuse = (infusionData) => {
       `InfuseProduct :: Data to be sent: id-> ${infusionData?.id} cat-> "${infusionData?.category}" -> Reported successfully.`
     );
   } else {
-    debug(`InfuseProduct :: Nothing to report skipped sending.`);
+    debug("InfuseProduct :: Nothing to report skipped sending.");
   }
 };
 const getDescriptionTitleImages = async (conclusion: IConclusionProductEntity): Promise<IMetaData> => {
@@ -112,6 +112,6 @@ export const infuseProduct = async (conclusion: IConclusionProductEntity, produc
     return infusionData;
   }
 
-  debug(`InfuseProduct :: Not Reporting Wholesale Pages, Stopped.`);
+  debug("InfuseProduct :: Not Reporting Wholesale Pages, Stopped.");
   return null;
 };

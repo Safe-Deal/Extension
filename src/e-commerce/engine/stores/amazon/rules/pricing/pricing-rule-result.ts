@@ -9,7 +9,7 @@ import { calculateProductPricingAlgorithm } from "./rule-pricing-algorithm";
 import { getProductPricingSummaryTooltip } from "./rule-pricing-summary-tooltip";
 import { LOCALE } from "../../../../../../utils/extension/locale";
 
-const SAFE_DEAL_PRICE_API = `/price`;
+const SAFE_DEAL_PRICE_API = "/price";
 
 export const getRuleProductPricingResultValue = async (
   product: IProduct,

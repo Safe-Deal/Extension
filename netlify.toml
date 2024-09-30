@@ -1,0 +1,3 @@
+[build]
+publish = "const/"
+command = "yarn install --ignore-scripts && yarn aff:test"

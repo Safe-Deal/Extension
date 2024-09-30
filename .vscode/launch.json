@@ -1,0 +1,51 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Playwright Current File",
+      "program": "${workspaceFolder}/node_modules/.bin/playwright",
+      "args": [
+        "test",
+        "${file}",
+        "--workers=1",
+        "--config=./test/playwright.config.ts",
+        "--retries=0",
+        "--timeout=20000"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "env": {
+        "NODE_ENV": "test",
+        "HEADLESS": "false",
+        "DEBUG": "true"
+      },
+      "runtimeExecutable": "${env:NVM_BIN}/node"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Jest Current File Debug",
+      "program": "${workspaceFolder}/node_modules/.bin/jest",
+      "args": [
+        "${relativeFile}",
+        "--config",
+        "./test/jest.config.js",
+        "--runInBand",
+        "--watchAll=false",
+        "--testTimeout=100000"
+      ],
+      "console": "integratedTerminal",
+      "internalConsoleOptions": "neverOpen",
+      "cwd": "${workspaceFolder}",
+      "sourceMaps": true,
+      "runtimeArgs": ["--inspect-brk"],
+      "env": {
+        "NODE_ENV": "test",
+        "DEBUG": "true"
+      },
+      "runtimeExecutable": "${env:NVM_BIN}/node"
+    }
+  ]
+}

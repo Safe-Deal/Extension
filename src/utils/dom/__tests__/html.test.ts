@@ -45,7 +45,10 @@ describe("html", () => {
 
     it("returns an object with string keys and string values", () => {
       const result = urlParams("https://example.com/?foo=bar&baz=qux");
-      expect(result).toMatchObject({ foo: expect.any(String), baz: expect.any(String) });
+      expect(result).toMatchObject({
+        foo: expect.any(String),
+        baz: expect.any(String)
+      });
     });
 
     it("handles edge case of a URL without query string or fragment identifier", () => {

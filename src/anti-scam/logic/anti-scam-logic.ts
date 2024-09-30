@@ -68,7 +68,7 @@ const report = (data) => {
     reporter.post(data);
     debug(`ApiScamPartners :: ${JSON.stringify(data)} -> Reported successfully.`);
   } else {
-    debug(`ApiScamPartners :: Nothing to report skipped sending.`);
+    debug("ApiScamPartners :: Nothing to report skipped sending.");
   }
 };
 

@@ -14,7 +14,9 @@ export const getStorePositiveFeedbackSummaryTooltip = (
   const productFeedbackSummaryTooltipMessage = () => {
     i18nData = isPassed
       ? { percentOfPeople: `${Math.round(storePositiveRateValue).toFixed(2)}` }
-      : { percentOfPeople: `${Math.round(100 - storePositiveRateValue).toFixed(2)}` };
+      : {
+          percentOfPeople: `${Math.round(100 - storePositiveRateValue).toFixed(2)}`
+        };
 
     return {
       safe: "tooltip_seller_feedback_safe",

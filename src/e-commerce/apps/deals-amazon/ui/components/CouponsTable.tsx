@@ -55,7 +55,13 @@ const CouponsTable = ({ coupons }) => {
 
   const SortIndicator = useCallback(
     ({ field, children }) => (
-      <div style={{ display: "inline-flex", position: "relative", alignItems: "center" }}>
+      <div
+        style={{
+          display: "inline-flex",
+          position: "relative",
+          alignItems: "center"
+        }}
+      >
         {children}
         <span style={{ position: "absolute", right: "-18px", top: "1px" }}>
           {field === sortField &&

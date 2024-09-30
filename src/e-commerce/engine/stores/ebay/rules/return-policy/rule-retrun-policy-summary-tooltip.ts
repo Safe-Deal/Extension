@@ -4,7 +4,7 @@ import { IRuleSummaryTooltip } from "../../../../../../data/entities/rule-summar
 
 export const getRuleReturnPolicySummaryTooltip = (returnPolicyNormalizeValue: number = 0): IRuleSummaryTooltip => {
   const returnsNotAccepted: boolean = returnPolicyNormalizeValue <= BONUS_POINTS.NONE;
-  const i18n: string = returnsNotAccepted ? `tooltip_return_policy_un_safe` : `tooltip_return_policy_safe`;
+  const i18n: string = returnsNotAccepted ? "tooltip_return_policy_un_safe" : "tooltip_return_policy_safe";
   const type: RuleSummaryTooltipType = returnsNotAccepted ? RuleSummaryTooltipType.UNSAFE : RuleSummaryTooltipType.SAFE;
   const i18nRuleExplanation = returnsNotAccepted
     ? "explanations_ebay_return_policy_off"

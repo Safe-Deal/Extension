@@ -80,7 +80,7 @@ export class AliExpressProductDownloader extends BaseProductDownloader {
     }
 
     if (!this.document) {
-      const startingHtml = `{"widgets":[`;
+      const startingHtml = '{"widgets":[';
       const endingHtml = "}</script>";
       const startAt = html.indexOf(startingHtml);
       const endAt = html.indexOf(endingHtml, startAt) + 1;
@@ -104,7 +104,7 @@ export class AliExpressProductDownloader extends BaseProductDownloader {
       let jsonStr = "";
       if (match && match[1]) {
         try {
-          jsonStr = match[1].replace("};", "}").replace("data:", `"data":`);
+          jsonStr = match[1].replace("};", "}").replace("data:", '"data":');
           const productData = JSON.parse(jsonStr);
           this.document = productData?.data?.GLOBAL_DATA
             ? convertToOldStructureNewUsa(productData.data)
@@ -472,9 +472,9 @@ const AliExpressProductFindSection = (searchId, currentNode) => {
 };
 
 function convertToOldStructure(json) {
-  const product = AliExpressProductFindSection(`bx/ProductContextWidget`, json.widgets);
-  const shop = AliExpressProductFindSection(`bx/HeaderPDP`, json.widgets);
-  const currency = AliExpressProductFindSection(`bx/TopHead`, json.widgets);
+  const product = AliExpressProductFindSection("bx/ProductContextWidget", json.widgets);
+  const shop = AliExpressProductFindSection("bx/HeaderPDP", json.widgets);
+  const currency = AliExpressProductFindSection("bx/TopHead", json.widgets);
 
   const result: any = {};
   if (product) {
@@ -490,7 +490,10 @@ function convertToOldStructure(json) {
           tradeCount: props.tradeInfo?.tradeCount
         },
         tradeCount: props.tradeInfo?.tradeCount,
-        storeModule: { openTime: store.dateOpening, positiveRate: store?.positiveReviews?.percentages }
+        storeModule: {
+          openTime: store.dateOpening,
+          positiveRate: store?.positiveReviews?.percentages
+        }
       },
       storeModule: {
         openTime: store.dateOpening,
@@ -540,7 +543,9 @@ function convertToOldStructureUsa(json) {
     },
     category: json?.categoryComponent?.categoryName,
     imageModule: { imagePathList: json?.imageComponent?.imagePathList },
-    crossLinkModule: { crossLinkGroupList: json?.shopCategoryComponent?.productGroupsResult?.groups },
+    crossLinkModule: {
+      crossLinkGroupList: json?.shopCategoryComponent?.productGroupsResult?.groups
+    },
     actionModule: {
       categoryId: json?.productInfoComponent?.categoryId,
       comingSoon: json?.promotionComponent?.comingSoon,

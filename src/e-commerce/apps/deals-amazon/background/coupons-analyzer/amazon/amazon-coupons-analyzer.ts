@@ -129,7 +129,11 @@ const getAllAmazonCoupons = async ({
   currentPageDom: Document | any;
 }): Promise<any[]> => {
   const pagesDomList = await getAllDocumentPages({ url, currentPageDom });
-  const allAmzCoupons = amazonCouponsPagesAnalyzer({ url, domainUrl, pagesDomList });
+  const allAmzCoupons = amazonCouponsPagesAnalyzer({
+    url,
+    domainUrl,
+    pagesDomList
+  });
   return uniqBy(allAmzCoupons, "asin");
 };
 

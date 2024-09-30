@@ -10,7 +10,10 @@ export const useLocalStoragePosition = (initialPosition) => {
       const storedData = browserLocalStorage.getItem(STORAGE_KEY);
       if (storedData) {
         const { position, screenSize } = JSON.parse(storedData);
-        const currentScreenSize = { width: window.innerWidth, height: window.innerHeight };
+        const currentScreenSize = {
+          width: window.innerWidth,
+          height: window.innerHeight
+        };
 
         if (screenSize.width === currentScreenSize?.width && screenSize.height === currentScreenSize.height) {
           return position;
@@ -25,7 +28,10 @@ export const useLocalStoragePosition = (initialPosition) => {
   });
 
   useEffect(() => {
-    const currentScreenSize = { width: window.innerWidth, height: window.innerHeight };
+    const currentScreenSize = {
+      width: window.innerWidth,
+      height: window.innerHeight
+    };
     const dataToStore = { position, screenSize: currentScreenSize };
     localStorage.setItem(STORAGE_KEY, JSON.stringify(dataToStore));
   }, [position]);

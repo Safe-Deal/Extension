@@ -24,37 +24,37 @@ export const Home = () => {
   const socialMedia = [
     {
       name: "twitter",
-      url: `https://twitter.com/intent/tweet?url=`,
+      url: "https://twitter.com/intent/tweet?url=",
       icon: TWITTER_ICON
     },
     {
       name: "linkedin",
-      url: `https://www.linkedin.com/shareArticle?url=`,
+      url: "https://www.linkedin.com/shareArticle?url=",
       icon: LINKEDIN_ICON
     },
     {
       name: "facebook",
-      url: `https://www.facebook.com/sharer/sharer.php?u=`,
+      url: "https://www.facebook.com/sharer/sharer.php?u=",
       icon: FACEBOOK_ICON
     },
     {
       name: "whatsapp",
-      url: `https://api.whatsapp.com/send?text=`,
+      url: "https://api.whatsapp.com/send?text=",
       icon: WHATSAPP_ICON
     },
     {
       name: "telegram",
-      url: `https://telegram.me/share/url?url=`,
+      url: "https://telegram.me/share/url?url=",
       icon: TELEGRAM_ICON
     },
     {
       name: "reddit",
-      url: `https://reddit.com/submit?url=`,
+      url: "https://reddit.com/submit?url=",
       icon: REDDIT_ICON
     },
     {
       name: "email",
-      url: `mailto:?body=`,
+      url: "mailto:?body=",
       icon: EMAIL_ICON
     }
   ];

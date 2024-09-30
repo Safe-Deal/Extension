@@ -26,7 +26,7 @@ export const replaceAll = (str, matches, replacement) => {
 };
 
 export const numberFromString = (input: string) => {
-  let str = replaceAll(input, ` `, "");
+  let str = replaceAll(input, " ", "");
 
   const parseAndReplace = (value) => {
     const noChars = value.replace(/[^0-9\.-]+/g, "");

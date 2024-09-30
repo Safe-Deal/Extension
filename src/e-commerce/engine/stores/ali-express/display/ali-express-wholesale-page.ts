@@ -16,6 +16,11 @@ export class AliExpressWholesaleDisplayPage extends DisplaySite {
     const aliExpressWholesalePaint = new AliExpressWholesalePaint();
     initPageDisplay(document, SafeDealPages.AliExpress);
 
-    aliExpressWholesalePaint.draw({ conclusionProductEntity, productListSel, productInfoSel, priceSel });
+    aliExpressWholesalePaint.draw({
+      conclusionProductEntity,
+      productListSel,
+      productInfoSel,
+      priceSel
+    });
   }
 }

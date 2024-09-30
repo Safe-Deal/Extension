@@ -20,10 +20,20 @@ export class ApiScamNorton implements ScamRater {
 
       const isSafe = rating.rating == "r" || rating.rating == "g" || rating.rating == "b" || rating.rating == "w";
       if (isSafe) {
-        return { type: ScamSiteType.SAFE, trustworthiness: 100, childSafety, tabId };
+        return {
+          type: ScamSiteType.SAFE,
+          trustworthiness: 100,
+          childSafety,
+          tabId
+        };
       }
 
-      return { type: ScamSiteType.NO_DATA, trustworthiness, childSafety, tabId };
+      return {
+        type: ScamSiteType.NO_DATA,
+        trustworthiness,
+        childSafety,
+        tabId
+      };
     } catch (error) {
       debug(`ApiScamNorton:: Url:${this.url} Domain:${JSON.stringify(domain)} \nError ${JSON.stringify(error)}`);
       return { type: ScamSiteType.NO_DATA, tabId };

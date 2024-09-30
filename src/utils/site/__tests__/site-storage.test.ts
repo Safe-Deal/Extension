@@ -51,7 +51,11 @@ describe("local_storageFactory", () => {
         browserLocalStorage.setItem("foo", "Foo");
         browserLocalStorage.setItem("foo2", "Foo2");
         browserLocalStorage.setItem("foo3", "Foo3");
-        expect(browserLocalStorage.getAll()).toEqual({ foo: "Foo", foo2: "Foo2", foo3: "Foo3" });
+        expect(browserLocalStorage.getAll()).toEqual({
+          foo: "Foo",
+          foo2: "Foo2",
+          foo3: "Foo3"
+        });
       });
     });
   });

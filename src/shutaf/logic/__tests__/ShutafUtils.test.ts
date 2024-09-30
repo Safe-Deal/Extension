@@ -20,14 +20,28 @@ describe("Shutaf ShutafUtils", () => {
   describe("getShutafByUrl", () => {
     it("should return the correct shutaf when domain matches", () => {
       const url = new URL("https://example.com");
-      const shutaff: IShutaf[] = [{ name: "test", domain: "example.com", shutaf: ShutafType.API, target: "" }];
+      const shutaff: IShutaf[] = [
+        {
+          name: "test",
+          domain: "example.com",
+          shutaf: ShutafType.API,
+          target: ""
+        }
+      ];
       const result = getShutafByUrl(url, shutaff);
       expect(result).toEqual(shutaff[0]);
     });
 
     it("should return null when no shutaf matches the domain", () => {
       const url = new URL("https://notfound.com");
-      const shutaff: IShutaf[] = [{ name: "test", domain: "example.com", shutaf: ShutafType.API, target: "" }];
+      const shutaff: IShutaf[] = [
+        {
+          name: "test",
+          domain: "example.com",
+          shutaf: ShutafType.API,
+          target: ""
+        }
+      ];
       const result = getShutafByUrl(url, shutaff);
       expect(result).toBeNull();
     });
@@ -41,7 +55,12 @@ describe("Shutaf ShutafUtils", () => {
 
   describe("isApiCallRequeued", () => {
     it("should return true if shutaf type is API", () => {
-      const shutaf: IShutaf = { name: "test", domain: "example.com", shutaf: ShutafType.API, target: "" };
+      const shutaf: IShutaf = {
+        name: "test",
+        domain: "example.com",
+        shutaf: ShutafType.API,
+        target: ""
+      };
       const result = isApiCallRequeued(shutaf);
       expect(result).toBe(true);
     });
@@ -115,7 +134,12 @@ describe("Shutaf ShutafUtils", () => {
 
   it("should check if URL contains custom target", () => {
     const url = new URL("https://example.com/item/12345?query=abc#hash");
-    const shutaf: IShutaf = { name: "test", domain: "example.com", shutaf: ShutafType.API, target: "item" };
+    const shutaf: IShutaf = {
+      name: "test",
+      domain: "example.com",
+      shutaf: ShutafType.API,
+      target: "item"
+    };
     const result = isOnItemPage(url, shutaf);
     expect(result).toBe(true);
   });

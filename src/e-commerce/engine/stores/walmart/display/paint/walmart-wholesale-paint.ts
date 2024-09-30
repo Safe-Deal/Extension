@@ -69,7 +69,7 @@ export class WalmartWholesalePaint implements IPaint {
       productDomEl.style.position = "relative";
       const productInfo = productDomEl?.querySelector(productInfoSel);
       const priceEl: any = getAvailableSelector(
-        `.a-section.a-spacing-none.a-spacing-top-micro|.a-section.a-spacing-none.a-spacing-top-mini`,
+        ".a-section.a-spacing-none.a-spacing-top-micro|.a-section.a-spacing-none.a-spacing-top-mini",
         productInfo
       );
       if (priceEl && priceEl.classList) {
@@ -92,12 +92,12 @@ export class WalmartWholesalePaint implements IPaint {
     iconImageContainer.style.position = "relative";
     iconImageContainer.style.display = "contents";
 
-    iconImage.style.height = `22px`;
+    iconImage.style.height = "22px";
     iconImage.className = "safe-deal-image";
     iconImage.src = ProductPaint.getProductIconImage(conclusionProduct);
 
     iconImageSpan.style.position = "absolute";
-    iconImageSpan.style.margin = `0 8px`;
+    iconImageSpan.style.margin = "0 8px";
     PaintUtils.appendProductReliabilityPopover({
       targetEl: iconImageSpan,
       explanation: getReliabilityProductsSummaryTooltipMessage(rules)

@@ -41,4 +41,8 @@ export const dialogActionsStyle = {
   fontWeight: 400
 };
 
-export const numberOfSuperDealsStyle = { marginLeft: 4, fontSize: 20, color: colors.red };
+export const numberOfSuperDealsStyle = {
+  marginLeft: 4,
+  fontSize: 20,
+  color: colors.red
+};

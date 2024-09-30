@@ -56,7 +56,11 @@ export function SdDealsCouponsStickyBadgeRoot({ theme, deals = [], loadingDeals 
               color="inherit"
               onClick={handleDialogClose}
               aria-label="close"
-              style={{ position: "absolute", right: theme.spacing(3), top: theme.spacing(1) }}
+              style={{
+                position: "absolute",
+                right: theme.spacing(3),
+                top: theme.spacing(1)
+              }}
             >
               <CloseIcon />
             </IconButton>

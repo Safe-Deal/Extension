@@ -23,7 +23,7 @@ export const AntiScamModal: React.FC<AntiScamProps> = ({ conclusion }) => {
 
   const percent = conclusion?.trustworthiness ? 100 - conclusion.trustworthiness : NaN;
   const data = Number.isNaN(percent)
-    ? { SafeVsUnsafePercentageAmount: `` }
+    ? { SafeVsUnsafePercentageAmount: "" }
     : { SafeVsUnsafePercentageAmount: `: ${percent}% ` };
   const message = formatString(t("anti_scam_dangerous_website"), data);
 
@@ -84,7 +84,13 @@ export const AntiScamModal: React.FC<AntiScamProps> = ({ conclusion }) => {
           </button>
           <div
             className="anti-scam-modal__divider--vertical"
-            style={{ margin: "0 20px", height: "auto", backgroundColor: "#ccc", width: "1px", alignSelf: "stretch" }}
+            style={{
+              margin: "0 20px",
+              height: "auto",
+              backgroundColor: "#ccc",
+              width: "1px",
+              alignSelf: "stretch"
+            }}
           />
           <button onClick={handleStay} className="anti-scam-modal__button anti-scam-modal__button--leave" type="button">
             {t("anti_scam_stay")}

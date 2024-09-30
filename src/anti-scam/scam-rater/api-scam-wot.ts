@@ -42,7 +42,12 @@ export class ApiScamWOT implements ScamRater {
         const type = selectFromRange(SAFETY_RANGE, trustworthiness);
         return { type, trustworthiness, childSafety, tabId };
       }
-      return { type: ScamSiteType.NO_DATA, trustworthiness, childSafety, tabId };
+      return {
+        type: ScamSiteType.NO_DATA,
+        trustworthiness,
+        childSafety,
+        tabId
+      };
     } catch (error) {
       debug(`ApiScamWOT:: Url:${this.url} Domain:${JSON.stringify(domain)} \nError ${JSON.stringify(error)}`);
       return { type: ScamSiteType.NO_DATA, tabId };

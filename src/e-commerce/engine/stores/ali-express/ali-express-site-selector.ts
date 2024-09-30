@@ -5,10 +5,11 @@ export class AliExpressSiteSelector extends SiteDomSelector {
     super(
       {
         // Gallery
-        wholesaleGalleryPageItemListSel: `[data-product-id]|li.list-item|.product-container a[title]|ul>li[data-product-id]|.product-container  a[target="_blank"]|.productContainer|[class*="cards--gallery--"]|.search-card-item|[class*=red-snippet_RedSnippet__gallery__]`,
-        wholesaleGalleryPageItemHref: `.place-container a|.product-container a[title]|a[class*="link"]`,
-        wholesaleGalleryPageItemRatingSel: `.product-info .rating-value`,
-        wholesaleGalleryPageItemOrdersSel: `.sale-value`,
+        wholesaleGalleryPageItemListSel:
+          '[data-product-id]|li.list-item|.product-container a[title]|ul>li[data-product-id]|.product-container  a[target="_blank"]|.productContainer|[class*="cards--gallery--"]|.search-card-item|[class*=red-snippet_RedSnippet__gallery__]',
+        wholesaleGalleryPageItemHref: '.place-container a|.product-container a[title]|a[class*="link"]',
+        wholesaleGalleryPageItemRatingSel: ".product-info .rating-value",
+        wholesaleGalleryPageItemOrdersSel: ".sale-value",
 
         // List
         wholesaleListPageItemListSel: "li.list-item",
@@ -17,7 +18,7 @@ export class AliExpressSiteSelector extends SiteDomSelector {
         wholesaleListPageItemOrdersSel: ".sale-value",
 
         // Wholesale - General
-        wholesalePageProductId: `.product-card[data-product-id]|.product-container a[title]|ul>li[data-product-id]`,
+        wholesalePageProductId: ".product-card[data-product-id]|.product-container a[title]|ul>li[data-product-id]",
 
         // Item Details
         itemPageProductSel:

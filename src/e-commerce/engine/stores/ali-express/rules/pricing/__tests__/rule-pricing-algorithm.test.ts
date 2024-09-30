@@ -29,13 +29,19 @@ describe("Rule: Pricing", () => {
     });
 
     it("should return negative value", () => {
-      const currentProductPricing = { ...mockPricing, ...{ minPrice: 10, maxPrice: 15 } };
+      const currentProductPricing = {
+        ...mockPricing,
+        ...{ minPrice: 10, maxPrice: 15 }
+      };
       const expected = calculateProductPricingAlgorithm(currentProductPricing).normalizeValue;
       expect(expected).toEqual(RULE_VALUE.RULE_VAL_3);
     });
 
     it("should return value 5", () => {
-      const currentProductPricing = { ...mockPricing, ...{ minPrice: 3, maxPrice: 3 } };
+      const currentProductPricing = {
+        ...mockPricing,
+        ...{ minPrice: 3, maxPrice: 3 }
+      };
       const expected = calculateProductPricingAlgorithm(currentProductPricing).normalizeValue;
       expect(expected).toEqual(RULE_VALUE.RULE_VAL_3);
     });

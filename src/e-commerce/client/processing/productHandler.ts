@@ -39,7 +39,7 @@ export const processProducts = (site, siteURL: string, updateProgress: (progress
       totalAnalyzed: 1,
       totalLeft: 0
     });
-    debug(`Amazon Prime Video. Skipping.`, "Client::processContent");
+    debug("Amazon Prime Video. Skipping.", "Client::processContent");
     return;
   }
 
@@ -50,7 +50,7 @@ export const processProducts = (site, siteURL: string, updateProgress: (progress
   debug(`Found New: ${notProcessesProducts.length} on page.`, "Client::processContent");
 
   if (isEmpty(notProcessesProducts)) {
-    debug(`No New Products Found. Exiting.`, "Client::processContent");
+    debug("No New Products Found. Exiting.", "Client::processContent");
     return;
   }
 

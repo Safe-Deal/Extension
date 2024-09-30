@@ -2,7 +2,10 @@ import { useState, useEffect } from "react";
 import { processChartData } from "../data/PriceChartData";
 
 export const useProcessedData = (prices) => {
-  const [chartData, setChartData] = useState({ hasData: false, data: [[], []] });
+  const [chartData, setChartData] = useState({
+    hasData: false,
+    data: [[], []]
+  });
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {

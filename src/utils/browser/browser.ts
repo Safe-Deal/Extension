@@ -62,5 +62,9 @@ export const onDocumentInactivity = (callback, inactivityTimeMs = 500) => {
     }, inactivityTimeMs);
   });
 
-  observer.observe(document, { childList: true, subtree: true, characterData: true });
+  observer.observe(document, {
+    childList: true,
+    subtree: true,
+    characterData: true
+  });
 };

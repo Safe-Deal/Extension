@@ -117,5 +117,7 @@ export const messages = {
 	 	${t("mobile_app")}
 	 </a> 
   `,
-  open_client: t("click_to_reveal", { systemShortcut: isMac() ? "Option (⌥) + D" : "Alt + D" })
+  open_client: t("click_to_reveal", {
+    systemShortcut: isMac() ? "Option (⌥) + D" : "Alt + D"
+  })
 };

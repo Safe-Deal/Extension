@@ -17,10 +17,34 @@ interface IReviews {
 
 const getAliExpressRussiaReviews = async (productId: string): Promise<IReviews> => {
   const url = `https://aliexpress.ru/aer-jsonapi/review/v2/desktop/product/reviews?product_id=${productId}&_bx-v=2.5.13`;
-  const json1 = { productId, pageSize: 20, page: 1, sortValue: "USEFUL", filtrationValues: [] };
-  const json2 = { productId, pageSize: 20, page: 1, sortValue: "NEW", filtrationValues: [] };
-  const json3 = { productId, pageSize: 20, page: 1, sortValue: "LOW_GRADE", filtrationValues: [] };
-  const json4 = { productId, pageSize: 20, page: 1, sortValue: "HIGH_GRADE", filtrationValues: [] };
+  const json1 = {
+    productId,
+    pageSize: 20,
+    page: 1,
+    sortValue: "USEFUL",
+    filtrationValues: []
+  };
+  const json2 = {
+    productId,
+    pageSize: 20,
+    page: 1,
+    sortValue: "NEW",
+    filtrationValues: []
+  };
+  const json3 = {
+    productId,
+    pageSize: 20,
+    page: 1,
+    sortValue: "LOW_GRADE",
+    filtrationValues: []
+  };
+  const json4 = {
+    productId,
+    pageSize: 20,
+    page: 1,
+    sortValue: "HIGH_GRADE",
+    filtrationValues: []
+  };
   const promises = [
     Remote.postJson(url, json1),
     Remote.postJson(url, json2),

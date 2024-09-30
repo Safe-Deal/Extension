@@ -5,9 +5,15 @@ import { ICON_CLOSE_POPUP } from "../../../../constants/visual";
 export default function Navigation() {
   const navigationItems = [
     { href: "https://shop.joinsafedeal.com/", text: t("popup_shop_tab") },
-    { href: "https://www.joinsafedeal.com/#benefits", text: t("popup_benefits_tab") },
+    {
+      href: "https://www.joinsafedeal.com/#benefits",
+      text: t("popup_benefits_tab")
+    },
     { href: "https://www.joinsafedeal.com/#about", text: t("popup_about_tab") },
-    { href: "https://www.joinsafedeal.com/#support", text: t("popup_contact_us_tab") }
+    {
+      href: "https://www.joinsafedeal.com/#support",
+      text: t("popup_contact_us_tab")
+    }
   ];
 
   const handleCloseClick = (event: React.MouseEvent) => {

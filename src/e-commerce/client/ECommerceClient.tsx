@@ -20,7 +20,10 @@ import { useContentModifiedObserver } from "./hooks/useContentModifiedObserver";
 import { isRtl } from "../../constants/messages";
 
 export function ECommerceClient(): JSX.Element {
-  const [state, setState] = useState<{ processedItems: AnalyzedItem[]; progress: Progress }>({
+  const [state, setState] = useState<{
+    processedItems: AnalyzedItem[];
+    progress: Progress;
+  }>({
     processedItems: [],
     progress: DEFAULT_PROGRESS
   });

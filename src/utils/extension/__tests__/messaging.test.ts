@@ -10,7 +10,10 @@ describe("Messaging System", () => {
       postMessage: jest.fn(),
       onMessage: {
         addListener: jest.fn((handler) => {
-          const simulatedMessage = { type: "testType", params: { key: "value" } };
+          const simulatedMessage = {
+            type: "testType",
+            params: { key: "value" }
+          };
           handler(simulatedMessage);
         })
       },

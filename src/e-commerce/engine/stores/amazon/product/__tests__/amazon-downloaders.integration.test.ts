@@ -16,7 +16,7 @@ describe("Remote Fetch Amazon US Integration test", () => {
     await HUMAN_DELAY_E2E();
   });
 
-  it(`should correctly fetch amazon`, async () => {
+  it("should correctly fetch amazon", async () => {
     if (IS_CI) {
       return;
     }
@@ -28,7 +28,7 @@ describe("Remote Fetch Amazon US Integration test", () => {
     expect(text.length > 1).toBeTruthy();
   });
 
-  it.skip(`should correctly fetch amazon stores Reviews`, async () => {
+  it.skip("should correctly fetch amazon stores Reviews", async () => {
     // https://www.amazon.com/sp?seller=AZ6BTX98B3TBC
     const downloader = new AmazonStoreDownloader("AZ6BTX98B3TBC", "www.amazon.com");
     const html = await downloader.download();
@@ -39,7 +39,7 @@ describe("Remote Fetch Amazon US Integration test", () => {
     expect(percentTop.textContent.includes("positive")).toBeTruthy();
   });
 
-  it.skip(`should correctly fetch amazon products Reviews`, async () => {
+  it.skip("should correctly fetch amazon products Reviews", async () => {
     if (IS_CI) {
       return;
     }

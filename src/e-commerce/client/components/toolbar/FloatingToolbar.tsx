@@ -59,7 +59,9 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
     if (toolbarRef.current) {
       const { offsetHeight } = toolbarRef.current;
       const dialogueHeight = dialogueRef.current?.offsetHeight;
-      setLocation({ y: Math.max(position.y - offsetHeight - (dialogueHeight || 0), 0) });
+      setLocation({
+        y: Math.max(position.y - offsetHeight - (dialogueHeight || 0), 0)
+      });
     }
   }, [position.y, toolbarRef.current?.offsetHeight, dialogueRef.current?.offsetHeight, isLoading, size]);
 

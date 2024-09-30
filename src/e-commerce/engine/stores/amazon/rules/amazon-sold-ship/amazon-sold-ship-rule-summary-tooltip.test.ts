@@ -8,7 +8,7 @@ describe("Rule: Amazon Sold And Ship - Tooltip", () => {
     it("should return sold and ship when item is both amazon brand", () => {
       const soldShipByAmazon = true;
       const soldOrShipByAmazonValue = true;
-      const description = `tooltip_amazon_sold_ship_safe`;
+      const description = "tooltip_amazon_sold_ship_safe";
       const excepted: IRuleSummaryTooltip = {
         description,
         type: RuleSummaryTooltipType.SAFE,
@@ -23,7 +23,7 @@ describe("Rule: Amazon Sold And Ship - Tooltip", () => {
     it("should return sold or ship when item is one of amazon brand", () => {
       const soldShipByAmazon = false;
       const soldOrShipByAmazonValue = true;
-      const description = `tooltip_amazon_sold_or_ship_safe`;
+      const description = "tooltip_amazon_sold_or_ship_safe";
       const excepted: IRuleSummaryTooltip = {
         description,
         type: RuleSummaryTooltipType.SAFE,

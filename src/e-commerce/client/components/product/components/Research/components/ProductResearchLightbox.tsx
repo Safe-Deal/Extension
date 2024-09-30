@@ -31,9 +31,18 @@ interface IProductResearchLightboxProps {
 export const ProductResearchLightbox = ({ open, onClose, productId, store }: IProductResearchLightboxProps) => {
   const domain = getDomain();
   const isSmall = isDomainSmallLanguage(domain);
-  const [productName, setProductName] = useProductName({ productId, store, isSmall });
+  const [productName, setProductName] = useProductName({
+    productId,
+    store,
+    isSmall
+  });
   const [activeTab, setActiveTab] = useState(0);
-  const researchTabs = useProductResearch({ productId, productName, store, isSmall });
+  const researchTabs = useProductResearch({
+    productId,
+    productName,
+    store,
+    isSmall
+  });
 
   const handleChange = (event, selectedTab) => {
     setActiveTab(selectedTab);

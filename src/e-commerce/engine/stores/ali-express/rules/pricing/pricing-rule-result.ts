@@ -10,7 +10,7 @@ import { AliExpressProductDownloader } from "../../product/ali-express-product-d
 import { calculateProductPricingAlgorithm } from "./rule-pricing-algorithm";
 import { getProductPricingSummaryTooltip } from "./rule-pricing-summary-tooltip";
 
-const SAFE_DEAL_PRICE_API = `/price`;
+const SAFE_DEAL_PRICE_API = "/price";
 interface ProductPrice {
   minPrice?: string | number | null;
   maxPrice?: string | number | null;
@@ -98,7 +98,11 @@ export const getRuleProductPricingResultValue = async (
       weight = 0;
     }
     const price = toAveragePrices(currentProductPricing.price);
-    const dataset = { ...currentProductPricing, price, currency: productsPricing?.currency };
+    const dataset = {
+      ...currentProductPricing,
+      price,
+      currency: productsPricing?.currency
+    };
     const res: IRuleResult = {
       bonus: {
         isBonusRule: true,

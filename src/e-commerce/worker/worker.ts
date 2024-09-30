@@ -107,12 +107,24 @@ export const initCommerce = () => {
         await processProduct(product, postMessage);
         queue.start();
       } catch (error) {
-        reportError({ error, productId: product?.id, postMessage, siteResponse: null, cashingKey: null });
+        reportError({
+          error,
+          productId: product?.id,
+          postMessage,
+          siteResponse: null,
+          cashingKey: null
+        });
       }
     } else {
       queue.add(() =>
         processProduct(product, postMessage).catch((error) => {
-          reportError({ error, productId: product?.id, postMessage, siteResponse: null, cashingKey: null });
+          reportError({
+            error,
+            productId: product?.id,
+            postMessage,
+            siteResponse: null,
+            cashingKey: null
+          });
         })
       );
     }

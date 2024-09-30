@@ -7,8 +7,12 @@ describe("Remote Fetch eBay Integration test should correctly fetch", () => {
   const productId = "363785622564";
   const url = `https://www.ebay.com/itm/${productId}`;
 
-  it(`should correctly fetch delivery info for product`, async () => {
-    const downloader = new eBayProductDownloader({ id: productId, domain: "www.ebay.com", url });
+  it("should correctly fetch delivery info for product", async () => {
+    const downloader = new eBayProductDownloader({
+      id: productId,
+      domain: "www.ebay.com",
+      url
+    });
     const result = await downloader.download();
     const deliveryInfoEl = getAllAvailableSelectors(EBAY_PAGE_SELECTORS, result, true);
     expect(deliveryInfoEl.length > 0).toBeTruthy();
@@ -18,8 +22,12 @@ describe("Remote Fetch eBay Integration test should correctly fetch", () => {
     expect(deliveryInfoTxt.map((txt: string) => txt).length > 1).toBeTruthy();
   });
 
-  it(`should correctly fetch shop open year for product`, async () => {
-    const downloader = new eBayProductDownloader({ id: productId, domain: "www.ebay.com", url });
+  it("should correctly fetch shop open year for product", async () => {
+    const downloader = new eBayProductDownloader({
+      id: productId,
+      domain: "www.ebay.com",
+      url
+    });
     const result = await downloader.download();
     const shopOpenYearEl = getAllAvailableSelectors(shopOpenYearSelector, result, true);
     expect(shopOpenYearEl.length > 0).toBeTruthy();
@@ -29,8 +37,12 @@ describe("Remote Fetch eBay Integration test should correctly fetch", () => {
     expect(shopOpenYearText[0]).toContain("joined");
   });
 
-  it(`should correctly fetch both delivery info and shop open year for product`, async () => {
-    const downloader = new eBayProductDownloader({ id: productId, domain: "www.ebay.com", url });
+  it("should correctly fetch both delivery info and shop open year for product", async () => {
+    const downloader = new eBayProductDownloader({
+      id: productId,
+      domain: "www.ebay.com",
+      url
+    });
     const result = await downloader.download();
     const deliveryInfoEl = getAllAvailableSelectors(EBAY_PAGE_SELECTORS, result, true);
     const shopOpenYearEl = getAllAvailableSelectors(shopOpenYearSelector, result, true);

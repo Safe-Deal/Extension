@@ -6,78 +6,78 @@ export const STATUS_NOT_200 = "RESPONSE_STATUS_NOT_200";
 
 const userAgents = [
   {
-    "Sec-Ch-Ua": `"Google Chrome";v="91", " Not;A Brand";v="99", "Chromium";v="91"`,
+    "Sec-Ch-Ua": '"Google Chrome";v="91", " Not;A Brand";v="99", "Chromium";v="91"',
     "User-Agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
   },
   {
-    "Sec-Ch-Ua": `"Google Chrome";v="92", " Not;A Brand";v="99", "Chromium";v="92"`,
+    "Sec-Ch-Ua": '"Google Chrome";v="92", " Not;A Brand";v="99", "Chromium";v="92"',
     "User-Agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36"
   },
   {
-    "Sec-Ch-Ua": `"Mozilla";v="89", " Not;A Brand";v="99", "Firefox";v="89"`,
+    "Sec-Ch-Ua": '"Mozilla";v="89", " Not;A Brand";v="99", "Firefox";v="89"',
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:89.0) Gecko/20100101 Firefox/89.0"
   },
   {
-    "Sec-Ch-Ua": `"Mozilla";v="90", " Not;A Brand";v="99", "Firefox";v="90"`,
+    "Sec-Ch-Ua": '"Mozilla";v="90", " Not;A Brand";v="99", "Firefox";v="90"',
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:90.0) Gecko/20100101 Firefox/90.0"
   },
   {
-    "Sec-Ch-Ua": `"Microsoft Edge";v="91", " Not;A Brand";v="99", "Chromium";v="91"`,
+    "Sec-Ch-Ua": '"Microsoft Edge";v="91", " Not;A Brand";v="99", "Chromium";v="91"',
     "User-Agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/91.0.864.59 Safari/537.36"
   },
   {
-    "Sec-Ch-Ua": `"Microsoft Edge";v="92", " Not;A Brand";v="99", "Chromium";v="92"`,
+    "Sec-Ch-Ua": '"Microsoft Edge";v="92", " Not;A Brand";v="99", "Chromium";v="92"',
     "User-Agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/92.0.902.67 Safari/537.36"
   },
   {
-    "Sec-Ch-Ua": `"Opera";v="77", " Not;A Brand";v="99", "Chromium";v="91"`,
+    "Sec-Ch-Ua": '"Opera";v="77", " Not;A Brand";v="99", "Chromium";v="91"',
     "User-Agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36 OPR/77.0.4054.277"
   },
   {
-    "Sec-Ch-Ua": `"Opera";v="78", " Not;A Brand";v="99", "Chromium";v="92"`,
+    "Sec-Ch-Ua": '"Opera";v="78", " Not;A Brand";v="99", "Chromium";v="92"',
     "User-Agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/92.0.4515.159 Safari/537.36 OPR/78.0.4093.231"
   },
   {
-    "Sec-Ch-Ua": `"Safari";v="14", " Not;A Brand";v="99", "WebKit";v="605"`,
+    "Sec-Ch-Ua": '"Safari";v="14", " Not;A Brand";v="99", "WebKit";v="605"',
     "User-Agent":
       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15"
   },
   {
-    "Sec-Ch-Ua": `"Safari";v="13", " Not;A Brand";v="99", "WebKit";v="605"`,
+    "Sec-Ch-Ua": '"Safari";v="13", " Not;A Brand";v="99", "WebKit";v="605"',
     "User-Agent":
       "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.1 Safari/605.1.15"
   },
   {
-    "Sec-Ch-Ua": `"Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"`,
+    "Sec-Ch-Ua": '"Google Chrome";v="93", " Not;A Brand";v="99", "Chromium";v="93"',
     "User-Agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.82 Safari/537.36"
   },
   {
-    "Sec-Ch-Ua": `"Google Chrome";v="94", " Not;A Brand";v="99", "Chromium";v="94"`,
+    "Sec-Ch-Ua": '"Google Chrome";v="94", " Not;A Brand";v="99", "Chromium";v="94"',
     "User-Agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.81 Safari/537.36"
   },
   {
-    "Sec-Ch-Ua": `"Mozilla";v="91", " Not;A Brand";v="99", "Firefox";v="91"`,
+    "Sec-Ch-Ua": '"Mozilla";v="91", " Not;A Brand";v="99", "Firefox";v="91"',
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:91.0) Gecko/20100101 Firefox/91.0"
   },
   {
-    "Sec-Ch-Ua": `"Mozilla";v="92", " Not;A Brand";v="99", "Firefox";v="92"`,
+    "Sec-Ch-Ua": '"Mozilla";v="92", " Not;A Brand";v="99", "Firefox";v="92"',
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:92.0) Gecko/20100101 Firefox/92.0"
   },
   {
-    "Sec-Ch-Ua": `"Microsoft Edge";v="93", " Not;A Brand";v="99", "Chromium";v="93"`,
+    "Sec-Ch-Ua": '"Microsoft Edge";v="93", " Not;A Brand";v="99", "Chromium";v="93"',
     "User-Agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/93.0.961.52 Safari/537.36"
   },
   {
-    "Sec-Ch-Ua": `"Microsoft Edge";v="94", " Not;A Brand";v="99", "Chromium";v="94"`,
+    "Sec-Ch-Ua": '"Microsoft Edge";v="94", " Not;A Brand";v="99", "Chromium";v="94"',
     "User-Agent":
       "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edge/94.0.992.50 Safari/537.36"
   }
@@ -91,20 +91,48 @@ const getRandomUserAgent = () => {
 const crawlerAgents = [
   { "User-Agent": "Googlebot/2.1 (+http://www.google.com/bot.html)" },
   { "User-Agent": "Bingbot/2.0; +http://www.bing.com/bingbot.htm" },
-  { "User-Agent": "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-ads/2.0; +http://www.baidu.com/search/spider.html)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-cpro/2.0; +http://www.baidu.com/search/spider.html)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-favo/2.0; +http://www.baidu.com/search/spider.html)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-image/2.0; +http://www.baidu.com/search/spider.html)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-news/2.0; +http://www.baidu.com/search/spider.html)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-video/2.0; +http://www.baidu.com/search/spider.html)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)" },
-  { "User-Agent": "DuckDuckBot/1.0; (+http://duckduckgo.com/duckduckbot.html)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; Ask Jeeves/Teoma; +http://about.ask.com/en/docs/about/webmasters.shtml)" },
-  { "User-Agent": "Mozilla/5.0 (compatible; SeznamBot/3.2; +http://fulltext.sblog.cz/)" }
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; Baiduspider/2.0; +http://www.baidu.com/search/spider.html)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-ads/2.0; +http://www.baidu.com/search/spider.html)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-cpro/2.0; +http://www.baidu.com/search/spider.html)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-favo/2.0; +http://www.baidu.com/search/spider.html)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-image/2.0; +http://www.baidu.com/search/spider.html)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-news/2.0; +http://www.baidu.com/search/spider.html)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; Baiduspider-video/2.0; +http://www.baidu.com/search/spider.html)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; YandexBot/3.0; +http://yandex.com/bots)"
+  },
+  {
+    "User-Agent": "DuckDuckBot/1.0; (+http://duckduckgo.com/duckduckbot.html)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; Yahoo! Slurp; http://help.yahoo.com/help/us/ysearch/slurp)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; Ask Jeeves/Teoma; +http://about.ask.com/en/docs/about/webmasters.shtml)"
+  },
+  {
+    "User-Agent": "Mozilla/5.0 (compatible; SeznamBot/3.2; +http://fulltext.sblog.cz/)"
+  }
 ];
 
 const getRandomCrawlerAgent = () => {
@@ -140,7 +168,7 @@ const CLIENT_HEADERS = (url: string): HeadersInit => {
     "Sec-Ch-Dpr": "2",
     "Sec-Ch-Ua": randomUserAgent["Sec-Ch-Ua"],
     "Sec-Ch-Ua-Mobile": "?0",
-    "Sec-Ch-Ua-Platform": `"macOS"`,
+    "Sec-Ch-Ua-Platform": '"macOS"',
     "Sec-Ch-Viewport-Width": "451",
     "Sec-Fetch-Dest": "document",
     "Sec-Fetch-Mode": "navigate",

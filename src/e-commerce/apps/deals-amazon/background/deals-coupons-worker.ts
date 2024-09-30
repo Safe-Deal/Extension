@@ -13,7 +13,11 @@ export const initAmazonCouponsWorker = (): void => {
 
     const currentPageDom: ParsedHtml = parseAsHtml(document);
     try {
-      const deals = await getAllAmazonCoupons({ url, domainUrl, currentPageDom });
+      const deals = await getAllAmazonCoupons({
+        url,
+        domainUrl,
+        currentPageDom
+      });
       sendResponse({ deals });
     } catch (error) {
       logError(error);

@@ -67,7 +67,13 @@ export class ErrorBoundary extends Component<ErrorBoundaryProps, ErrorBoundarySt
             <DialogContent dividers style={{ textAlign: "left" }}>
               <Typography style={{ color: "red" }}>{this.state.error?.toString() ?? "Unknown Error"}</Typography>
               {this.state.errorInfo && (
-                <Typography style={{ marginTop: "20px", color: "gray", fontSize: "0.8em" }}>
+                <Typography
+                  style={{
+                    marginTop: "20px",
+                    color: "gray",
+                    fontSize: "0.8em"
+                  }}
+                >
                   {this.state.errorInfo.componentStack}
                 </Typography>
               )}

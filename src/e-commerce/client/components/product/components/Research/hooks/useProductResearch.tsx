@@ -78,6 +78,11 @@ interface IResearchContentProps {
 
 export const useProductResearch = ({ productId, productName, store, isSmall }: IResearchContentProps) => {
   const searchQuery = `${productName}`;
-  const researchComponents = Content({ productId, searchQuery, store, isSmall });
+  const researchComponents = Content({
+    productId,
+    searchQuery,
+    store,
+    isSmall
+  });
   return researchComponents;
 };

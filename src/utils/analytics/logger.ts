@@ -40,11 +40,11 @@ export const NODE_LOCALE = "en";
 if (typeof jest === "undefined") {
   if (IS_DEBUG) {
     // eslint-disable-next-line no-console
-    console.info(`SafeDeal :: Extension Engine Reloading.... -> Clearing Console.`);
+    console.info("SafeDeal :: Extension Engine Reloading.... -> Clearing Console.");
     // eslint-disable-next-line no-console
     console.clear();
     // eslint-disable-next-line no-console
-    console.info(`SafeDeal :: Extension Engine Loaded -> Debugger -> ON`);
+    console.info("SafeDeal :: Extension Engine Loaded -> Debugger -> ON");
   }
 }
 
@@ -85,7 +85,11 @@ export const logError = (exception: Error, ruleName: string = "N/A - General Exc
   }
 
   const isBackground = isBackgroundPage();
-  const msg: any = { Rule: `${ruleName} - v:${VERSION} on ${BROWSER_VERSION}`, Error: err, isWorker: isBackground };
+  const msg: any = {
+    Rule: `${ruleName} - v:${VERSION} on ${BROWSER_VERSION}`,
+    Error: err,
+    isWorker: isBackground
+  };
 
   if (!isBackground) {
     const url = browserWindow().location?.href;

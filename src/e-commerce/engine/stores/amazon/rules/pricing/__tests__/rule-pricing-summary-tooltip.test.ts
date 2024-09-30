@@ -9,7 +9,7 @@ describe("Rule: Pricing - Tooltip", () => {
         normalizeValue: 6,
         ratio: 2
       };
-      const description = `tooltip_product_pricing_type_excellent`;
+      const description = "tooltip_product_pricing_type_excellent";
       const excepted: IRuleSummaryTooltip = {
         description,
         type: RuleSummaryTooltipType.SAFE,
@@ -27,7 +27,7 @@ describe("Rule: Pricing - Tooltip", () => {
         normalizeValue: 3,
         ratio: 10
       };
-      const description = `tooltip_product_pricing_type_average_lower`;
+      const description = "tooltip_product_pricing_type_average_lower";
       const excepted: IRuleSummaryTooltip = {
         description,
         type: RuleSummaryTooltipType.SAFE,
@@ -45,7 +45,7 @@ describe("Rule: Pricing - Tooltip", () => {
         normalizeValue: 0,
         ratio: 10
       };
-      const description = `tooltip_product_pricing_type_expensive`;
+      const description = "tooltip_product_pricing_type_expensive";
       const excepted: IRuleSummaryTooltip = {
         description,
         type: RuleSummaryTooltipType.UNSAFE,

@@ -49,10 +49,20 @@ export class ApiScamVoidUrl implements ScamRater {
 
       if (isDangerous) {
         trustworthiness = Math.abs(trustworthiness - 40);
-        return { type: ScamSiteType.DANGEROUS, trustworthiness, childSafety, tabId };
+        return {
+          type: ScamSiteType.DANGEROUS,
+          trustworthiness,
+          childSafety,
+          tabId
+        };
       }
 
-      return { type: ScamSiteType.NO_DATA, trustworthiness, childSafety, tabId };
+      return {
+        type: ScamSiteType.NO_DATA,
+        trustworthiness,
+        childSafety,
+        tabId
+      };
     } catch (error) {
       debug(`ApiScamVoidUrl:: Url:${this.url} Domain:${JSON.stringify(domain)} \nError ${JSON.stringify(error)}`);
       return { type: ScamSiteType.NO_DATA, tabId };

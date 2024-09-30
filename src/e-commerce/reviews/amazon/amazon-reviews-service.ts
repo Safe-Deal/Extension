@@ -71,7 +71,7 @@ const fetchAllProductReviewsAmazon = async (
   );
 
   const docDom: any = parseAsHtml(doc);
-  const imageSelectors = `img[class*="-thumbnail-image"]`;
+  const imageSelectors = 'img[class*="-thumbnail-image"]';
   const totalReviewsSelector = "span#acrCustomerReviewText";
   const ratingSelector = "span.a-icon-alt";
 
@@ -101,7 +101,13 @@ const getReviewsFromProductAmazon = async (data: any) => {
   const siteUrl = get(data, "siteUrl");
   const { reviewsTitle, reviewsContent, allImagesBigResolution, totalReviews, rating } =
     await fetchAllProductReviewsAmazon(productId, doc, siteUrl);
-  return { reviewsTitle, reviewsContent, allImagesBigResolution, totalReviews, rating };
+  return {
+    reviewsTitle,
+    reviewsContent,
+    allImagesBigResolution,
+    totalReviews,
+    rating
+  };
 };
 
 const analyze = async (data: ReviewSummaryData): Promise<ReviewsResponse> => {

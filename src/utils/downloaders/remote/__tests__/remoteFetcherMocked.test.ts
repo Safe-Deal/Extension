@@ -32,7 +32,9 @@ describe("Remote class", () => {
 
   it("should perform a POST request and return the result", async () => {
     (postFetchJson as jest.Mock).mockResolvedValue({ success: true });
-    const result = await Remote.postJson("https://example.com", { data: "test" });
+    const result = await Remote.postJson("https://example.com", {
+      data: "test"
+    });
     expect(result.response).toEqual({ success: true });
     expect(result.fromCache).toBe(false);
   });
@@ -48,8 +50,12 @@ describe("Remote class", () => {
 
   it("should cache POST requests and return cached result on subsequent requests", async () => {
     (postFetchJson as jest.Mock).mockResolvedValue({ success: true });
-    const result1 = await Remote.postJson("https://example.com", { data: "test" });
-    const result2 = await Remote.postJson("https://example.com", { data: "test" });
+    const result1 = await Remote.postJson("https://example.com", {
+      data: "test"
+    });
+    const result2 = await Remote.postJson("https://example.com", {
+      data: "test"
+    });
     expect(result1.fromCache).toBe(false);
     expect(result2.fromCache).toBe(true);
     expect(postFetchJson).toHaveBeenCalledTimes(1);
@@ -68,7 +74,9 @@ describe("Remote class", () => {
 
   it("should handle POST request failure gracefully", async () => {
     (postFetchJson as jest.Mock).mockRejectedValue(new Error("Network error"));
-    const result = await Remote.postJson("https://example.com", { data: "test" });
+    const result = await Remote.postJson("https://example.com", {
+      data: "test"
+    });
     expect(result).toBeNull();
   });
 });

@@ -1,13 +1,13 @@
-import React from "react"
-import { ErrorBoundary } from "../../../../utils/analytics/ErrorBoundary"
-import AliSuperDealsAnalyzer from "./components/analyzer/analyzer"
+import React from "react";
+import { ErrorBoundary } from "../../../../utils/analytics/ErrorBoundary";
+import AliSuperDealsAnalyzer from "./components/analyzer/analyzer";
 
 function AliSuperDealsApp() {
-	return (
-		<ErrorBoundary>
-			<AliSuperDealsAnalyzer />
-		</ErrorBoundary>
-	)
+  return (
+    <ErrorBoundary>
+      <AliSuperDealsAnalyzer />
+    </ErrorBoundary>
+  );
 }
 
-export default AliSuperDealsApp
+export default AliSuperDealsApp;

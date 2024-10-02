@@ -1,4 +1,4 @@
-import { ISiteDomSelectorResponse } from "./site-dom-selector-response.interface"
+import { ISiteDomSelectorResponse } from "./site-dom-selector-response.interface";
 
 export interface ISiteResponse {
   url: string;

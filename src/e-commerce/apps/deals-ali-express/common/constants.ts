@@ -1,1 +1,1 @@
-export const ALIEXPRESS_CAMPAIGN_URL = "/gcp/"
+export const ALIEXPRESS_CAMPAIGN_URL = "/gcp/";

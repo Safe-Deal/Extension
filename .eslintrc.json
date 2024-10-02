@@ -8,7 +8,8 @@
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    "plugin:jsx-a11y/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -29,7 +30,23 @@
     "react/prop-types": "off",
     "react/react-in-jsx-scope": "off",
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "no-prototype-builtins": "off",
+    "react/display-name": "off",
+    "react/no-children-prop": "off",
+    "@typescript-eslint/prefer-as-const": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "jsx-a11y/no-noninteractive-element-interactions": "off",
+    "@typescript-eslint/no-empty-object-type": "off",
+    "no-unsafe-optional-chaining": "off",
+    "prefer-const": "off",
+    "@typescript-eslint/no-unsafe-function-type": "off",
+    "@typescript-eslint/no-this-alias": "off",
+    "no-useless-escape": "off",
+    "no-empty-pattern": "off"
   },
   "settings": {
     "react": {

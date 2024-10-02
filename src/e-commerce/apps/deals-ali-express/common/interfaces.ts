@@ -36,4 +36,4 @@ interface ISuperDealProduct {
   };
 }
 
-export { IBrowserMessageRequest, MESSAGE_TYPE, ISuperDealProduct, AliSuperDealsMessageRequest }
+export { IBrowserMessageRequest, MESSAGE_TYPE, ISuperDealProduct, AliSuperDealsMessageRequest };

@@ -1,7 +1,7 @@
 {
   "name": "__MSG_appName__",
   "short_name": "__MSG_appNameShort__",
-  "version": "5.8.1",
+  "version": "5.8.2",
   "manifest_version": 2,
   "description": "__MSG_appDescription__",
   "icons": {
@@ -13,15 +13,27 @@
   },
   "default_locale": "en",
   "background": {
-    "scripts": ["scripts/service_worker.js"],
+    "scripts": [
+      "scripts/service_worker.js"
+    ],
     "persistent": true
   },
-  "permissions": ["tabs", "http://*/*", "https://*/*"],
+  "permissions": [
+    "tabs",
+    "http://*/*",
+    "https://*/*"
+  ],
   "content_scripts": [
     {
       "run_at": "document_end",
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["scripts/content-script-shutaf.js", "scripts/content-script-anti-scam.js"],
+      "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": [
+        "scripts/content-script-shutaf.js",
+        "scripts/content-script-anti-scam.js"
+      ],
       "all_frames": false
     },
     {
@@ -71,13 +83,19 @@
         "https://www.amazon.eg/*",
         "https://www.amazon.co.il/*"
       ],
-      "js": ["scripts/content-script-ecommerce.js"],
+      "js": [
+        "scripts/content-script-ecommerce.js"
+      ],
       "all_frames": false
     },
     {
       "run_at": "document_end",
-      "matches": ["https://*.alibaba.com/*"],
-      "js": ["scripts/content-script-wholesale-warehouse.js"],
+      "matches": [
+        "https://*.alibaba.com/*"
+      ],
+      "js": [
+        "scripts/content-script-wholesale-warehouse.js"
+      ],
       "all_frames": false
     }
   ],

@@ -1,4 +1,4 @@
-import { ProductStore } from "../logic/conclusion/conclusion-product-entity.interface"
+import { ProductStore } from "../logic/conclusion/conclusion-product-entity.interface";
 
 export interface IMetaData {
   id: string;

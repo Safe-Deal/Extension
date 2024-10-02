@@ -1,5 +1,5 @@
-import { IProduct } from "../../../../data/entities/product.interface"
-import { IRule } from "../../../../data/entities/rule.interface"
+import { IProduct } from "../../../../data/entities/product.interface";
+import { IRule } from "../../../../data/entities/rule.interface";
 
 export enum ProductConclusionEnum {
   RECOMMENDED = "RECOMMENDED",

@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Vásárlási asszisztens: AliExpress, Amazon"
+  },
+  "appDescription": {
+    "message": "Vásárlási asszisztens: Takarítson meg időt az AI-val. Fedezze fel az ártörténetet, kerülje el a költséges ajánlatokat, keressen..."
+  },
+  "appNameShort": {
+    "message": "Biztonság..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Biztonságos üzlet",
+    "description": "Legyen magabiztos, ha online vásárol"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "A Safe-Deal felülvizsgálta ezt a webhelyet, és megállapította, hogy veszélyes lehet {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Hagyja el ezt a webhelyet most"
+  },
+  "anti_scam_stay": {
+    "message": "Ez az oldal megbízható"
+  },
+  "anti_scam_confirm": {
+    "message": "Nagy a valószínűsége annak, hogy ez a webhely csalás, tolvaj vagy más illegális tevékenység. Bízol ebben a weboldalban?"
+  },
+  "recommended_product": {
+    "message": "Ajánlott termék"
+  },
+  "unrecommended_product": {
+    "message": "Nem ajánlott termék"
+  },
+  "doubtful_product": {
+    "message": "Kétes termék"
+  },
+  "insufficient_data": {
+    "message": "Következtetés határozatlan"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Jó üzlet jele"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Megkérdőjelezhető üzlet jele"
+  },
+  "no_data": {
+    "message": "Jelenleg nincsenek megjeleníthető adatok"
+  },
+  "chart_title": {
+    "message": "Termék ártörténet"
+  },
+  "back_button": {
+    "message": "Előző"
+  },
+  "next_button": {
+    "message": "Következő"
+  },
+  "start_using_button": {
+    "message": "Kezdje el a SafeDeal használatát"
+  },
+  "tour_step1_title": {
+    "message": "Üdvözöljük a Biztonságos üzletben"
+  },
+  "tour_step1_text_0": {
+    "message": ", Köszönjük, hogy szoftverünket használja."
+  },
+  "morning": {
+    "message": "reggel"
+  },
+  "day": {
+    "message": "nap"
+  },
+  "night": {
+    "message": "éjszaka"
+  },
+  "hi": {
+    "message": "Szia"
+  },
+  "good": {
+    "message": "Jó"
+  },
+  "tour_step1_text_1": {
+    "message": "Íme az egyik támogatott üzletünk."
+  },
+  "tour_step1_text_2": {
+    "message": "Ugyanúgy működik más támogatott webhelyeken, mint például az AliExpress, az eBay, az Amazon és így tovább."
+  },
+  "tour_step1_text_3": {
+    "message": "Körülbelül egy percet vesz igénybe, amíg elmagyarázza, hogyan működik."
+  },
+  "tour_step1_lets_start": {
+    "message": "Kezdjük el"
+  },
+  "tour_step2_title": {
+    "message": "Vásárlási ajánlások"
+  },
+  "tour_step2_text_0": {
+    "message": "Termékünk középpontjában a gyors és hatékony vásárlási döntések meghozatala áll; közlekedési lámpaként működünk az online vásárlásoknál."
+  },
+  "tour_step2_text_3": {
+    "message": "Mesterséges intelligenciánk néhány másodperc alatt adatvezérelt döntést hoz a termékekről. Így számos termékről perceken belül gyors jelzőt kap, nem órákon át kézi ellenőrzéssel."
+  },
+  "tour_step3_title": {
+    "message": "Az üzlet biztonsága fontos"
+  },
+  "tour_step3_text_0": {
+    "message": "Bölcsen vásárolhat ma, hogy megkímélje a jövőbeni gondoktól."
+  },
+  "tour_step3_text_1": {
+    "message": "Zöld pajzs – Ajánlott üzlet"
+  },
+  "tour_step3_text_2": {
+    "message": "Piros pajzs – nem ajánlott üzlet"
+  },
+  "tour_step3_text_3": {
+    "message": "Sárga pajzs – Kétes üzlet"
+  },
+  "tour_step5_title": {
+    "message": "Az Ön magánélete a legfontosabb"
+  },
+  "tour_step5_text_0": {
+    "message": "Szolgáltatásunk használata Önnek ingyenes. Vásárláskor az üzlet csekély díjat fizet nekünk, hogy elkalauzoljuk Önt a legjobb termékhez."
+  },
+  "tour_step5_text_1": {
+    "message": "A szoftver helyileg működik, mivel törődünk az Ön adataival. A tevékenységéről nem gyűjtenek információkat."
+  },
+  "tour_feedback_title": {
+    "message": "Nagyra értékeljük visszajelzését"
+  },
+  "tour_feedback_text": {
+    "message": "Lépjen kapcsolatba, ha ötlete van, problémája van, vagy ha fejlesztést szeretne megbeszélni: "
+  },
+  "or": {
+    "message": "vagy"
+  },
+  "contact_form": {
+    "message": "Használja a kapcsolatfelvételi űrlapot"
+  },
+  "by_email": {
+    "message": "Írni egy e-mailt"
+  },
+  "call_as_at": {
+    "message": "Telefonon +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Sok vásárló erősen ajánlotta a terméket"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "A terméket nem ajánlják eléggé a vásárlók"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "A vélemények rendkívül pozitívak. Csillagok: {ProductRatingValue}, Vélemények: {ProductReviewAmount}, Értékelések: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Hiányos vélemények vagy rossz vélemények. Csillagok: {ProductRatingValue}, Vélemények: {ProductReviewAmount}, Értékelések: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "A vélemények rendkívül pozitívak. Csillagok: {ProductRatingValue}, Rendelések: {ProductOrdersAmount}, Vélemények: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Hiányos vélemények vagy rossz vélemények. Csillagok: {ProductRatingValue}, Rendelések: {ProductOrdersAmount}, Vélemények: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "A vélemények rendkívül pozitívak. Csillagok: {ProductRatingValue}, rendelések: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Hiányos vélemények vagy rossz vélemények. Csillagok: {ProductRatingValue}, rendelések: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "A bolt magasra értékelt. Csillagok: {ProductRatingValue}, rendelések: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Az üzletet rosszul értékelték. Csillagok: {ProductRatingValue}, rendelések: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Jól megalapozott eladó, az üzleti életben {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Kezdő eladó, az üzleti életben {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Kiváló visszaküldési politika"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "A visszatérési politika rossz"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Megbízható eladó"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Közvetlenül márka szerint eladó"
+  },
+  "tooltip_order_safe": {
+    "message": "Elégedett vásárlók nagy száma"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Kis számú elégedett vásárló"
+  },
+  "tooltip_rating_safe": {
+    "message": "Sok elégedett vásárló írt véleményt"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Sok dühös ügyfél negatív véleményeket írt"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Kiváló szállítási idő, legfeljebb {daysToDeliver} nap"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Akár {daysToDeliver} napig is eltarthat a csomag kézhezvétele."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Nem világos, hogy mikorra kerül sor a szállításra"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Az üzlet vásárlóinak többsége elégedett, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Sok vásárló elégedetlen az üzlettel, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Az üzlet nem kap visszajelzéseket a vásárlóktól"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Ingyenes szállítás"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Felár ellenében szállítjuk, vagy átvétel szükséges"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Ez a termék kedvező árú"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "A vásárlási lehetőségek rossz választéka"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Az ár kiváló, az átlaghoz képest {priceDifVsAverage}%-kal alacsonyabb"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Az ár tisztességes, az átlaghoz képest {priceDifVsAverage}%-kal alacsonyabb"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Az ár tisztességes, az átlaghoz képest {priceDifVsAverage}%-kal magasabb"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Drága ár, az átlaghoz képest {priceDifVsAverage}%-kal magasabb"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose - Megbízható és jó ár-érték arányú termék"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Az Amazon értékesíti és szállítja ezt a terméket"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Az Amazon, az érintett harmadik fél értékesíti vagy szállítja"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "A Walmart értékesíti és szállítja ezt a terméket"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "A visszajelzések jól néznek ki! {validAmount} hiteles, {fakeAmount} természetellenes, összesen {totalAmount}"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "A visszajelzések manipuláltnak tűnnek! {validAmount} hiteles, {fakeAmount} természetellenes, összesen {totalAmount}"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Ez a termék nagyon jól fogy"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "A termék értékesítése viszonylag alacsony"
+  },
+  "popup_title": {
+    "message": "Az Ön okos asszisztense az online vásárláshoz"
+  },
+  "loading_product": {
+    "message": "Termék vizsgálat alatt"
+  },
+  "popup_footer_share": {
+    "message": "Mondja el barátainak és családjának a SafeDeal szolgáltatást"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Ellenőrzött biztonságos webhely. Támogass minket affiliate linkünkön keresztül."
+  },
+  "popup_top_tabs_home": {
+    "message": "itthon"
+  },
+  "popup_top_tabs_settings": {
+    "message": "Beállítások"
+  },
+  "supported_websites": {
+    "message": "Támogatott weboldalak"
+  },
+  "popup_benefits_tab": {
+    "message": "Jellemzők"
+  },
+  "popup_about_tab": {
+    "message": "Ról ről"
+  },
+  "popup_contact_us_tab": {
+    "message": "Lépjen kapcsolatba velünk"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "amazon"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Prémium"
+  },
+  "years_label": {
+    "message": "évek"
+  },
+  "year_label": {
+    "message": "1 év"
+  },
+  "less_than_a_year": {
+    "message": "kevesebb mint egy év"
+  },
+  "explanations_price_history": {
+    "message": "Egy termék ártörténeti grafikonja – Segítségével felismerheti a valódi árengedményeket a hamis termékek árából. Az árakról nyilvántartást vezetünk, majd napi rendszerességgel figyeljük a változásokat, lehetővé téve az akciók és a korlátozott idejű ajánlatok kihasználását."
+  },
+  "explanations_review_and_ratings": {
+    "message": "A következtetés a következőkön alapul: \n    1) A termékajánlások átfogó áttekintése érdekében különféle statisztikai elemzési és mesterséges intelligencia technikákat alkalmaztunk. \n    2) A vélemények és értékelések elemzése megtörtént, és a 4-es vagy annál magasabb értékelést a nagyszerű termék jelzésének tekintjük. \n    3) Az értelmes eredményhez legalább 100 rendelés szükséges, tehát minél több megrendelést elemezünk, annál jobban megbízunk a termékminősítési következtetésben."
+  },
+  "explanations_store_age": {
+    "message": "Rendszerünk az üzletek hitelességét az üzlet életkorával méri, hiszen a nagyobb tapasztalattal rendelkező és pozitív hírnévvel rendelkező üzletek hitelesebbek."
+  },
+  "explanations_store_rating": {
+    "message": "Ellenőrizzük a bolti visszajelzések általános pontszámát, minél magasabb a pontszám, annál nagyobb az esély arra, hogy jó szolgáltatást kapjunk. A visszajelzések több mint 91%-a pozitív visszajelzésnek minősül."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "Az AliExpress az eladót nagyon megbízható eladónak minősíti, nagy értékesítési volumennel"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Az Amazon bestseller az, amelyik havonta legalább 150 eladást bonyolít le, és minél több eladása van, annál könnyebben támaszkodhat más vásárlók visszajelzéseire."
+  },
+  "explanations_amazon_choice": {
+    "message": "Az Amazon's Choice jelzéssel ellátott termékeket gyakran vásárolják a vásárlók. Kedvező árúak, magas értékelésűek, és gyorsan szállíthatók az Amazon raktárából."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Statisztikai modellezést használunk a pozitív vélemények számának pozicionálására és beállítására a természetellenes vélemények száma alapján, így Ön jó minőségű adatok alapján hozhat döntést. Az algoritmus nem tökéletes, de nagy pontosságú. Az Amazon jó munkát végzett a visszajelzések százmillióinak összegyűjtésével, de sok márka úgy döntött, hogy visszaél vele, rossz minőségű és elfogult véleményekkel árasztva el, hogy megpróbálja növelni saját nyereségét. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Az Amazon értékesíti és szállítja: Ezeket a tételeket az Amazon készletként rendelte meg. Közvetlenül egy Amazon raktárból értékesítik és szállítják őket. Sokkal gyorsabban hozzájuthat a tételhez, és az Amazon közvetlenül kezeli az ügyfélszolgálati problémákat."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Ezek a cikkek egy független, harmadik fél vállalkozás tulajdonában vannak, és előre szállítják őket az Amazon raktáraiba. Amikor megvásárolja őket, az Amazon kiszállítja őket."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Fontos, hogy a vásárlók tudják, mikorra számíthatnak a termék megérkezésére. Ezért mindig ellenőrizzük a becsült szállítási dátumot az eBay-en. A becsült kézbesítési dátum az eladótól az áruk becsomagolásához és kiszállításához szükséges időn, valamint a postai szolgálattól kapott kézbesítési időn alapul. Belföldi küldemények esetén a 14 napot, nemzetközi küldemények esetén a 30 napot tekintjük kiváló szállítási időnek."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Az ingyenes szállítás remek jele annak, hogy az eladó kiváló ügyfélszolgálatot nyújt, és a leírtaknak megfelelően időben kiszállítja a terméket."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "A visszaküldések elfogadása jól jelzi a jó eladót: Ha sérült vagy hibás terméket kap, visszaküldheti a visszatérítésért."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Fizetendő visszaküldés vagy visszaküldés hiánya: Csak akkor küldheti vissza, ha a terméket hibásan érkezett meg, és visszatérítést kér."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Azokat az eladókat, akik nagy mennyiségben nyújtanak kiváló ügyfélszolgálatot, az eBay a Legjobbra értékelt jelvénnyel látják el. Ez azt jelenti, hogy magas a visszajelzési pontszámuk és magas a pozitív visszajelzésük az eBay-en, így biztonságosabb tőlük vásárolni."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "A márkát képviselő eladókat gyakran kiváló ügyfélszolgálattal társítják. Általában magas visszajelzési pontszámmal rendelkeznek, és nagy százalékban pozitív visszajelzést kapnak az eBay-en, ami biztonságosabb megoldássá teszi a tőlük való vásárlást."
+  },
+  "why_it_free": {
+    "message": "Miért ingyenes a használata?"
+  },
+  "explanations_why_it_free": {
+    "message": "Miért ingyenes a Safe-Deal használata?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Szolgáltatásunk használata Önnek ingyenes. Vásárláskor az üzlet csekély díjat fizet nekünk azért, hogy elkalauzoljuk Önt a legjobb termékhez."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Kizárólag nyilvánosan elérhető adatokat használunk, biztosítva, hogy a márka vagy az üzlet ne befolyásolja ajánlásainkat."
+  },
+  "premium_features": {
+    "message": "Prémium funkciók"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Nincs kapcsolat, bármilyen pénzvisszatérítési programot csatlakoztathat"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Személyes telefonos és e-mailes támogatás és megnövelt feldolgozási idő"
+  },
+  "premium_features_cost": {
+    "message": "Ár - 2 USD havonta (évente számlázva)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Az összegyűjtött pénzt a szolgáltatás fejlesztésére és az infrastruktúra kifizetésére fordítják."
+  },
+  "affiliated_websites": {
+    "message": "Kapcsolt webhelyek"
+  },
+  "buy_premium": {
+    "message": "Prémium vásárlás"
+  },
+  "opt_out": {
+    "message": "Kiszáll"
+  },
+  "image": {
+    "message": "Kép"
+  },
+  "product_name": {
+    "message": "termék név"
+  },
+  "final_price": {
+    "message": "Végső ár"
+  },
+  "coupon": {
+    "message": "Kupon"
+  },
+  "you_saved": {
+    "message": "Kupon összege"
+  },
+  "you_save": {
+    "message": "Te kímélj"
+  },
+  "share": {
+    "message": "Ossza meg"
+  },
+  "discounts_found": {
+    "message": "Kedvezmények találtak"
+  },
+  "extension_not_available": {
+    "message": "A SafeDeal bővítmény nem érhető el ezen az oldalon."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Keressen más kulcsszóra, hogy kuponokat és ajánlatokat találjon."
+  },
+  "search_product": {
+    "message": "Termék keresése"
+  },
+  "want_more_coupons": {
+    "message": "További kuponokat szeretne?"
+  },
+  "click_here": {
+    "message": "Kattints ide"
+  },
+  "coupon_header": {
+    "message": "Biztonságos ajánlat – Kuponok és ajánlatok"
+  },
+  "tab_header_analyze": {
+    "message": "Termékértékelés"
+  },
+  "tab_header_reviews": {
+    "message": "Vélemények Összefoglaló"
+  },
+  "click_to_reveal": {
+    "message": "Kattintson vagy nyomja meg a {systemShortcut} gombot a minimális és a teljes elemzés közötti váltáshoz."
+  },
+  "click_to_hide": {
+    "message": "Kattintson az ikonra, vagy nyomja meg az „Escape” gombot a részletes nézet bezárásához."
+  },
+  "click_to_pin": {
+    "message": "Rögzítse ezt a panelt, hogy látható maradjon frissítéskor és böngészés közben"
+  },
+  "click_to_unpin": {
+    "message": "Oldja fel ezt a panelt, hogy elrejtse, ha máshová kattint az oldalon"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Még nincsenek vélemények"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Még nincsenek vásárlói vélemények. Ez a termék lehet új vagy nem népszerű."
+  },
+  "reviews_pros": {
+    "message": "Profik"
+  },
+  "reviews_cons": {
+    "message": "Hátrányok"
+  },
+  "reviews_good_to_know": {
+    "message": "Jó tudni"
+  },
+  "reviews_error": {
+    "message": "Elnézést kérünk a kellemetlenségért. Úgy tűnik, hogy a felülvizsgálati összefoglaló folyamat sikertelen volt. A probléma megoldásához forduljon segítségért a Safe Deal ügyfélszolgálati csapatához."
+  },
+  "deals_ali_express": {
+    "message": "Biztonságos ajánlat – Akciókereső"
+  },
+  "deals_ali_found": {
+    "message": "Talált ajánlatok: "
+  },
+  "product": {
+    "message": "Termék"
+  },
+  "title": {
+    "message": "Cím"
+  },
+  "price": {
+    "message": "Ár"
+  },
+  "deal_type": {
+    "message": "Ügylet típusa"
+  },
+  "savings": {
+    "message": "Megtakarítás"
+  },
+  "extra": {
+    "message": "Külön"
+  },
+  "shipping": {
+    "message": "Szállítás"
+  },
+  "rating": {
+    "message": "Értékelés"
+  },
+  "sold": {
+    "message": "Eladott"
+  },
+  "reviews": {
+    "message": "Vélemények"
+  },
+  "mobile_app": {
+    "message": "Telepítse mobilalkalmazásunkat"
+  },
+  "tab_header_opinions": {
+    "message": "Vélemények és kommentárok"
+  },
+  "opinions_title": {
+    "message": "Mondja el véleményét, vagy kérdezze meg a közösséget erről a termékről"
+  },
+  "research_online": {
+    "message": "Nézze meg"
+  },
+  "video_reviews": {
+    "message": "Videó vélemények"
+  },
+  "reddit_reviews": {
+    "message": "Vélemények a Redditben"
+  },
+  "web_reviews": {
+    "message": "Vélemények Online"
+  },
+  "shopping_reviews": {
+    "message": "Bevásárló oldalak"
+  },
+  "product_photos": {
+    "message": "Termékfotók"
+  },
+  "product_purchase_query": {
+    "message": "vásároljon most online"
+  },
+  "product_reviews_query": {
+    "message": "részletes ismertetők"
+  }
+}

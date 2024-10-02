@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Βοηθός αγορών: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "Shopping Assistant: Save Time by AI. Ανακαλύψτε το ιστορικό τιμών, αποφύγετε δαπανηρές προσφορές, εντοπίστε ψεύτικες κριτικές,..."
+  },
+  "appNameShort": {
+    "message": "Ασφαλής..."
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Ασφαλής Συμφωνία",
+    "description": "Νιώστε σίγουροι όταν ψωνίζετε online"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Το Safe-Deal εξέτασε αυτόν τον ιστότοπο και διαπίστωσε ότι θα μπορούσε να είναι επικίνδυνος {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Αφήστε αυτόν τον ιστότοπο τώρα"
+  },
+  "anti_scam_stay": {
+    "message": "Αυτός ο ιστότοπος είναι αξιόπιστος"
+  },
+  "anti_scam_confirm": {
+    "message": "Μεγάλη πιθανότητα ότι αυτός ο ιστότοπος είναι απάτη, κλέφτης ή κάποια άλλη παράνομη δραστηριότητα. Εμπιστεύεστε αυτόν τον ιστότοπο;"
+  },
+  "recommended_product": {
+    "message": "Προτεινόμενο προϊόν"
+  },
+  "unrecommended_product": {
+    "message": "Μη συνιστώμενο προϊόν"
+  },
+  "doubtful_product": {
+    "message": "Αμφίβολο προϊόν"
+  },
+  "insufficient_data": {
+    "message": "Συμπέρασμα απροσδιόριστο"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Μια ένδειξη καλής συμφωνίας"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Ένδειξη αμφισβητήσιμης συμφωνίας"
+  },
+  "no_data": {
+    "message": "Προς το παρόν, δεν υπάρχουν δεδομένα για εμφάνιση"
+  },
+  "chart_title": {
+    "message": "Ιστορικό τιμών προϊόντος"
+  },
+  "back_button": {
+    "message": "Προηγούμενος"
+  },
+  "next_button": {
+    "message": "Επόμενο"
+  },
+  "start_using_button": {
+    "message": "Ξεκινήστε να χρησιμοποιείτε το SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "Καλώς ήρθατε στο Safe Deal"
+  },
+  "tour_step1_text_0": {
+    "message": ", Σας ευχαριστούμε που χρησιμοποιείτε το λογισμικό μας."
+  },
+  "morning": {
+    "message": "πρωί"
+  },
+  "day": {
+    "message": "ημέρα"
+  },
+  "night": {
+    "message": "Νύχτα"
+  },
+  "hi": {
+    "message": "γεια"
+  },
+  "good": {
+    "message": "Καλός"
+  },
+  "tour_step1_text_1": {
+    "message": "Εδώ είναι ένα από τα υποστηριζόμενα καταστήματά μας."
+  },
+  "tour_step1_text_2": {
+    "message": "Λειτουργεί με τον ίδιο τρόπο σε άλλους υποστηριζόμενους ιστότοπους όπως το AliExpress, το eBay, το Amazon και άλλα."
+  },
+  "tour_step1_text_3": {
+    "message": "Θα χρειαστεί περίπου ένα λεπτό για να εξηγηθεί πώς λειτουργεί."
+  },
+  "tour_step1_lets_start": {
+    "message": "Ας αρχίσουμε"
+  },
+  "tour_step2_title": {
+    "message": "Προτάσεις αγοράς"
+  },
+  "tour_step2_text_0": {
+    "message": "Η λήψη γρήγορων και αποτελεσματικών αποφάσεων αγοράς βρίσκεται στο επίκεντρο του προϊόντος μας. λειτουργούμε ως φανάρι για online αγορές."
+  },
+  "tour_step2_text_3": {
+    "message": "Η Τεχνητή Νοημοσύνη μας λαμβάνει μια απόφαση βάσει δεδομένων για προϊόντα σε λίγα δευτερόλεπτα. Με αυτόν τον τρόπο, λαμβάνετε μια γρήγορη ένδειξη για πολλά προϊόντα μέσα σε λίγα λεπτά, όχι σε ώρες χειροκίνητου ελέγχου."
+  },
+  "tour_step3_title": {
+    "message": "Η ασφάλεια της συμφωνίας είναι σημαντική"
+  },
+  "tour_step3_text_0": {
+    "message": "Μπορείτε να ψωνίσετε με σύνεση σήμερα για να γλιτώσετε την ταλαιπωρία στο μέλλον."
+  },
+  "tour_step3_text_1": {
+    "message": "Πράσινη ασπίδα - Προτεινόμενη συμφωνία"
+  },
+  "tour_step3_text_2": {
+    "message": "Κόκκινη ασπίδα - Μη συνιστώμενη συμφωνία"
+  },
+  "tour_step3_text_3": {
+    "message": "Κίτρινη ασπίδα - Αμφίβολη συμφωνία"
+  },
+  "tour_step5_title": {
+    "message": "Το απόρρητό σας είναι πρωταρχικής σημασίας"
+  },
+  "tour_step5_text_0": {
+    "message": "Η χρήση της υπηρεσίας μας είναι δωρεάν για εσάς. Όταν κάνετε μια αγορά, το κατάστημα μας πληρώνει μια μικρή χρέωση για να σας καθοδηγήσουμε στο καλύτερο προϊόν."
+  },
+  "tour_step5_text_1": {
+    "message": "Το λογισμικό λειτουργεί τοπικά αφού νοιαζόμαστε για το απόρρητό σας. Δεν συλλέγονται πληροφορίες σχετικά με τη δραστηριότητά σας."
+  },
+  "tour_feedback_title": {
+    "message": "Εκτιμούμε τα σχόλιά σας"
+  },
+  "tour_feedback_text": {
+    "message": "Επικοινωνήστε εάν έχετε μια ιδέα, ένα πρόβλημα ή εάν πρέπει να συζητήσετε μια βελτίωση: "
+  },
+  "or": {
+    "message": "ή"
+  },
+  "contact_form": {
+    "message": "Χρησιμοποιήστε τη φόρμα επικοινωνίας"
+  },
+  "by_email": {
+    "message": "Γράψτε ένα email"
+  },
+  "call_as_at": {
+    "message": "Τηλεφωνικά +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Πολλοί πελάτες συνέστησαν ιδιαίτερα το προϊόν"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Το προϊόν δεν συνιστάται αρκετά από τους πελάτες"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Οι κριτικές είναι εξαιρετικά θετικές. Αστέρια: {ProductRatingValue}, Κριτικές: {ProductReviewAmount}, Βαθμολογίες: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Έλλειψη κριτικών ή κακές κριτικές. Αστέρια: {ProductRatingValue}, Κριτικές: {ProductReviewAmount}, Βαθμολογίες: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Οι κριτικές είναι εξαιρετικά θετικές. Αστέρια: {ProductRatingValue}, Παραγγελίες: {ProductOrdersAmount}, Κριτικές: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Έλλειψη κριτικών ή κακές κριτικές. Αστέρια: {ProductRatingValue}, Παραγγελίες: {ProductOrdersAmount}, Κριτικές: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Οι κριτικές είναι εξαιρετικά θετικές. Αστέρια: {ProductRatingValue}, Παραγγελίες: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Έλλειψη κριτικών ή κακές κριτικές. Αστέρια: {ProductRatingValue}, Παραγγελίες: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Το κατάστημα έχει υψηλή βαθμολογία. Αστέρια: {ProductRatingValue}, Παραγγελίες: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Το κατάστημα έχει κακή βαθμολογία. Αστέρια: {ProductRatingValue}, Παραγγελίες: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Καθιερωμένος πωλητής, στην επιχείρηση {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Αρχάριος πωλητής, στην επιχείρηση {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Εξαιρετική πολιτική επιστροφής"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Η πολιτική επιστροφών είναι κακή"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Αξιόπιστος πωλητής"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Πωλείται απευθείας ανά μάρκα"
+  },
+  "tooltip_order_safe": {
+    "message": "Ένας μεγάλος αριθμός ικανοποιημένων πελατών"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Ένας μικρός αριθμός ευχαριστημένων πελατών"
+  },
+  "tooltip_rating_safe": {
+    "message": "Πολλοί ικανοποιημένοι πελάτες έχουν αφήσει κριτικές"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Πολλοί θυμωμένοι πελάτες δημοσίευσαν αρνητικές κριτικές"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Εξαιρετικός χρόνος παράδοσης, το πολύ {daysToDeliver} ημέρες"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Μπορεί να χρειαστούν έως και {daysToDeliver} ημέρες για να λάβετε το πακέτο σας."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Δεν είναι σαφές πότε θα γίνει η παράδοση"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Η πλειοψηφία των πελατών του καταστήματος είναι ικανοποιημένη, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Πολλοί πελάτες είναι δυσαρεστημένοι με το κατάστημα, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Το κατάστημα δεν έχει σχόλια από τους πελάτες"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Αποστολή δωρεάν"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Απαιτείται αποστολή με χρέωση ή παραλαβή"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "Αυτό το προϊόν έχει λογική τιμή"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Κακή επιλογή επιλογών αγοράς"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Η τιμή είναι εξαιρετική, {priceDifVsAverage}% χαμηλότερη σε σύγκριση με τον μέσο όρο"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Η τιμή είναι δίκαιη, {priceDifVsAverage}% χαμηλότερη σε σύγκριση με τον μέσο όρο"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Η τιμή είναι δίκαιη, {priceDifVsAverage}% υψηλότερη σε σύγκριση με τον μέσο όρο"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Μια ακριβή τιμή, {priceDifVsAverage}% υψηλότερη σε σύγκριση με τον μέσο όρο"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose - Ένα αξιόπιστο και καλής αξίας προϊόν"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Η Amazon πουλά και αποστέλλει αυτό το προϊόν"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Πωλείται ή αποστέλλεται από την Amazon, εμπλεκόμενο τρίτο μέρος"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Η Walmart πουλά και αποστέλλει αυτό το προϊόν"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Τα σχόλια φαίνονται υπέροχα! {validAmount} αυθεντικό, {fakeAmount} αφύσικο, {totalAmount} συνολικά"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Τα σχόλια φαίνονται χειραγωγημένα! {validAmount} αυθεντικό, {fakeAmount} αφύσικο, {totalAmount} συνολικά"
+  },
+  "tooltip_bsr_safe": {
+    "message": "Αυτό το προϊόν πουλάει πολύ καλά"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Οι πωλήσεις του προϊόντος είναι σχετικά χαμηλές"
+  },
+  "popup_title": {
+    "message": "Ο έξυπνος βοηθός σας για online αγορές"
+  },
+  "loading_product": {
+    "message": "Προϊόν σε επιθεώρηση"
+  },
+  "popup_footer_share": {
+    "message": "Ενημερώστε τους φίλους και την οικογένειά σας για το SafeDeal"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Επαληθευμένος ασφαλής ιστότοπος. Υποστηρίξτε μας μέσω του συνδέσμου συνεργάτη μας."
+  },
+  "popup_top_tabs_home": {
+    "message": "Σπίτι"
+  },
+  "popup_top_tabs_settings": {
+    "message": "Ρυθμίσεις"
+  },
+  "supported_websites": {
+    "message": "Υποστηριζόμενες ιστοσελίδες"
+  },
+  "popup_benefits_tab": {
+    "message": "Χαρακτηριστικά"
+  },
+  "popup_about_tab": {
+    "message": "Σχετικά με"
+  },
+  "popup_contact_us_tab": {
+    "message": "Επικοινωνήστε μαζί μας"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Αμαζόνα"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Ασφάλιστρο"
+  },
+  "years_label": {
+    "message": "χρόνια"
+  },
+  "year_label": {
+    "message": "1 χρόνος"
+  },
+  "less_than_a_year": {
+    "message": "λιγότερο από ένα χρόνο"
+  },
+  "explanations_price_history": {
+    "message": "Γράφημα ιστορικού τιμών ενός προϊόντος - Αυτό μπορεί να σας βοηθήσει να εντοπίσετε πραγματικές εκπτώσεις από ψεύτικες. Διατηρούμε αρχείο της τιμής και στη συνέχεια παρακολουθούμε τις αλλαγές σε καθημερινή βάση, καθιστώντας δυνατή την αξιοποίηση των εκπτώσεων και των προσφορών περιορισμένου χρόνου."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Το συμπέρασμα βασίζεται: \n    1) Για να αντλήσουμε μια συνολική άποψη των συστάσεων προϊόντων, εφαρμόσαμε διάφορες τεχνικές στατιστικής ανάλυσης και τεχνητής νοημοσύνης. \n    2) Οι κριτικές και οι αξιολογήσεις αναλύθηκαν και θεωρούμε ότι η βαθμολογία 4 και άνω αποτελεί ένδειξη ενός υπέροχου προϊόντος. \n    3) Ένα ουσιαστικό αποτέλεσμα απαιτεί τουλάχιστον 100 παραγγελίες, επομένως όσες περισσότερες παραγγελίες αναλύουμε, τόσο περισσότερο εμπιστευόμαστε το συμπέρασμα αξιολόγησης του προϊόντος."
+  },
+  "explanations_store_age": {
+    "message": "Το σύστημά μας μετρά την αξιοπιστία του καταστήματος χρησιμοποιώντας την ηλικία του καταστήματος, καθώς τα καταστήματα με μεγαλύτερη εμπειρία και θετική φήμη είναι πιο αξιόπιστα."
+  },
+  "explanations_store_rating": {
+    "message": "Ελέγχουμε τη συνολική βαθμολογία σχολίων καταστήματος, όσο υψηλότερη είναι η βαθμολογία, τόσο περισσότερες είναι οι πιθανότητες να λάβουμε μια καλή υπηρεσία. Πάνω από το 91% τα σχόλια θεωρούνται θετικά."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "Το AliExpress κατατάσσει τον πωλητή ως έναν πολύ αξιόπιστο πωλητή, με υψηλό όγκο πωλήσεων"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Ένα μπεστ σέλερ της Amazon είναι αυτό που έχει τουλάχιστον 150 πωλήσεις το μήνα και όσο περισσότερες πωλήσεις έχει, τόσο πιο εύκολο γίνεται να βασιστείς στα σχόλια των άλλων αγοραστών."
+  },
+  "explanations_amazon_choice": {
+    "message": "Τα προϊόντα με την ένδειξη Amazon's Choice αγοράζονται συχνά από πελάτες. Έχουν ευνοϊκή τιμή, έχουν υψηλή βαθμολογία και είναι διαθέσιμα για γρήγορη αποστολή από την αποθήκη της Amazon."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Χρησιμοποιούμε τη Στατιστική Μοντελοποίηση για να τοποθετήσουμε και να προσαρμόσουμε τον αριθμό των θετικών κριτικών με βάση τον αριθμό των αφύσικών κριτικών, ώστε να μπορείτε να λάβετε την απόφασή σας με βάση δεδομένα υψηλής ποιότητας. Ο αλγόριθμος δεν είναι τέλειος, αλλά έχει υψηλά ποσοστά ακρίβειας. Η Amazon έκανε καλή δουλειά συγκεντρώνοντας εκατοντάδες εκατομμύρια σχόλια, αλλά πολλές επωνυμίες επέλεξαν να το καταχραστούν, πλημμυρίζοντας το με χαμηλής ποιότητας και μεροληπτικές κριτικές για να προσπαθήσουν να ενισχύσουν τα δικά τους κέρδη. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Πωλήθηκε και αποστέλλεται από την Amazon: Αυτά τα είδη παραγγέλθηκαν ως απόθεμα από την Amazon. Πωλούνται και αποστέλλονται απευθείας από μια αποθήκη της Amazon. Θα μπορείτε να λαμβάνετε το αντικείμενο πολύ πιο γρήγορα και η Amazon θα χειρίζεται άμεσα τυχόν ζητήματα εξυπηρέτησης πελατών."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Αυτά τα είδη ανήκουν σε μια ανεξάρτητη επιχείρηση τρίτων και αποστέλλονται νωρίτερα στις αποθήκες της Amazon. Όταν τα αγοράζετε, η Amazon σας τα στέλνει."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Είναι σημαντικό για τους αγοραστές να γνωρίζουν πότε μπορούν να περιμένουν να φτάσουν ένα αντικείμενο. Γι' αυτό ελέγχουμε πάντα μια εκτιμώμενη ημερομηνία παράδοσης στο eBay. Η εκτιμώμενη ημερομηνία παράδοσης βασίζεται στον χρόνο που χρειάζεται ο πωλητής για να συσκευάσει και να στείλει τα αντικείμενα, καθώς και στον χρόνο παράδοσης από τις ταχυδρομικές υπηρεσίες. Θεωρούμε 14 ημέρες για εγχώριες αποστολές και 30 ημέρες για διεθνείς αποστολές ως εξαιρετικούς χρόνους παράδοσης."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Η δωρεάν αποστολή είναι μια εξαιρετική ένδειξη ότι ένας πωλητής θα παρέχει εξαιρετική εξυπηρέτηση πελατών και θα αποστείλει το προϊόν στην ώρα που περιγράφεται."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Η αποδοχή επιστροφών είναι μια καλή ένδειξη ενός καλού πωλητή: Εάν λάβετε ένα προϊόν που είναι κατεστραμμένο ή λανθασμένο, μπορείτε να το επιστρέψετε για επιστροφή χρημάτων."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Πληρωτές επιστροφές ή μη επιστροφές: Μόνο εάν το προϊόν έφτασε λανθασμένα μπορείτε να το επιστρέψετε για επιστροφή χρημάτων."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Οι πωλητές που παρέχουν άριστη εξυπηρέτηση πελατών σε μεγάλη κλίμακα φέρουν την επωνυμία του eBay με το σήμα Κορυφαία βαθμολογία. Αυτό σημαίνει ότι έχουν υψηλή βαθμολογία ανατροφοδότησης και υψηλό ποσοστό θετικών σχολίων στο eBay, επομένως είναι ασφαλέστερο να αγοράσετε από αυτούς."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Οι πωλητές που αντιπροσωπεύουν μια επωνυμία συνδέονται συχνά με εξαιρετική εξυπηρέτηση πελατών. Έχουν συνήθως υψηλές βαθμολογίες ανατροφοδότησης και μεγάλο ποσοστό θετικών σχολίων στο eBay, γεγονός που καθιστά την αγορά από αυτούς μια ασφαλέστερη επιλογή."
+  },
+  "why_it_free": {
+    "message": "Γιατί είναι δωρεάν η χρήση;"
+  },
+  "explanations_why_it_free": {
+    "message": "Γιατί η χρήση του Safe-Deal είναι δωρεάν για εσάς;"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Η χρήση της υπηρεσίας μας είναι δωρεάν για εσάς. Όταν κάνετε μια αγορά, το κατάστημα μας πληρώνει μια μικρή χρέωση για να σας καθοδηγήσουμε στο καλύτερο προϊόν."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Χρησιμοποιούμε μόνο δημόσια διαθέσιμα δεδομένα, διασφαλίζοντας ότι καμία επωνυμία ή κατάστημα δεν επηρεάζει τις συστάσεις μας."
+  },
+  "premium_features": {
+    "message": "Premium χαρακτηριστικά"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Χωρίς συνεργασία, μπορείτε να συνδέσετε οποιοδήποτε πρόγραμμα επιστροφής χρημάτων θέλετε"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Υποστήριξη προσωπικού τηλεφώνου και email & Βελτιωμένος χρόνος επεξεργασίας"
+  },
+  "premium_features_cost": {
+    "message": "Τιμή - 2 USD ανά μήνα (χρεώνεται ετησίως)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Τα χρήματα που συγκεντρώνονται χρησιμοποιούνται για τη βελτίωση της υπηρεσίας και την πληρωμή των υποδομών."
+  },
+  "affiliated_websites": {
+    "message": "Συνδεδεμένοι ιστότοποι"
+  },
+  "buy_premium": {
+    "message": "Αγορά Premium"
+  },
+  "opt_out": {
+    "message": "Εξαίρεση"
+  },
+  "image": {
+    "message": "Εικόνα"
+  },
+  "product_name": {
+    "message": "Ονομασία προϊόντος"
+  },
+  "final_price": {
+    "message": "Τελική τιμή"
+  },
+  "coupon": {
+    "message": "Κουπόνι"
+  },
+  "you_saved": {
+    "message": "Ποσό κουπονιού"
+  },
+  "you_save": {
+    "message": "Γλιτώνετε"
+  },
+  "share": {
+    "message": "Μερίδιο"
+  },
+  "discounts_found": {
+    "message": "Βρέθηκαν εκπτώσεις"
+  },
+  "extension_not_available": {
+    "message": "Η επέκταση SafeDeal δεν είναι διαθέσιμη για αυτήν τη σελίδα."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Αναζητήστε οποιαδήποτε άλλη λέξη-κλειδί για να βρείτε κουπόνια και προσφορές."
+  },
+  "search_product": {
+    "message": "Αναζήτηση προϊόντος"
+  },
+  "want_more_coupons": {
+    "message": "Θέλετε περισσότερα κουπόνια;"
+  },
+  "click_here": {
+    "message": "Κάντε κλικ ΕΔΩ"
+  },
+  "coupon_header": {
+    "message": "Ασφαλής Προσφορά - Κουπόνια & Προσφορές"
+  },
+  "tab_header_analyze": {
+    "message": "Αξιολόγηση Προϊόντος"
+  },
+  "tab_header_reviews": {
+    "message": "Σύνοψη κριτικών"
+  },
+  "click_to_reveal": {
+    "message": "Κάντε κλικ ή πατήστε {systemShortcut} για εναλλαγή μεταξύ ελάχιστης και πλήρους ανάλυσης."
+  },
+  "click_to_hide": {
+    "message": "Κάντε κλικ στο εικονίδιο ή πατήστε το πλήκτρο 'Escape' για να κλείσετε τη λεπτομερή προβολή."
+  },
+  "click_to_pin": {
+    "message": "Καρφιτσώστε αυτό το πλαίσιο για να παραμείνει ορατό κατά την ανανέωση και κατά την περιήγησή σας"
+  },
+  "click_to_unpin": {
+    "message": "Ξεκαρφιτσώστε αυτό το πλαίσιο, ώστε να κρύβεται όταν κάνετε κλικ σε άλλο σημείο της σελίδας"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Δεν υπάρχουν ακόμα κριτικές"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Δεν υπάρχουν ακόμη κριτικές πελατών. Αυτό το προϊόν μπορεί να είναι νέο ή όχι δημοφιλές."
+  },
+  "reviews_pros": {
+    "message": "Πλεονεκτήματα"
+  },
+  "reviews_cons": {
+    "message": "Μειονεκτήματα"
+  },
+  "reviews_good_to_know": {
+    "message": "Καλό να ξέρω"
+  },
+  "reviews_error": {
+    "message": "Ζητούμε συγγνώμη για την αναστάτωση. Φαίνεται ότι η διαδικασία σύνοψης της αναθεώρησης δεν ήταν επιτυχής. Για να επιλύσετε αυτό το ζήτημα, επικοινωνήστε με την ομάδα υποστήριξης Safe Deal για βοήθεια."
+  },
+  "deals_ali_express": {
+    "message": "Safe Deal - Deals Finder"
+  },
+  "deals_ali_found": {
+    "message": "Προσφορές που βρέθηκαν: "
+  },
+  "product": {
+    "message": "Προϊόν"
+  },
+  "title": {
+    "message": "Τίτλος"
+  },
+  "price": {
+    "message": "Τιμή"
+  },
+  "deal_type": {
+    "message": "Τύπος συμφωνίας"
+  },
+  "savings": {
+    "message": "Οικονομίες"
+  },
+  "extra": {
+    "message": "Επιπλέον"
+  },
+  "shipping": {
+    "message": "Αποστολή"
+  },
+  "rating": {
+    "message": "Εκτίμηση"
+  },
+  "sold": {
+    "message": "Πωληθεί"
+  },
+  "reviews": {
+    "message": "Κριτικές"
+  },
+  "mobile_app": {
+    "message": "Εγκαταστήστε την εφαρμογή μας για κινητά"
+  },
+  "tab_header_opinions": {
+    "message": "Απόψεις & Σχολιασμός"
+  },
+  "opinions_title": {
+    "message": "Δώστε τη γνώμη σας ή ρωτήστε την κοινότητα για αυτό το προϊόν"
+  },
+  "research_online": {
+    "message": "Ολοκλήρωση αγοράς"
+  },
+  "video_reviews": {
+    "message": "Κριτικές βίντεο"
+  },
+  "reddit_reviews": {
+    "message": "Απόψεις στο Reddit"
+  },
+  "web_reviews": {
+    "message": "Κριτικές στο Διαδίκτυο"
+  },
+  "shopping_reviews": {
+    "message": "Ιστότοποι αγορών"
+  },
+  "product_photos": {
+    "message": "Φωτογραφίες προϊόντων"
+  },
+  "product_purchase_query": {
+    "message": "αγοράστε online τώρα"
+  },
+  "product_reviews_query": {
+    "message": "λεπτομερείς κριτικές"
+  }
+}

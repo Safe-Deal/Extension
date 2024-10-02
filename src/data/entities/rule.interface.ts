@@ -1,5 +1,5 @@
-import { IBonusRule } from "./bonus.interface";
-import { IRuleSummaryTooltip } from "./rule-summary-tooltip.interface";
+import { IBonusRule } from "./bonus.interface"
+import { IRuleSummaryTooltip } from "./rule-summary-tooltip.interface"
 
 export interface IRule {
   name?: string;

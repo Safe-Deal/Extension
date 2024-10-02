@@ -1,4 +1,4 @@
-import { RULE_VALUE } from "../../../../../../constants/rule-value";
+import { RULE_VALUE } from "../../../../../../constants/rule-value"
 
 export const calculateProSellerValueAlgorithm = (proSellerEl: any): number =>
-  proSellerEl ? RULE_VALUE.RULE_VAL_10 : RULE_VALUE.RULE_VAL_5;
+	proSellerEl ? RULE_VALUE.RULE_VAL_10 : RULE_VALUE.RULE_VAL_5

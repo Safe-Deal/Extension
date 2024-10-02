@@ -1,1 +1,1 @@
-export const PRICING_ITEM_DETAILS = "Pricing Item Details";
+export const PRICING_ITEM_DETAILS = "Pricing Item Details"

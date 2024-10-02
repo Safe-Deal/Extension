@@ -1,4 +1,4 @@
-import { RuleSummaryTooltipType } from "./rule-summary-tooltip-type-enum";
+import { RuleSummaryTooltipType } from "./rule-summary-tooltip-type-enum"
 
 export interface IRuleSummaryTooltip {
   description: string;

@@ -1,37 +1,37 @@
-import BONUS_POINTS from "../../../../../../constants/rule-bonus-value";
-import { BUYER, DAY, isContainedIn, NO } from "../../../../../../utils/multilang/languages";
-import { isFreeShipping } from "../free-shipping/rule-free-shipping-algorithm";
+import BONUS_POINTS from "../../../../../../constants/rule-bonus-value"
+import { BUYER, DAY, isContainedIn, NO } from "../../../../../../utils/multilang/languages"
+import { isFreeShipping } from "../free-shipping/rule-free-shipping-algorithm"
 
-const noReturnPolicy = (returnPolicyValue: string): boolean => isContainedIn(returnPolicyValue, NO);
+const noReturnPolicy = (returnPolicyValue: string): boolean => isContainedIn(returnPolicyValue, NO)
 
-const paidReturnPolicy = (returnPolicyValue: string): boolean => isContainedIn(returnPolicyValue, BUYER);
+const paidReturnPolicy = (returnPolicyValue: string): boolean => isContainedIn(returnPolicyValue, BUYER)
 
 const timedReturnPolicy = (returnPolicyValue: string): boolean =>
-  isContainedIn(returnPolicyValue, DAY) && !isFreeShipping(returnPolicyValue);
+	isContainedIn(returnPolicyValue, DAY) && !isFreeShipping(returnPolicyValue)
 
 export const calculateReturnPolicyValueAlgorhtim = (text: string): number => {
-  if (!text) {
-    return BONUS_POINTS.NONE;
-  }
+	if (!text) {
+		return BONUS_POINTS.NONE
+	}
 
-  const normalizeValue: number = BONUS_POINTS.NONE;
+	const normalizeValue: number = BONUS_POINTS.NONE
 
-  text = String(text)?.toLowerCase();
-  if (isFreeShipping(text)) {
-    return BONUS_POINTS.TEN;
-  }
+	text = String(text)?.toLowerCase()
+	if (isFreeShipping(text)) {
+		return BONUS_POINTS.TEN
+	}
 
-  if (noReturnPolicy(text)) {
-    return BONUS_POINTS.NEGATIVE_SMALL;
-  }
+	if (noReturnPolicy(text)) {
+		return BONUS_POINTS.NEGATIVE_SMALL
+	}
 
-  if (paidReturnPolicy(text)) {
-    return BONUS_POINTS.NONE;
-  }
+	if (paidReturnPolicy(text)) {
+		return BONUS_POINTS.NONE
+	}
 
-  if (timedReturnPolicy(text)) {
-    return BONUS_POINTS.SEVEN;
-  }
+	if (timedReturnPolicy(text)) {
+		return BONUS_POINTS.SEVEN
+	}
 
-  return normalizeValue;
-};
+	return normalizeValue
+}

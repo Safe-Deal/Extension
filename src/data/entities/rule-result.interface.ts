@@ -1,11 +1,11 @@
-import { IBonusRule } from "./bonus.interface";
-import { IRuleSummaryTooltip } from "./rule-summary-tooltip.interface";
+import { IBonusRule } from "./bonus.interface"
+import { IRuleSummaryTooltip } from "./rule-summary-tooltip.interface"
 
 export const NOT_VALID_RULE_RESPONSE = {
-  isValidRule: false,
-  value: 0,
-  weight: 0
-};
+	isValidRule: false,
+	value: 0,
+	weight: 0
+}
 
 export interface IRuleResult {
   name: string;

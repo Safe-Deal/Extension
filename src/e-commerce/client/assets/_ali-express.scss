@@ -1,0 +1,13 @@
+.safe-deal-page-container__ali-express {
+  .safe-deal-image-wholesale-product {
+    position: absolute;
+    bottom: calc(100% - 54px);
+    right: 3px;
+    width: 30px;
+    cursor: context-menu;
+    &-rtl {
+      right: initial;
+      left: 8px;
+    }
+  }
+}

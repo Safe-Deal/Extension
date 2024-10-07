@@ -1,0 +1,11 @@
+.vscode
+node_modules
+.git
+.gitignore
+Dockerfile
+.dockerignore
+npm-debug.log
+yarn-error.log
+dist
+netlify.toml
+tools

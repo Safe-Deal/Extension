@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "खरेदी सहाय्यक: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "खरेदी सहाय्यक: AI द्वारे वेळ वाचवा. किंमत इतिहास शोधा, महागडे सौदे टाळा, स्पॉट फेक पुनरावलोकने, स्पॉट सेलरचे नकारात्मक रेटिंग."
+  },
+  "appNameShort": {
+    "message": "सुरक्षित डील"
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "सुरक्षित डील",
+    "description": "तुम्ही ऑनलाइन खरेदी करता तेव्हा आत्मविश्वास वाटतो"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "सेफ-डीलने या वेबसाइटचे पुनरावलोकन केले आहे आणि निर्धारित केले आहे की ती धोकादायक असू शकते {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "आता ही वेबसाइट सोडा"
+  },
+  "anti_scam_stay": {
+    "message": "ही साइट विश्वासार्ह आहे"
+  },
+  "anti_scam_confirm": {
+    "message": "ही वेबसाइट घोटाळा, चोर किंवा इतर काही बेकायदेशीर क्रियाकलाप असल्याची उच्च संभाव्यता. तुमचा या वेबसाइटवर विश्वास आहे?"
+  },
+  "recommended_product": {
+    "message": "शिफारस केलेले उत्पादन"
+  },
+  "unrecommended_product": {
+    "message": "शिफारस केलेले उत्पादन"
+  },
+  "doubtful_product": {
+    "message": "संशयास्पद उत्पादन"
+  },
+  "insufficient_data": {
+    "message": "निष्कर्ष अनिश्चित"
+  },
+  "signal_of_a_good_deal": {
+    "message": "चांगल्या कराराचे संकेत"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "संशयास्पद कराराचे संकेत"
+  },
+  "no_data": {
+    "message": "सध्या, प्रदर्शित करण्यासाठी कोणताही डेटा नाही"
+  },
+  "chart_title": {
+    "message": "उत्पादन किंमत इतिहास"
+  },
+  "back_button": {
+    "message": "मागील"
+  },
+  "next_button": {
+    "message": "पुढे"
+  },
+  "start_using_button": {
+    "message": "SafeDeal वापरणे सुरू करा"
+  },
+  "tour_step1_title": {
+    "message": "सुरक्षित डील मध्ये आपले स्वागत आहे"
+  },
+  "tour_step1_text_0": {
+    "message": ", आमचे सॉफ्टवेअर वापरल्याबद्दल धन्यवाद."
+  },
+  "morning": {
+    "message": "सकाळी"
+  },
+  "day": {
+    "message": "दिवस"
+  },
+  "night": {
+    "message": "रात्री"
+  },
+  "hi": {
+    "message": "हाय"
+  },
+  "good": {
+    "message": "चांगले"
+  },
+  "tour_step1_text_1": {
+    "message": "येथे आमच्या समर्थित दुकानांपैकी एक आहे."
+  },
+  "tour_step1_text_2": {
+    "message": "AliExpress, eBay, Amazon आणि अधिक सारख्या इतर समर्थित साइटवर त्याच प्रकारे कार्य करते."
+  },
+  "tour_step1_text_3": {
+    "message": "हे कसे कार्य करते हे स्पष्ट करण्यासाठी सुमारे एक मिनिट लागणे आवश्यक आहे."
+  },
+  "tour_step1_lets_start": {
+    "message": "चला सुरू करुया"
+  },
+  "tour_step2_title": {
+    "message": "खरेदी शिफारसी"
+  },
+  "tour_step2_text_0": {
+    "message": "जलद आणि कार्यक्षम खरेदी निर्णय घेणे हे आमच्या उत्पादनाचे केंद्र आहे; आम्ही ऑनलाइन खरेदीसाठी ट्रॅफिक लाइट म्हणून काम करतो."
+  },
+  "tour_step2_text_3": {
+    "message": "आमची कृत्रिम बुद्धिमत्ता काही सेकंदात उत्पादनांवर डेटा-चालित निर्णय घेते. अशाप्रकारे, मॅन्युअल तपासणीच्या काही तासांत नव्हे तर काही मिनिटांत तुम्हाला बऱ्याच उत्पादनांवर द्रुत सूचक मिळेल."
+  },
+  "tour_step3_title": {
+    "message": "डील सुरक्षा महत्त्वाची आहे"
+  },
+  "tour_step3_text_0": {
+    "message": "भविष्यातील त्रास वाचवण्यासाठी तुम्ही आजच हुशारीने खरेदी करू शकता."
+  },
+  "tour_step3_text_1": {
+    "message": "हिरवी ढाल - शिफारस केलेला करार"
+  },
+  "tour_step3_text_2": {
+    "message": "लाल ढाल - अनुशंसित करार"
+  },
+  "tour_step3_text_3": {
+    "message": "पिवळा ढाल - संशयास्पद सौदा"
+  },
+  "tour_step5_title": {
+    "message": "तुमची गोपनीयता सर्वोपरि आहे"
+  },
+  "tour_step5_text_0": {
+    "message": "आमची सेवा वापरणे तुमच्यासाठी विनामूल्य आहे. तुम्ही खरेदी करता तेव्हा, तुम्हाला सर्वोत्तम उत्पादनासाठी मार्गदर्शन करण्यासाठी स्टोअर आम्हाला थोडे शुल्क देते."
+  },
+  "tour_step5_text_1": {
+    "message": "सॉफ्टवेअर स्थानिक पातळीवर कार्य करते कारण आम्हाला तुमच्या गोपनीयतेची काळजी आहे. तुमच्या क्रियाकलापाबद्दल कोणतीही माहिती संकलित केलेली नाही."
+  },
+  "tour_feedback_title": {
+    "message": "आम्ही तुमच्या अभिप्रायाला महत्त्व देतो"
+  },
+  "tour_feedback_text": {
+    "message": "तुम्हाला एखादी कल्पना, समस्या असल्यास किंवा सुधारणेवर चर्चा करायची असल्यास संपर्क साधा: "
+  },
+  "or": {
+    "message": "किंवा"
+  },
+  "contact_form": {
+    "message": "संपर्क फॉर्म वापरा"
+  },
+  "by_email": {
+    "message": "एक ईमेल लिहा"
+  },
+  "call_as_at": {
+    "message": "फोनद्वारे +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "अनेक ग्राहकांनी उत्पादनाची जोरदार शिफारस केली"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "उत्पादनाची ग्राहकांकडून पुरेशी शिफारस केलेली नाही"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "पुनरावलोकने अत्यंत सकारात्मक आहेत. तारे: {ProductRatingValue}, पुनरावलोकने: {ProductReviewAmount}, रेटिंग: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "पुनरावलोकने कमतरता किंवा खराब पुनरावलोकने. तारे: {ProductRatingValue}, पुनरावलोकने: {ProductReviewAmount}, रेटिंग: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "पुनरावलोकने अत्यंत सकारात्मक आहेत. तारे: {ProductRatingValue}, ऑर्डर: {ProductOrdersAmount}, पुनरावलोकने: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "पुनरावलोकने कमतरता किंवा खराब पुनरावलोकने. तारे: {ProductRatingValue}, ऑर्डर: {ProductOrdersAmount}, पुनरावलोकने: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "पुनरावलोकने अत्यंत सकारात्मक आहेत. तारे: {ProductRatingValue}, ऑर्डर: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "पुनरावलोकने कमतरता किंवा खराब पुनरावलोकने. तारे: {ProductRatingValue}, ऑर्डर: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "दुकान उच्च दर्जाचे आहे. तारे: {ProductRatingValue}, ऑर्डर: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "दुकान खराब रेट आहे. तारे: {ProductRatingValue}, ऑर्डर: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "व्यवसायात सुस्थापित विक्रेता, {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "नवशिक्या विक्रेता, व्यवसायात {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "उत्कृष्ट परतावा धोरण"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "रिटर्न पॉलिसी खराब आहे"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "एक विश्वासार्ह विक्रेता"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "ब्रँडद्वारे थेट विक्री"
+  },
+  "tooltip_order_safe": {
+    "message": "मोठ्या संख्येने समाधानी ग्राहक"
+  },
+  "tooltip_order_un_safe": {
+    "message": "आनंदी ग्राहकांची एक छोटी संख्या"
+  },
+  "tooltip_rating_safe": {
+    "message": "अनेक समाधानी ग्राहकांनी पुनरावलोकने सोडली आहेत"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "अनेक संतप्त ग्राहकांनी नकारात्मक पुनरावलोकने पोस्ट केली"
+  },
+  "tooltip_delivery_safe": {
+    "message": "उत्कृष्ट वितरण वेळ, जास्तीत जास्त {daysToDeliver} दिवस"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "तुमचे पॅकेज मिळण्यासाठी {daysToDeliver} दिवस लागू शकतात."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "प्रसूती कधी होईल हे स्पष्ट नाही"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "स्टोअरचे बहुतांश ग्राहक समाधानी आहेत, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "अनेक ग्राहक स्टोअरवर असमाधानी आहेत, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "स्टोअरला ग्राहकांकडून फीडबॅक मिळत नाही"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "विनामूल्य शिप करा"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "शुल्क किंवा पिकअपसाठी पाठवले"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "हे उत्पादन वाजवी किंमत आहे"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "खरेदी पर्यायांची खराब निवड"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "किंमत उत्कृष्ट आहे, सरासरीच्या तुलनेत {priceDifVsAverage}% कमी"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "किंमत योग्य आहे, सरासरीच्या तुलनेत {priceDifVsAverage}% कमी आहे"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "किंमत योग्य आहे, सरासरीच्या तुलनेत {priceDifVsAverage}% जास्त आहे"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "महाग किंमत, सरासरीच्या तुलनेत {priceDifVsAverage}% जास्त"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose - एक विश्वासार्ह आणि चांगल्या किमतीचे उत्पादन"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon हे उत्पादन विकते आणि पाठवते"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Amazon द्वारे विकले किंवा पाठवले गेले, यात सहभागी तृतीय पक्ष"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "वॉलमार्ट हे उत्पादन विकते आणि पाठवते"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "अभिप्राय छान दिसतात! {validAmount} अस्सल, {fakeAmount} अनैसर्गिक, {totalAmount} एकूण"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "अभिप्राय हाताळलेले दिसतात! {validAmount} अस्सल, {fakeAmount} अनैसर्गिक, {totalAmount} एकूण"
+  },
+  "tooltip_bsr_safe": {
+    "message": "या उत्पादनाची खरोखर चांगली विक्री होत आहे"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "उत्पादनाची विक्री तुलनेने कमी आहे"
+  },
+  "popup_title": {
+    "message": "ऑनलाइन खरेदीसाठी तुमचा स्मार्ट सहाय्यक"
+  },
+  "loading_product": {
+    "message": "तपासणीमध्ये उत्पादन"
+  },
+  "popup_footer_share": {
+    "message": "तुमच्या मित्रांना आणि कुटुंबियांना SafeDeal बद्दल सांगा"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "सत्यापित सुरक्षित साइट. आमच्या संलग्न दुव्याद्वारे आम्हाला समर्थन द्या."
+  },
+  "popup_top_tabs_home": {
+    "message": "मुख्यपृष्ठ"
+  },
+  "popup_top_tabs_settings": {
+    "message": "सेटिंग्ज"
+  },
+  "supported_websites": {
+    "message": "समर्थित वेबसाइट्स"
+  },
+  "popup_benefits_tab": {
+    "message": "वैशिष्ट्ये"
+  },
+  "popup_about_tab": {
+    "message": "बद्दल"
+  },
+  "popup_contact_us_tab": {
+    "message": "आमच्याशी संपर्क साधा"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "ऍमेझॉन"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "वॉलमार्ट"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "प्रीमियम"
+  },
+  "years_label": {
+    "message": "वर्षे"
+  },
+  "year_label": {
+    "message": "1 वर्ष"
+  },
+  "less_than_a_year": {
+    "message": "एक वर्षापेक्षा कमी"
+  },
+  "explanations_price_history": {
+    "message": "उत्पादनाच्या किमतीचा इतिहास आलेख - हे तुम्हाला बनावट वस्तूंमधून खऱ्या सवलती शोधण्यात मदत करू शकते. आम्ही किंमतीची नोंद ठेवतो आणि नंतर दररोज बदलांचे निरीक्षण करतो, ज्यामुळे विक्री आणि मर्यादित-वेळच्या ऑफरचा लाभ घेणे शक्य होते."
+  },
+  "explanations_review_and_ratings": {
+    "message": "निष्कर्ष यावर आधारित आहे: \n    1) उत्पादनाच्या शिफारशींचे एकंदर दृश्य प्राप्त करण्यासाठी, आम्ही विविध सांख्यिकीय विश्लेषण आणि कृत्रिम बुद्धिमत्ता तंत्रे लागू केली. \n    2) पुनरावलोकने आणि रेटिंगचे विश्लेषण केले गेले आणि आम्ही 4 आणि त्यावरील रेटिंग हे एका उत्तम उत्पादनाचे संकेत मानतो. \n    3) अर्थपूर्ण परिणामासाठी किमान 100 ऑर्डरची आवश्यकता असते, त्यामुळे आम्ही जितक्या जास्त ऑर्डर्सचे विश्लेषण करू तितकाच उत्पादन रेटिंगच्या निष्कर्षावर अधिक विश्वास ठेवतो."
+  },
+  "explanations_store_age": {
+    "message": "आमची प्रणाली स्टोअरचे वय वापरून स्टोअरच्या विश्वासार्हतेचे मोजमाप करते, कारण अधिक अनुभव आणि सकारात्मक प्रतिष्ठा असलेले स्टोअर अधिक विश्वासार्ह असतात."
+  },
+  "explanations_store_rating": {
+    "message": "आम्ही एकूण स्टोअर फीडबॅक स्कोअर तपासतो, स्कोअर जितका जास्त असेल तितकी चांगली सेवा मिळण्याची शक्यता जास्त असते. 91% पेक्षा जास्त अभिप्राय सकारात्मक प्रतिक्रिया मानला जातो."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress विक्रेत्याला एक अतिशय विश्वासार्ह विक्रेता म्हणून वर्गीकृत करते, ज्यामध्ये मोठ्या प्रमाणात विक्री होते"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Amazon बेस्टसेलर असा असतो ज्याची दरमहा किमान 150 विक्री असते आणि तिची जितकी जास्त विक्री होते तितके इतर खरेदीदारांच्या फीडबॅकवर अवलंबून राहणे सोपे होते."
+  },
+  "explanations_amazon_choice": {
+    "message": "ॲमेझॉनची निवड चिन्हांकित उत्पादने ग्राहकांकडून वारंवार खरेदी केली जातात. त्यांच्याकडे अनुकूल किंमत आहे, उच्च रेट केलेले आहेत आणि Amazon च्या वेअरहाऊसमधून द्रुत शिपिंगसाठी उपलब्ध आहेत."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "आम्ही अनैसर्गिक पुनरावलोकनांच्या संख्येवर आधारित सकारात्मक पुनरावलोकनांची संख्या ठेवण्यासाठी आणि समायोजित करण्यासाठी सांख्यिकीय मॉडेलिंग वापरतो, जेणेकरून तुम्ही उच्च-गुणवत्तेच्या डेटावर आधारित तुमचा निर्णय घेऊ शकता. अल्गोरिदम परिपूर्ण नाही, परंतु उच्च अचूकता दर आहेत. ॲमेझॉनने लाखो फीडबॅक गोळा करण्याचे चांगले काम केले आहे, परंतु बऱ्याच ब्रँडने त्याचा गैरवापर करणे निवडले आहे, ते कमी गुणवत्तेचे आणि पक्षपाती पुनरावलोकनांनी भरलेले आहे आणि त्यांचा स्वतःचा नफा वाढवण्याचा प्रयत्न केला आहे. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Amazon द्वारे विकले आणि पाठवले: या वस्तू Amazon द्वारे इन्व्हेंटरी म्हणून ऑर्डर केल्या होत्या. ते थेट Amazon वेअरहाऊसमधून विकले आणि पाठवले जात आहेत. आपण आयटम अधिक जलद मिळविण्यात सक्षम व्हाल आणि Amazon कोणत्याही ग्राहक सेवा समस्या थेट हाताळेल."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "या वस्तू स्वतंत्र, तृतीय-पक्ष व्यवसायाच्या मालकीच्या आहेत आणि Amazon च्या गोदामांमध्ये वेळेपूर्वी पाठवल्या जातात. तुम्ही ते खरेदी करता तेव्हा, Amazon ते तुमच्याकडे पाठवतात."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "खरेदीदारांना हे जाणून घेणे महत्त्वाचे आहे की ते एखादी वस्तू केव्हा येण्याची अपेक्षा करू शकतात. म्हणूनच आम्ही नेहमी eBay वर अंदाजे वितरण तारीख तपासतो. अंदाजे डिलिव्हरीची तारीख विक्रेत्याला वस्तू पॅक आणि शिप करण्यासाठी लागणाऱ्या वेळेवर आणि पोस्टल सेवांमधून डिलिव्हरीच्या वेळेवर आधारित आहे. आम्ही देशांतर्गत शिपमेंटसाठी 14 दिवस आणि आंतरराष्ट्रीय शिपमेंटसाठी 30 दिवस उत्कृष्ट वितरण वेळ मानतो."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "विनामूल्य शिपिंग हे एक उत्तम संकेत आहे की विक्रेता उत्तम ग्राहक सेवा प्रदान करेल आणि वर्णन केल्यानुसार आयटम वेळेवर पाठवेल."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "परतावा स्वीकारणे हे चांगल्या विक्रेत्याचे चांगले संकेत आहे: जर तुम्हाला एखादी वस्तू खराब झालेली किंवा चुकीची प्राप्त झाली असेल, तर तुम्ही ती परताव्यासाठी परत करू शकता."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "देय परतावा किंवा कोणतेही परतावा नाही: जर उत्पादन चुकीच्या पद्धतीने आले असेल तरच तुम्ही ते परताव्यात परत करू शकता."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "जे विक्रेते मोठ्या प्रमाणावर उत्कृष्ट ग्राहक सेवा देतात त्यांना eBay द्वारे शीर्ष रेट केलेल्या बॅजसह ब्रँड केले जाते. याचा अर्थ त्यांच्याकडे उच्च फीडबॅक स्कोअर आहे आणि eBay वर सकारात्मक फीडबॅकची उच्च टक्केवारी आहे, त्यामुळे त्यांच्याकडून खरेदी करणे अधिक सुरक्षित आहे."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "ब्रँडचे प्रतिनिधित्व करणारे विक्रेते अनेकदा उत्कृष्ट ग्राहक सेवेशी संबंधित असतात. त्यांच्याकडे सहसा उच्च फीडबॅक स्कोअर असतात आणि eBay वर सकारात्मक फीडबॅकची मोठी टक्केवारी असते, ज्यामुळे त्यांच्याकडून खरेदी करणे अधिक सुरक्षित पर्याय बनते."
+  },
+  "why_it_free": {
+    "message": "वापरण्यास मुक्त का आहे?"
+  },
+  "explanations_why_it_free": {
+    "message": "तुमच्यासाठी सेफ-डील फ्री का वापरत आहे?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "आमची सेवा वापरणे तुमच्यासाठी विनामूल्य आहे. तुम्ही खरेदी करता तेव्हा, तुम्हाला सर्वोत्तम उत्पादनासाठी मार्गदर्शन करण्यासाठी स्टोअर आम्हाला थोडे शुल्क देते."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "कोणताही ब्रँड किंवा दुकान आमच्या शिफारशींवर प्रभाव टाकणार नाही याची खात्री करून आम्ही केवळ सार्वजनिकरीत्या उपलब्ध डेटा वापरतो."
+  },
+  "premium_features": {
+    "message": "प्रीमियम वैशिष्ट्ये"
+  },
+  "premium_features_no_affiliation": {
+    "message": "कोणतीही संलग्नता नाही, तुम्ही तुम्हाला हवा असलेला कोणताही कॅशबॅक प्रोग्राम प्लग करू शकता"
+  },
+  "premium_features_enhanced_support": {
+    "message": "वैयक्तिक फोन आणि ईमेल समर्थन आणि वर्धित प्रक्रिया वेळ"
+  },
+  "premium_features_cost": {
+    "message": "किंमत - 2 USD प्रति महिना (वार्षिक बिल)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "जमा झालेला पैसा सेवा सुधारण्यासाठी आणि पायाभूत सुविधांसाठी पैसे देण्यासाठी वापरला जातो."
+  },
+  "affiliated_websites": {
+    "message": "संलग्न वेबसाइट्स"
+  },
+  "buy_premium": {
+    "message": "प्रीमियम खरेदी करा"
+  },
+  "opt_out": {
+    "message": "निवड रद्द करा"
+  },
+  "image": {
+    "message": "प्रतिमा"
+  },
+  "product_name": {
+    "message": "उत्पादनाचे नांव"
+  },
+  "final_price": {
+    "message": "अंतिम किंमत"
+  },
+  "coupon": {
+    "message": "कूपन"
+  },
+  "you_saved": {
+    "message": "कूपन रक्कम"
+  },
+  "you_save": {
+    "message": "तुम्ही सुटे"
+  },
+  "share": {
+    "message": "शेअर करा"
+  },
+  "discounts_found": {
+    "message": "सवलती मिळाल्या"
+  },
+  "extension_not_available": {
+    "message": "या पृष्ठासाठी SafeDeal विस्तार उपलब्ध नाही."
+  },
+  "search_for_any_other_keyword": {
+    "message": "कूपन आणि सौदे शोधण्यासाठी इतर कोणताही कीवर्ड शोधा."
+  },
+  "search_product": {
+    "message": "उत्पादन शोधा"
+  },
+  "want_more_coupons": {
+    "message": "आणखी कूपन हवे आहेत?"
+  },
+  "click_here": {
+    "message": "इथे क्लिक करा"
+  },
+  "coupon_header": {
+    "message": "सुरक्षित डील - कूपन आणि सौदे"
+  },
+  "tab_header_analyze": {
+    "message": "उत्पादन मूल्यांकन"
+  },
+  "tab_header_reviews": {
+    "message": "पुनरावलोकनांचा सारांश"
+  },
+  "click_to_reveal": {
+    "message": "किमान आणि पूर्ण विश्लेषण दरम्यान टॉगल करण्यासाठी {systemShortcut} वर क्लिक करा किंवा दाबा."
+  },
+  "click_to_hide": {
+    "message": "तपशीलवार दृश्य बंद करण्यासाठी चिन्हावर क्लिक करा किंवा 'एस्केप' की दाबा."
+  },
+  "click_to_pin": {
+    "message": "हे पॅनेल रिफ्रेश करताना आणि तुम्ही ब्राउझ करताना ते दृश्यमान ठेवण्यासाठी पिन करा"
+  },
+  "click_to_unpin": {
+    "message": "हे पॅनल अनपिन करा जेणेकरून पृष्ठावर इतरत्र क्लिक केल्यावर ते लपवेल"
+  },
+  "reviews_no_reviews_header": {
+    "message": "अद्याप कोणतीही पुनरावलोकने नाहीत"
+  },
+  "reviews_no_reviews_text": {
+    "message": "अद्याप कोणतीही ग्राहक पुनरावलोकने नाहीत. हे उत्पादन नवीन असू शकते किंवा लोकप्रिय नाही."
+  },
+  "reviews_pros": {
+    "message": "साधक"
+  },
+  "reviews_cons": {
+    "message": "बाधक"
+  },
+  "reviews_good_to_know": {
+    "message": "माहितीसाठी चांगले"
+  },
+  "reviews_error": {
+    "message": "गैरसोयीबद्दल आम्ही दिलगीर आहोत. असे दिसते की पुनरावलोकन सारांश प्रक्रिया अयशस्वी झाली. या समस्येचे निराकरण करण्यासाठी, कृपया मदतीसाठी सेफ डील सपोर्ट टीमशी संपर्क साधा."
+  },
+  "deals_ali_express": {
+    "message": "सेफ डील - डील्स फाइंडर"
+  },
+  "deals_ali_found": {
+    "message": "सौदे सापडले: "
+  },
+  "product": {
+    "message": "उत्पादन"
+  },
+  "title": {
+    "message": "शीर्षक"
+  },
+  "price": {
+    "message": "किंमत"
+  },
+  "deal_type": {
+    "message": "डील प्रकार"
+  },
+  "savings": {
+    "message": "बचत"
+  },
+  "extra": {
+    "message": "अवांतर"
+  },
+  "shipping": {
+    "message": "शिपिंग"
+  },
+  "rating": {
+    "message": "रेटिंग"
+  },
+  "sold": {
+    "message": "विकले"
+  },
+  "reviews": {
+    "message": "पुनरावलोकने"
+  },
+  "mobile_app": {
+    "message": "आमचे मोबाईल ॲप इन्स्टॉल करा"
+  },
+  "tab_header_opinions": {
+    "message": "मते आणि भाष्य"
+  },
+  "opinions_title": {
+    "message": "तुमचे मत द्या किंवा या उत्पादनाबद्दल समुदायाला विचारा"
+  },
+  "research_online": {
+    "message": "तपासा"
+  },
+  "video_reviews": {
+    "message": "व्हिडिओ पुनरावलोकने"
+  },
+  "reddit_reviews": {
+    "message": "Reddit मध्ये मते"
+  },
+  "web_reviews": {
+    "message": "ऑनलाइन पुनरावलोकने"
+  },
+  "shopping_reviews": {
+    "message": "खरेदी साइट्स"
+  },
+  "product_photos": {
+    "message": "उत्पादन फोटो"
+  },
+  "product_purchase_query": {
+    "message": "आता ऑनलाइन खरेदी करा"
+  },
+  "product_reviews_query": {
+    "message": "तपशीलवार पुनरावलोकने"
+  }
+}

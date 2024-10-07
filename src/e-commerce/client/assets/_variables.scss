@@ -1,0 +1,33 @@
+//Bases
+$white: #ffffff;
+$black: #000000;
+
+//Primary Colors
+$primary-50: #f1fff9;
+$primary-600: #00a660;
+$primary-800: #003720;
+//Greys
+$grey-100: #f1f5f9;
+$grey-200: #e2e8f0;
+$grey-400: #94a3b8;
+$grey-500: #64748b;
+$grey-600: #475569;
+$grey-700: #334155;
+$grey-800: #1e293b;
+//Product
+$product-bad: #ef3e35;
+$product-doubtful: #ff8c00;
+$product-insufficient: $grey-600;
+
+//Borders
+$tabs-border-color: #eaecf0;
+
+//Content
+$reason-good-bg: rgba(16, 186, 145, 1);
+$reason-bad-bg: rgba(203, 3, 37, 1);
+
+$font-regular: "Plus Jakarta Sans", "Roboto", sans-serif;
+$font-regular-size: 14px;
+$font-regular-weight: 400;
+$font-smaller-size: 12px;
+$z-index-max: 2147483647;

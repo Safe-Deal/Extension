@@ -1,0 +1,14 @@
+export const RULE_VALUE = Object.freeze({
+  RULE_VAL_1: 1,
+  RULE_VAL_2: 2,
+  RULE_VAL_3: 3,
+  RULE_VAL_4: 4,
+  RULE_VAL_5: 5,
+  RULE_VAL_6: 6,
+  RULE_VAL_7: 7,
+  RULE_VAL_8: 8,
+  RULE_VAL_9: 9,
+  RULE_VAL_10: 10,
+  RULE_VAL_NEGATIVE: -10,
+  RULE_VAL_NEGATIVE_CRITICAL: -20
+});

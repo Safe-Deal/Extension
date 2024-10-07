@@ -1,0 +1,25 @@
+.sd-ae-dialog-header {
+  height: 56px;
+  padding: 0 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  &__count {
+    font-size: 20px;
+    font-weight: 700;
+    color: $primary-600;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  &__reload-button {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    border: none;
+    margin-top: 2px;
+  }
+}

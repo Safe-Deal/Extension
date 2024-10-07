@@ -1,0 +1,28 @@
+.safe-deal-page-container {
+  .analysis__progress-bars {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding-top: 4px;
+
+    .progress-bar__container {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      vertical-align: middle;
+      gap: 20px;
+      width: 100%;
+
+      &--gauges {
+        display: flex;
+        justify-content: space-around;
+        gap: 24px;
+        width: 100%;
+        padding-left: 2px;
+        padding-right: 2px;
+      }
+    }
+  }
+}

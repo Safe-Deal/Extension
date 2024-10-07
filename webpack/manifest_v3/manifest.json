@@ -1,0 +1,102 @@
+{
+  "name": "__MSG_appName__",
+  "short_name": "__MSG_appNameShort__",
+  "version": "5.5.9",
+  "manifest_version": 3,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "res/icons/icon-16.png",
+    "32": "res/icons/favicon-32x32.png",
+    "38": "res/icons/icon-38.png",
+    "48": "res/icons/icon-48.png",
+    "128": "res/icons/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "service_worker": "scripts/service_worker.js"
+  },
+  "permissions": ["tabs"],
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["http://localhost/*", "https://localhost/*", "https://www.joinsafedeal.com/*"],
+      "js": ["scripts/content-script-auth.js"],
+      "all_frames": true
+    },
+    {
+      "run_at": "document_end",
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["scripts/content-script-shutaf.js", "scripts/content-script-anti-scam.js"],
+      "all_frames": false
+    },
+    {
+      "run_at": "document_end",
+      "matches": [
+        "https://*.aliexpress.com/*",
+        "https://*.aliexpress.us/*",
+        "https://*.aliexpress.ru/*",
+        "https://*.aliexpress.co.il/*",
+        "https://*.aliexpress.fr/*",
+        "https://*.aliexpress.pl/*",
+        "https://*.ebay.com/*",
+        "https://*.ebay.com.au/*",
+        "https://*.ebay.at/*",
+        "https://*.ebay.ca/*",
+        "https://*.ebay.fr/*",
+        "https://*.ebay.de/*",
+        "https://*.ebay.com.hk/*",
+        "https://*.ebay.ie/*",
+        "https://*.ebay.it/*",
+        "https://*.ebay.com.my/*",
+        "https://*.ebay.nl/*",
+        "https://*.ebay.ph/*",
+        "https://*.ebay.pl/*",
+        "https://*.ebay.com.sg/*",
+        "https://*.ebay.es/*",
+        "https://*.ebay.ch/*",
+        "https://*.ebay.co.uk/*",
+        "https://www.amazon.com/*",
+        "https://www.amazon.com.au/*",
+        "https://www.amazon.com.br/*",
+        "https://www.amazon.ca/*",
+        "https://www.amazon.cn/*",
+        "https://www.amazon.fr/*",
+        "https://www.amazon.de/*",
+        "https://www.amazon.in/*",
+        "https://www.amazon.it/*",
+        "https://www.amazon.co.jp/*",
+        "https://www.amazon.com.mx/*",
+        "https://www.amazon.nl/*",
+        "https://www.amazon.sa/*",
+        "https://www.amazon.sg/*",
+        "https://www.amazon.es/*",
+        "https://www.amazon.com.tr/*",
+        "https://www.amazon.ae/*",
+        "https://www.amazon.co.uk/*",
+        "https://www.amazon.eg/*",
+        "https://www.amazon.co.il/*"
+      ],
+      "js": ["scripts/content-script-ecommerce.js"],
+      "all_frames": false
+    },
+    {
+      "run_at": "document_end",
+      "matches": ["https://*.alibaba.com/*"],
+      "js": ["scripts/content-script-supplier.js"],
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "res/icons/icon-16.png",
+      "32": "res/icons/favicon-32x32.png",
+      "38": "res/icons/icon-38.png",
+      "48": "res/icons/icon-48.png",
+      "128": "res/icons/icon-128.png"
+    },
+    "default_title": "__MSG_appName__",
+    "default_popup": "popup.html"
+  },
+  "content_security_policy": {},
+  "host_permissions": ["http://*/*", "https://*/*"]
+}

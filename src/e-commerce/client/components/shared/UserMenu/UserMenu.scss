@@ -1,0 +1,14 @@
+.account-menu {
+  position: relative;
+
+  &__icon-button {
+    background-color: white;
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  &__menu {
+    margin-top: 8px;
+  }
+}

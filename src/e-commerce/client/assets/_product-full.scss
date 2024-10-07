@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200..800&display=swap");
+
+.sd-product-full {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  height: 640px !important;
+  width: 700px !important;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px #00000052;
+
+  &__header {
+    position: relative;
+    background-color: $primary-600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 24px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    direction: inherit;
+
+    &--recommended {
+      background-color: $primary-600;
+    }
+
+    &--bad {
+      background-color: $product-bad;
+    }
+
+    &--insufficient {
+      background-color: $product-insufficient;
+    }
+
+    &--doubtful {
+      background-color: $product-doubtful;
+    }
+
+    &__shied {
+      order: 1;
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 700;
+      color: $white;
+      margin-bottom: 2px;
+      order: 2;
+    }
+
+    &__research {
+      display: flex;
+      flex-grow: 1;
+      align-items: center;
+      order: 3;
+      &--rtl {
+        margin-left: 64px;
+        justify-content: flex-end;
+      }
+      &--ltr {
+        margin-right: 64px;
+        justify-content: flex-end;
+      }
+    }
+
+    &__icon {
+      width: 32px;
+      height: 32px;
+    }
+
+    &--rtl {
+      direction: rtl;
+    }
+  }
+
+  &__body {
+    padding: 12px;
+    height: 100%;
+
+    &__tabs {
+      margin-bottom: 24px;
+      border-bottom: 1px solid #eaecf0;
+
+      .MuiTabs-flexContainer {
+        justify-content: center;
+
+        button {
+          flex: 1;
+          color: $grey-600;
+          font-size: 16px;
+          font-weight: 600;
+          text-transform: capitalize;
+
+          &[aria-selected="true"] {
+            color: $grey-800;
+            background-color: $grey-100;
+            border-top-left-radius: 4px;
+            border-top-right-radius: 4px;
+          }
+        }
+      }
+      .MuiTabs-indicator {
+        background-color: $grey-800;
+      }
+    }
+
+    &__content {
+      display: grid;
+      height: 100%;
+      max-height: 488px !important;
+      width: 100%;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-left: 4px;
+      padding-right: 4px;
+
+      scrollbar-width: thin;
+      scrollbar-color: #e0e0e0 #fafafa;
+
+      &::-webkit-scrollbar {
+        width: 1px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #fafafa;
+        border-radius: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #e0e0e0;
+        border-radius: 8px;
+        border: 1px solid #fafafa;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background-color: #c0c0c0;
+        border-radius: 8px;
+      }
+    }
+  }
+}

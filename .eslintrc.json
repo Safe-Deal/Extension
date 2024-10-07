@@ -1,0 +1,115 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:jest/recommended",
+    "plugin:testing-library/react"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["react", "@typescript-eslint", "prettier", "import", "jest", "testing-library"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    },
+    "react": {
+      "version": "detect"
+    }
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "import/extensions": 0,
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
+    "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+    "react/function-component-definition": "off",
+    "react/jsx-no-useless-fragment": "warn",
+    "react/display-name": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".jsx", ".tsx"] }],
+    "jest/no-disabled-tests": "warn",
+    "import/prefer-default-export": "off",
+    "@typescript-eslint/no-unused-vars": "warn",
+    "react/prop-types": "warn",
+    "@typescript-eslint/no-this-alias": "warn",
+    "@typescript-eslint/no-explicit-any": "warn",
+    "no-empty-pattern": "warn",
+    "camelcase": "warn",
+    "no-param-reassign": "warn",
+    "no-promise-executor-return": "warn",
+    "no-await-in-loop": "off",
+    "no-restricted-syntax": "off",
+    "eqeqeq": "warn",
+    "no-useless-escape": "off",
+    "no-prototype-builtins": "warn",
+    "no-new-wrappers": "warn",
+    "testing-library/no-debugging-utils": "off",
+    "@typescript-eslint/ban-ts-comment": "warn",
+    "class-methods-use-this": "warn",
+    "prefer-destructuring": "warn",
+    "react/jsx-props-no-spreading": "off",
+    "no-shadow": "off",
+    "no-restricted-globals": "off",
+    "no-plusplus": "warn",
+    "react/destructuring-assignment": "warn",
+    "consistent-return": "warn",
+    "no-use-before-define": "warn",
+    "import/no-mutable-exports": "warn",
+    "new-cap": "warn",
+    "no-nested-ternary": "warn",
+    "no-continue": "warn",
+    "default-param-last": "warn",
+    "no-useless-constructor": "off",
+    "prefer-const": "warn",
+    "jsx-a11y/alt-text": "warn",
+    "radix": "warn",
+    "no-empty-function": "warn",
+    "react/no-unstable-nested-components": "warn",
+    "jsx-a11y/anchor-is-valid": "warn",
+    "no-underscore-dangle": "warn",
+    "@typescript-eslint/prefer-as-const": "warn",
+    "array-callback-return": "warn",
+    "react/no-array-index-key": "warn",
+    "global-require": "warn",
+    "@typescript-eslint/no-var-requires": "warn",
+    "jest/no-conditional-expect": "warn",
+    "no-unsafe-optional-chaining": "warn",
+    "@typescript-eslint/no-unsafe-function-type": "warn",
+    "@typescript-eslint/no-empty-object-type": "warn",
+    "default-case-last": "warn",
+    "no-case-declarations": "warn",
+    "jest/no-export": "warn",
+    "react/require-default-props": "warn",
+    "react/no-children-prop": "warn",
+    "jest/no-identical-title": "warn",
+    "jsx-a11y/click-events-have-key-events": "warn",
+    "jsx-a11y/no-noninteractive-element-interactions": "warn",
+    "max-classes-per-file": "warn",
+    "import/no-unresolved": "warn"
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
+}

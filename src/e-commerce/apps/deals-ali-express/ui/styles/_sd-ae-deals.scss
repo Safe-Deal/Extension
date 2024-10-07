@@ -1,0 +1,38 @@
+.sd-ae-deals {
+  &__button {
+    z-index: 9999;
+    position: relative;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    color: $primary-600;
+    border-radius: 0 0 0 8px;
+    padding: 10px 0;
+    width: 100%;
+    min-width: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__dialog {
+      overflow-y: auto;
+
+      &__content {
+        overflow-y: visible;
+      }
+
+      &__actions {
+        justify-content: center;
+        font-weight: 400;
+      }
+    }
+
+    &--solo {
+      max-width: 56px;
+      position: fixed;
+      bottom: 20px;
+      border-radius: 8px 0 0 8px;
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
+}

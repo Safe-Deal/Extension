@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "Ostuassistent: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "Ostuassistent: säästke aega AI-ga. Vaadake hinnaajalugu, vältige kulukaid pakkumisi ja leidke võltsarvustusi"
+  },
+  "appNameShort": {
+    "message": "Ohutu tehing"
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "Ohutu tehing",
+    "description": "Olge veebis ostes kindel"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal vaatas selle veebisaidi üle ja otsustas, et see võib olla ohtlik {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "Lahkuge sellelt veebisaidilt kohe"
+  },
+  "anti_scam_stay": {
+    "message": "See sait on usaldusväärne"
+  },
+  "anti_scam_confirm": {
+    "message": "Suur tõenäosus, et see veebisait on pettus, varas või mõni muu ebaseaduslik tegevus. Kas usaldate seda veebisaiti?"
+  },
+  "recommended_product": {
+    "message": "Soovitatav toode"
+  },
+  "unrecommended_product": {
+    "message": "Soovitamatu toode"
+  },
+  "doubtful_product": {
+    "message": "Kahtlane toode"
+  },
+  "insufficient_data": {
+    "message": "Järeldus määramatu"
+  },
+  "signal_of_a_good_deal": {
+    "message": "Hea tehingu tunnus"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "Viide küsitavale tehingule"
+  },
+  "no_data": {
+    "message": "Praegu pole kuvamiseks andmeid"
+  },
+  "chart_title": {
+    "message": "Toote hinna ajalugu"
+  },
+  "back_button": {
+    "message": "Eelmine"
+  },
+  "next_button": {
+    "message": "Edasi"
+  },
+  "start_using_button": {
+    "message": "Alustage SafeDeali kasutamist"
+  },
+  "tour_step1_title": {
+    "message": "Tere tulemast turvalisele tehingule"
+  },
+  "tour_step1_text_0": {
+    "message": ", Täname, et kasutate meie tarkvara."
+  },
+  "morning": {
+    "message": "hommikul"
+  },
+  "day": {
+    "message": "päeval"
+  },
+  "night": {
+    "message": "öö"
+  },
+  "hi": {
+    "message": "Tere"
+  },
+  "good": {
+    "message": "Hea"
+  },
+  "tour_step1_text_1": {
+    "message": "Siin on üks meie toetatud kauplustest."
+  },
+  "tour_step1_text_2": {
+    "message": "Toimib samamoodi ka teistel toetatud saitidel, nagu AliExpress, eBay, Amazon ja palju muud."
+  },
+  "tour_step1_text_3": {
+    "message": "Selle toimimise selgitamiseks peaks kuluma umbes minut."
+  },
+  "tour_step1_lets_start": {
+    "message": "Alustame"
+  },
+  "tour_step2_title": {
+    "message": "Ostusoovitused"
+  },
+  "tour_step2_text_0": {
+    "message": "Kiirete ja tõhusate ostuotsuste tegemine on meie toote keskmes; toimime veebiostude foorina."
+  },
+  "tour_step2_text_3": {
+    "message": "Meie tehisintellekt teeb andmepõhise otsuse toodete kohta mõne sekundiga. Nii saate paljude toodete kohta kiire indikaatori mõne minutiga, mitte tundidepikkuse käsitsi kontrollimisega."
+  },
+  "tour_step3_title": {
+    "message": "Tehingu ohutus on oluline"
+  },
+  "tour_step3_text_0": {
+    "message": "Saate juba täna targalt sisseoste teha, et tulevikus probleeme säästa."
+  },
+  "tour_step3_text_1": {
+    "message": "Roheline kilp – soovitatav tehing"
+  },
+  "tour_step3_text_2": {
+    "message": "Punane kilp – mittesoovitatav tehing"
+  },
+  "tour_step3_text_3": {
+    "message": "Kollane kilp – kahtlane tehing"
+  },
+  "tour_step5_title": {
+    "message": "Teie privaatsus on esmatähtis"
+  },
+  "tour_step5_text_0": {
+    "message": "Meie teenuse kasutamine on teile tasuta. Kui sooritate ostu, maksab pood meile väikese tasu, et juhataks teid parima tooteni."
+  },
+  "tour_step5_text_1": {
+    "message": "Tarkvara töötab kohapeal, kuna hoolime teie privaatsusest. Teie tegevuse kohta teavet ei koguta."
+  },
+  "tour_feedback_title": {
+    "message": "Hindame teie tagasisidet"
+  },
+  "tour_feedback_text": {
+    "message": "Võtke ühendust, kui teil on idee, probleem või kui teil on vaja arutada täiustust: "
+  },
+  "or": {
+    "message": "või"
+  },
+  "contact_form": {
+    "message": "Kasutage kontaktivormi"
+  },
+  "by_email": {
+    "message": "Kirjuta e-kiri"
+  },
+  "call_as_at": {
+    "message": "Telefoni teel +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "Paljud kliendid soovitasid toodet väga"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "Toodet ei soovita kliendid piisavalt"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "Arvustused on äärmiselt positiivsed. Tärnid: {ProductRatingValue}, arvustused: {ProductReviewAmount}, hinnangud: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "Arvustuste puudujääk või kehvad arvustused. Tärnid: {ProductRatingValue}, arvustused: {ProductReviewAmount}, hinnangud: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "Arvustused on äärmiselt positiivsed. Tärnid: {ProductRatingValue}, tellimused: {ProductOrdersAmount}, arvustused: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "Arvustuste puudujääk või kehvad arvustused. Tärnid: {ProductRatingValue}, tellimused: {ProductOrdersAmount}, arvustused: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "Arvustused on äärmiselt positiivsed. Tärnid: {ProductRatingValue}, tellimused: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "Arvustuste puudujääk või kehvad arvustused. Tärnid: {ProductRatingValue}, tellimused: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "Pood on kõrgelt hinnatud. Tärnid: {ProductRatingValue}, tellimused: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "Pood on halvasti hinnatud. Tärnid: {ProductRatingValue}, tellimused: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "Väljakujunenud müüja, äritegevuses {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "Algaja müüja, äritegevuses {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "Suurepärane tagastuspoliitika"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "Tagastamispoliitika on kehv"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "Usaldusväärne müüja"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "Müüakse otse kaubamärgi järgi"
+  },
+  "tooltip_order_safe": {
+    "message": "Suur hulk rahulolevaid kliente"
+  },
+  "tooltip_order_un_safe": {
+    "message": "Väike hulk õnnelikke kliente"
+  },
+  "tooltip_rating_safe": {
+    "message": "Paljud rahulolevad kliendid on jätnud arvustusi"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "Paljud vihased kliendid postitasid negatiivseid arvustusi"
+  },
+  "tooltip_delivery_safe": {
+    "message": "Suurepärane tarneaeg, maksimaalselt {daysToDeliver} päeva"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "Paki kättesaamiseks võib kuluda kuni {daysToDeliver} päeva."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "Millal kohaletoimetamine toimub, on ebaselge"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "Enamik poe kliente on rahul, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "Paljud kliendid pole poega rahul, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "Poel puudub klientide tagasiside"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "Saada tasuta"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "Saadetakse tasu eest või vajalik järeletulemine"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "See toode on mõistliku hinnaga"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "Kehv ostuvõimaluste valik"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "Hind on suurepärane, keskmisega võrreldes {priceDifVsAverage}% madalam"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "Hind on õiglane, keskmisega võrreldes {priceDifVsAverage}% madalam"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "Hind on õiglane, keskmisega võrreldes {priceDifVsAverage}% kõrgem"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "Kallis hind, keskmisega võrreldes {priceDifVsAverage}% kõrgem"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose – usaldusväärne ja hea hinnaga toode"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "Amazon müüb ja saadab seda toodet"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "Müüb või tarnib Amazon, kaasatud kolmas osapool"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart müüb ja saadab seda toodet"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "Tagasiside tundub hea! {validAmount} autentne, {fakeAmount} ebaloomulik, kokku {totalAmount}"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "Tagasiside näib olevat manipuleeritud! {validAmount} autentne, {fakeAmount} ebaloomulik, kokku {totalAmount}"
+  },
+  "tooltip_bsr_safe": {
+    "message": "See toode müüb tõesti hästi"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "Toote müük on suhteliselt madal"
+  },
+  "popup_title": {
+    "message": "Teie nutikas assistent veebiostudel"
+  },
+  "loading_product": {
+    "message": "Toode ülevaatuses"
+  },
+  "popup_footer_share": {
+    "message": "Rääkige oma sõpradele ja perele SafeDealist"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "Kinnitatud turvaline sait. Toetage meid meie sidusettevõtte lingi kaudu."
+  },
+  "popup_top_tabs_home": {
+    "message": "Kodu"
+  },
+  "popup_top_tabs_settings": {
+    "message": "Seaded"
+  },
+  "supported_websites": {
+    "message": "Toetatud veebisaidid"
+  },
+  "popup_benefits_tab": {
+    "message": "Funktsioonid"
+  },
+  "popup_about_tab": {
+    "message": "Umbes"
+  },
+  "popup_contact_us_tab": {
+    "message": "Võta meiega ühendust"
+  },
+  "popup_ali_express": {
+    "message": "AliExpress"
+  },
+  "popup_amazon": {
+    "message": "Amazon"
+  },
+  "popup_ebay": {
+    "message": "eBay"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "Premium"
+  },
+  "years_label": {
+    "message": "aastat"
+  },
+  "year_label": {
+    "message": "1 aasta"
+  },
+  "less_than_a_year": {
+    "message": "vähem kui aasta"
+  },
+  "explanations_price_history": {
+    "message": "Toote hinnaajaloo graafik – see aitab teil tuvastada võltsitud allahindlusi. Peame hinna üle arvestust ja jälgime seejärel muutusi igapäevaselt, võimaldades ära kasutada sooduspakkumisi ja piiratud ajaga pakkumisi."
+  },
+  "explanations_review_and_ratings": {
+    "message": "Järeldus põhineb: \n    1) Tootesoovitustest üldise ülevaate saamiseks kasutasime erinevaid statistilise analüüsi ja tehisintellekti tehnikaid. \n    2) Arvustused ja hinnangud analüüsiti ning hinnangut 4 ja rohkem peame suurepärase toote märgiks. \n    3) Sisulise tulemuse saavutamiseks on vaja vähemalt 100 tellimust, seega mida rohkem tellimusi analüüsime, seda rohkem usaldame toote reitingu järeldust."
+  },
+  "explanations_store_age": {
+    "message": "Meie süsteem mõõdab kaupluse usaldusväärsust kaupluse vanuse järgi, kuna suurema kogemuse ja positiivse mainega kauplused on usaldusväärsemad."
+  },
+  "explanations_store_rating": {
+    "message": "Kontrollime poe tagasiside üldist skoori, mida kõrgem on skoor, seda suurem on võimalus saada head teenust. Üle 91% tagasisidet loetakse positiivseks."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "AliExpress liigitab müüja väga usaldusväärseks ja suure müügimahuga müüjaks"
+  },
+  "explanations_amazon_bsr": {
+    "message": "Amazoni bestseller on see, millel on vähemalt 150 müüki kuus ja mida rohkem müüki, seda lihtsam on teiste ostjate tagasisidele loota."
+  },
+  "explanations_amazon_choice": {
+    "message": "Kliendid ostavad sageli Amazon's Choice'i märgistusega tooteid. Need on soodsa hinnaga, kõrgelt hinnatud ja saadaval kiireks kohaletoimetamiseks Amazoni laost."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "Kasutame statistilist modelleerimist, et positsioneerida ja kohandada positiivsete arvustuste arvu ebaloomulike arvustuste arvu põhjal, et saaksite teha oma otsuse kvaliteetsete andmete põhjal. Algoritm ei ole täiuslik, kuid sellel on kõrge täpsus. Amazon on teinud head tööd, kogudes sadu miljoneid tagasisidet, kuid paljud kaubamärgid on otsustanud seda kuritarvitada, tulvanud selle üle madala kvaliteediga ja kallutatud arvustustega, et proovida oma kasumit suurendada. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "Müünud ja tarninud Amazon: Amazon tellis need kaubad laoseisuna. Neid müüakse ja saadetakse otse Amazoni laost. Saate kauba palju kiiremini kätte saada ja Amazon tegeleb klienditeeninduse probleemidega otse."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "Need kaubad kuuluvad sõltumatule kolmanda osapoole ettevõttele ja saadetakse enne tähtaega Amazoni ladudesse. Kui ostate need, saadab Amazon need teile."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "Ostjatel on oluline teada, millal nad võivad kauba kohalejõudmist oodata. Seetõttu kontrollime eBayst alati hinnangulist tarnekuupäeva. Hinnanguline tarnekuupäev põhineb ajal, mis müüjal kulub kaupade pakkimiseks ja saatmiseks, ning postiteenuste tarneajal. Peame 14 päeva riigisiseste saadetiste ja 30 päeva rahvusvaheliste saadetiste puhul suurepäraseks tarneajaks."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "Tasuta kohaletoimetamine on suurepärane märk sellest, et müüja pakub suurepärast klienditeenindust ja saadab kauba õigeaegselt, nagu kirjeldatud."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "Tagastamise aktsepteerimine on hea näitaja heast müüjast: kui saate kahjustatud või vale kauba, saate selle tagastada ja raha tagasi saada."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "Tasutav tagastus või mittetagastamine: ainult siis, kui toode saabus valesti, saate selle tagastada ja raha tagasi saada."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "Müüjad, kes pakuvad suurepärast klienditeenindust suures ulatuses, on eBay kaubamärgi all kõrgeima reitingu märgiga. See tähendab, et neil on eBays kõrge tagasiside skoor ja suur protsent positiivset tagasisidet, seega on neilt turvalisem osta."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "Brändi esindavaid müüjaid seostatakse sageli suurepärase klienditeenindusega. Tavaliselt on neil kõrged tagasiside hinded ja suur protsent positiivset tagasisidet eBays, mis muudab neilt ostmise turvalisemaks valikuks."
+  },
+  "why_it_free": {
+    "message": "Miks on tasuta kasutamine?"
+  },
+  "explanations_why_it_free": {
+    "message": "Miks on Safe-Deali kasutamine teie jaoks tasuta?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "Meie teenuse kasutamine on teile tasuta. Kui sooritate ostu, maksab pood meile väikese tasu, et juhataks teid parima tooteni."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "Kasutame ainult avalikult kättesaadavaid andmeid, tagades, et ükski bränd ega pood ei mõjuta meie soovitusi."
+  },
+  "premium_features": {
+    "message": "Premium funktsioonid"
+  },
+  "premium_features_no_affiliation": {
+    "message": "Seotust pole, saate ühendada mis tahes soovitud rahatagastusprogrammi"
+  },
+  "premium_features_enhanced_support": {
+    "message": "Isiklik telefoni- ja e-posti tugi ning pikem töötlemisaeg"
+  },
+  "premium_features_cost": {
+    "message": "Hind - 2 USD kuus (arvestatakse igal aastal)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "Kogutud raha kasutatakse teenuse täiustamiseks ja infrastruktuuri eest tasumiseks."
+  },
+  "affiliated_websites": {
+    "message": "Seotud veebisaidid"
+  },
+  "buy_premium": {
+    "message": "Osta Premium"
+  },
+  "opt_out": {
+    "message": "Loobuge"
+  },
+  "image": {
+    "message": "Pilt"
+  },
+  "product_name": {
+    "message": "tootenimi"
+  },
+  "final_price": {
+    "message": "Lõplik hind"
+  },
+  "coupon": {
+    "message": "Kupong"
+  },
+  "you_saved": {
+    "message": "Kupongi summa"
+  },
+  "you_save": {
+    "message": "Sa varu"
+  },
+  "share": {
+    "message": "Jaga"
+  },
+  "discounts_found": {
+    "message": "Allahindlused leitud"
+  },
+  "extension_not_available": {
+    "message": "SafeDeali laiendus pole selle lehe jaoks saadaval."
+  },
+  "search_for_any_other_keyword": {
+    "message": "Kupongide ja pakkumiste leidmiseks otsige mõnda muud märksõna."
+  },
+  "search_product": {
+    "message": "Otsi toodet"
+  },
+  "want_more_coupons": {
+    "message": "Kas soovite rohkem kuponge?"
+  },
+  "click_here": {
+    "message": "Kliki siia"
+  },
+  "coupon_header": {
+    "message": "Ohutu pakkumine – kupongid ja pakkumised"
+  },
+  "tab_header_analyze": {
+    "message": "Toote hindamine"
+  },
+  "tab_header_reviews": {
+    "message": "Arvustuste kokkuvõte"
+  },
+  "click_to_reveal": {
+    "message": "Minimaalse ja täieliku analüüsi vahel lülitumiseks klõpsake või vajutage nuppu {systemShortcut}."
+  },
+  "click_to_hide": {
+    "message": "Üksikasjaliku vaate sulgemiseks klõpsake ikoonil või vajutage klahvi \"Escape\"."
+  },
+  "click_to_pin": {
+    "message": "Kinnitage see paneel, et see oleks värskendamisel ja sirvimise ajal nähtav"
+  },
+  "click_to_unpin": {
+    "message": "Vabastage see paneel, et see peidaks, kui klõpsate lehel mujal"
+  },
+  "reviews_no_reviews_header": {
+    "message": "Ülevaateid pole veel"
+  },
+  "reviews_no_reviews_text": {
+    "message": "Klientide arvustusi pole veel. See toode võib olla uus või mitte populaarne."
+  },
+  "reviews_pros": {
+    "message": "Plussid"
+  },
+  "reviews_cons": {
+    "message": "Miinused"
+  },
+  "reviews_good_to_know": {
+    "message": "Hea teada"
+  },
+  "reviews_error": {
+    "message": "Vabandame ebamugavuste pärast. Näib, et ülevaate kokkuvõtte tegemine ebaõnnestus. Selle probleemi lahendamiseks võtke abi saamiseks ühendust turvalise tehingu tugimeeskonnaga."
+  },
+  "deals_ali_express": {
+    "message": "Turvaline pakkumine – pakkumiste otsija"
+  },
+  "deals_ali_found": {
+    "message": "Leitud pakkumised: "
+  },
+  "product": {
+    "message": "Toode"
+  },
+  "title": {
+    "message": "Pealkiri"
+  },
+  "price": {
+    "message": "Hind"
+  },
+  "deal_type": {
+    "message": "Tehingu tüüp"
+  },
+  "savings": {
+    "message": "Säästud"
+  },
+  "extra": {
+    "message": "Lisa"
+  },
+  "shipping": {
+    "message": "Saatmine"
+  },
+  "rating": {
+    "message": "Hinnang"
+  },
+  "sold": {
+    "message": "Müüdud"
+  },
+  "reviews": {
+    "message": "Arvustused"
+  },
+  "mobile_app": {
+    "message": "Installige meie mobiilirakendus"
+  },
+  "tab_header_opinions": {
+    "message": "Arvamused ja kommentaarid"
+  },
+  "opinions_title": {
+    "message": "Esitage oma arvamus või küsige kogukonnalt selle toote kohta"
+  },
+  "research_online": {
+    "message": "Kontrollige"
+  },
+  "video_reviews": {
+    "message": "Video ülevaated"
+  },
+  "reddit_reviews": {
+    "message": "Arvamused Redditis"
+  },
+  "web_reviews": {
+    "message": "Arvustused Internetis"
+  },
+  "shopping_reviews": {
+    "message": "Ostukohad"
+  },
+  "product_photos": {
+    "message": "Tootefotod"
+  },
+  "product_purchase_query": {
+    "message": "osta kohe veebist"
+  },
+  "product_reviews_query": {
+    "message": "üksikasjalikud ülevaated"
+  }
+}

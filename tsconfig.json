@@ -1,0 +1,31 @@
+{
+  "ts-node": {
+    "files": true,
+    "transpileOnly": false
+  },
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "target": "ES2018",
+    "module": "CommonJS",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "lib": ["ES2018", "DOM"],
+    "esModuleInterop": true,
+    "jsx": "react",
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["jest", "chrome", "node", "playwright", "./webpack/declarations.d.ts", "firefox-webext-browser"],
+    "paths": {
+      "@anti-scam/*": ["./src/anti-scam/*"],
+      "@browser-extension/*": ["./src/browser-extension/*"],
+      "@data/*": ["./src/data/*"],
+      "@e-commerce/*": ["./src/e-commerce/*"],
+      "@shutaf/*": ["./src/shutaf/*"],
+      "@constants/*": ["./src/constants/*"],
+      "@utils/*": ["./src/utils/*"],
+      "react": ["./node_modules/@types/react"],
+      "@store/*": ["./src/store/*"]
+    }
+  },
+  "exclude": ["node_modules", "dist", "webpack", "tools", ".vscode"]
+}

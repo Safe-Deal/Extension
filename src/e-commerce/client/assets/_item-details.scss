@@ -1,0 +1,24 @@
+.safe-deal-page-container {
+  .item-details {
+    &__image__icon {
+      text-align: center !important;
+      display: inline-block !important;
+      height: 40px !important;
+      margin: 8px 12px !important;
+      vertical-align: middle !important;
+    }
+  }
+
+  .sd-coupons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+      color: #1890ff;
+      font-weight: 800;
+      &:hover {
+        color: #40a9ff;
+      }
+    }
+  }
+}

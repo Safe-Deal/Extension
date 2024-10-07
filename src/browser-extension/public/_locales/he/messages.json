@@ -1,0 +1,558 @@
+{
+  "appName": {
+    "message": "עוזר קניות: AliExpress, Amazon, eBay"
+  },
+  "appDescription": {
+    "message": "עוזר קניות: חסוך זמן על ידי AI. גלה את היסטוריית המחירים, הימנע מעסקאות יקרות, גלה ביקורות מזויפות, דירוג שלילי של מוכר נקודתי."
+  },
+  "appNameShort": {
+    "message": "עסקה בטוחה"
+  },
+  "empty": {
+    "message": ""
+  },
+  "btnTooltip": {
+    "message": "עסקה בטוחה",
+    "description": "תרגיש בטוח כשאתה קונה באינטרנט"
+  },
+  "anti_scam_dangerous_website": {
+    "message": "Safe-Deal בדק אתר זה וקבע שהוא עלול להיות מסוכן {SafeVsUnsafePercentageAmount}!"
+  },
+  "anti_scam_leave": {
+    "message": "עזוב את האתר הזה עכשיו"
+  },
+  "anti_scam_stay": {
+    "message": "האתר הזה אמין"
+  },
+  "anti_scam_confirm": {
+    "message": "סבירות גבוהה שהאתר הזה הוא הונאה, גנב או פעילות לא חוקית אחרת. אתה סומך על האתר הזה?"
+  },
+  "recommended_product": {
+    "message": "מוצר מומלץ"
+  },
+  "unrecommended_product": {
+    "message": "מוצר לא מומלץ"
+  },
+  "doubtful_product": {
+    "message": "מוצר מפוקפק"
+  },
+  "insufficient_data": {
+    "message": "מסקנה בלתי מוגדרת"
+  },
+  "signal_of_a_good_deal": {
+    "message": "אינדיקציה לעסקה טובה"
+  },
+  "signal_of_a_bad_deal": {
+    "message": "אינדיקציה לעסקה מפוקפקת"
+  },
+  "no_data": {
+    "message": "נכון לעכשיו, אין נתונים להצגה"
+  },
+  "chart_title": {
+    "message": "היסטוריית מחירי המוצר"
+  },
+  "back_button": {
+    "message": "קודם"
+  },
+  "next_button": {
+    "message": "הַבָּא"
+  },
+  "start_using_button": {
+    "message": "התחל להשתמש ב-SafeDeal"
+  },
+  "tour_step1_title": {
+    "message": "ברוכים הבאים ל-Safe Deal"
+  },
+  "tour_step1_text_0": {
+    "message": ", תודה על השימוש בתוכנה שלנו."
+  },
+  "morning": {
+    "message": "בוקר"
+  },
+  "day": {
+    "message": "יְוֹם"
+  },
+  "night": {
+    "message": "לַיְלָה"
+  },
+  "hi": {
+    "message": "היי"
+  },
+  "good": {
+    "message": "טוֹב"
+  },
+  "tour_step1_text_1": {
+    "message": "הנה אחת מהחנויות הנתמכות שלנו."
+  },
+  "tour_step1_text_2": {
+    "message": "עובד באותו אופן באתרים נתמכים אחרים כגון AliExpress, eBay, Amazon ועוד."
+  },
+  "tour_step1_text_3": {
+    "message": "זה אמור לקחת בערך דקה להסביר איך זה עובד."
+  },
+  "tour_step1_lets_start": {
+    "message": "בואו נתחיל"
+  },
+  "tour_step2_title": {
+    "message": "המלצות רכישה"
+  },
+  "tour_step2_text_0": {
+    "message": "קבלת החלטות קנייה מהירה ויעילה היא לב ליבו של המוצר שלנו; אנו פועלים כרמזור לרכישות מקוונות."
+  },
+  "tour_step2_text_3": {
+    "message": "הבינה המלאכותית שלנו מקבלת החלטה מונעת נתונים על מוצרים תוך מספר שניות. בדרך זו, אתה מקבל אינדיקטור מהיר על מוצרים רבים בתוך דקות, לא שעות של בדיקה ידנית."
+  },
+  "tour_step3_title": {
+    "message": "בטיחות העסקה חשובה"
+  },
+  "tour_step3_text_0": {
+    "message": "אתה יכול לעשות קניות בחוכמה היום כדי לחסוך טרחה בעתיד."
+  },
+  "tour_step3_text_1": {
+    "message": "מגן ירוק - עסקה מומלצת"
+  },
+  "tour_step3_text_2": {
+    "message": "מגן אדום - עסקה לא מומלצת"
+  },
+  "tour_step3_text_3": {
+    "message": "מגן צהוב - עסקה מפוקפקת"
+  },
+  "tour_step5_title": {
+    "message": "הפרטיות שלך היא מעל הכל"
+  },
+  "tour_step5_text_0": {
+    "message": "השימוש בשירות שלנו הוא בחינם עבורך. כאשר אתה מבצע רכישה, החנות משלמת לנו עמלה קטנה עבור הדרכה למוצר הטוב ביותר."
+  },
+  "tour_step5_text_1": {
+    "message": "התוכנה פועלת באופן מקומי מכיוון שאנו דואגים לפרטיות שלך. לא נאסף מידע על הפעילות שלך."
+  },
+  "tour_feedback_title": {
+    "message": "אנו מעריכים את המשוב שלך"
+  },
+  "tour_feedback_text": {
+    "message": "צור קשר אם יש לך רעיון, בעיה או אם אתה צריך לדון בשיפור: "
+  },
+  "or": {
+    "message": "אוֹ"
+  },
+  "contact_form": {
+    "message": "השתמש בטופס יצירת קשר"
+  },
+  "by_email": {
+    "message": "כתוב מייל"
+  },
+  "call_as_at": {
+    "message": "בטלפון +1-650-646-3794"
+  },
+  "tooltip_product_feedback_safe": {
+    "message": "לקוחות רבים המליצו בחום על המוצר"
+  },
+  "tooltip_product_feedback_un_safe": {
+    "message": "המוצר אינו מומלץ מספיק על ידי הלקוחות"
+  },
+  "tooltip_product_feedback_safe_rated": {
+    "message": "ביקורות חיוביות ביותר. כוכבים: {ProductRatingValue}, ביקורות: {ProductReviewAmount}, דירוגים: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_un_safe_rated": {
+    "message": "חוסר בביקורות או ביקורות גרועות. כוכבים: {ProductRatingValue}, ביקורות: {ProductReviewAmount}, דירוגים: {ProductRatingAmount}"
+  },
+  "tooltip_product_feedback_safe_orders": {
+    "message": "ביקורות חיוביות ביותר. כוכבים: {ProductRatingValue}, הזמנות: {ProductOrdersAmount}, ביקורות: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders": {
+    "message": "חוסר בביקורות או ביקורות גרועות. כוכבים: {ProductRatingValue}, הזמנות: {ProductOrdersAmount}, ביקורות: {ProductReviewAmount}"
+  },
+  "tooltip_product_feedback_safe_orders_only": {
+    "message": "ביקורות חיוביות ביותר. כוכבים: {ProductRatingValue}, הזמנות: {ProductOrdersAmount}"
+  },
+  "tooltip_product_feedback_un_safe_orders_only": {
+    "message": "חוסר בביקורות או ביקורות גרועות. כוכבים: {ProductRatingValue}, הזמנות: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_safe_orders_only": {
+    "message": "החנות זוכה לדירוג גבוה. כוכבים: {ProductRatingValue}, הזמנות: {ProductOrdersAmount}"
+  },
+  "tooltip_seller_feedback_un_safe_orders_only": {
+    "message": "החנות מדורגת גרוע. כוכבים: {ProductRatingValue}, הזמנות: {ProductOrdersAmount}"
+  },
+  "tooltip_shop_open_year_safe": {
+    "message": "מוכר ותיק, בעסק {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_shop_open_year_un_safe": {
+    "message": "מוכר מתחיל, בעסק {shopOpenedYearValue} {yearsInBusinessIndicator} "
+  },
+  "tooltip_return_policy_safe": {
+    "message": "מדיניות החזרה מעולה"
+  },
+  "tooltip_return_policy_un_safe": {
+    "message": "מדיניות ההחזרה גרועה"
+  },
+  "tooltip_top_seller_safe": {
+    "message": "מוכר אמין"
+  },
+  "tooltip_sold_by_brand": {
+    "message": "נמכר ישירות לפי מותג"
+  },
+  "tooltip_order_safe": {
+    "message": "מספר רב של לקוחות מרוצים"
+  },
+  "tooltip_order_un_safe": {
+    "message": "מספר קטן של לקוחות מרוצים"
+  },
+  "tooltip_rating_safe": {
+    "message": "לקוחות מרוצים רבים השאירו ביקורות"
+  },
+  "tooltip_rating_un_safe": {
+    "message": "לקוחות כועסים רבים פרסמו ביקורות שליליות"
+  },
+  "tooltip_delivery_safe": {
+    "message": "זמן אספקה מצוין, {daysToDeliver} ימים לכל היותר"
+  },
+  "tooltip_delivery_un_safe": {
+    "message": "זה יכול לקחת עד {daysToDeliver} ימים כדי לקבל את החבילה שלך."
+  },
+  "tooltip_delivery_unknown": {
+    "message": "לא ברור מתי יתבצע המסירה"
+  },
+  "tooltip_seller_feedback_safe": {
+    "message": "רוב לקוחות החנות מרוצים, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_un_safe": {
+    "message": "לקוחות רבים אינם מרוצים מהחנות, {percentOfPeople}%"
+  },
+  "tooltip_seller_feedback_unknown": {
+    "message": "לחנות אין פידבקים מלקוחות"
+  },
+  "tooltip_free_shipping_safe": {
+    "message": "משלוח חינם"
+  },
+  "tooltip_free_shipping_un_safe": {
+    "message": "נשלח בתשלום או נדרש איסוף"
+  },
+  "tooltip_product_pricing_average": {
+    "message": "מוצר זה במחיר סביר"
+  },
+  "tooltip_product_pricing_no_price_available": {
+    "message": "מבחר דל של אפשרויות קנייה"
+  },
+  "tooltip_product_pricing_type_excellent": {
+    "message": "המחיר מצוין, {priceDifVsAverage}% נמוך בהשוואה לממוצע"
+  },
+  "tooltip_product_pricing_type_average_lower": {
+    "message": "המחיר הוגן, {priceDifVsAverage}% נמוך יותר בהשוואה לממוצע"
+  },
+  "tooltip_product_pricing_type_average_higher": {
+    "message": "המחיר הוגן, {priceDifVsAverage}% גבוה יותר בהשוואה לממוצע"
+  },
+  "tooltip_product_pricing_type_expensive": {
+    "message": "מחיר יקר, {priceDifVsAverage}% גבוה יותר בהשוואה לממוצע"
+  },
+  "tooltip_amazon_choice_safe": {
+    "message": "Amazon Choose - מוצר אמין ובעל תמורה טובה"
+  },
+  "tooltip_amazon_sold_ship_safe": {
+    "message": "אמזון מוכרת ומשלוחת את המוצר הזה"
+  },
+  "tooltip_amazon_sold_or_ship_safe": {
+    "message": "נמכר או נשלח על ידי אמזון, צד שלישי מעורב"
+  },
+  "tooltip_walmart_sold_ship_safe": {
+    "message": "Walmart מוכרת ומשלוחת את המוצר הזה"
+  },
+  "tooltip_review_meta_safe": {
+    "message": "תגובות נראות נהדר! {validAmount} אותנטי, {fakeAmount} לא טבעי, {totalAmount} בסך הכל"
+  },
+  "tooltip_review_meta_un_safe": {
+    "message": "הפידבקים נראים מתופעלים! {validAmount} אותנטי, {fakeAmount} לא טבעי, {totalAmount} בסך הכל"
+  },
+  "tooltip_bsr_safe": {
+    "message": "המוצר הזה נמכר ממש טוב"
+  },
+  "tooltip_bsr_un_safe": {
+    "message": "מכירות המוצר נמוכות יחסית"
+  },
+  "popup_title": {
+    "message": "העוזרת החכמה שלך לקניות מקוונות"
+  },
+  "loading_product": {
+    "message": "מוצר בבדיקה"
+  },
+  "popup_footer_share": {
+    "message": "ספר לחברים ולמשפחה שלך על SafeDeal"
+  },
+  "popup_support_us_via_affiliate_link": {
+    "message": "אתר בטוח מאומת. תמכו בנו באמצעות קישור השותפים שלנו."
+  },
+  "popup_top_tabs_home": {
+    "message": "בית"
+  },
+  "popup_top_tabs_settings": {
+    "message": "הגדרות"
+  },
+  "supported_websites": {
+    "message": "אתרים נתמכים"
+  },
+  "popup_benefits_tab": {
+    "message": "מאפיינים"
+  },
+  "popup_about_tab": {
+    "message": "על אודות"
+  },
+  "popup_contact_us_tab": {
+    "message": "צור קשר"
+  },
+  "popup_ali_express": {
+    "message": "אלי אקספרס"
+  },
+  "popup_amazon": {
+    "message": "אֲמָזוֹנָה"
+  },
+  "popup_ebay": {
+    "message": "איביי"
+  },
+  "popup_walmart": {
+    "message": "Walmart"
+  },
+  "popup_top_tabs_affiliation": {
+    "message": "פּרֶמיָה"
+  },
+  "years_label": {
+    "message": "שנים"
+  },
+  "year_label": {
+    "message": "1 שנה"
+  },
+  "less_than_a_year": {
+    "message": "פחות משנה"
+  },
+  "explanations_price_history": {
+    "message": "גרף היסטוריית המחירים של מוצר - זה יכול לעזור לך לזהות הנחות אמיתיות מהנחות מזויפות. אנו מנהלים רישום של המחיר ולאחר מכן עוקבים אחר שינויים על בסיס יומי, ומאפשרים לנצל את המבצעים וההצעות לזמן מוגבל."
+  },
+  "explanations_review_and_ratings": {
+    "message": "המסקנה מבוססת על: \n    1) כדי להפיק מבט כולל של המלצות למוצרים, יישמנו ניתוחים סטטיסטיים שונים וטכניקות בינה מלאכותית. \n    2) ביקורות ודירוגים נותחו, ואנו רואים שדירוג של 4 ומעלה מהווה אינדיקציה למוצר מעולה. \n    3) תוצאה משמעותית דורשת לפחות 100 הזמנות, כך שככל שננתח יותר הזמנות, כך אנו סומכים יותר על מסקנת דירוג המוצר."
+  },
+  "explanations_store_age": {
+    "message": "המערכת שלנו מודדת את אמינות החנות לפי גיל החנות, שכן חנויות עם יותר ניסיון ומוניטין חיובי הן אמינות יותר."
+  },
+  "explanations_store_rating": {
+    "message": "אנו בודקים את ציון המשוב הכולל של החנות, ככל שהציון גבוה יותר, כך הסיכוי לקבל שירות טוב גדל. למעלה מ-91% משוב נחשב למשוב חיובי."
+  },
+  "explanations_top_seller_ali_express": {
+    "message": "עליאקספרס מסווגת את המוכר כמוכר אמין מאוד, עם היקף מכירות גבוה"
+  },
+  "explanations_amazon_bsr": {
+    "message": "רב מכר של אמזון הוא כזה שיש לו לפחות 150 מכירות בחודש וככל שיש לו יותר מכירות, כך קל יותר להסתמך על משוב של קונים אחרים."
+  },
+  "explanations_amazon_choice": {
+    "message": "מוצרים המסומנים Amazon's Choice נרכשים לעתים קרובות על ידי לקוחות. יש להם מחיר נוח, מדורגים גבוה וזמינים למשלוח מהיר מהמחסן של אמזון."
+  },
+  "explanations_amazon_review_meta": {
+    "message": "אנו משתמשים במודל סטטיסטי כדי למקם ולהתאים את מספר הביקורות החיוביות על סמך מספר הביקורות הלא טבעיות, כך שתוכל לקבל את ההחלטה שלך על סמך נתונים באיכות גבוהה. האלגוריתם אינו מושלם, אך יש לו שיעורי דיוק גבוהים. אמזון עשתה עבודה טובה באיסוף מאות מיליוני פידבקים, אבל מותגים רבים בחרו לעשות בו שימוש לרעה, והציפו אותו באיכות נמוכה ובביקורות מוטות כדי לנסות ולהגביר את הרווחים שלהם. "
+  },
+  "explanations_amazon_sold_ship": {
+    "message": "נמכר ונשלח על ידי אמזון: פריטים אלה הוזמנו כמלאי על ידי אמזון. הם נמכרים ונשלחים ישירות ממחסן של אמזון. תוכל להשיג את הפריט הרבה יותר מהר, ואמזון תטפל ישירות בכל בעיות שירות לקוחות."
+  },
+  "explanations_amazon_sold_or_ship": {
+    "message": "פריטים אלו נמצאים בבעלות עסק עצמאי של צד שלישי ונשלחים מבעוד מועד למחסני אמזון. כשאתה קונה אותם, אמזון שולחת לך אותם."
+  },
+  "explanations_ebay_delivery_time": {
+    "message": "חשוב לקונים לדעת מתי הם יכולים לצפות שהפריט יגיע. לכן אנחנו תמיד בודקים באיביי תאריך משלוח משוער. מועד האספקה המשוער מבוסס על הזמן שלוקח למוכר לארוז ולשלוח פריטים, וזמן האספקה משירותי הדואר. אנו רואים 14 יום למשלוחים מקומיים ו-30 יום למשלוחים בינלאומיים כזמני אספקה מצוינים."
+  },
+  "explanations_ebay_free_shipping": {
+    "message": "משלוח חינם הוא אינדיקציה מצוינת לכך שמוכר יספק שירות לקוחות מעולה וישלח את הפריט בזמן כמתואר."
+  },
+  "explanations_ebay_return_policy_on": {
+    "message": "קבלת החזרות היא אינדיקציה טובה למוכר טוב: אם אתה מקבל פריט פגום או שגוי, תוכל להחזיר אותו תמורת החזר."
+  },
+  "explanations_ebay_return_policy_off": {
+    "message": "החזרות בתשלום או ללא החזרות: רק אם המוצר הגיע בצורה שגויה תוכל להחזיר אותו תמורת החזר."
+  },
+  "explanations_ebay_top_rated": {
+    "message": "מוכרים המספקים שירות לקוחות מעולה בקנה מידה גדול ממותגים על ידי eBay עם התג Top Rated. המשמעות היא שיש להם ציון משוב גבוה ואחוז גבוה של משוב חיובי באיביי, כך שבטוח יותר לקנות מהם."
+  },
+  "explanations_ebay_sold_by_brand": {
+    "message": "מוכרים המייצגים מותג מזוהים לעתים קרובות עם שירות לקוחות מעולה. בדרך כלל יש להם ציוני משוב גבוהים ואחוז גדול של משוב חיובי באיביי, מה שהופך את הרכישה מהם לאופציה בטוחה יותר."
+  },
+  "why_it_free": {
+    "message": "למה זה בחינם לשימוש?"
+  },
+  "explanations_why_it_free": {
+    "message": "מדוע השימוש ב-Safe-Deal הוא בחינם עבורך?"
+  },
+  "explanations_why_it_free_line_1": {
+    "message": "השימוש בשירות שלנו הוא בחינם עבורך. כאשר אתה מבצע רכישה, החנות משלמת לנו עמלה קטנה עבור הדרכה למוצר הטוב ביותר."
+  },
+  "explanations_why_it_free_line_2": {
+    "message": "אנו משתמשים בנתונים זמינים לציבור בלבד, ומבטיחים שאף מותג או חנות לא משפיעים על ההמלצות שלנו."
+  },
+  "premium_features": {
+    "message": "תכונות פרימיום"
+  },
+  "premium_features_no_affiliation": {
+    "message": "אין שיוך, אתה יכול לחבר כל תוכנית Cashback שאתה רוצה"
+  },
+  "premium_features_enhanced_support": {
+    "message": "תמיכה אישית בטלפון ובדואר אלקטרוני וזמן עיבוד משופר"
+  },
+  "premium_features_cost": {
+    "message": "מחיר - 2 דולר לחודש (מחייב מדי שנה)"
+  },
+  "explanations_why_it_free_additional_affiliation": {
+    "message": "הכסף שנאסף משמש לשיפור השירות ותשלום עבור תשתיות."
+  },
+  "affiliated_websites": {
+    "message": "אתרים קשורים"
+  },
+  "buy_premium": {
+    "message": "רכישת פרימיום"
+  },
+  "opt_out": {
+    "message": "בטל הסכמה"
+  },
+  "image": {
+    "message": "תמונה"
+  },
+  "product_name": {
+    "message": "שם מוצר"
+  },
+  "final_price": {
+    "message": "מחיר אחרון"
+  },
+  "coupon": {
+    "message": "קוּפּוֹן"
+  },
+  "you_saved": {
+    "message": "כמות הקופון"
+  },
+  "you_save": {
+    "message": "אתה חוסך"
+  },
+  "share": {
+    "message": "לַחֲלוֹק"
+  },
+  "discounts_found": {
+    "message": "נמצאו הנחות"
+  },
+  "extension_not_available": {
+    "message": "תוסף SafeDeal אינו זמין עבור דף זה."
+  },
+  "search_for_any_other_keyword": {
+    "message": "חפש כל מילת מפתח אחרת כדי למצוא קופונים ומבצעים."
+  },
+  "search_product": {
+    "message": "חיפוש מוצר"
+  },
+  "want_more_coupons": {
+    "message": "רוצה עוד קופונים?"
+  },
+  "click_here": {
+    "message": "לחץ כאן"
+  },
+  "coupon_header": {
+    "message": "עסקה בטוחה - קופונים ומבצעים"
+  },
+  "tab_header_analyze": {
+    "message": "הערכת מוצר"
+  },
+  "tab_header_reviews": {
+    "message": "סיכום ביקורות"
+  },
+  "click_to_reveal": {
+    "message": "לחץ או הקש על {systemShortcut} כדי לעבור בין ניתוח מינימלי לניתוח מלא."
+  },
+  "click_to_hide": {
+    "message": "לחץ על הסמל או הקש על מקש 'Escape' כדי לסגור את התצוגה המפורטת."
+  },
+  "click_to_pin": {
+    "message": "הצמד את החלונית הזו כדי שהיא תהיה גלויה בזמן הרענון ובזמן הגלישה"
+  },
+  "click_to_unpin": {
+    "message": "בטל את ההצמדה של חלונית זו כך שהיא תסתתר בעת לחיצה במקום אחר בדף"
+  },
+  "reviews_no_reviews_header": {
+    "message": "אין ביקורות עדיין"
+  },
+  "reviews_no_reviews_text": {
+    "message": "אין עדיין ביקורות של לקוחות. מוצר זה עשוי להיות חדש או לא פופולרי."
+  },
+  "reviews_pros": {
+    "message": "יתרונות"
+  },
+  "reviews_cons": {
+    "message": "חסרונות"
+  },
+  "reviews_good_to_know": {
+    "message": "טוב לדעת"
+  },
+  "reviews_error": {
+    "message": "אנחנו מתנצלים על אי הנוחות. נראה שתהליך סיכום הביקורת לא צלח. כדי לפתור בעיה זו, אנא צור קשר עם צוות התמיכה של Safe Deal לקבלת סיוע."
+  },
+  "deals_ali_express": {
+    "message": "עסקה בטוחה - מאתר מבצעים"
+  },
+  "deals_ali_found": {
+    "message": "מבצעים שנמצאו: "
+  },
+  "product": {
+    "message": "מוצר"
+  },
+  "title": {
+    "message": "כותרת"
+  },
+  "price": {
+    "message": "מחיר"
+  },
+  "deal_type": {
+    "message": "סוג עסקה"
+  },
+  "savings": {
+    "message": "חיסכון"
+  },
+  "extra": {
+    "message": "תוֹסֶפֶת"
+  },
+  "shipping": {
+    "message": "משלוח"
+  },
+  "rating": {
+    "message": "דֵרוּג"
+  },
+  "sold": {
+    "message": "נמכר"
+  },
+  "reviews": {
+    "message": "ביקורות"
+  },
+  "mobile_app": {
+    "message": "התקן את אפליקציית המובייל שלנו"
+  },
+  "tab_header_opinions": {
+    "message": "דעות ופרשנות"
+  },
+  "opinions_title": {
+    "message": "תן דעתך או שאל את הקהילה לגבי המוצר הזה"
+  },
+  "research_online": {
+    "message": "לבדוק"
+  },
+  "video_reviews": {
+    "message": "ביקורות וידאו"
+  },
+  "reddit_reviews": {
+    "message": "דעות ברדיט"
+  },
+  "web_reviews": {
+    "message": "ביקורות באינטרנט"
+  },
+  "shopping_reviews": {
+    "message": "אתרי קניות"
+  },
+  "product_photos": {
+    "message": "תמונות מוצר"
+  },
+  "product_purchase_query": {
+    "message": "לקנות באינטרנט עכשיו"
+  },
+  "product_reviews_query": {
+    "message": "ביקורות מפורטות"
+  }
+}

@@ -19,18 +19,6 @@ const WORKER_MESSAGE_TYPE = Object.freeze({
 export type ContentListener = (message: any, sender: any) => void;
 export type BackgroundListener = (message: any, postMessage: any) => void;
 
-export const AUTH_GLUE = {
-  worker(onAuth) {
-    addWorkerHandler(WORKER_MESSAGE_TYPE.AUTH, onAuth);
-  },
-  client(onClient: ContentListener) {
-    registerClientListener(WORKER_MESSAGE_TYPE.AUTH, onClient);
-  },
-  send(authData) {
-    sendMessage(WORKER_MESSAGE_TYPE.AUTH, authData);
-  }
-};
-
 export const AMAZON_COUPONS_GLUE = {
   worker(onAmazonCoupons) {
     addWorkerHandler(WORKER_MESSAGE_TYPE.AMAZON_COUPONS, onAmazonCoupons);

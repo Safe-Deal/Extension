@@ -10,26 +10,12 @@ const WORKER_MESSAGE_TYPE = Object.freeze({
   SHUTAF: "shutaf",
   REVIEWS_SUMMARIZATION: "reviews_summarization",
   ALI_SUPER_DEALS: "ali_super_deals",
-  AMAZON_COUPONS: "amazon_coupons",
   E_COMMERCE: "e_commerce",
-  SUPPLIER: "supplier",
-  AUTH: "auth"
+  SUPPLIER: "supplier"
 });
 
 export type ContentListener = (message: any, sender: any) => void;
 export type BackgroundListener = (message: any, postMessage: any) => void;
-
-export const AMAZON_COUPONS_GLUE = {
-  worker(onAmazonCoupons) {
-    addWorkerHandler(WORKER_MESSAGE_TYPE.AMAZON_COUPONS, onAmazonCoupons);
-  },
-  client(onClient: ContentListener) {
-    registerClientListener(WORKER_MESSAGE_TYPE.AMAZON_COUPONS, onClient);
-  },
-  send(data) {
-    sendMessage(WORKER_MESSAGE_TYPE.AMAZON_COUPONS, data);
-  }
-};
 
 enum ComersRequestType {
   E_COMMERCE_PRODUCT = "e_commerce_product",

@@ -1,0 +1,52 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run linting
+        run: yarn run dist:pretty
+
+      - name: Run tests
+        run: yarn run test:ci
+
+      - name: Build project
+        run: yarn run dist:build
+
+      - name: Check version update
+        run: node webpack/ver.js
+
+      - name: Build extension for Chrome
+        run: yarn run dist:rel
+
+      - name: Build extension for Firefox
+        run: yarn run dist:rel:ff
+
+      - name: Upload Chrome extension artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: chrome-extension
+          path: dist/extension.zip
+
+      - name: Upload Firefox extension artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: firefox-extension
+          path: dist/extension_firefox.zip

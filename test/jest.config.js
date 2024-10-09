@@ -7,7 +7,7 @@ module.exports = {
   automock: false,
   testEnvironment: "jest-environment-jsdom",
   testTimeout: TIMEOUT_IN_SECONDS * 1000,
-  roots: ["./../src", "../brain"],
+  roots: ["./../src"],
   setupFiles: ["./jest.setup.js"],
   setupFilesAfterEnv: ["./jest.setup.env.js"],
   testPathIgnorePatterns: [".*\\.mock\\..*"],

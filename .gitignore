@@ -18,7 +18,6 @@ test/timing
 test/results
 test/result-report
 src/browser-extension/public/manifest.json
-brain/dist-server
 affiliates/ads_providers
 .env
 .env.local

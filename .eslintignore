@@ -4,6 +4,5 @@ webpack.dev.js
 jest.config.js
 tsconfig.json
 *.json
-brain/dist-server
 const
 node_modules

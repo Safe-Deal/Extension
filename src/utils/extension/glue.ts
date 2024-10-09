@@ -89,18 +89,6 @@ export const REVIEW_SUMMARY_GLUE = {
   }
 };
 
-export const ALI_SUPER_DEALS_GLUE = {
-  worker(onReviewsSummarize) {
-    addWorkerHandler(WORKER_MESSAGE_TYPE.ALI_SUPER_DEALS, onReviewsSummarize);
-  },
-  client(onClient: ContentListener) {
-    registerClientListener(WORKER_MESSAGE_TYPE.ALI_SUPER_DEALS, onClient);
-  },
-  send(aliSuperDealsMessageRequest: AliSuperDealsMessageRequest) {
-    sendMessage(WORKER_MESSAGE_TYPE.ALI_SUPER_DEALS, aliSuperDealsMessageRequest);
-  }
-};
-
 export const SETUP_GLUE = {
   worker(onSetup: (props: { url: string; browser: string }) => void) {
     addWorkerHandler(WORKER_MESSAGE_TYPE.INITIAL_SETUP, onSetup);

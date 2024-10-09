@@ -1,18 +1,8 @@
-import type {JsonValue} from 'type-fest';
+import type { JsonValue } from "type-fest";
 
-import {
-  GetMessageProtocolDataType,
-  GetMessageProtocolReturnType,
-  MaybePromise,
-} from './types-internal';
+import { GetMessageProtocolDataType, GetMessageProtocolReturnType, MaybePromise } from "./types-internal";
 
-export type RuntimeContext =
-  | 'devtools'
-  | 'background'
-  | 'popup'
-  | 'options'
-  | 'content-script'
-  | 'window';
+export type RuntimeContext = "devtools" | "background" | "popup" | "options" | "content-script" | "window";
 
 export interface Endpoint {
   context: RuntimeContext;
@@ -35,7 +25,7 @@ export interface PegasusMessage<TData extends JsonValue> {
 export type OnMessageCallback<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   TProtocolMap extends Record<string, any> = Record<string, any>,
-  TType extends keyof TProtocolMap = never,
+  TType extends keyof TProtocolMap = never
 > = (
-  message: PegasusMessage<GetMessageProtocolDataType<TProtocolMap[TType]>>,
+  message: PegasusMessage<GetMessageProtocolDataType<TProtocolMap[TType]>>
 ) => MaybePromise<GetMessageProtocolReturnType<TProtocolMap[TType]>>;

@@ -1,24 +1,20 @@
-import type {RequestMessage} from './src/PortMessage';
-import type {InternalPacket} from './src/types-internal';
-import type {DeliveryReceipt} from './src/utils/delivery-logger';
-import type {EndpointFingerprint} from './src/utils/endpoint-fingerprint';
-import type {Runtime} from 'webextension-polyfill';
+import type { Runtime } from "webextension-polyfill";
+import browser from "webextension-polyfill";
+import type { RequestMessage } from "./src/PortMessage";
+import type { InternalPacket } from "./src/types-internal";
+import type { DeliveryReceipt } from "./src/utils/delivery-logger";
+import type { EndpointFingerprint } from "./src/utils/endpoint-fingerprint";
 
-import browser from 'webextension-polyfill';
-
-import {createBroadcastEventRuntime} from './src/BroadcastEventRuntime';
-import {createMessageRuntime} from './src/MessageRuntime';
-import {PortMessage} from './src/PortMessage';
-import {initTransportAPI} from './src/TransportAPI';
-import {InternalBroadcastEvent} from './src/types-internal';
-import {decodeConnectionArgs} from './src/utils/connection-args';
-import {createDeliveryLogger} from './src/utils/delivery-logger';
-import {createFingerprint} from './src/utils/endpoint-fingerprint';
-import {
-  deserializeEndpoint,
-  serializeEndpoint,
-} from './src/utils/endpoint-utils';
-import {internalPacketTypeRouter} from './src/utils/internalPacketTypeRouter';
+import { createBroadcastEventRuntime } from "./src/BroadcastEventRuntime";
+import { createMessageRuntime } from "./src/MessageRuntime";
+import { PortMessage } from "./src/PortMessage";
+import { initTransportAPI } from "./src/TransportAPI";
+import { InternalBroadcastEvent } from "./src/types-internal";
+import { decodeConnectionArgs } from "./src/utils/connection-args";
+import { createDeliveryLogger } from "./src/utils/delivery-logger";
+import { createFingerprint } from "./src/utils/endpoint-fingerprint";
+import { deserializeEndpoint, serializeEndpoint } from "./src/utils/endpoint-utils";
+import { internalPacketTypeRouter } from "./src/utils/internalPacketTypeRouter";
 
 interface PortConnection {
   port: Runtime.Port;
@@ -32,10 +28,7 @@ export function initPegasusTransport(): void {
   const onceSessionEndCbs = new Map<EndpointFingerprint, Set<() => void>>();
 
   const oncePortConnected = (endpointName: string, cb: () => void) => {
-    oncePortConnectedCbs.set(
-      endpointName,
-      (oncePortConnectedCbs.get(endpointName) || new Set()).add(cb),
-    );
+    oncePortConnectedCbs.set(endpointName, (oncePortConnectedCbs.get(endpointName) || new Set()).add(cb));
 
     return () => {
       const su = oncePortConnectedCbs.get(endpointName);
@@ -45,45 +38,36 @@ export function initPegasusTransport(): void {
     };
   };
 
-  const onceSessionEnded = (
-    sessionFingerprint: EndpointFingerprint,
-    cb: () => void,
-  ) => {
-    onceSessionEndCbs.set(
-      sessionFingerprint,
-      (onceSessionEndCbs.get(sessionFingerprint) || new Set()).add(cb),
-    );
+  const onceSessionEnded = (sessionFingerprint: EndpointFingerprint, cb: () => void) => {
+    onceSessionEndCbs.set(sessionFingerprint, (onceSessionEndCbs.get(sessionFingerprint) || new Set()).add(cb));
   };
 
   const notifyEndpoint = (endpoint: string) => ({
     withFingerprint: (fingerprint: EndpointFingerprint) => {
-      const nextChain = <T>(v: T) => ({and: () => v});
+      const nextChain = <T>(v: T) => ({ and: () => v });
 
       const notifications = {
         aboutIncomingMessage: (message: InternalPacket) => {
           const recipient = connMap.get(endpoint);
           if (recipient == null) {
-            throw new Error('Unable to find recipient endpoint');
+            throw new Error("Unable to find recipient endpoint");
           }
 
           PortMessage.toExtensionContext(recipient.port, {
             message,
-            status: 'incoming',
+            status: "incoming"
           });
 
           return nextChain(notifications);
         },
 
-        aboutMessageUndeliverability: (
-          resolvedDestination: string,
-          message: InternalPacket,
-        ) => {
+        aboutMessageUndeliverability: (resolvedDestination: string, message: InternalPacket) => {
           const sender = connMap.get(endpoint);
           if (sender?.fingerprint === fingerprint) {
             PortMessage.toExtensionContext(sender.port, {
               message,
               resolvedDestination,
-              status: 'undeliverable',
+              status: "undeliverable"
             });
           }
 
@@ -95,7 +79,7 @@ export function initPegasusTransport(): void {
           if (conn?.fingerprint === fingerprint) {
             PortMessage.toExtensionContext(conn.port, {
               fingerprint: endedSessionFingerprint,
-              status: 'terminated',
+              status: "terminated"
             });
           }
 
@@ -105,12 +89,12 @@ export function initPegasusTransport(): void {
         aboutSuccessfulDelivery: (receipt: DeliveryReceipt) => {
           const sender = connMap.get(endpoint);
           if (sender == null) {
-            throw new Error('Unable to find sender endpoint');
+            throw new Error("Unable to find sender endpoint");
           }
 
           PortMessage.toExtensionContext(sender.port, {
             receipt,
-            status: 'delivered',
+            status: "delivered"
           });
 
           return nextChain(notifications);
@@ -119,13 +103,10 @@ export function initPegasusTransport(): void {
         whenDeliverableTo: (targetEndpoint: string) => {
           const notifyDeliverability = () => {
             const origin = connMap.get(endpoint);
-            if (
-              origin?.fingerprint === fingerprint &&
-              connMap.has(targetEndpoint)
-            ) {
+            if (origin?.fingerprint === fingerprint && connMap.has(targetEndpoint)) {
               PortMessage.toExtensionContext(origin.port, {
                 deliverableTo: targetEndpoint,
-                status: 'deliverable',
+                status: "deliverable"
               });
 
               return true;
@@ -133,47 +114,42 @@ export function initPegasusTransport(): void {
           };
 
           if (!notifyDeliverability()) {
-            const unsub = oncePortConnected(
-              targetEndpoint,
-              notifyDeliverability,
-            );
+            const unsub = oncePortConnected(targetEndpoint, notifyDeliverability);
             onceSessionEnded(fingerprint, unsub);
           }
 
           return nextChain(notifications);
-        },
+        }
       };
 
       return notifications;
-    },
+    }
   });
 
   const sessFingerprint = createFingerprint();
 
   const messageRuntime = createMessageRuntime(
-    'background',
+    "background",
     async (message) => {
       if (
-        message.origin.context === 'background' &&
-        ['content-script', 'devtools'].includes(message.destination.context) &&
+        message.origin.context === "background" &&
+        ["content-script", "devtools"].includes(message.destination.context) &&
         !message.destination.tabId
       ) {
-        throw new TypeError(
-          'When sending messages from background page, use @tabId syntax to target specific tab',
-        );
+        throw new TypeError("When sending messages from background page, use @tabId syntax to target specific tab");
       }
 
       const resolvedSender = serializeEndpoint({
         ...message.origin,
-        ...(message.origin.context === 'window' && {context: 'content-script'}),
+        ...(message.origin.context === "window" && { context: "content-script" })
       });
 
       const resolvedDestination = serializeEndpoint({
         ...message.destination,
-        ...(message.destination.context === 'window' && {
-          context: 'content-script',
+        ...(message.destination.context === "window" && {
+          context: "content-script"
         }),
-        tabId: message.destination.tabId || message.origin.tabId,
+        tabId: message.destination.tabId || message.origin.tabId
       });
 
       // downstream endpoints are agnostic of these attributes, presence of these attrs will make them think the message is not intended for them
@@ -185,38 +161,34 @@ export function initPegasusTransport(): void {
       const sender = () => connMap.get(resolvedSender) as PortConnection;
 
       const deliver = () => {
-        notifyEndpoint(resolvedDestination)
-          .withFingerprint(dest().fingerprint)
-          .aboutIncomingMessage(message);
+        notifyEndpoint(resolvedDestination).withFingerprint(dest().fingerprint).aboutIncomingMessage(message);
 
         const receipt: DeliveryReceipt = {
           from: {
             endpointId: resolvedSender,
-            fingerprint: sender()?.fingerprint,
+            fingerprint: sender()?.fingerprint
           },
           message,
-          to: dest().fingerprint,
+          to: dest().fingerprint
         };
 
-        if (message.messageType === 'message') {
+        if (message.messageType === "message") {
           pendingResponses.add(receipt);
         }
 
-        if (message.messageType === 'reply') {
+        if (message.messageType === "reply") {
           pendingResponses.remove(message.id);
         }
 
         if (sender()) {
-          notifyEndpoint(resolvedSender)
-            .withFingerprint(sender().fingerprint)
-            .aboutSuccessfulDelivery(receipt);
+          notifyEndpoint(resolvedSender).withFingerprint(sender().fingerprint).aboutSuccessfulDelivery(receipt);
         }
       };
 
       if (dest()?.port) {
         deliver();
-      } else if (message.messageType === 'message') {
-        if (message.origin.context === 'background') {
+      } else if (message.messageType === "message") {
+        if (message.origin.context === "background") {
           oncePortConnected(resolvedDestination, deliver);
         } else if (sender()) {
           notifyEndpoint(resolvedSender)
@@ -230,27 +202,25 @@ export function initPegasusTransport(): void {
     async (message) => {
       const resolvedSender = serializeEndpoint({
         ...message.origin,
-        ...(message.origin.context === 'window' && {context: 'content-script'}),
+        ...(message.origin.context === "window" && { context: "content-script" })
       });
 
       const sender = connMap.get(resolvedSender);
       if (sender == null) {
-        throw new Error('Unable to find sender endpoint');
+        throw new Error("Unable to find sender endpoint");
       }
 
       const receipt: DeliveryReceipt = {
         from: {
           endpointId: resolvedSender,
-          fingerprint: sender.fingerprint,
+          fingerprint: sender.fingerprint
         },
         message,
-        to: sessFingerprint,
+        to: sessFingerprint
       };
 
-      notifyEndpoint(resolvedSender)
-        .withFingerprint(sender.fingerprint)
-        .aboutSuccessfulDelivery(receipt);
-    },
+      notifyEndpoint(resolvedSender).withFingerprint(sender.fingerprint).aboutSuccessfulDelivery(receipt);
+    }
   );
 
   browser.runtime.onConnect.addListener((incomingPort) => {
@@ -262,19 +232,17 @@ export function initPegasusTransport(): void {
 
     // all other contexts except 'content-script' are aware of, and pass their identity as name
     connArgs.endpointName ||= serializeEndpoint({
-      context: 'content-script',
+      context: "content-script",
       frameId: incomingPort.sender?.frameId,
-      tabId: incomingPort.sender?.tab?.id ?? null,
+      tabId: incomingPort.sender?.tab?.id ?? null
     });
 
     // literal tab id in case of content script, however tab id of inspected page in case of devtools context
-    const {tabId: linkedTabId, frameId: linkedFrameId} = deserializeEndpoint(
-      connArgs.endpointName,
-    );
+    const { tabId: linkedTabId, frameId: linkedFrameId } = deserializeEndpoint(connArgs.endpointName);
 
     connMap.set(connArgs.endpointName, {
       fingerprint: connArgs.fingerprint,
-      port: incomingPort,
+      port: incomingPort
     });
 
     oncePortConnectedCbs.get(connArgs.endpointName)?.forEach((cb) => cb());
@@ -287,7 +255,7 @@ export function initPegasusTransport(): void {
       pendingResponses.remove(rogueMsgs);
 
       rogueMsgs.forEach((rogueMessage) => {
-        if (rogueMessage.from.endpointId === 'background') {
+        if (rogueMessage.from.endpointId === "background") {
           messageRuntime.endTransaction(rogueMessage.message.transactionId);
         } else {
           notifyEndpoint(rogueMessage.from.endpointId)
@@ -300,9 +268,7 @@ export function initPegasusTransport(): void {
     incomingPort.onDisconnect.addListener(() => {
       // sometimes previous content script's onDisconnect is called *after* the fresh content-script's
       // onConnect. So without this fingerprint equality check, we would remove the new port from map
-      if (
-        connMap.get(connArgs.endpointName)?.fingerprint === connArgs.fingerprint
-      ) {
+      if (connMap.get(connArgs.endpointName)?.fingerprint === connArgs.fingerprint) {
         connMap.delete(connArgs.endpointName);
       }
 
@@ -311,42 +277,35 @@ export function initPegasusTransport(): void {
     });
 
     incomingPort.onMessage.addListener((msg: RequestMessage) => {
-      if (msg.type === 'sync') {
-        const allActiveSessions = [...connMap.values()].map(
-          (conn) => conn.fingerprint,
-        );
-        const stillPending = msg.pendingResponses.filter((fp) =>
-          allActiveSessions.includes(fp.to),
-        );
+      if (msg.type === "sync") {
+        const allActiveSessions = [...connMap.values()].map((conn) => conn.fingerprint);
+        const stillPending = msg.pendingResponses.filter((fp) => allActiveSessions.includes(fp.to));
 
         pendingResponses.add(...stillPending);
 
         msg.pendingResponses
-          .filter(
-            (deliveryReceipt) =>
-              !allActiveSessions.includes(deliveryReceipt.to),
-          )
+          .filter((deliveryReceipt) => !allActiveSessions.includes(deliveryReceipt.to))
           .forEach((deliveryReceipt) =>
             notifyEndpoint(connArgs.endpointName)
               .withFingerprint(connArgs.fingerprint)
-              .aboutSessionEnded(deliveryReceipt.to),
+              .aboutSessionEnded(deliveryReceipt.to)
           );
 
         msg.pendingDeliveries.forEach((intendedDestination) =>
           notifyEndpoint(connArgs.endpointName)
             .withFingerprint(connArgs.fingerprint)
-            .whenDeliverableTo(intendedDestination),
+            .whenDeliverableTo(intendedDestination)
         );
 
         return;
       }
 
-      if (msg.type === 'deliver' && msg.message?.origin?.context) {
+      if (msg.type === "deliver" && msg.message?.origin?.context) {
         // origin tab ID is resolved from the port identifier (also prevent "MITM attacks" of extensions)
         msg.message.origin.tabId = linkedTabId;
         msg.message.origin.frameId = linkedFrameId;
 
-        internalPacketTypeRouter(msg.message, {eventRuntime, messageRuntime});
+        internalPacketTypeRouter(msg.message, { eventRuntime, messageRuntime });
       }
     });
   });
@@ -354,10 +313,8 @@ export function initPegasusTransport(): void {
   let undeliveredEvents: InternalBroadcastEvent[] | undefined = [];
   // PersistentPort usually reconnects within 500ms
   setTimeout(() => {
-    Promise.all(
-      (undeliveredEvents as InternalBroadcastEvent[]).map(routeEvent),
-    ).catch((err) => {
-      console.error('Error while tying to deliver undelivered events:', err);
+    Promise.all((undeliveredEvents as InternalBroadcastEvent[]).map(routeEvent)).catch((err) => {
+      console.error("Error while tying to deliver undelivered events:", err);
     });
     undeliveredEvents = undefined;
   }, 500);
@@ -371,24 +328,22 @@ export function initPegasusTransport(): void {
     }
 
     connMap.forEach((port, endpoint) => {
-      notifyEndpoint(endpoint)
-        .withFingerprint(port.fingerprint)
-        .aboutIncomingMessage(event);
+      notifyEndpoint(endpoint).withFingerprint(port.fingerprint).aboutIncomingMessage(event);
     });
 
     // So background listeners receive events from other contexts
-    if (event.origin.context !== 'background') {
+    if (event.origin.context !== "background") {
       eventRuntime.handleEvent(event);
     }
   };
 
-  const eventRuntime = createBroadcastEventRuntime('background', routeEvent);
+  const eventRuntime = createBroadcastEventRuntime("background", routeEvent);
 
   initTransportAPI({
-    browser: browser,
+    browser,
     emitBroadcastEvent: eventRuntime.emitBroadcastEvent,
     onBroadcastEvent: eventRuntime.onBroadcastEvent,
     onMessage: messageRuntime.onMessage,
-    sendMessage: messageRuntime.sendMessage,
+    sendMessage: messageRuntime.sendMessage
   });
 }

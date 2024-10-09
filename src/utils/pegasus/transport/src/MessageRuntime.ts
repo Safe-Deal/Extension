@@ -1,11 +1,11 @@
-import type {OnMessageCallback, RuntimeContext} from './types';
-import type {InternalMessage, TransportMessagingAPI} from './types-internal';
-import type {JsonValue} from 'type-fest';
+import type { JsonValue } from "type-fest";
 
-import {serializeError} from 'serialize-error';
-import uuid from 'tiny-uid';
+import { serializeError } from "serialize-error";
+import uuid from "tiny-uid";
+import type { InternalMessage, TransportMessagingAPI } from "./types-internal";
+import type { OnMessageCallback, RuntimeContext } from "./types";
 
-import {deserializeEndpoint} from './utils/endpoint-utils';
+import { deserializeEndpoint } from "./utils/endpoint-utils";
 
 export interface MessageRuntime extends TransportMessagingAPI {
   /**
@@ -18,41 +18,37 @@ export interface MessageRuntime extends TransportMessagingAPI {
 export const createMessageRuntime = (
   thisContext: RuntimeContext,
   routeMessage: (msg: InternalMessage) => Promise<void>,
-  localMessage?: (msg: InternalMessage) => Promise<void>,
+  localMessage?: (msg: InternalMessage) => Promise<void>
 ): MessageRuntime => {
   const runtimeId = uuid();
   const openTransactions = new Map<
     string,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    {resolve: (v: any) => void; reject: (e: any) => void}
+    { resolve: (v: any) => void; reject: (e: any) => void }
   >();
   const onMessageListeners = new Map<string, OnMessageCallback>();
 
   const handleMessage = (message: InternalMessage) => {
-    if (
-      message.destination.context === thisContext &&
-      !message.destination.frameId &&
-      !message.destination.tabId
-    ) {
+    if (message.destination.context === thisContext && !message.destination.frameId && !message.destination.tabId) {
       localMessage?.(message);
 
-      const {transactionId, id: messageID, messageType} = message;
+      const { transactionId, id: messageID, messageType } = message;
 
       const handleReply = () => {
         const transactionP = openTransactions.get(transactionId);
         if (transactionP) {
-          const {err, data} = message;
+          const { err, data } = message;
           if (err) {
             const dehydratedErr = err as Record<string, string>;
             // eslint-disable-next-line no-restricted-globals, @typescript-eslint/no-explicit-any
-            const errCtr = (self as {[key: string]: any})[dehydratedErr.name];
-            const hydratedErr = new (
-              typeof errCtr === 'function' ? errCtr : Error
-            )(dehydratedErr.message);
+            const errCtr = (self as { [key: string]: any })[dehydratedErr.name];
+            const hydratedErr = new (typeof errCtr === "function" ? errCtr : Error)(dehydratedErr.message);
 
             // eslint-disable-next-line no-restricted-syntax
             for (const prop in dehydratedErr) {
-              hydratedErr[prop] = dehydratedErr[prop];
+              if (Object.prototype.hasOwnProperty.call(dehydratedErr, prop)) {
+                hydratedErr[prop] = dehydratedErr[prop];
+              }
             }
 
             transactionP.reject(hydratedErr);
@@ -70,17 +66,17 @@ export const createMessageRuntime = (
 
         try {
           const cb = onMessageListeners.get(messageID);
-          if (typeof cb === 'function') {
+          if (typeof cb === "function") {
             reply = (await cb({
               data: message.data as never,
               id: messageID,
               sender: message.origin,
-              timestamp: message.timestamp,
+              timestamp: message.timestamp
             })) as JsonValue;
           } else {
             noHandlerFoundError = true;
             throw new Error(
-              `[pegasus-transport] No handler registered in '${thisContext}' to accept messages with id '${messageID}'`,
+              `[pegasus-transport] No handler registered in '${thisContext}' to accept messages with id '${messageID}'`
             );
           }
         } catch (error) {
@@ -95,8 +91,8 @@ export const createMessageRuntime = (
             data: reply,
             destination: message.origin,
             hops: [],
-            messageType: 'reply',
-            origin: {context: thisContext, tabId: null},
+            messageType: "reply",
+            origin: { context: thisContext, tabId: null }
           });
 
           if (err && !noHandlerFoundError) {
@@ -107,10 +103,12 @@ export const createMessageRuntime = (
       };
 
       switch (messageType) {
-        case 'reply':
+        case "reply":
           return handleReply();
-        case 'message':
+        case "message":
           return handleNewMessage();
+        default:
+          return;
       }
     }
 
@@ -122,7 +120,7 @@ export const createMessageRuntime = (
   return {
     endTransaction: (transactionID) => {
       const transactionP = openTransactions.get(transactionID);
-      transactionP?.reject('Transaction was ended before it could complete');
+      transactionP?.reject("Transaction was ended before it could complete");
       openTransactions.delete(transactionID);
     },
     handleMessage,
@@ -131,17 +129,12 @@ export const createMessageRuntime = (
 
       return () => onMessageListeners.delete(messageID);
     },
-    sendMessage: (messageID, data, destination = 'background') => {
-      const endpoint =
-        typeof destination === 'string'
-          ? deserializeEndpoint(destination)
-          : destination;
-      const errFn = 'Bridge#sendMessage ->';
+    sendMessage: (messageID, data, destination = "background") => {
+      const endpoint = typeof destination === "string" ? deserializeEndpoint(destination) : destination;
+      const errFn = "Bridge#sendMessage ->";
 
       if (!endpoint.context) {
-        throw new TypeError(
-          `${errFn} Destination must be any one of known destinations`,
-        );
+        throw new TypeError(`${errFn} Destination must be any one of known destinations`);
       }
 
       return new Promise((resolve, reject) => {
@@ -150,13 +143,13 @@ export const createMessageRuntime = (
           destination: endpoint,
           hops: [],
           id: messageID,
-          messageType: 'message',
-          origin: {context: thisContext, tabId: null},
+          messageType: "message",
+          origin: { context: thisContext, tabId: null },
           timestamp: Date.now(),
-          transactionId: uuid(),
+          transactionId: uuid()
         };
 
-        openTransactions.set(payload.transactionId, {reject, resolve});
+        openTransactions.set(payload.transactionId, { reject, resolve });
 
         try {
           handleMessage(payload);
@@ -165,6 +158,6 @@ export const createMessageRuntime = (
           reject(error);
         }
       });
-    },
+    }
   };
 };

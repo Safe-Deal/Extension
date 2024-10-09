@@ -1,12 +1,6 @@
-import {JsonValue} from 'type-fest';
+import { JsonValue } from "type-fest";
 
-export type RuntimeContext =
-  | 'devtools'
-  | 'background'
-  | 'popup'
-  | 'options'
-  | 'content-script'
-  | 'window';
+export type RuntimeContext = "devtools" | "background" | "popup" | "options" | "content-script" | "window";
 
 export interface Endpoint {
   context: RuntimeContext;
@@ -46,9 +40,7 @@ type Proimsify<T> = T extends Promise<unknown> ? T : Promise<T>;
  * - ***If all methods are async***, it returns the original type.
  * - ***If the service has non-async methods***, it returns a `DeepAsync` of the service.
  */
-export type PegasusRPCService<TService> = TService extends DeepAsync<TService>
-  ? TService
-  : DeepAsync<TService>;
+export type PegasusRPCService<TService> = TService extends DeepAsync<TService> ? TService : DeepAsync<TService>;
 
 /**
  * A recursive type that deeply converts all methods in `TService` to be async.
@@ -57,21 +49,17 @@ export type PegasusRPCService<TService> = TService extends DeepAsync<TService>
 type DeepAsync<TService> = TService extends (...args: any) => unknown
   ? ToAsyncFunction<TService>
   : // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  TService extends {[key: string]: any}
-  ? {
-      [fn in keyof TService]: DeepAsync<TService[fn]>;
-    }
-  : never;
+    TService extends { [key: string]: any }
+    ? {
+        [fn in keyof TService]: DeepAsync<TService[fn]>;
+      }
+    : never;
 
 type ToAsyncFunction<T extends (...args: unknown[]) => unknown> = (
   ...args: Tail<Parameters<T>>
 ) => Proimsify<ReturnType<T>>;
 
-type Unpacked<T> = T extends Array<infer U>
-  ? U
-  : T extends ReadonlyArray<infer U>
-  ? U
-  : T;
+type Unpacked<T> = T extends Array<infer U> ? U : T extends ReadonlyArray<infer U> ? U : T;
 
 type GoodFuncParamType = JsonValue | unknown;
 
@@ -80,19 +68,18 @@ type GoodFuncReturnType = Promise<JsonValue> | JsonValue | void | Promise<void>;
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type GoodParamsHead<T> = Head<T> extends PegasusRPCMessage ? any : unknown;
 
-type GoodParamsTail<T> = Tail<T> extends []
-  ? GoodParamsHead<T>
-  : [Exclude<Unpacked<Tail<T>>, GoodFuncParamType>] extends [never]
-  ? GoodParamsHead<T>
-  : unknown;
+type GoodParamsTail<T> =
+  Tail<T> extends []
+    ? GoodParamsHead<T>
+    : [Exclude<Unpacked<Tail<T>>, GoodFuncParamType>] extends [never]
+      ? GoodParamsHead<T>
+      : unknown;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type GoodParams<T> = T extends GoodParamsHead<T> ? GoodParamsTail<T> : never;
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type GoodFunc<T extends (...args: any) => any> = (
-  ...args: GoodParams<Parameters<T>>[]
-) => GoodFuncReturnType;
+type GoodFunc<T extends (...args: any) => any> = (...args: GoodParams<Parameters<T>>[]) => GoodFuncReturnType;
 
 type IPegasusRPCServiceInternal<T> = {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -100,6 +87,4 @@ type IPegasusRPCServiceInternal<T> = {
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export type IPegasusRPCService<T> = T extends (...args: any) => any
-  ? GoodFunc<T>
-  : IPegasusRPCServiceInternal<T>;
+export type IPegasusRPCService<T> = T extends (...args: any) => any ? GoodFunc<T> : IPegasusRPCServiceInternal<T>;

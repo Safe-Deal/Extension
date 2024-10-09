@@ -1,10 +1,8 @@
-import { useAuthStore } from "@store/AuthState";
-import { logError } from "@utils/analytics/logger";
+import { useAuthStore, authStoreReady } from "@store/AuthState";
+import { logError, debug } from "@utils/analytics/logger";
 import { browserWindow } from "@utils/dom/html";
 import { AuthMessagesEvents, SubscriptionStatus } from "@constants/supabase";
-import { debug } from "@utils/analytics/logger";
 import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
-import { authStoreReady } from "@store/AuthState";
 
 initPegasusTransport();
 

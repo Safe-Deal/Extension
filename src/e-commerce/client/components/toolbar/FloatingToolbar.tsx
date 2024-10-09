@@ -5,6 +5,7 @@ import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Paper from "@mui/material/Paper";
 import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
+import { useAuthStore } from "@store/AuthState";
 import { isRtl, messages, t } from "../../../../constants/messages";
 import { SdDealsCouponsApp } from "../../../apps/deals-amazon/ui/DealsCouponsApp";
 import { ProductStore } from "../../../engine/logic/conclusion/conclusion-product-entity.interface";
@@ -16,7 +17,6 @@ import { InitialLoader } from "../shared/InitialLoader";
 import { Tooltips } from "../shared/Tooltip";
 import { PinButton } from "./components/PinButton";
 import LoginPrompt from "./LoginPrompt";
-import { useAuthStore } from "@store/AuthState";
 
 const DELAY_BEFORE_OPEN_AGAIN = 250;
 const IS_PINNED_STORAGE_KEY = "safe_deal_pinned_toolbar";

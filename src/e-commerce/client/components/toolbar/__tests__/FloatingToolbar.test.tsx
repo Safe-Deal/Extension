@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { FloatingToolbar } from "../FloatingToolbar";
 import { useAuthStore } from "@store/AuthState";
+import { FloatingToolbar } from "../FloatingToolbar";
 
 jest.mock("@mui/material/styles/ThemeProvider", () => ({ children }) => <div>{children}</div>);
 jest.mock("@store/AuthState");

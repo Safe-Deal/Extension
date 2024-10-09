@@ -4,6 +4,6 @@ export default function getConfiguration() {
 
   return {
     deserializer,
-    serializer,
+    serializer
   };
 }

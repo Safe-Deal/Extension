@@ -1,12 +1,7 @@
-import {JsonValue} from 'type-fest';
-import {type Browser} from 'webextension-polyfill';
+import { JsonValue } from "type-fest";
+import { type Browser } from "webextension-polyfill";
 
-import {
-  Destination,
-  Endpoint,
-  OnMessageCallback,
-  PegasusMessage,
-} from './types';
+import { Destination, Endpoint, OnMessageCallback, PegasusMessage } from "./types";
 
 export interface TransportBrowserAPI {
   browser: Browser | null;
@@ -14,7 +9,7 @@ export interface TransportBrowserAPI {
 
 export interface TransportMessagingAPI<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  TProtocolMap extends Record<string, any> = Record<string, any>,
+  TProtocolMap extends Record<string, any> = Record<string, any>
 > {
   /**
    * Sends a message to some other part of your extension.
@@ -28,7 +23,7 @@ export interface TransportMessagingAPI<
   sendMessage: <TType extends keyof TProtocolMap>(
     messageID: TType,
     data: GetMessageProtocolDataType<TProtocolMap[TType]>,
-    destination?: Destination,
+    destination?: Destination
   ) => Proimsify<GetMessageProtocolReturnType<TProtocolMap[TType]>>;
   /**
    * Register one and only one listener, per messageId per context. That will be called upon sendMessage from other side.
@@ -37,13 +32,13 @@ export interface TransportMessagingAPI<
   onMessage: <TType extends keyof TProtocolMap>(
     messageID: TType,
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    callback: OnMessageCallback<TProtocolMap, TType>,
+    callback: OnMessageCallback<TProtocolMap, TType>
   ) => RemoveListenerCallback;
 }
 
 export interface TransportBroadcastEventAPI<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  TProtocolMap extends Record<string, any> = Record<string, any>,
+  TProtocolMap extends Record<string, any> = Record<string, any>
 > {
   /**
    * Broadcast Channel API alternative for browser extensions
@@ -51,7 +46,7 @@ export interface TransportBroadcastEventAPI<
    */
   onBroadcastEvent: <TType extends keyof TProtocolMap>(
     eventID: TType,
-    callback: (event: PegasusMessage<TProtocolMap[TType]>) => void,
+    callback: (event: PegasusMessage<TProtocolMap[TType]>) => void
   ) => () => void;
   /**
    * Broadcast Channel API alternative for browser extensions
@@ -59,20 +54,14 @@ export interface TransportBroadcastEventAPI<
    *
    * Emits an event, which can be of any kind of serialazible Object, to "every" listener in any extension context with the same extension.
    */
-  emitBroadcastEvent: <TType extends keyof TProtocolMap>(
-    eventID: TType,
-    data: TProtocolMap[TType],
-  ) => Promise<void>;
+  emitBroadcastEvent: <TType extends keyof TProtocolMap>(eventID: TType, data: TProtocolMap[TType]) => Promise<void>;
 }
 
-export interface TransportAPI
-  extends TransportMessagingAPI,
-    TransportBroadcastEventAPI,
-    TransportBrowserAPI {}
+export interface TransportAPI extends TransportMessagingAPI, TransportBroadcastEventAPI, TransportBrowserAPI {}
 
 export interface InternalPacket {
   origin: Endpoint;
-  messageType: 'message' | 'reply' | 'broadcastEvent';
+  messageType: "message" | "reply" | "broadcastEvent";
   timestamp: number;
   hops: string[];
   id: string;
@@ -80,19 +69,19 @@ export interface InternalPacket {
 }
 
 export interface InternalBroadcastEvent extends InternalPacket {
-  messageType: 'broadcastEvent';
+  messageType: "broadcastEvent";
   data: JsonValue;
 }
 
 export interface InternalMessage extends InternalPacket {
   destination: Endpoint;
-  messageType: 'message' | 'reply';
+  messageType: "message" | "reply";
   err?: JsonValue;
   data?: JsonValue | void;
 }
 
 export interface EndpointWontRespondError {
-  type: 'error';
+  type: "error";
   transactionID: string;
 }
 
@@ -116,13 +105,13 @@ export type GetMessageProtocolDataType<T> = T extends (
   ...args: infer Args
 ) => // eslint-disable-next-line @typescript-eslint/no-explicit-any
 any
-  ? Args['length'] extends 0 | 1
+  ? Args["length"] extends 0 | 1
     ? Args[0]
     : never
   : // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  T extends any
-  ? T
-  : never;
+    T extends any
+    ? T
+    : never;
 
 /**
  * Given a function declaration, `ProtocolWithReturn`, or a value, return the message's return type.

@@ -1,6 +1,7 @@
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import React, { useEffect, useState } from "react";
+import { useAuthStore } from "@store/AuthState";
 import { DONE_PRODUCT_CONTAINER_CSS_CLASS, DONE_PRODUCT_CSS_CLASS } from "../../../../constants/display";
 import { isRtl, t } from "../../../../constants/messages";
 import { getProductBg } from "../../../engine/logic/site/paint/product-paint";
@@ -13,7 +14,6 @@ import { ProductTitle } from "./components/ProductTitle";
 import { Reviews } from "./components/Reviews/Reviews";
 import { Rules } from "./components/Rules/Rules";
 import { DEFAULT_PRODUCT } from "./utils/constants";
-import { useAuthStore } from "@store/AuthState";
 
 export enum TabValue {
   Analyze = "analyze",

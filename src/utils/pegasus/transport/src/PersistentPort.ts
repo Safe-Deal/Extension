@@ -1,13 +1,12 @@
-import type {StatusMessage} from './PortMessage';
-import type {InternalPacket} from './types-internal';
-import type {Runtime} from 'webextension-polyfill';
+import type { Runtime } from "webextension-polyfill";
+import browser from "webextension-polyfill";
+import type { StatusMessage } from "./PortMessage";
+import type { InternalPacket } from "./types-internal";
 
-import browser from 'webextension-polyfill';
-
-import {PortMessage} from './PortMessage';
-import {encodeConnectionArgs} from './utils/connection-args';
-import {createDeliveryLogger} from './utils/delivery-logger';
-import {createFingerprint} from './utils/endpoint-fingerprint';
+import { PortMessage } from "./PortMessage";
+import { encodeConnectionArgs } from "./utils/connection-args";
+import { createDeliveryLogger } from "./utils/delivery-logger";
+import { createFingerprint } from "./utils/endpoint-fingerprint";
 
 interface QueuedMessage {
   resolvedDestination: string;
@@ -23,37 +22,35 @@ interface QueuedMessage {
  *
  * Used by extension contexts to communicate with the background script (service worker)
  */
-export const createPersistentPort = (name = '') => {
+export const createPersistentPort = (name = "") => {
   const fingerprint = createFingerprint();
   let port: Runtime.Port;
   let undeliveredQueue: ReadonlyArray<QueuedMessage> = [];
   const pendingResponses = createDeliveryLogger();
-  const onMessageListeners = new Set<
-    (message: InternalPacket, p: Runtime.Port) => void
-  >();
+  const onMessageListeners = new Set<(message: InternalPacket, p: Runtime.Port) => void>();
   const onFailureListeners = new Set<(message: InternalPacket) => void>();
 
   const handleMessage = (msg: StatusMessage, msgPort: Runtime.Port) => {
     switch (msg.status) {
-      case 'undeliverable':
+      case "undeliverable":
         if (!undeliveredQueue.some((m) => m.message.id === msg.message.id)) {
           undeliveredQueue = [
             ...undeliveredQueue,
             {
               message: msg.message,
-              resolvedDestination: msg.resolvedDestination,
-            },
+              resolvedDestination: msg.resolvedDestination
+            }
           ];
         }
 
         return;
 
-      case 'deliverable':
+      case "deliverable":
         undeliveredQueue = undeliveredQueue.reduce((acc, queuedMsg) => {
           if (queuedMsg.resolvedDestination === msg.deliverableTo) {
             PortMessage.toBackground(msgPort, {
               message: queuedMsg.message,
-              type: 'deliver',
+              type: "deliver"
             });
 
             return acc;
@@ -64,15 +61,15 @@ export const createPersistentPort = (name = '') => {
 
         return;
 
-      case 'delivered':
-        if (msg.receipt.message.messageType === 'message') {
+      case "delivered":
+        if (msg.receipt.message.messageType === "message") {
           pendingResponses.add(msg.receipt);
         }
 
         return;
 
-      case 'incoming':
-        if (msg.message.messageType === 'reply') {
+      case "incoming":
+        if (msg.message.messageType === "reply") {
           pendingResponses.remove(msg.message.id);
         }
 
@@ -80,15 +77,15 @@ export const createPersistentPort = (name = '') => {
 
         return;
 
-      case 'terminated': {
-        const rogueMsgs = pendingResponses
-          .entries()
-          .filter((receipt) => msg.fingerprint === receipt.to);
-        pendingResponses.remove(rogueMsgs);
-        rogueMsgs.forEach(({message}) =>
-          onFailureListeners.forEach((cb) => cb(message)),
-        );
-      }
+      case "terminated":
+        {
+          const rogueMsgs = pendingResponses.entries().filter((receipt) => msg.fingerprint === receipt.to);
+          pendingResponses.remove(rogueMsgs);
+          rogueMsgs.forEach(({ message }) => onFailureListeners.forEach((cb) => cb(message)));
+        }
+        break;
+
+      default:
     }
   };
 
@@ -96,20 +93,16 @@ export const createPersistentPort = (name = '') => {
     port = browser.runtime.connect({
       name: encodeConnectionArgs({
         endpointName: name,
-        fingerprint,
-      }),
+        fingerprint
+      })
     });
     port.onMessage.addListener(handleMessage);
     port.onDisconnect.addListener(connect);
 
     PortMessage.toBackground(port, {
-      pendingDeliveries: [
-        ...new Set(
-          undeliveredQueue.map(({resolvedDestination}) => resolvedDestination),
-        ),
-      ],
+      pendingDeliveries: [...new Set(undeliveredQueue.map(({ resolvedDestination }) => resolvedDestination))],
       pendingResponses: pendingResponses.entries(),
-      type: 'sync',
+      type: "sync"
     });
   };
 
@@ -125,8 +118,8 @@ export const createPersistentPort = (name = '') => {
     postMessage(message: InternalPacket): void {
       PortMessage.toBackground(port, {
         message,
-        type: 'deliver',
+        type: "deliver"
       });
-    },
+    }
   };
 };

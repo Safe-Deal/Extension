@@ -1,10 +1,10 @@
 import { Session } from "@supabase/supabase-js";
 import { ext } from "@utils/extension/ext";
 import { debug } from "@utils/analytics/logger";
-import supabase from "../utils/supabase";
 import { useAuthStore, initAuthStoreBackend } from "@store/AuthState";
-import { SUPABASE, SupabaseAuthEvents } from "../constants/supabase";
 import { SubscriptionStatus } from "@constants/supabase";
+import supabase from "../utils/supabase";
+import { SUPABASE, SupabaseAuthEvents } from "../constants/supabase";
 
 const { EXTENSION_AUTH_PATH } = SUPABASE;
 

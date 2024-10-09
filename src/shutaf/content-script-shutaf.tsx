@@ -1,9 +1,9 @@
 import { authStoreReady, useAuthStore } from "@store/AuthState";
+import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
 import { debug, logError } from "../utils/analytics/logger";
 import { browserWindow } from "../utils/dom/html";
 import { onHrefChange } from "../utils/dom/location";
 import { SHUTAF_GLUE } from "../utils/extension/glue";
-import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
 
 const PING_INTERVAL_IN_SEC = 25;
 
@@ -20,13 +20,9 @@ const storeAndSendUrl = (url: string) => {
   debug(`Shutaf:: Sent URL: ${url}`);
 };
 
-const isActiveSubscriptionStatus = (status: string): boolean => {
-  return status === "active" || status === "trialing";
-};
+const isActiveSubscriptionStatus = (status: string): boolean => status === "active" || status === "trialing";
 
-const hasPaddleSubscriptionId = (paddleId: string | undefined): boolean => {
-  return Boolean(paddleId);
-};
+const hasPaddleSubscriptionId = (paddleId: string | undefined): boolean => Boolean(paddleId);
 
 const isActiveSubscriber = (userMetadata: any): boolean => {
   const subscription_status = userMetadata?.subscription_status;

@@ -49,7 +49,9 @@ export class PegasusStore<S, A extends PegasusStoreAction = PegasusStoreAnyActio
     deserializer,
     patchStrategy = shallowPatch
   }: PegasusStoreProps<S, A>) {
-    this.readyPromise = new Promise((resolve) => (this.readyResolve = resolve));
+    this.readyPromise = new Promise((resolve) => {
+      this.readyResolve = resolve;
+    });
     this.serializer = serializer;
     this.deserializer = deserializer;
     this.listeners = [];

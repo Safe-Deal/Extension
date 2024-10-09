@@ -1,14 +1,14 @@
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import { debug, logError } from "@utils/analytics/logger";
 import React, { useEffect } from "react";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
+import { useAmazonCouponsStore } from "@store/AmazonCouponsState";
 import { ErrorBoundary } from "../../../../utils/analytics/ErrorBoundary";
 import { browserWindow } from "../../../../utils/dom/html";
 import { SafeDealTheme } from "../../../../utils/react/theme";
 import { SiteMetadata } from "../../../../utils/site/site-information";
 import { SdDealsCouponsStickyBadgeRoot } from "./components/SdDealsCouponsRoot";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { IAmazonCouponsDealsBus, AmazonCouponsMessageType } from "../background/deals-coupons-worker";
-import { useAmazonCouponsStore } from "@store/AmazonCouponsState";
 
 export function SdDealsCouponsApp(): JSX.Element {
   const { coupons, loading, setCoupons, setLoading } = useAmazonCouponsStore();

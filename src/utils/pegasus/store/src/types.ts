@@ -1,5 +1,5 @@
-import {MessageType} from './constants';
-import {ChangeType} from './strategies/constants';
+import { MessageType } from "./constants";
+import { ChangeType } from "./strategies/constants";
 
 export type SerializerFn<S = unknown> = (value: S) => string;
 export type DeserializerFn<S = unknown> = (value: string) => S;
@@ -82,9 +82,7 @@ export interface Unsubscribe {
  * @template A The type of things (actions or otherwise) which may be
  *   dispatched.
  */
-export interface Dispatch<
-  A extends PegasusStoreAction = PegasusStoreAnyAction,
-> {
+export interface Dispatch<A extends PegasusStoreAction = PegasusStoreAnyAction> {
   <T extends A>(action: T): Promise<A>;
 }
 
@@ -110,7 +108,7 @@ export type Observable<T> = {
    * be used to unsubscribe the observable from the store, and prevent further
    * emission of values from the observable.
    */
-  subscribe: (observer: Observer<T>) => {unsubscribe: Unsubscribe};
+  subscribe: (observer: Observer<T>) => { unsubscribe: Unsubscribe };
   [Symbol.observable](): Observable<T>;
 };
 
@@ -125,7 +123,7 @@ export type Observable<T> = {
 export interface IPegasusStore<
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   S = any,
-  A extends PegasusStoreAction = PegasusStoreAnyAction,
+  A extends PegasusStoreAction = PegasusStoreAnyAction
 > {
   /**
    * Dispatches an action. It is the only way to trigger a state change.

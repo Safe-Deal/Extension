@@ -1,5 +1,5 @@
-import type {InternalPacket} from '../types-internal';
-import type {EndpointFingerprint} from './endpoint-fingerprint';
+import type { InternalPacket } from "../types-internal";
+import type { EndpointFingerprint } from "./endpoint-fingerprint";
 
 export interface DeliveryReceipt {
   message: InternalPacket;
@@ -20,9 +20,9 @@ export const createDeliveryLogger = () => {
     entries: () => logs,
     remove: (message: string | DeliveryReceipt[]) => {
       logs =
-        typeof message === 'string'
+        typeof message === "string"
           ? logs.filter((receipt) => receipt.message.transactionId !== message)
           : logs.filter((receipt) => !message.includes(receipt));
-    },
+    }
   };
 };

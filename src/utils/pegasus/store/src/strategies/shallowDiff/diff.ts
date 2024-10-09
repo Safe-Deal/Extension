@@ -1,6 +1,6 @@
-import {isValidState} from '../../isValidState';
-import {StateDiff} from '../../types';
-import {ChangeType} from '../constants';
+import { isValidState } from "../../isValidState";
+import { StateDiff } from "../../types";
+import { ChangeType } from "../constants";
 
 /**
  * Returns a new Object containing only the fields in `new` that differ from `old`
@@ -13,7 +13,7 @@ import {ChangeType} from '../constants';
  */
 export function shallowDiff<S>(oldObj: S, newObj: S): StateDiff {
   if (!isValidState(oldObj) || !isValidState(newObj)) {
-    throw new Error('shallowDiff can only diff valid state objects');
+    throw new Error("shallowDiff can only diff valid state objects");
   }
 
   const difference: StateDiff = [];
@@ -23,7 +23,7 @@ export function shallowDiff<S>(oldObj: S, newObj: S): StateDiff {
       difference.push({
         change: ChangeType.UPDATED,
         key,
-        value: newObj[key] as S,
+        value: newObj[key] as S
       });
     }
   });
@@ -33,7 +33,7 @@ export function shallowDiff<S>(oldObj: S, newObj: S): StateDiff {
     if (!newObj.hasOwnProperty(key)) {
       difference.push({
         change: ChangeType.REMOVED,
-        key,
+        key
       });
     }
   });

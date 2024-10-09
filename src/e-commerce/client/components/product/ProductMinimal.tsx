@@ -3,8 +3,10 @@ import { DONE_PRODUCT_CONTAINER_CSS_CLASS, DONE_PRODUCT_CSS_CLASS } from "../../
 import { getSymbolClassByText } from "../../../../constants/icons";
 import { getReliabilityProductsSummaryTooltip } from "../../../../constants/rule-reliability-messages";
 import {
-	getProductBg, getProductConclusionText,
-	getProductIconImage, getProductOutline
+  getProductBg,
+  getProductConclusionText,
+  getProductIconImage,
+  getProductOutline
 } from "../../../engine/logic/site/paint/product-paint";
 import { PRICING_ITEM_DETAILS } from "../../../engine/logic/utils/const";
 import { DEFAULT_PRODUCT } from "./utils/constants";

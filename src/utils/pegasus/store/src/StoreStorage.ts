@@ -5,7 +5,9 @@ export type StoreStorageStrategy = "indexedDb" | undefined;
 
 export class StoreStorage<S, A extends PegasusStoreAction = PegasusStoreAnyAction> {
   private readonly dbName = "PegasusStore";
+
   private readonly objectStoreName = "state";
+
   private db: IDBDatabase | null = null;
 
   constructor(

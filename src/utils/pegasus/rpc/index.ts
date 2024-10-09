@@ -1,2 +1,2 @@
-export * from './src/RPCServices';
-export * from './src/types';
+export * from "./src/RPCServices";
+export * from "./src/types";

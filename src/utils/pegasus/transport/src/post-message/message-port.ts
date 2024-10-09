@@ -7,25 +7,21 @@ let promise: Promise<MessagePort>;
  * is accepted OR a port will be offered, which the other side will then accept.
  */
 export const getMessagePort = (
-  thisContext: 'window' | 'content-script',
+  thisContext: "window" | "content-script",
   namespace: string,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  onMessage: (e: MessageEvent<any>) => void,
-): Promise<MessagePort> =>
-  (promise ??= new Promise((resolve) => {
+  onMessage: (e: MessageEvent<any>) => void
+): Promise<MessagePort> => {
+  promise ??= new Promise((resolve) => {
     const acceptMessagingPort = (event: MessageEvent) => {
       const {
-        data: {cmd, scope, context},
-        ports,
+        data: { cmd, scope, context },
+        ports
       } = event;
-      if (
-        cmd === 'webext-port-offer' &&
-        scope === namespace &&
-        context !== thisContext
-      ) {
-        window.removeEventListener('message', acceptMessagingPort);
+      if (cmd === "webext-port-offer" && scope === namespace && context !== thisContext) {
+        window.removeEventListener("message", acceptMessagingPort);
         ports[0].onmessage = onMessage;
-        ports[0].postMessage('port-accepted');
+        ports[0].postMessage("port-accepted");
         return resolve(ports[0]);
       }
     };
@@ -33,8 +29,8 @@ export const getMessagePort = (
     const offerMessagingPort = () => {
       const channel = new MessageChannel();
       channel.port1.onmessage = (event: MessageEvent) => {
-        if (event.data === 'port-accepted') {
-          window.removeEventListener('message', acceptMessagingPort);
+        if (event.data === "port-accepted") {
+          window.removeEventListener("message", acceptMessagingPort);
           return resolve(channel.port1);
         }
 
@@ -43,22 +39,23 @@ export const getMessagePort = (
 
       window.postMessage(
         {
-          cmd: 'webext-port-offer',
+          cmd: "webext-port-offer",
           context: thisContext,
-          scope: namespace,
+          scope: namespace
         },
-        '*',
-        [channel.port2],
+        "*",
+        [channel.port2]
       );
     };
 
-    window.addEventListener('message', acceptMessagingPort);
+    window.addEventListener("message", acceptMessagingPort);
 
     // one of the contexts needs to be offset by at least 1 tick to prevent a race condition
     // where both of them are offering, and then also accepting the port at the same time
-    if (thisContext === 'window') {
+    if (thisContext === "window") {
       setTimeout(offerMessagingPort, 0);
     } else {
       offerMessagingPort();
     }
-  }));
+  });
+};

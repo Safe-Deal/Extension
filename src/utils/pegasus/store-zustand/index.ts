@@ -1,2 +1,2 @@
-export * from './src/initPegasusZustandStoreBackend';
-export * from './src/pegasusZustandStoreReady';
+export * from "./src/initPegasusZustandStoreBackend";
+export * from "./src/pegasusZustandStoreReady";

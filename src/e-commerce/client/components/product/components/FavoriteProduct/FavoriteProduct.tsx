@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./FavoriteProduct.scss";
-import { TabValue } from "../../ProductFull";
 import { useAuthStore } from "@store/AuthState";
+import { TabValue } from "../../ProductFull";
 
 interface IFavoriteProductProps {
   tab: (value: TabValue) => void;
@@ -31,7 +31,7 @@ const FavoriteProduct = ({ tab, action }: IFavoriteProductProps) => {
     <>
       {isPremiumUser && (
         <div className="sd-favorite-product">
-          <button onClick={toggleFavorite} className="sd-favorite-product__button">
+          <button type="button" onClick={toggleFavorite} className="sd-favorite-product__button">
             {isFavorite ? "★" : "☆"}
           </button>
         </div>

@@ -1,9 +1,9 @@
+import { initAmazonCouponsStoreBackend } from "@store/AmazonCouponsState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { logError, debug } from "../../../../utils/analytics/logger";
 import { ParsedHtml, parseAsHtml } from "../../../../utils/dom/html";
 import { AmazonSiteUtils } from "../../../engine/stores/amazon/utils/amazon-site-utils";
 import { getAllAmazonCoupons } from "./coupons-analyzer/amazon/amazon-coupons-analyzer";
-import { initAmazonCouponsStoreBackend } from "@store/AmazonCouponsState";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
 
 export enum AmazonCouponsMessageType {
   FETCH_AMAZON_COUPONS = "fetchAmazonCoupons"

@@ -1,4 +1,4 @@
-import {TransportAPI} from './types-internal';
+import { TransportAPI } from "./types-internal";
 
 let API: TransportAPI | null = null;
 
@@ -7,9 +7,7 @@ let API: TransportAPI | null = null;
  */
 export function initTransportAPI(api: TransportAPI): void {
   if (API != null) {
-    throw new Error(
-      'Messaging API already set. Likely you called "initPegasusTransport" twice in the same context.',
-    );
+    throw new Error('Messaging API already set. Likely you called "initPegasusTransport" twice in the same context.');
   }
   API = api;
 }
@@ -21,7 +19,7 @@ export function initTransportAPI(api: TransportAPI): void {
 export function getTransportAPI(): TransportAPI {
   if (API == null) {
     throw new Error(
-      'Messaging API wan\'t set. Make sure you called "initPegasusTransport" within current context before using @webext-pegasus packages.',
+      'Messaging API wan\'t set. Make sure you called "initPegasusTransport" within current context before using @webext-pegasus packages.'
     );
   }
 

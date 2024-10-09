@@ -1,13 +1,10 @@
-import type {PegasusMessage, RuntimeContext} from './types';
-import type {JsonValue} from 'type-fest';
+import type { JsonValue } from "type-fest";
 
-import {serializeError} from 'serialize-error';
-import uuid from 'tiny-uid';
+import { serializeError } from "serialize-error";
+import uuid from "tiny-uid";
+import type { PegasusMessage, RuntimeContext } from "./types";
 
-import {
-  InternalBroadcastEvent,
-  TransportBroadcastEventAPI,
-} from './types-internal';
+import { InternalBroadcastEvent, TransportBroadcastEventAPI } from "./types-internal";
 
 export interface BroadcastEventRuntime extends TransportBroadcastEventAPI {
   /**
@@ -19,26 +16,19 @@ export interface BroadcastEventRuntime extends TransportBroadcastEventAPI {
 export const createBroadcastEventRuntime = (
   thisContext: RuntimeContext,
   routeEvent: (event: InternalBroadcastEvent) => Promise<void>,
-  localEvent?: (event: InternalBroadcastEvent) => Promise<void>,
+  localEvent?: (event: InternalBroadcastEvent) => Promise<void>
 ): BroadcastEventRuntime => {
   const runtimeId = uuid();
-  const onEventListeners = new Map<
-    string,
-    Array<(event: PegasusMessage<JsonValue>) => void | Promise<void>>
-  >();
+  const onEventListeners = new Map<string, Array<(event: PegasusMessage<JsonValue>) => void | Promise<void>>>();
 
   const handleEvent = async (event: InternalBroadcastEvent): Promise<void> => {
-    const relayedViaBackground =
-      event.hops.findIndex((hop) => hop.startsWith(`background::`)) !== -1;
+    const relayedViaBackground = event.hops.findIndex((hop) => hop.startsWith(`background::`)) !== -1;
     // If event was sent from background or it's already a relay from background
     // All broadcast events are relayed through background
-    if (
-      (thisContext === 'background' && event.origin.context === thisContext) ||
-      relayedViaBackground
-    ) {
+    if ((thisContext === "background" && event.origin.context === thisContext) || relayedViaBackground) {
       localEvent?.(event);
 
-      const {id: eventID} = event;
+      const { id: eventID } = event;
 
       const errs: unknown[] = [];
 
@@ -50,7 +40,7 @@ export const createBroadcastEventRuntime = (
             data: event.data,
             id: eventID,
             sender: event.origin,
-            timestamp: event.timestamp,
+            timestamp: event.timestamp
           } as PegasusMessage<JsonValue>);
         } catch (error) {
           errs.push(error);
@@ -61,7 +51,7 @@ export const createBroadcastEventRuntime = (
         throw new Error(
           `Error(s) occurred while handling broadcast event ${eventID}: ${errs
             .map((err) => serializeError(err))
-            .join(', ')}`,
+            .join(", ")}`
         );
       }
 
@@ -78,41 +68,36 @@ export const createBroadcastEventRuntime = (
   };
 
   return {
-    emitBroadcastEvent: async <Data extends JsonValue>(
-      eventID: string,
-      data: Data,
-    ): Promise<void> => {
+    emitBroadcastEvent: async <Data extends JsonValue>(eventID: string, data: Data): Promise<void> => {
       const payload: InternalBroadcastEvent = {
         data,
         hops: [],
         id: eventID,
-        messageType: 'broadcastEvent',
+        messageType: "broadcastEvent",
         origin: {
           context: thisContext,
-          tabId: null,
+          tabId: null
         },
         timestamp: Date.now(),
-        transactionId: uuid(),
+        transactionId: uuid()
       };
 
-      return await handleEvent(payload);
+      const result = await handleEvent(payload);
+      return result;
     },
-    handleEvent: handleEvent,
+    handleEvent,
     onBroadcastEvent: (eventID, callback) => {
       const currentListeners = onEventListeners.get(eventID) ?? [];
-      onEventListeners.set(eventID, [
-        ...currentListeners,
-        callback as (event: PegasusMessage<JsonValue>) => void,
-      ]);
+      onEventListeners.set(eventID, [...currentListeners, callback as (event: PegasusMessage<JsonValue>) => void]);
 
       return () => {
         const oldListeners = onEventListeners.get(eventID) ?? [];
 
         onEventListeners.set(
           eventID,
-          oldListeners.filter((listener) => listener !== callback),
+          oldListeners.filter((listener) => listener !== callback)
         );
       };
-    },
+    }
   };
 };

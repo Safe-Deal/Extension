@@ -1,11 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import { authStoreReady } from "@store/AuthState";
+import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
 import { debug, IS_DEBUG, logError } from "../utils/analytics/logger";
 import { MODIFIED_PAGES_CSS_CLASS } from "../constants/display";
 import { ErrorBoundary } from "../utils/analytics/ErrorBoundary";
 import { SupplierClient } from "./client/SupplierClient";
-import { authStoreReady } from "@store/AuthState";
-import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
 
 import "../e-commerce/client/assets/style.scss";
 import { SiteUtil } from "../e-commerce/engine/logic/utils/site-utils";

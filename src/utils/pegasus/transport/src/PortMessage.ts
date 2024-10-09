@@ -1,39 +1,39 @@
-import type {InternalPacket} from './types-internal';
-import type {DeliveryReceipt} from './utils/delivery-logger';
-import type {EndpointFingerprint} from './utils/endpoint-fingerprint';
-import type {Runtime} from 'webextension-polyfill';
+import type { Runtime } from "webextension-polyfill";
+import type { InternalPacket } from "./types-internal";
+import type { DeliveryReceipt } from "./utils/delivery-logger";
+import type { EndpointFingerprint } from "./utils/endpoint-fingerprint";
 
 export type StatusMessage =
   | {
-      status: 'undeliverable';
+      status: "undeliverable";
       message: InternalPacket;
       resolvedDestination: string;
     }
   | {
-      status: 'deliverable';
+      status: "deliverable";
       deliverableTo: string;
     }
   | {
-      status: 'delivered';
+      status: "delivered";
       receipt: DeliveryReceipt;
     }
   | {
-      status: 'incoming';
+      status: "incoming";
       message: InternalPacket;
     }
   | {
-      status: 'terminated';
+      status: "terminated";
       fingerprint: EndpointFingerprint;
     };
 
 export type RequestMessage =
   | {
-      type: 'sync';
+      type: "sync";
       pendingResponses: ReadonlyArray<DeliveryReceipt>;
       pendingDeliveries: ReadonlyArray<string>;
     }
   | {
-      type: 'deliver';
+      type: "deliver";
       message: InternalPacket;
     };
 

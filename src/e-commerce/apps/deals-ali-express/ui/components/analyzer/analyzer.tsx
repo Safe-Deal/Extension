@@ -4,9 +4,7 @@ import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import React, { useEffect, useState } from "react";
 import { browserWindow, querySelector } from "../../../../../../utils/dom/html";
-import { ALI_SUPER_DEALS_GLUE } from "../../../../../../utils/extension/glue";
 import { SiteMetadata } from "../../../../../../utils/site/site-information";
-import { ISuperDealProduct } from "../../../common/interfaces";
 import { isAliexpressCampaignPage } from "../../utils/ali-super-deals-utils-ui";
 import AliSuperDealsDatatable from "../datatable/datatable";
 import AliSuperDealsDialogContentHeader from "../dialog/dialog-header";
@@ -14,12 +12,18 @@ import Transition from "../dialog/dialog-transition";
 import AliSuperDealsAppBar from "../toolbar/toolbar";
 import { SiteUtil } from "../../../../../engine/logic/utils/site-utils";
 import { ProductStore } from "../../../../../engine/logic/conclusion/conclusion-product-entity.interface";
+import { useAliexpressDealsStore, aliexpressDealsStoreReady } from "@store/AliexpressDealsState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
+import {
+  AliSuperDealsMessageType,
+  IAliSuperDealsBus
+} from "@e-commerce/apps/deals-ali-express/worker/ali-super-deals-worker";
 
 function SuperDealsAnalyzer(): JSX.Element {
   const [open, setOpen] = useState(false);
-  const [superDeals, setSuperDeals] = useState<ISuperDealProduct[]>([]);
-  const [loadingSuperDeals, setLoadingSuperDeals] = useState(false);
+  const { superDeals, loading } = useAliexpressDealsStore();
   const [loadingReloadMoreDeals, setLoadingReloadMoreDeals] = useState(false);
+  const { sendMessage } = definePegasusMessageBus<IAliSuperDealsBus>();
   const store = SiteUtil.getStore();
   const isItemDetail = SiteUtil.isItemDetails();
   const isWholesale = SiteUtil.isWholesale();
@@ -46,18 +50,11 @@ function SuperDealsAnalyzer(): JSX.Element {
         setTimeout(myAutoScroll, 1000);
       }
       if (count === 0) {
-        setLoadingSuperDeals(false);
         setLoadingReloadMoreDeals(false);
-
-        ALI_SUPER_DEALS_GLUE.send({
+        const data = {
           pageDocument: SiteMetadata.getDomOuterHTML(browserWindow().document)
-        });
-
-        ALI_SUPER_DEALS_GLUE.client((response: any) => {
-          const { result } = response;
-          const { deals }: { deals: ISuperDealProduct[] } = result;
-          setSuperDeals(deals);
-        });
+        };
+        sendMessage(AliSuperDealsMessageType.FETCH_ALI_SUPER_DEALS, data);
       }
     }
     setTimeout(myAutoScroll, 1000);
@@ -74,7 +71,6 @@ function SuperDealsAnalyzer(): JSX.Element {
     }
 
     setOpen(true);
-    setLoadingSuperDeals(true);
     reloadMoreDealsMechanism();
   };
 
@@ -82,6 +78,7 @@ function SuperDealsAnalyzer(): JSX.Element {
   const handleReloadMoreDeals = (): void => reloadMoreDealsMechanism();
 
   useEffect(() => {
+    aliexpressDealsStoreReady();
     if (isAliexpressCampaignPage()) {
       handleClickOpen();
     }
@@ -115,7 +112,7 @@ function SuperDealsAnalyzer(): JSX.Element {
             superDeals={superDeals}
           />
           <div id="alert-dialog-slide-description">
-            <AliSuperDealsDatatable deals={superDeals} loading={loadingSuperDeals} />
+            <AliSuperDealsDatatable deals={superDeals} loading={loading} />
           </div>
         </DialogContent>
         <DialogActions className="sd-ae-deals__dialog__actions" />

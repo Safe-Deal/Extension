@@ -3,7 +3,6 @@ import { IBackgroundListenerMessage } from "../../e-commerce/worker/worker";
 import { addWorkerHandler, registerClientListener, sendMessage } from "./messaging";
 
 const WORKER_MESSAGE_TYPE = Object.freeze({
-  INITIAL_SETUP: "initial_setup",
   ANTI_SCAM: "anti_scam",
   SHUTAF: "shutaf",
   REVIEWS_SUMMARIZATION: "reviews_summarization",
@@ -83,14 +82,5 @@ export const REVIEW_SUMMARY_GLUE = {
   },
   send(reviewsSummarizeMsg: ReviewSummaryData) {
     sendMessage(WORKER_MESSAGE_TYPE.REVIEWS_SUMMARIZATION, reviewsSummarizeMsg);
-  }
-};
-
-export const SETUP_GLUE = {
-  worker(onSetup: (props: { url: string; browser: string }) => void) {
-    addWorkerHandler(WORKER_MESSAGE_TYPE.INITIAL_SETUP, onSetup);
-  },
-  send(setupMsg: { url: string; browser: string }) {
-    sendMessage(WORKER_MESSAGE_TYPE.INITIAL_SETUP, setupMsg);
   }
 };

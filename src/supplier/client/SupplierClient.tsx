@@ -9,7 +9,7 @@ import { ProductMinimal } from "../../e-commerce/client/components/product/Produ
 import { ProductFull } from "../../e-commerce/client/components/product/ProductFull";
 import { ISupplierMessageBus, SupplierMessageType } from "../worker/worker";
 import { definePegasusMessageBus } from "@utils/pegasus/transport";
-import { useSupplierStore, supplierStoreReady } from "@store/SupplierStore";
+import { useSupplierStore, supplierStoreReady } from "@store/SupplierState";
 
 const SupplierClient = (): ReactNode => {
   const { analyzedItems, loading } = useSupplierStore();

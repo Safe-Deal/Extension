@@ -1,6 +1,5 @@
 import { debug, logError } from "../../utils/analytics/logger";
 import { MemoryCache } from "../../utils/cashing/memoryCache";
-import { REVIEW_SUMMARY_GLUE } from "../../utils/extension/glue";
 import { VERSION } from "../../utils/extension/utils";
 import { AlibabaReviewsService } from "../../supplier/reviews/alibaba-reviews-service";
 import { ProductStore } from "../engine/logic/conclusion/conclusion-product-entity.interface";
@@ -8,8 +7,17 @@ import { AliExpressReviewsService } from "./aliexpress/aliexpress-reviews-servic
 import { AmazonReviewsService } from "./amazon/amazon-reviews-service";
 import { EbayReviewsService } from "./ebay/ebay-reviews-service";
 import { ReviewSummaryData } from "./reviews-types";
+import { initReviewSummaryStoreBackend } from "@store/ReviewSummaryState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
 
-const cash = new MemoryCache();
+const cache = new MemoryCache();
+
+export enum ReviewSummaryMessageType {
+  GENERATE_REVIEW_SUMMARY = "reviewSummary"
+}
+export interface IReviewSummaryMessageBus {
+  [ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY]: (data: ReviewSummaryData) => Promise<void>;
+}
 
 export interface ReviewsResponse {
   reviewsSummary: any[];
@@ -22,93 +30,96 @@ export interface ReviewsResponse {
   reviewsValue?: string;
 }
 
-export const reviewsSummaryWorker = async (dataRequest: ReviewSummaryData, sendResponse) => {
-  const { store, productId, isSupplier, storeFeedbackUrl } = dataRequest;
-  const cashingKey = `${store}_${productId}`;
+export const initReviewsSummarizeWorker = async (): Promise<void> => {
+  const store = await initReviewSummaryStoreBackend();
+  debug("ReviewSummaryStore:: Review Summary Store ready!", store);
+  const { onMessage } = definePegasusMessageBus<IReviewSummaryMessageBus>();
 
-  if (cash.has(cashingKey) && !dataRequest.regenerate) {
-    const result = cash.get(cashingKey);
-    sendResponse(result);
-    debug(`Product #${productId} is already in processed returning from cash`, "Worker::reviewsSummaryWorker");
-    return;
-  }
-
-  try {
-    let reviewsResponse: ReviewsResponse = {
-      reviewsSummary: [],
-      error: null,
-      reviewsImages: [],
-      ver: VERSION,
-      totalReviews: null,
-      rating: null
-    };
-
-    switch (store) {
-      case ProductStore.ALI_EXPRESS:
-      case ProductStore.ALI_EXPRESS_RUSSIA:
-        reviewsResponse = await AliExpressReviewsService.analyze(dataRequest);
-        break;
-      case ProductStore.AMAZON:
-        reviewsResponse = await AmazonReviewsService.analyze(dataRequest);
-        break;
-      case ProductStore.EBAY:
-        reviewsResponse = await EbayReviewsService.analyze(dataRequest);
-        break;
-      case ProductStore.ALIBABA:
-        reviewsResponse = await AlibabaReviewsService.analyze(dataRequest);
-        break;
-      default:
-        reviewsResponse = {
-          reviewsImages: [],
-          reviewsSummary: [],
-          error: null,
-          ver: VERSION,
-          totalReviews: null,
-          rating: null
-        };
-        break;
+  onMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, async (dataRequest) => {
+    if (!dataRequest || !dataRequest.data) {
+      logError(new Error("Invalid dataRequest"), "reviewsSummaryWorker:: Invalid dataRequest");
+      return;
     }
 
-    const response = {
-      ...reviewsResponse
-    };
+    const { setReviewData, setIsLoading, setError } = store.getState();
+    const data = dataRequest.data;
+    const { store: productStore, productId, regenerate } = data;
 
-    if (response?.error) {
-      logError(
-        new Error(
-          JSON.stringify(
-            {
-              store,
-              productId,
-              error: response.error
-            },
-            null,
-            2
-          )
-        ),
-        `reviewsSummaryWorker:: ${response.error}`
-      );
-    } else {
-      debug(
-        `reviewsSummaryWorker:: reviewsSummary worker Response: reviewsSummary's -> ${response?.reviewsSummary?.length}`
-      );
+    if (!productStore || !productId) {
+      logError(new Error("Missing productStore or productId"), "reviewsSummaryWorker:: Missing required data");
+      return;
     }
 
-    cash.set(cashingKey, response);
-    sendResponse(response);
-  } catch (error) {
-    sendResponse({
-      reviewsSummary: [],
-      error: "Error in reviewsSummaryWorker",
-      reviewsImages: [],
-      ver: VERSION,
-      totalReviews: null,
-      rating: null
-    });
-    logError(error, "reviewsSummaryWorker:: Error in reviewsSummaryWorker");
-  }
-};
+    const cachingKey = `${productStore}_${productId}`;
 
-export const initReviewsSummarizeWorker = (): void => {
-  REVIEW_SUMMARY_GLUE.worker(reviewsSummaryWorker);
+    setIsLoading(true);
+    if (cache.has(cachingKey) && !regenerate) {
+      const result = cache.get(cachingKey);
+      if (result) {
+        setReviewData(result);
+        setIsLoading(false);
+        debug(`Product #${productId} is already processed returning from cache`, "Worker::reviewsSummaryWorker");
+        return;
+      }
+    }
+
+    try {
+      let reviewsResponse: ReviewsResponse = {
+        reviewsSummary: [],
+        error: null,
+        reviewsImages: [],
+        ver: VERSION,
+        totalReviews: null,
+        rating: null
+      };
+
+      switch (productStore) {
+        case ProductStore.ALI_EXPRESS:
+        case ProductStore.ALI_EXPRESS_RUSSIA:
+          reviewsResponse = await AliExpressReviewsService.analyze(data);
+          break;
+        case ProductStore.AMAZON:
+          reviewsResponse = await AmazonReviewsService.analyze(data);
+          break;
+        case ProductStore.EBAY:
+          reviewsResponse = await EbayReviewsService.analyze(data);
+          break;
+        case ProductStore.ALIBABA:
+          reviewsResponse = await AlibabaReviewsService.analyze(data);
+          break;
+        default:
+          throw new Error(`Unsupported product store: ${productStore}`);
+      }
+
+      if (reviewsResponse.error) {
+        logError(
+          new Error(
+            JSON.stringify(
+              {
+                productStore,
+                productId,
+                error: reviewsResponse.error
+              },
+              null,
+              2
+            )
+          ),
+          `reviewsSummaryWorker:: ${reviewsResponse.error}`
+        );
+        setError(reviewsResponse.error);
+      } else {
+        debug(
+          `reviewsSummaryWorker:: reviewsSummary worker Response: reviewsSummary's -> ${reviewsResponse?.reviewsSummary?.length ?? 0}`
+        );
+        cache.set(cachingKey, reviewsResponse);
+        setReviewData(reviewsResponse);
+      }
+    } catch (error) {
+      const errorMessage = error instanceof Error ? error.message : "Unknown error";
+      setError(`Error in reviewsSummaryWorker: ${errorMessage}`);
+      logError(error, `reviewsSummaryWorker:: Error in reviewsSummaryWorker: ${errorMessage}`);
+    } finally {
+      setIsLoading(false);
+    }
+  });
 };

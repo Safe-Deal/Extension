@@ -5,11 +5,6 @@ import { AnalyzedItem, Progress, DEFAULT_PROGRESS } from "@e-commerce/client/pro
 
 export const STORE_NAME = "globalSupplierState";
 
-export interface ISupplierData {
-  processedItems: AnalyzedItem[];
-  progress: Progress;
-}
-
 interface SupplierState {
   analyzedItems: AnalyzedItem[];
   loading: boolean;

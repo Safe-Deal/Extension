@@ -5,7 +5,7 @@ import { ParsedHtml } from "../../utils/dom/html";
 import { prepareDTO, preprocessAlibabaData } from "../stores/alibaba/alibaba-store";
 import { analyzeSupplierProductByAI } from "../supplier-ai-api-service";
 import { convertedAlibabaProduct } from "../mocks/alibaba-product-mock";
-import { initSupplierStoreBackend } from "@store/SupplierStore";
+import { initSupplierStoreBackend } from "@store/SupplierState";
 import { definePegasusMessageBus } from "@utils/pegasus/transport";
 
 export enum SupplierMessageType {

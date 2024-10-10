@@ -1,15 +1,12 @@
-import { AliSuperDealsMessageRequest } from "../../e-commerce/apps/deals-ali-express/common/interfaces";
 import { ReviewSummaryData } from "../../e-commerce/reviews/reviews-types";
 import { IBackgroundListenerMessage } from "../../e-commerce/worker/worker";
 import { addWorkerHandler, registerClientListener, sendMessage } from "./messaging";
 
 const WORKER_MESSAGE_TYPE = Object.freeze({
-  ERROR: "error",
   INITIAL_SETUP: "initial_setup",
   ANTI_SCAM: "anti_scam",
   SHUTAF: "shutaf",
   REVIEWS_SUMMARIZATION: "reviews_summarization",
-  ALI_SUPER_DEALS: "ali_super_deals",
   E_COMMERCE: "e_commerce",
   SUPPLIER: "supplier"
 });
@@ -95,14 +92,5 @@ export const SETUP_GLUE = {
   },
   send(setupMsg: { url: string; browser: string }) {
     sendMessage(WORKER_MESSAGE_TYPE.INITIAL_SETUP, setupMsg);
-  }
-};
-
-export const ERROR_GLUE = {
-  worker(onError) {
-    addWorkerHandler(WORKER_MESSAGE_TYPE.ERROR, onError);
-  },
-  send(errMsg: any) {
-    sendMessage(WORKER_MESSAGE_TYPE.ERROR, errMsg);
   }
 };

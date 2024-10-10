@@ -30,17 +30,19 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
   const [rating, setRating] = React.useState<string | null>(null);
 
   useEffect(() => {
-    reviewSummaryStoreReady().then(() => {
-      sendMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, {
-        productId,
-        document: SiteMetadata.getDomOuterHTML(browserWindow().document),
-        siteUrl: SiteMetadata.getURL(),
-        store,
-        isSupplier,
-        storeFeedbackUrl
-      });
-    });
+    reviewSummaryStoreReady();
   }, []);
+
+  useEffect(() => {
+    sendMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, {
+      productId,
+      document: SiteMetadata.getDomOuterHTML(browserWindow().document),
+      siteUrl: SiteMetadata.getURL(),
+      store,
+      isSupplier,
+      storeFeedbackUrl
+    });
+  }, [productId, store]);
 
   useEffect(() => {
     if (!reviewData) return;

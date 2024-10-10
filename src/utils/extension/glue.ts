@@ -6,8 +6,7 @@ const WORKER_MESSAGE_TYPE = Object.freeze({
   ANTI_SCAM: "anti_scam",
   SHUTAF: "shutaf",
   REVIEWS_SUMMARIZATION: "reviews_summarization",
-  E_COMMERCE: "e_commerce",
-  SUPPLIER: "supplier"
+  E_COMMERCE: "e_commerce"
 });
 
 export type ContentListener = (message: any, sender: any) => void;
@@ -29,18 +28,6 @@ export const ECOMMERCE_GLUE = {
   },
   send(product: IBackgroundListenerMessage, type: ComersRequestType) {
     sendMessage(WORKER_MESSAGE_TYPE.E_COMMERCE, { product, type });
-  }
-};
-
-export const SUPPLIER_GLUE = {
-  worker(onProduct: BackgroundListener) {
-    addWorkerHandler(WORKER_MESSAGE_TYPE.SUPPLIER, onProduct);
-  },
-  client(onClient: ContentListener) {
-    registerClientListener(WORKER_MESSAGE_TYPE.SUPPLIER, onClient);
-  },
-  send(product: any) {
-    sendMessage(WORKER_MESSAGE_TYPE.SUPPLIER, product);
   }
 };
 

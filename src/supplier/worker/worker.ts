@@ -1,36 +1,58 @@
 import { get } from "lodash";
-import { initPegasusTransport } from "@utils/pegasus/transport/background";
-import { initAuthStoreBackend } from "@store/AuthState";
-import { MemoryCache } from "../../utils/cashing/memoryCache";
-import { SUPPLIER_GLUE } from "../../utils/extension/glue";
+import { debug, logError } from "@utils/analytics/logger";
+import { initSupplierStoreBackend } from "@store/SupplierState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { SiteMetadata } from "../../utils/site/site-information";
 import { ParsedHtml } from "../../utils/dom/html";
 import { prepareDTO, preprocessAlibabaData } from "../stores/alibaba/alibaba-store";
 import { analyzeSupplierProductByAI } from "../supplier-ai-api-service";
 import { convertedAlibabaProduct } from "../mocks/alibaba-product-mock";
 
-const cache = new MemoryCache();
+export enum SupplierMessageType {
+  ANALYZE_SUPPLIER = "analyzeSupplier"
+}
+export interface ISupplierRequestData {
+  document: string;
+  url: {
+    domain: string;
+    domainURL: string;
+    pathName: string;
+    queryParams: string;
+    url: string;
+  };
+}
+export interface ISupplierMessageBus {
+  [SupplierMessageType.ANALYZE_SUPPLIER]: (request: ISupplierRequestData) => Promise<void>;
+}
 
-export const initSupplier = () => {
-  SUPPLIER_GLUE.worker(async (data: any, postMessage: any): Promise<void> => {
-    const dom: ParsedHtml = SiteMetadata.getDom(data);
-    const urlObj = data?.url;
-    const SupplierStoreData = preprocessAlibabaData(dom);
-    const supplierAiDTO = prepareDTO(SupplierStoreData);
-    const storeFeedbackUrl = get(SupplierStoreData, "globalData.seller.feedbackUrl");
+export const initSupplier = async () => {
+  const store = await initSupplierStoreBackend();
+  debug("SupplierStore:: Supplier Store ready:", store);
+  const { onMessage } = definePegasusMessageBus<ISupplierMessageBus>();
 
-    // ----------------------------
-    // Analyzes the product by AI/Mock
-    // ----------------------------
-    const aiResult = await analyzeSupplierProductByAI(supplierAiDTO);
-    const safeDealAiResult = convertedAlibabaProduct(aiResult, urlObj, storeFeedbackUrl);
+  onMessage(SupplierMessageType.ANALYZE_SUPPLIER, async (request) => {
+    store.getState().setLoading(true);
+    try {
+      if (!request || !request.data) {
+        throw new Error("Invalid request or missing data");
+      }
+      const { url } = request.data;
+      if (!url) {
+        throw new Error("Missing required data: url");
+      }
+      const dom: ParsedHtml = SiteMetadata.getDom(request.data);
+      const SupplierStoreData = preprocessAlibabaData(dom);
+      const supplierAiDTO = prepareDTO(SupplierStoreData);
+      const storeFeedbackUrl = get(SupplierStoreData, "globalData.seller.feedbackUrl");
 
-    // This if For Mock ONLY on Development Checking!
-    // const safeDealAiResult = await new Promise((resolve) => {
-    //   // resolve(alibabaProductMock);
-    //   // resolve(convertedAlibabaProductMock);
-    // });
+      const aiResult = await analyzeSupplierProductByAI(supplierAiDTO);
+      const safeDealAiResult = convertedAlibabaProduct(aiResult, url, storeFeedbackUrl);
 
-    postMessage(safeDealAiResult);
+      store.getState().setAnalyzedItems(safeDealAiResult);
+    } catch (error) {
+      logError(error, "::SupplierStore Error!");
+    } finally {
+      store.getState().setLoading(false);
+    }
   });
 };

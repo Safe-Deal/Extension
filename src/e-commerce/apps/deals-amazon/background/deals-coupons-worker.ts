@@ -9,9 +9,11 @@ export enum AmazonCouponsMessageType {
   FETCH_AMAZON_COUPONS = "fetchAmazonCoupons"
 }
 export interface IAmazonCouponsDealsBus {
-  fetchAmazonCoupons: (request: { document: string; url: string; domainUrl: string }) => Promise<{
-    deals: any[];
-  }>;
+  [AmazonCouponsMessageType.FETCH_AMAZON_COUPONS]: (request: {
+    document: string;
+    url: string;
+    domainUrl: string;
+  }) => Promise<void>;
 }
 
 export const initAmazonCouponsWorker = async (): Promise<void> => {
@@ -24,19 +26,16 @@ export const initAmazonCouponsWorker = async (): Promise<void> => {
       const { document, url, domainUrl } = request.data;
       if (!AmazonSiteUtils.isAmazonWholesale(url)) {
         store.getState().setCoupons([]);
-        return { deals: [] };
       }
       store.getState().setLoading(true);
       const currentPageDom: ParsedHtml = parseAsHtml(document);
       try {
         const deals = await getAllAmazonCoupons({ url, domainUrl, currentPageDom });
         store.getState().setCoupons(deals);
-        store.getState().setLoading(false);
-        return { deals };
       } catch (error) {
         logError(error);
+      } finally {
         store.getState().setLoading(false);
-        return { deals: [] };
       }
     });
   } catch (error) {

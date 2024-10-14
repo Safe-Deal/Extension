@@ -1,13 +1,14 @@
 import { create } from "zustand";
-import { pegasusZustandStoreReady, initPegasusZustandStoreBackend } from "@utils/pegasus/store-zustand";
+import { pegasusZustandStoreReady, initPegasusZustandStoreBackend } from "@pegasus/store-zustand";
+import { IAmazonCouponProduct } from "@e-commerce/apps/deals-amazon/deals-coupons.interfaces";
 import { subscribeWithSelector } from "zustand/middleware";
 
 export const STORE_NAME = "globalAmazonCouponsState";
 
 interface AmazonCouponsState {
-  coupons: any[];
+  coupons: IAmazonCouponProduct[];
   loading: boolean;
-  setCoupons: (coupons: any[]) => void;
+  setCoupons: (coupons: IAmazonCouponProduct[]) => void;
   setLoading: (loading: boolean) => void;
 }
 

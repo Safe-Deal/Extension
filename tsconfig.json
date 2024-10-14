@@ -24,7 +24,8 @@
       "@constants/*": ["./src/constants/*"],
       "@utils/*": ["./src/utils/*"],
       "react": ["./node_modules/@types/react"],
-      "@store/*": ["./src/store/*"]
+      "@store/*": ["./src/store/*"],
+      "@pegasus/*": ["./src/utils/pegasus/*"]
     }
   },
   "exclude": ["node_modules", "dist", "webpack", "tools", ".vscode"]

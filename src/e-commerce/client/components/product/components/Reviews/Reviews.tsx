@@ -1,15 +1,16 @@
-import React, { useCallback, useEffect, useMemo } from "react";
-import { t } from "../../../../../../constants/messages";
-import { logError } from "../../../../../../utils/analytics/logger";
-import { browserWindow } from "../../../../../../utils/dom/html";
-import { REVIEW_SUMMARY_GLUE } from "../../../../../../utils/extension/glue";
-import { SiteMetadata } from "../../../../../../utils/site/site-information";
+import React, { useEffect, useMemo } from "react";
+import { t } from "@constants/messages";
+import { browserWindow } from "@utils/dom/html";
+import { SiteMetadata } from "@utils/site/site-information";
 import { ProductStore } from "../../../../../engine/logic/conclusion/conclusion-product-entity.interface";
 import { createReviewsSummary } from "../../../../../reviews/reviews-utils";
 import { LoaderSpinner } from "../../../shared/Loader";
 import { ReviewsDetails } from "./ReviewsDetails";
 import { ReviewsImages } from "./ReviewsImages";
 import { ReviewsImagesBigGallery } from "./ReviewsImagesBigGallery";
+import { useReviewSummaryStore, reviewSummaryStoreReady } from "@store/ReviewSummaryState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
+import { IReviewSummaryMessageBus, ReviewSummaryMessageType } from "@e-commerce/reviews/reviews-worker";
 
 interface IReviewsProps {
   productId: string;
@@ -20,34 +21,20 @@ interface IReviewsProps {
 }
 
 export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, storeFeedbackUrl }: IReviewsProps) => {
-  const [isLoaded, setIsLoaded] = React.useState(false);
-  const [isRequested, setIsRequested] = React.useState(false);
+  const { reviewData, isLoading, error } = useReviewSummaryStore();
+  const { sendMessage } = definePegasusMessageBus<IReviewSummaryMessageBus>();
+
   const [reviews, setReviews] = React.useState([]);
   const [gallery, setGallery] = React.useState([]);
-  const [error, setError] = React.useState(null);
   const [totalReviews, setTotalReviews] = React.useState<string | null>(null);
   const [rating, setRating] = React.useState<string | null>(null);
 
-  const handleReviewsSummary = useCallback((result) => {
-    setIsLoaded(true);
-
-    if (result?.error) {
-      logError(new Error(result?.error), "Reviews Summarization Error");
-      setError(result.error);
-    }
-
-    const reviewsSummary = createReviewsSummary(result?.reviewsSummary);
-    setGallery(result?.reviewsImages);
-    setReviews(reviewsSummary);
-    setTotalReviews(result.totalReviews);
-    setRating(result?.rating);
+  useEffect(() => {
+    reviewSummaryStoreReady();
   }, []);
 
-  const requestReviewsSummary = useCallback(() => {
-    if (isRequested) {
-      return;
-    }
-    REVIEW_SUMMARY_GLUE.send({
+  useEffect(() => {
+    sendMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, {
       productId,
       document: SiteMetadata.getDomOuterHTML(browserWindow().document),
       siteUrl: SiteMetadata.getURL(),
@@ -55,13 +42,16 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
       isSupplier,
       storeFeedbackUrl
     });
-    setIsRequested(true);
-  }, [isRequested, productId, store]);
+  }, [productId, store]);
 
   useEffect(() => {
-    REVIEW_SUMMARY_GLUE.client(handleReviewsSummary);
-    requestReviewsSummary();
-  }, [handleReviewsSummary, requestReviewsSummary]);
+    if (!reviewData) return;
+    const reviewsSummary = createReviewsSummary(reviewData?.reviewsSummary);
+    setGallery(reviewData?.reviewsImages);
+    setReviews(reviewsSummary);
+    setTotalReviews(reviewData?.totalReviews?.toString());
+    setRating(reviewData?.rating?.toString());
+  }, [reviewData]);
 
   const memoizedReviews = useMemo(
     () =>
@@ -83,7 +73,7 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
     [reviews]
   );
 
-  if (!isLoaded) {
+  if (isLoading) {
     return <LoaderSpinner />;
   }
 

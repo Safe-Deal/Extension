@@ -1,9 +1,16 @@
 import { API_URL } from "../../constants/api-params";
 import { browserWindow } from "../dom/html";
 import { STATUS_NOT_200 } from "../downloaders/fetch";
-import { ERROR_GLUE } from "../extension/glue";
 import { BROWSER_VERSION, VERSION } from "../extension/utils";
 import { isBackgroundPage } from "../general/general";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
+
+export enum ErrorMessageType {
+  SEND_ERROR = "sendError"
+}
+export interface IErrorMessageBus {
+  [ErrorMessageType.SEND_ERROR]: (errorMessage: any) => Promise<void>;
+}
 
 const isNode = (): boolean =>
   typeof process !== "undefined" && process.versions != null && process.versions.node != null;
@@ -113,7 +120,7 @@ export const logError = (exception: Error, ruleName: string = "N/A - General Exc
     if (isBackground) {
       sendLog(msg);
     } else {
-      ERROR_GLUE.send(msg);
+      sendErrorMessage(msg);
     }
   }
 };
@@ -121,5 +128,14 @@ export const logError = (exception: Error, ruleName: string = "N/A - General Exc
 export const handleError = logError;
 
 export const initLog = () => {
-  ERROR_GLUE.worker(sendLog);
+  const { onMessage } = definePegasusMessageBus<IErrorMessageBus>();
+
+  onMessage(ErrorMessageType.SEND_ERROR, async (errorMsg) => {
+    await sendLog(errorMsg);
+  });
+};
+
+export const sendErrorMessage = (errorMsg: any) => {
+  const { sendMessage } = definePegasusMessageBus<IErrorMessageBus>();
+  sendMessage(ErrorMessageType.SEND_ERROR, errorMsg);
 };

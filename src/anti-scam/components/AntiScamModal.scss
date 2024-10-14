@@ -1,3 +1,5 @@
+@use "sass:color";
+
 .safe-deal__scam__page {
   .anti-scam-modal {
     font-family: "Roboto,sans-serif,arial", sans-serif !important;
@@ -70,7 +72,7 @@
         color: white;
 
         &:hover {
-          background-color: darken(#f44336, 10%);
+          background-color: color.scale(#f44336, $lightness: -10%);
         }
       }
 
@@ -80,7 +82,7 @@
         color: "#70757a";
 
         &:hover {
-          background-color: darken(#4caf50, 10%);
+          background-color: color.scale(#4caf50, $lightness: -10%);
         }
       }
     }

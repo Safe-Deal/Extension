@@ -11,6 +11,7 @@ export const getMessagePort = (
   namespace: string,
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   onMessage: (e: MessageEvent<any>) => void
+  // @ts-expect-error: TypeScript cannot infer the type of onMessage from the initial value
 ): Promise<MessagePort> => {
   promise ??= new Promise((resolve) => {
     const acceptMessagingPort = (event: MessageEvent) => {

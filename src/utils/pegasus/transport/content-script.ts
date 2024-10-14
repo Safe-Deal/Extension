@@ -52,7 +52,7 @@ export function initPegasusTransport({ allowWindowMessagingForNamespace }: Props
           tabId: null
         }
       };
-
+      // @ts-expect-error: TypeScript cannot infer the type of payload from the initial value
       internalPacketTypeRouter(payload, { eventRuntime, messageRuntime });
     }
   });

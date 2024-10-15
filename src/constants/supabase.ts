@@ -1,9 +1,11 @@
+import { API_URL, EXTENSION_AUTH_PATH, LISTS_URL } from "./api-params";
+
 export const SUPABASE = Object.freeze({
   SUPABASE_URL: process.env.SUPABASE_URL,
   SUPABASE_ANON_KEY: process.env.SUPABASE_ANON_KEY,
-  EXTENSION_AUTH_PATH: process.env.EXTENSION_AUTH_PATH,
-  EXTENSION_API_PATH: process.env.API_URL,
-  LISTS_PAGE_PATH: process.env.LISTS_URL
+  EXTENSION_AUTH_PATH: EXTENSION_AUTH_PATH,
+  EXTENSION_API_PATH: API_URL,
+  LISTS_PAGE_PATH: LISTS_URL
 });
 
 export enum SupabaseAuthEvents {

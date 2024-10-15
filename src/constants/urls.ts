@@ -13,7 +13,7 @@ export default Object.freeze({
 
   // Amazon
   AMAZON_WHOLESALE_PATH_URL: "/s?k=|/b?k=|/s?i=",
-  AMAZON_ITEM_URL_REGEX: "/dp/|/gp/video/detail/|/product/|/product-reviews/",
+  AMAZON_ITEM_URL_REGEX: "/dp/|/gp/video/detail/|/product/|/product-reviews/|/gp/aw/",
 
   // Walmart
   WALMART_WHOLESALE_PATH_URL: "/search/|/browse/",

@@ -2,7 +2,6 @@ import { IBackgroundListenerMessage } from "../../e-commerce/worker/worker";
 import { addWorkerHandler, registerClientListener, sendMessage } from "./messaging";
 
 const WORKER_MESSAGE_TYPE = Object.freeze({
-  ANTI_SCAM: "anti_scam",
   SHUTAF: "shutaf",
   E_COMMERCE: "e_commerce"
 });
@@ -42,17 +41,5 @@ export const SHUTAF_GLUE = {
   },
   ping() {
     sendMessage(WORKER_MESSAGE_TYPE.SHUTAF, SHUTAF_GLUE.PING);
-  }
-};
-
-export const ANTI_SCAM_GLUE = {
-  worker(onAntiScam) {
-    addWorkerHandler(WORKER_MESSAGE_TYPE.ANTI_SCAM, onAntiScam);
-  },
-  client(onClient: ContentListener) {
-    registerClientListener(WORKER_MESSAGE_TYPE.ANTI_SCAM, onClient);
-  },
-  send(value: any) {
-    sendMessage(WORKER_MESSAGE_TYPE.ANTI_SCAM, value);
   }
 };

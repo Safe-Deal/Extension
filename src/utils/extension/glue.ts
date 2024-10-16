@@ -2,7 +2,6 @@ import { IBackgroundListenerMessage } from "../../e-commerce/worker/worker";
 import { addWorkerHandler, registerClientListener, sendMessage } from "./messaging";
 
 const WORKER_MESSAGE_TYPE = Object.freeze({
-  SHUTAF: "shutaf",
   E_COMMERCE: "e_commerce"
 });
 
@@ -25,21 +24,5 @@ export const ECOMMERCE_GLUE = {
   },
   send(product: IBackgroundListenerMessage, type: ComersRequestType) {
     sendMessage(WORKER_MESSAGE_TYPE.E_COMMERCE, { product, type });
-  }
-};
-
-export const SHUTAF_GLUE = {
-  PING: "ping",
-  worker(onShutaf) {
-    addWorkerHandler(WORKER_MESSAGE_TYPE.SHUTAF, onShutaf);
-  },
-  client(onClient: ContentListener) {
-    registerClientListener(WORKER_MESSAGE_TYPE.SHUTAF, onClient);
-  },
-  send(url: string) {
-    sendMessage(WORKER_MESSAGE_TYPE.SHUTAF, url);
-  },
-  ping() {
-    sendMessage(WORKER_MESSAGE_TYPE.SHUTAF, SHUTAF_GLUE.PING);
   }
 };

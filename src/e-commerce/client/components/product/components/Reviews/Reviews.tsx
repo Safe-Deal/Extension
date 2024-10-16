@@ -34,14 +34,18 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
   }, []);
 
   useEffect(() => {
-    sendMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, {
+    if (!store || !productId) return;
+
+    const data = {
       productId,
       document: SiteMetadata.getDomOuterHTML(browserWindow().document),
       siteUrl: SiteMetadata.getURL(),
       store,
-      isSupplier,
-      storeFeedbackUrl
-    });
+      ...(isSupplier !== undefined && { isSupplier }),
+      ...(storeFeedbackUrl !== undefined && { storeFeedbackUrl })
+    };
+
+    sendMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, data);
   }, [productId, store]);
 
   useEffect(() => {
@@ -59,7 +63,7 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
         <li className="sd-review-summary__list__section" key={reviewIndex}>
           <h3 className="sd-review-summary__list__section__title">{review.header}</h3>
           <ul className="sd-review-summary__list__section__reasons">
-            {review.items.map((item, itemIndex) => (
+            {review?.items?.map((item, itemIndex) => (
               <li key={itemIndex} className="sd-review-summary__list__section__reasons__item">
                 <span
                   className={`sd-review-summary__list__section__reasons__item__bullet sd-review-summary__list__section__reasons__item__bullet--${item.className}`}

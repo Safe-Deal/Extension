@@ -1,24 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { t } from "../../constants/messages";
 import { IMAGE_BAD } from "../../constants/visual";
 import { Z_INDEX_MAX } from "../../e-commerce/client/components/constants";
-import { ANTI_SCAM_GLUE } from "../../utils/extension/glue";
 import { formatString } from "../../utils/text/strings";
 import { CLOSE_TAB } from "../anti-scam-worker";
 import { whitelist } from "../logic/anti-scam-persistance";
 import { ScamConclusion } from "../types/anti-scam";
 import "./AntiScamModal.scss";
+import { useAntiScamStore, antiScamStoreReady } from "@store/AntiScamState";
+import { IAntiScamMessageBus, AntiScamMessageTypes } from "../anti-scam-worker";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
 
 interface AntiScamProps {
   conclusion: ScamConclusion;
 }
 
-export const AntiScamModal: React.FC<AntiScamProps> = ({ conclusion }: { conclusion: ScamConclusion }) => {
-  const [open, setOpen] = useState<boolean>(false);
+export const AntiScamModal: React.FC<AntiScamProps> = () => {
+  const { conclusion, open, setOpen } = useAntiScamStore();
+  const { sendMessage } = definePegasusMessageBus<IAntiScamMessageBus>();
 
   useEffect(() => {
-    setOpen(true);
-  }, [conclusion]);
+    antiScamStoreReady().then(() => {
+      setOpen(true);
+    });
+  }, [setOpen]);
 
   const percent: number = conclusion?.trustworthiness ? 100 - conclusion.trustworthiness : NaN;
   const data = Number.isNaN(percent)
@@ -28,7 +33,7 @@ export const AntiScamModal: React.FC<AntiScamProps> = ({ conclusion }: { conclus
   const handleClose = () => setOpen(false);
 
   const handleLeave = () => {
-    ANTI_SCAM_GLUE.send(CLOSE_TAB);
+    sendMessage(AntiScamMessageTypes.ANALYZE_DOMAIN, CLOSE_TAB);
   };
 
   const handleStay = () => {

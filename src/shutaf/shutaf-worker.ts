@@ -1,27 +1,55 @@
-import { debug } from "../utils/analytics/logger";
+import { debug, logError } from "../utils/analytics/logger";
 import { hideBadge, showBadge } from "../utils/extension/badges";
-import { SHUTAF_GLUE } from "../utils/extension/glue";
 import { ShutafTabManger } from "./logic/ShutafTabManger";
 import { ProductShutaf } from "./logic/product-shutaff";
+import { initShutafStoreBackend } from "@store/ShutafState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
 
-export const initShutafWorker = () => {
+export enum ShutafMessageType {
+  PING = "ping",
+  GENERATE_AFFILIATE_LINK = "generateAffiliateLink"
+}
+export interface IShutafMessageBus {
+  [ShutafMessageType.PING]: () => Promise<void>;
+  [ShutafMessageType.GENERATE_AFFILIATE_LINK]: (url: string) => Promise<void>;
+}
+
+export const initShutafWorker = async () => {
+  const store = await initShutafStoreBackend();
+  const { setAffiliateLink, setLoading } = store.getState();
+  debug("ShutafStore:: Shutaf Store is ready!", store);
   debug("initShutafWorker", "Shutaf::worker is starting... ");
+  const { onMessage } = definePegasusMessageBus<IShutafMessageBus>();
   ShutafTabManger.initialize();
-  SHUTAF_GLUE.worker(async (url: string, sendResponse) => {
-    if (url === SHUTAF_GLUE.PING) {
-      const notOpenedLinks = JSON.stringify(ShutafTabManger.requests, null, 2);
-      debug("ShutafWorker", `Shutaf::worker is alive. notOpenedLinks: ${notOpenedLinks}`);
-      return;
-    }
 
-    const executor = new ProductShutaf(url);
-    const affiliatedLink = await executor.execute();
-    if (affiliatedLink) {
-      await showBadge();
-    } else {
-      await hideBadge();
-    }
-    sendResponse(affiliatedLink);
+  onMessage(ShutafMessageType.PING, async () => {
+    const notOpenedLinks = JSON.stringify(ShutafTabManger.requests, null, 2);
+    debug("ShutafWorker", `Shutaf::worker is alive. notOpenedLinks: ${notOpenedLinks}`);
+    return;
   });
+
+  onMessage(ShutafMessageType.GENERATE_AFFILIATE_LINK, async (request) => {
+    setLoading(true);
+    try {
+      const url = request.data;
+      if (!url) {
+        logError(new Error("Invalid URL"), "shutafWorker:: Invalid url request");
+        return;
+      }
+      const executor = new ProductShutaf(url);
+      const affiliatedLink = await executor.execute();
+      if (affiliatedLink) {
+        await showBadge();
+      } else {
+        await hideBadge();
+      }
+      setAffiliateLink(affiliatedLink);
+    } catch (error) {
+      logError(error, "shutafWorker:: Error");
+    } finally {
+      setLoading(false);
+    }
+  });
+
   debug("initShutafWorker", "Shutaf::worker is listening... init done.");
 };

@@ -30,27 +30,27 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
   const [rating, setRating] = React.useState<string | null>(null);
 
   useEffect(() => {
-    reviewSummaryStoreReady();
-  }, []);
-
-  useEffect(() => {
-    sendMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, {
+    if (!store || !productId) return;
+    const data = {
       productId,
       document: SiteMetadata.getDomOuterHTML(browserWindow().document),
       siteUrl: SiteMetadata.getURL(),
       store,
-      isSupplier,
-      storeFeedbackUrl
+      ...(isSupplier !== undefined && { isSupplier }),
+      ...(storeFeedbackUrl !== undefined && { storeFeedbackUrl })
+    };
+    reviewSummaryStoreReady().then(() => {
+      sendMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, data);
     });
   }, [productId, store]);
 
   useEffect(() => {
     if (!reviewData) return;
-    const reviewsSummary = createReviewsSummary(reviewData?.reviewsSummary);
-    setGallery(reviewData?.reviewsImages);
-    setReviews(reviewsSummary);
-    setTotalReviews(reviewData?.totalReviews?.toString());
-    setRating(reviewData?.rating?.toString());
+    const reviewsSummary = createReviewsSummary(reviewData?.reviewsSummary || []);
+    setGallery(reviewData?.reviewsImages || []);
+    setReviews(reviewsSummary || []);
+    setTotalReviews(reviewData?.totalReviews?.toString() || null);
+    setRating(reviewData?.rating?.toString() || null);
   }, [reviewData]);
 
   const memoizedReviews = useMemo(
@@ -59,7 +59,7 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
         <li className="sd-review-summary__list__section" key={reviewIndex}>
           <h3 className="sd-review-summary__list__section__title">{review.header}</h3>
           <ul className="sd-review-summary__list__section__reasons">
-            {review.items.map((item, itemIndex) => (
+            {review?.items?.map((item, itemIndex) => (
               <li key={itemIndex} className="sd-review-summary__list__section__reasons__item">
                 <span
                   className={`sd-review-summary__list__section__reasons__item__bullet sd-review-summary__list__section__reasons__item__bullet--${item.className}`}
@@ -69,7 +69,7 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
             ))}
           </ul>
         </li>
-      )),
+      )) || [],
     [reviews]
   );
 

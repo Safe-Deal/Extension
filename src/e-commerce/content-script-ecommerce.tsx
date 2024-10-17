@@ -14,9 +14,7 @@ initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_ECOMMER
 (async () => {
   try {
     debug("SafeDeal Client::  initializing.... Started");
-    await authStoreReady().then((store) => {
-      debug("SafeDeal Client::  initializing.... Auth store is ready!", store);
-    });
+    await authStoreReady();
     const store = SiteUtil.getStore();
     if (store === ProductStore.NOT_SUPPORTED) {
       debug("SafeDeal Client::  initializing.... Store not supported. Exiting....");

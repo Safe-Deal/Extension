@@ -1,7 +1,9 @@
 import React from "react";
+import { useShutafStore, shutafStoreReady } from "@store/ShutafState";
+import { ShutafMessageType, IShutafMessageBus } from "@shutaf/shutaf-worker";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { ext } from "../../../../utils/extension/ext";
 import { hideBadge } from "../../../../utils/extension/badges";
-import { SHUTAF_GLUE } from "../../../../utils/extension/glue";
 
 import "./AffiliationBanner.scss";
 import { t } from "../../../../constants/messages";
@@ -15,24 +17,19 @@ const tabUrl = () =>
   });
 
 const AffiliationBanner = () => {
-  const [affLink, setAffLink] = React.useState(null);
-
-  SHUTAF_GLUE.client((value) => {
-    if (value) {
-      setAffLink(value);
-      hideBadge();
-    }
-  });
+  const { affiliateLink: affLink } = useShutafStore();
+  const { sendMessage } = definePegasusMessageBus<IShutafMessageBus>();
 
   React.useEffect(() => {
     hideBadge();
-
     const affShutaf = async () => {
       tabUrl().then(async (url: string) => {
-        SHUTAF_GLUE.send(url);
+        sendMessage(ShutafMessageType.GENERATE_AFFILIATE_LINK, url);
       });
     };
-    affShutaf();
+    shutafStoreReady().then(() => {
+      affShutaf();
+    });
   }, []);
 
   if (!affLink) {

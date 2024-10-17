@@ -1,38 +1,47 @@
 import { debug, logError } from "../utils/analytics/logger";
-import { ANTI_SCAM_GLUE } from "../utils/extension/glue";
 import { SiteMetadata } from "../utils/site/site-information";
 import { paintAntiScam } from "./logic/anti-scam-paint";
 import { isWhitelisted, markAsSafe } from "./logic/anti-scam-persistance";
-import { ScamConclusion, ScamSiteType } from "./types/anti-scam";
+import { ScamSiteType } from "./types/anti-scam";
+import { IAntiScamMessageBus, AntiScamMessageTypes } from "./anti-scam-worker";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
+import { useAntiScamStore } from "@store/AntiScamState";
+import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
+
+initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_ANTI_SCAM" });
 
 (async () => {
   try {
     const domain = SiteMetadata.getDomain();
     const isOkAlready = isWhitelisted(domain);
+    const { sendMessage } = definePegasusMessageBus<IAntiScamMessageBus>();
+
     if (isOkAlready) {
       debug(`AntiScam :: ${domain} is whitelisted so skipping.`);
       return;
     }
 
-    debug(`AntiScam :: Analysis of ${domain} started....`);
-    ANTI_SCAM_GLUE.client((result: ScamConclusion) => {
+    await sendMessage(AntiScamMessageTypes.ANALYZE_DOMAIN, domain);
+
+    useAntiScamStore.subscribe((state) => {
+      const conclusion = state?.conclusion;
+      debug(`AntiScam :: Analysis of ${domain} started....`);
       debug(`AntiScam :: Sending ${domain} for analysis`);
-      if (result) {
-        debug(`AntiScam :: Received ${JSON.stringify(result)}`);
-        if (result.type === ScamSiteType.DANGEROUS) {
-          paintAntiScam(result);
+
+      if (conclusion) {
+        debug(`AntiScam :: Received ${JSON.stringify(conclusion)}`);
+        if (conclusion.type === ScamSiteType.DANGEROUS) {
+          paintAntiScam(conclusion);
           debug(`AntiScam :: Painting.... Done.`);
-        } else if (result.type === ScamSiteType.SAFE) {
+        } else if (conclusion.type === ScamSiteType.SAFE) {
           markAsSafe();
           debug(`AntiScam :: Marked as Safe.`);
         }
       } else {
-        debug(`AntiScam :: No data returned nothing to paint!! result:${JSON.stringify(result)}`);
+        debug(`AntiScam :: No data returned nothing to paint!! result:${JSON.stringify(conclusion)}`);
       }
     });
-
-    ANTI_SCAM_GLUE.send(domain);
   } catch (error) {
-    logError(error);
+    logError(error, "AntiScam Error::");
   }
 })();

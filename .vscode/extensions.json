@@ -1,4 +1,5 @@
-{ "recommendations": [
+{
+  "recommendations": [
     "aaron-bond.better-comments",
     "adrianwilczynski.toggle-hidden",
     "alexdima.copy-relative-path",
@@ -20,7 +21,6 @@
     "formulahendry.auto-close-tag",
     "formulahendry.auto-rename-tag",
     "github.copilot",
-    "github.copilot-chat",
     "hediet.debug-visualizer",
     "ionutvmi.path-autocomplete",
     "kingwl.ts-react-hooks-tools",
@@ -53,4 +53,5 @@
     "xabikos.javascriptsnippets",
     "xyz.local-history",
     "yoavbls.pretty-ts-errors"
-  ] }
+  ]
+}

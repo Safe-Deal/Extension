@@ -30,12 +30,7 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
   const [rating, setRating] = React.useState<string | null>(null);
 
   useEffect(() => {
-    reviewSummaryStoreReady();
-  }, []);
-
-  useEffect(() => {
     if (!store || !productId) return;
-
     const data = {
       productId,
       document: SiteMetadata.getDomOuterHTML(browserWindow().document),
@@ -44,17 +39,18 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
       ...(isSupplier !== undefined && { isSupplier }),
       ...(storeFeedbackUrl !== undefined && { storeFeedbackUrl })
     };
-
-    sendMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, data);
+    reviewSummaryStoreReady().then(() => {
+      sendMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, data);
+    });
   }, [productId, store]);
 
   useEffect(() => {
     if (!reviewData) return;
-    const reviewsSummary = createReviewsSummary(reviewData?.reviewsSummary);
-    setGallery(reviewData?.reviewsImages);
-    setReviews(reviewsSummary);
-    setTotalReviews(reviewData?.totalReviews?.toString());
-    setRating(reviewData?.rating?.toString());
+    const reviewsSummary = createReviewsSummary(reviewData?.reviewsSummary || []);
+    setGallery(reviewData?.reviewsImages || []);
+    setReviews(reviewsSummary || []);
+    setTotalReviews(reviewData?.totalReviews?.toString() || null);
+    setRating(reviewData?.rating?.toString() || null);
   }, [reviewData]);
 
   const memoizedReviews = useMemo(
@@ -73,7 +69,7 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
             ))}
           </ul>
         </li>
-      )),
+      )) || [],
     [reviews]
   );
 

@@ -8,11 +8,30 @@ import { Site } from "../../data/sites/site";
 import { SiteFactory } from "../../data/sites/site-factory";
 import { debug, logError } from "../../utils/analytics/logger";
 import { MemoryCache } from "../../utils/cashing/memoryCache";
-import { ECOMMERCE_GLUE } from "../../utils/extension/glue";
 import { SiteMetadata } from "../../utils/site/site-information";
 import { IConclusionProductEntity } from "../engine/logic/conclusion/conclusion-product-entity.interface";
 import { convertSiteToSiteResponse } from "../engine/logic/utils/convertors";
 import { SiteUtil } from "../engine/logic/utils/site-utils";
+import { definePegasusMessageBus, definePegasusEventBus } from "@utils/pegasus/transport";
+import { initEcommerceStoreBackend } from "@store/EcommerceStore";
+
+export enum ECommerceProductType {
+  PRODUCT = "e_commerce_product",
+  WHOLESALE = "e_commerce_wholesale"
+}
+
+export enum EcommerceMessageTypes {
+  PROCESS_PRODUCT = "processProduct",
+  EMIT_CONCLUSION_RESPONSE_EVENT = "ecommerce:conclusionResponse"
+}
+
+export interface IEcommerceMessageBus {
+  [EcommerceMessageTypes.PROCESS_PRODUCT]: (request: IBackgroundListenerMessage) => Promise<void>;
+}
+
+export interface IEcommerceEventBus {
+  [EcommerceMessageTypes.EMIT_CONCLUSION_RESPONSE_EVENT]: IConclusionResponse;
+}
 
 const MAX_PARALLEL_PROCESSING = 8;
 
@@ -29,9 +48,10 @@ export interface IBackgroundListenerMessage {
     url: string;
   };
   product: IProduct;
+  type: ECommerceProductType;
 }
 
-const reportError = ({ error, productId, postMessage, siteResponse, cashingKey }) => {
+const reportError = ({ error, productId, setConclusionResponse, emitBroadcastEvent, siteResponse, cashingKey }) => {
   const conclusionResponse: IConclusionResponse = {
     conclusionProductEntity: [],
     error: error?.toString(),
@@ -39,11 +59,16 @@ const reportError = ({ error, productId, postMessage, siteResponse, cashingKey }
     productId
   };
   cash.delete(cashingKey);
-  postMessage(conclusionResponse);
+  setConclusionResponse(conclusionResponse);
+  emitBroadcastEvent(EcommerceMessageTypes.EMIT_CONCLUSION_RESPONSE_EVENT, conclusionResponse);
   logError(error);
 };
 
-const processProduct = async (data: IBackgroundListenerMessage, postMessage: (message: object) => void) => {
+const processProduct = async (
+  data: IBackgroundListenerMessage,
+  setConclusionResponse: (data: IConclusionResponse) => void,
+  emitBroadcastEvent
+) => {
   let siteResponse: ISiteResponse = null;
   let productId: string = null;
   let cashingKey: string = null;
@@ -54,7 +79,8 @@ const processProduct = async (data: IBackgroundListenerMessage, postMessage: (me
     cashingKey = `${data.url.domain}_${productId}_${isItem ? "item" : "list"}`;
     if (cash.has(cashingKey)) {
       const result = cash.get(cashingKey);
-      postMessage(result);
+      setConclusionResponse(result);
+      emitBroadcastEvent(EcommerceMessageTypes.EMIT_CONCLUSION_RESPONSE_EVENT, result);
       debug(`Product #${productId} is already in processed returning from cash`, "Worker::analyze");
       return;
     }
@@ -91,30 +117,48 @@ const processProduct = async (data: IBackgroundListenerMessage, postMessage: (me
       productId: product.id
     };
     cash.set(cashingKey, conclusionResponse);
-    postMessage(conclusionResponse);
+    setConclusionResponse(conclusionResponse);
+    emitBroadcastEvent(EcommerceMessageTypes.EMIT_CONCLUSION_RESPONSE_EVENT, conclusionResponse);
     debug(`Processing of: ${product?.id} .... Done - Response sent.`, "Worker::analyze");
   } catch (error) {
-    reportError({ error, productId, postMessage, siteResponse, cashingKey });
+    reportError({ error, productId, setConclusionResponse, emitBroadcastEvent, siteResponse, cashingKey });
   }
 };
 
-export const initCommerce = () => {
-  ECOMMERCE_GLUE.worker(async (data, postMessage) => {
-    const { product, type } = data;
-    if (type === ECOMMERCE_GLUE.PRODUCT) {
-      try {
-        queue.pause();
-        await processProduct(product, postMessage);
-        queue.start();
-      } catch (error) {
-        reportError({ error, productId: product?.id, postMessage, siteResponse: null, cashingKey: null });
+export const initCommerce = async () => {
+  const store = await initEcommerceStoreBackend();
+  debug("EcommerceStore:: E-commerce Store ready!", store.getState());
+  const { setConclusionResponse, setCurrentProduct } = store.getState();
+  const { onMessage } = definePegasusMessageBus<IEcommerceMessageBus>();
+  const { emitBroadcastEvent } = definePegasusEventBus<IEcommerceEventBus>();
+
+  onMessage(EcommerceMessageTypes.PROCESS_PRODUCT, async (request) => {
+    try {
+      if (!request || !request.data) {
+        throw new Error("EcommerceWorker:: Invalid request or data!");
       }
-    } else {
-      queue.add(() =>
-        processProduct(product, postMessage).catch((error) => {
-          reportError({ error, productId: product?.id, postMessage, siteResponse: null, cashingKey: null });
-        })
-      );
+      const { product, type } = request.data;
+      setCurrentProduct(product);
+      if (type === ECommerceProductType.PRODUCT) {
+        queue.pause();
+        await processProduct(request.data, setConclusionResponse, emitBroadcastEvent);
+        queue.start();
+      } else {
+        queue.add(() => {
+          processProduct(request.data, setConclusionResponse, emitBroadcastEvent).catch((error) => {
+            reportError({
+              error,
+              productId: product?.id,
+              setConclusionResponse,
+              emitBroadcastEvent,
+              siteResponse: null,
+              cashingKey: null
+            });
+          });
+        });
+      }
+    } catch (error) {
+      logError(error, "EcommerceWorker:: Error!");
     }
   });
 };

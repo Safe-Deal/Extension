@@ -9,8 +9,8 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    container:
-      image: mcr.microsoft.com/playwright:v1.47.2-focal
+    # container:
+    #   image: mcr.microsoft.com/playwright:v1.47.2-focal
 
     steps:
       - uses: actions/checkout@v3

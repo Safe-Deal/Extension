@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+import { useAntiScamStore, antiScamStoreReady } from "@store/AntiScamState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { t } from "../../constants/messages";
 import { IMAGE_BAD } from "../../constants/visual";
 import { Z_INDEX_MAX } from "../../e-commerce/client/components/constants";
@@ -7,9 +9,7 @@ import { CLOSE_TAB } from "../anti-scam-worker";
 import { whitelist } from "../logic/anti-scam-persistance";
 import { ScamConclusion } from "../types/anti-scam";
 import "./AntiScamModal.scss";
-import { useAntiScamStore, antiScamStoreReady } from "@store/AntiScamState";
 import { IAntiScamMessageBus, AntiScamMessageTypes } from "../anti-scam-worker";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
 
 interface AntiScamProps {
   conclusion: ScamConclusion;

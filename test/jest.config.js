@@ -1,3 +1,6 @@
+const { pathsToModuleNameMapper } = require("ts-jest");
+const { compilerOptions } = require("../tsconfig.json");
+
 const TIMEOUT_IN_SECONDS = 120;
 
 module.exports = {
@@ -7,9 +10,9 @@ module.exports = {
   automock: false,
   testEnvironment: "jest-environment-jsdom",
   testTimeout: TIMEOUT_IN_SECONDS * 1000,
-  roots: ["./../src"],
-  setupFiles: ["./jest.setup.js"],
-  setupFilesAfterEnv: ["./jest.setup.env.js"],
+  roots: ["<rootDir>/../src"],
+  setupFiles: ["<rootDir>/jest.setup.js"],
+  setupFilesAfterEnv: ["<rootDir>/jest.setup.env.js"],
   testPathIgnorePatterns: [".*\\.mock\\..*"],
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
@@ -17,13 +20,12 @@ module.exports = {
   },
   moduleNameMapper: {
     "\\.(css|less|scss|sss|styl)$": "identity-obj-proxy",
-    "^@utils/(.*)$": "<rootDir>..//src/utils/$1",
-    "^@constants/(.*)$": "<rootDir>..//src/constants/$1",
-    "^@anti-scam/(.*)$": "<rootDir>/../src/anti-scam/$1",
-    "^@browser-extension/(.*)$": "<rootDir>/../src/browser-extension/$1",
-    "^@data/(.*)$": "<rootDir>/../src/data/$1",
-    "^@e-commerce/(.*)$": "<rootDir>/../src/e-commerce/$1",
-    "^@shutaf/(.*)$": "<rootDir>/../src/shutaf/$1"
+    ...pathsToModuleNameMapper(compilerOptions.paths, { prefix: "<rootDir>/../" })
   },
-  transformIgnorePatterns: ["node_modules/(?!(@mui|swiper)/)"]
+  transformIgnorePatterns: ["node_modules/(?!(@mui|swiper)/)"],
+  globals: {
+    "ts-jest": {
+      tsconfig: "<rootDir>/../tsconfig.json"
+    }
+  }
 };

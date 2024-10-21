@@ -5,7 +5,7 @@ import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Paper from "@mui/material/Paper";
 import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
-import { useAuthStore } from "@store/AuthState";
+import { useAuthStore } from "../../../../store/AuthState";
 import { isRtl, messages, t } from "../../../../constants/messages";
 import { SdDealsCouponsApp } from "../../../apps/deals-amazon/ui/DealsCouponsApp";
 import { ProductStore } from "../../../engine/logic/conclusion/conclusion-product-entity.interface";

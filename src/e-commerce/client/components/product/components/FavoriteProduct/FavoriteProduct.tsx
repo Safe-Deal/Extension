@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useListsStore, listsStoreReady } from "@store/ListsStore";
 import "./FavoriteProduct.scss";
 import { useAuthStore } from "@store/AuthState";
 import { TabValue } from "../../ProductFull";
@@ -9,12 +10,18 @@ interface IFavoriteProductProps {
 }
 
 const FavoriteProduct = ({ tab, action }: IFavoriteProductProps) => {
-  const [isFavorite, setIsFavorite] = useState(false);
+  const { isCurrentAFavorite: isFavorite } = useListsStore();
   const { isPremiumUser, loading, session } = useAuthStore((state) => ({
     isPremiumUser: state.isPremium,
     loading: state.loading,
     session: state.session
   }));
+
+  useEffect(() => {
+    listsStoreReady().then(() => {
+      console.log(isFavorite);
+    });
+  }, []);
 
   const setFlag = async () => {
     if (loading || !session) return;
@@ -24,7 +31,6 @@ const FavoriteProduct = ({ tab, action }: IFavoriteProductProps) => {
   const toggleFavorite = async () => {
     await setFlag();
     tab(TabValue.Lists);
-    setIsFavorite(!isFavorite);
   };
 
   return (

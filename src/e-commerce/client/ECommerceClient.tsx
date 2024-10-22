@@ -1,5 +1,13 @@
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import React, { useEffect, useState } from "react";
+import { useAuthStore } from "@store/AuthState";
+import { useListsStore, listsStoreReady } from "@store/ListsStore";
+import { useEcommerceStore, ecommerceStoreReady } from "@store/EcommerceStore";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
+import {
+  IListWorkerMessageBus,
+  ListsWorkerMessageType
+} from "./components/product/components/Lists/worker/lists-worker";
 import { MODIFIED_PAGES_CSS_CLASS } from "../../constants/display";
 import { SiteFactory } from "../../data/sites/site-factory";
 import { debug } from "../../utils/analytics/logger";
@@ -24,6 +32,10 @@ export function ECommerceClient(): JSX.Element {
     processedItems: [],
     progress: DEFAULT_PROGRESS
   });
+  const { session } = useAuthStore();
+  const { lists } = useListsStore();
+  const { currentProduct } = useEcommerceStore();
+  const { sendMessage } = definePegasusMessageBus<IListWorkerMessageBus>();
   const [isWorking, setIsWorking] = useTimedState<boolean>(true, false);
   const [productData, setProductData] = useState<AnalyzedItem | null>(null);
 
@@ -38,6 +50,22 @@ export function ECommerceClient(): JSX.Element {
     pathName: SiteMetadata.getPathName(),
     dom
   });
+
+  useEffect(() => {
+    listsStoreReady();
+    ecommerceStoreReady();
+    if (session) {
+      sendMessage(ListsWorkerMessageType.FETCH_LISTS, session);
+    }
+  }, [session]);
+
+  useEffect(() => {
+    if (!session || !currentProduct || !lists) return;
+    const fetchLists = async () => {
+      sendMessage(ListsWorkerMessageType.CHECK_PRODUCT, { productId: currentProduct.id, lists });
+    };
+    fetchLists();
+  }, [currentProduct, session, lists]);
 
   const updateStatus = (newProgress) => {
     if (newProgress.totalLeft > 0) {

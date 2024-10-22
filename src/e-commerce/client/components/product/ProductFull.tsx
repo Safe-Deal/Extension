@@ -46,10 +46,6 @@ export function ProductFull({ product = DEFAULT_PRODUCT, isSupplier = false }: I
     setListsAction(null);
   }, []);
 
-  useEffect(() => {
-    console.log(isPremiumUser);
-  }, [isPremiumUser]);
-
   const handleChange = (event: React.SyntheticEvent, newValue: TabValue) => {
     setTabValue(newValue);
   };

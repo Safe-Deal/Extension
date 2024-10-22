@@ -9,6 +9,7 @@ import { initLog, logError } from "../utils/analytics/logger";
 import { initExtensionSetup } from "./extension/life-cycle";
 import { initSupplier } from "../supplier/worker/worker";
 import { initAuthWorker } from "../auth/auth-worker";
+import { initListsWorker } from "../e-commerce/client/components/product/components/Lists/worker/lists-worker";
 
 initPegasusTransport();
 
@@ -24,6 +25,7 @@ initPegasusTransport();
     initShutafWorker();
     initAmazonCouponsWorker();
     initAliExpressSuperDealsWorker();
+    initListsWorker();
   } catch (error) {
     logError(error);
   }

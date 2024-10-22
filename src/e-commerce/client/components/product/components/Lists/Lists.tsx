@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useMemo, useEffect } from "react";
 import { SUPABASE } from "@constants/supabase";
 import { useAuthStore } from "@store/AuthState";
 import { ResponsiveIframe } from "../../../shared/ResponsiveIframe";
@@ -34,6 +34,12 @@ export const Lists = ({ action, product }: IListProps) => {
 
     return baseUrl;
   }, [session, loading]);
+
+  useEffect(() => {
+    return () => {
+      console.log("Lists:: unmount");
+    };
+  }, []);
 
   return (
     <div className="sd-product-lists">

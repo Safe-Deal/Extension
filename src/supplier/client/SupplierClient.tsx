@@ -1,5 +1,7 @@
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import React, { ReactNode, useEffect } from "react";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
+import { useSupplierStore, supplierStoreReady } from "@store/SupplierState";
 import { MODIFIED_PAGES_CSS_CLASS } from "../../constants/display";
 import { browserWindow } from "../../utils/dom/html";
 import { SafeDealTheme } from "../../utils/react/theme";
@@ -8,8 +10,6 @@ import { FloatingToolbar } from "../../e-commerce/client/components/toolbar/Floa
 import { ProductMinimal } from "../../e-commerce/client/components/product/ProductMinimal";
 import { ProductFull } from "../../e-commerce/client/components/product/ProductFull";
 import { ISupplierMessageBus, SupplierMessageType } from "../worker/worker";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
-import { useSupplierStore, supplierStoreReady } from "@store/SupplierState";
 
 const SupplierClient = (): ReactNode => {
   const { analyzedItems, loading } = useSupplierStore();

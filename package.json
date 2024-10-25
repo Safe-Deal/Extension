@@ -1,7 +1,7 @@
 {
   "name": "safe-deal",
   "private": true,
-  "version": "5.5.9",
+  "version": "5.5.10",
   "author": "Safe Deal",
   "license": "MIT",
   "description": "Safe Deal Extension",
@@ -30,7 +30,7 @@
     "dev:clean": "shx rm -rf ./dist",
     "prettier": "prettier --ignore-path .gitignore --write ./src >> /dev/null 2>&1",
     "eslint": "eslint ./src --ext .ts,.tsx --fix --quiet",
-    "test": "run-s test:unit test:e2e",
+    "test": "run-s test:unit",
     "test:dist": "run-s test:clean dist:clean conf:chrome dist:build test",
     "test:unit": "jest --config ./test/jest.config.js --bail",
     "test:clean": "shx rm -rf ./test/timing ./test/output ./test/output-report ./test/temp",

@@ -1,9 +1,9 @@
+import { initShutafStoreBackend } from "@store/ShutafState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { debug, logError } from "../utils/analytics/logger";
 import { hideBadge, showBadge } from "../utils/extension/badges";
 import { ShutafTabManger } from "./logic/ShutafTabManger";
 import { ProductShutaf } from "./logic/product-shutaff";
-import { initShutafStoreBackend } from "@store/ShutafState";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
 
 export enum ShutafMessageType {
   PING = "ping",
@@ -25,7 +25,6 @@ export const initShutafWorker = async () => {
   onMessage(ShutafMessageType.PING, async () => {
     const notOpenedLinks = JSON.stringify(ShutafTabManger.requests, null, 2);
     debug("ShutafWorker", `Shutaf::worker is alive. notOpenedLinks: ${notOpenedLinks}`);
-    return;
   });
 
   onMessage(ShutafMessageType.GENERATE_AFFILIATE_LINK, async (request) => {

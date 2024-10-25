@@ -3,6 +3,12 @@ import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
 import React, { useEffect, useState } from "react";
+import { useAliexpressDealsStore, aliexpressDealsStoreReady } from "@store/AliexpressDealsState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
+import {
+  AliSuperDealsMessageType,
+  IAliSuperDealsBus
+} from "@e-commerce/apps/deals-ali-express/worker/ali-super-deals-worker";
 import { browserWindow, querySelector } from "../../../../../../utils/dom/html";
 import { SiteMetadata } from "../../../../../../utils/site/site-information";
 import { isAliexpressCampaignPage } from "../../utils/ali-super-deals-utils-ui";
@@ -12,12 +18,6 @@ import Transition from "../dialog/dialog-transition";
 import AliSuperDealsAppBar from "../toolbar/toolbar";
 import { SiteUtil } from "../../../../../engine/logic/utils/site-utils";
 import { ProductStore } from "../../../../../engine/logic/conclusion/conclusion-product-entity.interface";
-import { useAliexpressDealsStore, aliexpressDealsStoreReady } from "@store/AliexpressDealsState";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
-import {
-  AliSuperDealsMessageType,
-  IAliSuperDealsBus
-} from "@e-commerce/apps/deals-ali-express/worker/ali-super-deals-worker";
 
 function SuperDealsAnalyzer(): JSX.Element {
   const [open, setOpen] = useState(false);

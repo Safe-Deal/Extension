@@ -1,12 +1,12 @@
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
+import { useAntiScamStore } from "@store/AntiScamState";
+import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
 import { debug, logError } from "../utils/analytics/logger";
 import { SiteMetadata } from "../utils/site/site-information";
 import { paintAntiScam } from "./logic/anti-scam-paint";
 import { isWhitelisted, markAsSafe } from "./logic/anti-scam-persistance";
 import { ScamSiteType } from "./types/anti-scam";
 import { IAntiScamMessageBus, AntiScamMessageTypes } from "./anti-scam-worker";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
-import { useAntiScamStore } from "@store/AntiScamState";
-import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
 
 initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_ANTI_SCAM" });
 

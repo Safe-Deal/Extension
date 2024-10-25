@@ -1,3 +1,10 @@
+import {
+  IEcommerceMessageBus,
+  EcommerceMessageTypes,
+  ECommerceProductType,
+  IEcommerceEventBus
+} from "@e-commerce/worker/worker";
+import { definePegasusMessageBus, definePegasusEventBus } from "@utils/pegasus/transport";
 import { IProduct } from "../../../data/entities/product.interface";
 import { DisplaySite } from "../../engine/logic/site/display-site";
 import { PreDisplaySiteFactory, DisplaySiteFactory } from "../../engine/logic/site/display-site-factory";
@@ -10,13 +17,6 @@ import { comparePaths } from "../../../utils/dom/location";
 import { SiteUtil } from "../../engine/logic/utils/site-utils";
 import { onDocumentInactivity } from "../../../utils/browser/browser";
 import { ProductStore } from "../../engine/logic/conclusion/conclusion-product-entity.interface";
-import {
-  IEcommerceMessageBus,
-  EcommerceMessageTypes,
-  ECommerceProductType,
-  IEcommerceEventBus
-} from "@e-commerce/worker/worker";
-import { definePegasusMessageBus, definePegasusEventBus } from "@utils/pegasus/transport";
 
 const store = SiteUtil.getStore();
 const STORE_DELAY_TIMES_MAP = {
@@ -45,7 +45,7 @@ export const sendNextRequest = () => {
         url: SiteMetadata.getURL()
       },
       product: currentProduct,
-      type: type
+      type
     };
 
     if (currentProduct) {

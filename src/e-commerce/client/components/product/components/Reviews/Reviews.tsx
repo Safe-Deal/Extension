@@ -2,15 +2,15 @@ import React, { useEffect, useMemo } from "react";
 import { t } from "@constants/messages";
 import { browserWindow } from "@utils/dom/html";
 import { SiteMetadata } from "@utils/site/site-information";
+import { useReviewSummaryStore, reviewSummaryStoreReady } from "@store/ReviewSummaryState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
+import { IReviewSummaryMessageBus, ReviewSummaryMessageType } from "@e-commerce/reviews/reviews-worker";
 import { ProductStore } from "../../../../../engine/logic/conclusion/conclusion-product-entity.interface";
 import { createReviewsSummary } from "../../../../../reviews/reviews-utils";
 import { LoaderSpinner } from "../../../shared/Loader";
 import { ReviewsDetails } from "./ReviewsDetails";
 import { ReviewsImages } from "./ReviewsImages";
 import { ReviewsImagesBigGallery } from "./ReviewsImagesBigGallery";
-import { useReviewSummaryStore, reviewSummaryStoreReady } from "@store/ReviewSummaryState";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
-import { IReviewSummaryMessageBus, ReviewSummaryMessageType } from "@e-commerce/reviews/reviews-worker";
 
 interface IReviewsProps {
   productId: string;

@@ -1,3 +1,5 @@
+import { initReviewSummaryStoreBackend } from "@store/ReviewSummaryState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { debug, logError } from "../../utils/analytics/logger";
 import { MemoryCache } from "../../utils/cashing/memoryCache";
 import { VERSION } from "../../utils/extension/utils";
@@ -7,8 +9,6 @@ import { AliExpressReviewsService } from "./aliexpress/aliexpress-reviews-servic
 import { AmazonReviewsService } from "./amazon/amazon-reviews-service";
 import { EbayReviewsService } from "./ebay/ebay-reviews-service";
 import { ReviewSummaryData } from "./reviews-types";
-import { initReviewSummaryStoreBackend } from "@store/ReviewSummaryState";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
 
 const cache = new MemoryCache();
 

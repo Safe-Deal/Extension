@@ -1,11 +1,11 @@
 import { authStoreReady, useAuthStore } from "@store/AuthState";
 import { shutafStoreReady } from "@store/ShutafState";
-import { IShutafMessageBus, ShutafMessageType } from "./shutaf-worker";
 import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
+import { IShutafMessageBus, ShutafMessageType } from "./shutaf-worker";
 import { debug, logError } from "../utils/analytics/logger";
 import { browserWindow } from "../utils/dom/html";
 import { onHrefChange } from "../utils/dom/location";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
 
 const PING_INTERVAL_IN_SEC = 25;
 

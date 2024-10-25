@@ -5,11 +5,10 @@ import { t } from "../../constants/messages";
 import { IMAGE_BAD } from "../../constants/visual";
 import { Z_INDEX_MAX } from "../../e-commerce/client/components/constants";
 import { formatString } from "../../utils/text/strings";
-import { CLOSE_TAB } from "../anti-scam-worker";
+import { CLOSE_TAB, IAntiScamMessageBus, AntiScamMessageTypes } from "../anti-scam-worker";
 import { whitelist } from "../logic/anti-scam-persistance";
 import { ScamConclusion } from "../types/anti-scam";
 import "./AntiScamModal.scss";
-import { IAntiScamMessageBus, AntiScamMessageTypes } from "../anti-scam-worker";
 
 interface AntiScamProps {
   conclusion: ScamConclusion;

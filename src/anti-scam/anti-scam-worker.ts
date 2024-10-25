@@ -1,8 +1,8 @@
+import { initAntiScamStoreBackend } from "@store/AntiScamState";
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { debug, logError } from "../utils/analytics/logger";
 import { ext } from "../utils/extension/ext";
 import { ApiScamPartners } from "./logic/anti-scam-logic";
-import { initAntiScamStoreBackend } from "@store/AntiScamState";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
 
 export const CLOSE_TAB = "close-tab";
 

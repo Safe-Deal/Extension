@@ -19,9 +19,9 @@ export const useSupplierStore = create<SupplierState>()(
     analyzedItems: null,
     loading: true,
     progress: DEFAULT_PROGRESS,
-    setProgress: (progress: Progress) => set({ progress: progress }),
+    setProgress: (progress: Progress) => set({ progress }),
     setAnalyzedItems: (data: AnalyzedItem[]) => set({ analyzedItems: data }),
-    setLoading: (loading) => set({ loading: loading })
+    setLoading: (loading) => set({ loading })
   }))
 );
 

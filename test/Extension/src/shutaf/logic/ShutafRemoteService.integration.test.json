@@ -1,6 +1,0 @@
-{
-  "should fetch the shutaf link with all integration required fields, including valid 'target' values": {
-    "date": "2024-10-13",
-    "status": "passed"
-  }
-}

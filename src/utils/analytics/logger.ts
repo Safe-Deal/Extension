@@ -1,9 +1,9 @@
+import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { API_URL } from "../../constants/api-params";
 import { browserWindow } from "../dom/html";
 import { STATUS_NOT_200 } from "../downloaders/fetch";
 import { BROWSER_VERSION, VERSION } from "../extension/utils";
 import { isBackgroundPage } from "../general/general";
-import { definePegasusMessageBus } from "@utils/pegasus/transport";
 
 export enum ErrorMessageType {
   SEND_ERROR = "sendError"

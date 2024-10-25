@@ -1,4 +1,6 @@
 import PQueue from "p-queue";
+import { definePegasusMessageBus, definePegasusEventBus } from "@utils/pegasus/transport";
+import { initEcommerceStoreBackend } from "@store/EcommerceStore";
 import { IProduct } from "../../data/entities/product.interface";
 import { ISiteResponse } from "../../data/entities/site-response.interface";
 import { ConclusionManager } from "../../data/rules-conclusion/conclusion-manager";
@@ -12,8 +14,6 @@ import { SiteMetadata } from "../../utils/site/site-information";
 import { IConclusionProductEntity } from "../engine/logic/conclusion/conclusion-product-entity.interface";
 import { convertSiteToSiteResponse } from "../engine/logic/utils/convertors";
 import { SiteUtil } from "../engine/logic/utils/site-utils";
-import { definePegasusMessageBus, definePegasusEventBus } from "@utils/pegasus/transport";
-import { initEcommerceStoreBackend } from "@store/EcommerceStore";
 
 export enum ECommerceProductType {
   PRODUCT = "e_commerce_product",

@@ -20,7 +20,7 @@ interface IExplanationRule {
   explanationUrl?: string;
   size?: number;
 }
-const TOOLTIP_DISPLAY_DELAY_MS: number = 930;
+const TOOLTIP_DISPLAY_DELAY_MS: number = 230;
 export const getDirection = () => {
   const { document } = browserWindow();
   return document?.dir ?? LOCALE_DIRECTION;

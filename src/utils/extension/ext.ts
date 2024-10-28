@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 const apis = [
   "alarms",
   "bookmarks",

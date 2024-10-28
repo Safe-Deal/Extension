@@ -92,12 +92,14 @@ export default function AccountMenu({ isLoggedIn, session, onLoginLogout, onSign
             <ListItemIcon>{isLoggedIn ? <Logout fontSize="small" /> : <PersonAdd fontSize="small" />}</ListItemIcon>
             {isLoggedIn ? "Logout" : "Login"}
           </MenuItem>
-          <MenuItem onClick={onSignUp}>
-            <ListItemIcon>
-              <AssignmentIndIcon fontSize="small" />
-            </ListItemIcon>
-            Sign Up
-          </MenuItem>
+          {!isLoggedIn && (
+            <MenuItem onClick={onSignUp}>
+              <ListItemIcon>
+                <AssignmentIndIcon fontSize="small" />
+              </ListItemIcon>
+              Sign Up
+            </MenuItem>
+          )}
         </Menu>
       </>
     </div>

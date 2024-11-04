@@ -31,14 +31,20 @@ export const initSupplier = async () => {
   const { onMessage } = definePegasusMessageBus<ISupplierMessageBus>();
 
   onMessage(SupplierMessageType.ANALYZE_SUPPLIER, async (request) => {
-    store.getState().setLoading(true);
+    const { setLoading, setAnalyzedItems } = store.getState();
     try {
       if (!request || !request.data) {
-        throw new Error("Invalid request or missing data");
+        // It is expected, no need to log error
+        debug("Invalid request or missing data");
+        setLoading(false);
+        return;
       }
       const { url } = request.data;
       if (!url) {
-        throw new Error("Missing required data: url");
+        // It is expected, no need to log error
+        debug("Missing required data: url");
+        setLoading(false);
+        return;
       }
       const dom: ParsedHtml = SiteMetadata.getDom(request.data);
       const SupplierStoreData = preprocessAlibabaData(dom);
@@ -48,11 +54,11 @@ export const initSupplier = async () => {
       const aiResult = await analyzeSupplierProductByAI(supplierAiDTO);
       const safeDealAiResult = convertedAlibabaProduct(aiResult, url, storeFeedbackUrl);
 
-      store.getState().setAnalyzedItems(safeDealAiResult);
+      setAnalyzedItems(safeDealAiResult);
     } catch (error) {
       logError(error, "::SupplierStore Error!");
     } finally {
-      store.getState().setLoading(false);
+      setLoading(false);
     }
   });
 };

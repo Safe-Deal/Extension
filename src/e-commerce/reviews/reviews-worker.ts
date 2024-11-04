@@ -37,16 +37,20 @@ export const initReviewsSummarizeWorker = async (): Promise<void> => {
 
   onMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, async (dataRequest) => {
     if (!dataRequest || !dataRequest.data) {
-      logError(new Error("Invalid dataRequest"), "reviewsSummaryWorker:: Invalid dataRequest");
+      // It is expected, no need to log error
+      debug("Invalid dataRequest", "reviewsSummaryWorker:: Invalid dataRequest");
       return;
     }
 
     const { setReviewData, setIsLoading, setError } = store.getState();
     const data = dataRequest.data;
     const { store: productStore, productId, regenerate } = data;
+    setIsLoading(true);
 
     if (!productStore || !productId) {
-      logError(new Error("Missing productStore or productId"), "reviewsSummaryWorker:: Missing required data");
+      // It is expected, no need to log error
+      debug("Missing productStore or productId", "reviewsSummaryWorker:: Missing required data");
+      setIsLoading(false);
       return;
     }
 
@@ -88,7 +92,7 @@ export const initReviewsSummarizeWorker = async (): Promise<void> => {
           reviewsResponse = await AlibabaReviewsService.analyze(data);
           break;
         default:
-          throw new Error(`Unsupported product store: ${productStore}`);
+          debug(`Unsupported product store: ${productStore}`);
       }
 
       if (reviewsResponse.error) {

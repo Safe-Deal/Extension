@@ -135,7 +135,7 @@ export const initCommerce = async () => {
   onMessage(EcommerceMessageTypes.PROCESS_PRODUCT, async (request) => {
     try {
       if (!request || !request.data) {
-        throw new Error("EcommerceWorker:: Invalid request or data!");
+        debug("EcommerceWorker:: Invalid request or data!");
       }
       const { product, type } = request.data;
       setCurrentProduct(product);
@@ -158,7 +158,8 @@ export const initCommerce = async () => {
         });
       }
     } catch (error) {
-      logError(error, "EcommerceWorker:: Error!");
+      //error process product already being reported
+      debug(error, "EcommerceWorker:: Error!");
     }
   });
 };

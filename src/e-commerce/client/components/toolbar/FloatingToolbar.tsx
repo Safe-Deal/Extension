@@ -139,42 +139,50 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
       return <InitialLoader coupons={showCoupons} isMinimal={isMinimalList} data-testid="initial-loader" />;
     }
 
-    return (
-      <>
-        {size === ToolbarSize.MAXIMAL && Full && (
-          <div ref={dialogueRef} className="floating-toolbar">
-            <div
-              className={classNames("floating-toolbar__action-buttons", {
-                "floating-toolbar__action-buttons--rtl": isRtlLang,
-                "floating-toolbar__action-buttons--ltr": !isRtlLang
-              })}
-            >
-              <PinButton isPinned={isPinned} onClick={handlePin} />
-              <Tooltips title={t("click_to_hide")}>
-                <CloseIcon onClick={(e) => handleClose(e)} data-testid="close-icon" />
-              </Tooltips>
+    switch (size) {
+      case ToolbarSize.MAXIMAL:
+        if (Full) {
+          return (
+            <div ref={dialogueRef} className="floating-toolbar">
+              <div
+                className={classNames("floating-toolbar__action-buttons", {
+                  "floating-toolbar__action-buttons--rtl": isRtlLang,
+                  "floating-toolbar__action-buttons--ltr": !isRtlLang
+                })}
+              >
+                <PinButton isPinned={isPinned} onClick={handlePin} />
+                <Tooltips title={t("click_to_hide")}>
+                  <CloseIcon onClick={(e) => handleClose(e)} data-testid="close-icon" />
+                </Tooltips>
+              </div>
+              {isAlibabaSite ? session ? Full : <LoginPrompt /> : Full}
             </div>
-            {/* TODO: uncomment this when i have a premium user */}
-            {/* {isAlibabaSite && session && isPremiumUser ? Full : <LoginPrompt />} */}
-            {isAlibabaSite ? session ? Full : <LoginPrompt /> : Full}
-          </div>
-        )}
-        {size === ToolbarSize.MINIMAL && canMaximize && (
-          <Tooltips title={messages.open_client}>
-            <div
-              onClick={handleMaximize}
-              className={`floating-toolbar__minimal-wrapper ${isMinimalList && "floating-toolbar__minimal-wrapper--list"}`}
-              role="button"
-              tabIndex={0}
-              onKeyDown={handleKeyboardShortcut}
-            >
-              {Minimal}
-            </div>
-          </Tooltips>
-        )}
-        {size === ToolbarSize.MINIMAL && !canMaximize && <MinimalWrapper>{Minimal}</MinimalWrapper>}
-      </>
-    );
+          );
+        }
+        break;
+
+      case ToolbarSize.MINIMAL:
+        if (canMaximize && Minimal) {
+          return (
+            <Tooltips title={messages.open_client}>
+              <div
+                onClick={handleMaximize}
+                className={`floating-toolbar__minimal-wrapper ${isMinimalList && "floating-toolbar__minimal-wrapper--list"}`}
+                role="button"
+                tabIndex={0}
+                onKeyDown={handleKeyboardShortcut}
+              >
+                {Minimal}
+              </div>
+            </Tooltips>
+          );
+        } else {
+          return <MinimalWrapper>{Minimal}</MinimalWrapper>;
+        }
+
+      default:
+        return null;
+    }
   };
 
   return (

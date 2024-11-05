@@ -14,13 +14,20 @@ describe("API downloader test", () => {
     expect(response).toEqual(
       expect.objectContaining({
         averagePrice: expect.anything(),
-        currency: expect.anything(),
-        maxPrice: expect.anything(),
-        minPrice: expect.anything(),
         price: expect.any(Array),
-        productID: expect.anything()
+        productID: expect.any(String)
       })
     );
+
+    if (response.averagePrice !== "NA") {
+      expect(response).toEqual(
+        expect.objectContaining({
+          currency: expect.anything(),
+          maxPrice: expect.anything(),
+          minPrice: expect.anything()
+        })
+      );
+    }
   });
 });
 

@@ -9,6 +9,7 @@ import { WalmartDisplaySiteFactory } from "../../stores/walmart/walmart-display-
 import { ProductStore } from "../conclusion/conclusion-product-entity.interface";
 import { SiteUtil } from "../utils/site-utils";
 import { DisplaySite } from "./display-site";
+import { debug } from "@utils/analytics/logger";
 
 export class DisplaySiteFactory {
   public create(conclusionResponse: IConclusionResponse): DisplaySite {
@@ -43,6 +44,10 @@ export class PreDisplaySiteFactory {
     const html = browserWindow().document;
     this.removeExistingResult();
     if (SiteUtil.isItemDetails(url) && !this.isPainted()) {
+      if (!PreDisplaySiteFactory.site) {
+        debug("PreDisplaySiteFactory:: Site is not yet initialized.");
+        return;
+      }
       const selectors = PreDisplaySiteFactory.site.siteDomSelector.displayDomSelector.itemLoaderProductElSel;
     }
   }

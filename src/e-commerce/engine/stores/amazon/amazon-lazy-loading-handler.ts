@@ -20,17 +20,20 @@ let currentAsin = getAsinFromUrl(document.location.href);
 export const handleVariantOnAmazon = (locateAndProcessUndoneProducts) => {
   onHrefChange((href) => {
     const newAsin = getAsinFromUrl(href);
-    debug(
-      `handleVariantOnAmazon:: currentAsin:${currentAsin} newAsin:${newAsin} => No action to handle`,
-      "Client::processContent"
-    );
+
     if (currentAsin !== newAsin) {
-      debug(`handleVariantOnAmazon:: asin changed => triggerAnalysis on:${newAsin}`, "Client::handleVariantOnAmazon");
       currentAsin = newAsin;
-      setTimeout(() => {
-        PreDisplaySiteFactory.start();
-        locateAndProcessUndoneProducts();
-      }, 0);
+      const urlParams = new URL(href).searchParams;
+      const isVariationChange = urlParams.has("th") || urlParams.has("var");
+
+      if (!isVariationChange) {
+        setTimeout(() => {
+          PreDisplaySiteFactory.start();
+          locateAndProcessUndoneProducts();
+        }, 0);
+      }
+    } else {
+      debug(`handleVariantOnAmazon:: same asin ${currentAsin} => skipping analysis`, "Client::handleVariantOnAmazon");
     }
   });
 };

@@ -24,14 +24,20 @@ export const initAntiScamWorker = async () => {
 
     try {
       if (!request || !request.data) {
-        throw new Error("Invalid request or missing data");
+        // It is expected, no need to log error
+        debug("Invalid request or missing data");
+        setLoading(false);
+        return;
       }
 
       const domain = request.data;
       const sender = request.sender;
 
       if (!domain || !sender) {
-        throw new Error("Missing required data: url");
+        // It is expected, no need to log error
+        debug("Missing required data: url");
+        setLoading(false);
+        return;
       }
       if (domain === CLOSE_TAB) {
         const tabId = sender?.tabId;

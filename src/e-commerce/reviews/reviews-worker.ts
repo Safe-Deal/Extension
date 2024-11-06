@@ -30,7 +30,7 @@ export interface ReviewsResponse {
   reviewsValue?: string;
 }
 
-export const reviewsSummaryWorker = async (dataRequest) => {
+export const reviewsSummaryWorker = async (dataRequest, store) => {
   if (!dataRequest || !dataRequest.data) {
     // It is expected, no need to log error
     debug("Invalid dataRequest", "reviewsSummaryWorker:: Invalid dataRequest");
@@ -126,5 +126,7 @@ export const initReviewsSummarizeWorker = async (): Promise<void> => {
   const store = await initReviewSummaryStoreBackend();
   debug("ReviewSummaryStore:: Review Summary Store ready!", store);
   const { onMessage } = definePegasusMessageBus<IReviewSummaryMessageBus>();
-  onMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, reviewsSummaryWorker);
+  onMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, (dataRequest) =>
+    reviewsSummaryWorker(dataRequest, store)
+  );
 };

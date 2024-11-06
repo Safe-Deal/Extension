@@ -30,100 +30,101 @@ export interface ReviewsResponse {
   reviewsValue?: string;
 }
 
+export const reviewsSummaryWorker = async (dataRequest) => {
+  if (!dataRequest || !dataRequest.data) {
+    // It is expected, no need to log error
+    debug("Invalid dataRequest", "reviewsSummaryWorker:: Invalid dataRequest");
+    return;
+  }
+
+  const { setReviewData, setIsLoading, setError } = store.getState();
+  const { data } = dataRequest;
+  const { store: productStore, productId, regenerate } = data;
+  setIsLoading(true);
+
+  if (!productStore || !productId) {
+    // It is expected, no need to log error
+    debug("Missing productStore or productId", "reviewsSummaryWorker:: Missing required data");
+    setIsLoading(false);
+    return;
+  }
+
+  const cachingKey = `${productStore}_${productId}`;
+
+  setIsLoading(true);
+  if (cache.has(cachingKey) && !regenerate) {
+    const result = cache.get(cachingKey);
+    if (result) {
+      setReviewData(result);
+      setIsLoading(false);
+      debug(`Product #${productId} is already processed returning from cache`, "Worker::reviewsSummaryWorker");
+      return;
+    }
+  }
+
+  try {
+    let reviewsResponse: ReviewsResponse = {
+      reviewsSummary: [],
+      error: null,
+      reviewsImages: [],
+      ver: VERSION,
+      totalReviews: null,
+      rating: null
+    };
+
+    switch (productStore) {
+      case ProductStore.ALI_EXPRESS:
+      case ProductStore.ALI_EXPRESS_RUSSIA:
+        reviewsResponse = await AliExpressReviewsService.analyze(data);
+        break;
+      case ProductStore.AMAZON:
+        reviewsResponse = await AmazonReviewsService.analyze(data);
+        break;
+      case ProductStore.EBAY:
+        reviewsResponse = await EbayReviewsService.analyze(data);
+        break;
+      case ProductStore.ALIBABA:
+        reviewsResponse = await AlibabaReviewsService.analyze(data);
+        break;
+      default:
+        debug(`Unsupported product store: ${productStore}`);
+    }
+
+    if (reviewsResponse.error) {
+      logError(
+        new Error(
+          JSON.stringify(
+            {
+              productStore,
+              productId,
+              error: reviewsResponse.error
+            },
+            null,
+            2
+          )
+        ),
+        `reviewsSummaryWorker:: ${reviewsResponse.error}`
+      );
+      setError(reviewsResponse.error);
+    } else {
+      debug(
+        `reviewsSummaryWorker:: reviewsSummary worker Response: reviewsSummary's -> ${reviewsResponse?.reviewsSummary?.length ?? 0}`
+      );
+      cache.set(cachingKey, reviewsResponse);
+      setReviewData(reviewsResponse);
+    }
+  } catch (error) {
+    const errorMessage = error instanceof Error ? error.message : "Unknown error";
+    setError(`Error in reviewsSummaryWorker: ${errorMessage}`);
+    logError(error, `reviewsSummaryWorker:: Error in reviewsSummaryWorker: ${errorMessage}`);
+  } finally {
+    setIsLoading(false);
+  }
+};
+
 export const initReviewsSummarizeWorker = async (): Promise<void> => {
   const store = await initReviewSummaryStoreBackend();
   debug("ReviewSummaryStore:: Review Summary Store ready!", store);
   const { onMessage } = definePegasusMessageBus<IReviewSummaryMessageBus>();
-
-  onMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, async (dataRequest) => {
-    if (!dataRequest || !dataRequest.data) {
-      // It is expected, no need to log error
-      debug("Invalid dataRequest", "reviewsSummaryWorker:: Invalid dataRequest");
-      return;
-    }
-
-    const { setReviewData, setIsLoading, setError } = store.getState();
-    const data = dataRequest.data;
-    const { store: productStore, productId, regenerate } = data;
-    setIsLoading(true);
-
-    if (!productStore || !productId) {
-      // It is expected, no need to log error
-      debug("Missing productStore or productId", "reviewsSummaryWorker:: Missing required data");
-      setIsLoading(false);
-      return;
-    }
-
-    const cachingKey = `${productStore}_${productId}`;
-
-    setIsLoading(true);
-    if (cache.has(cachingKey) && !regenerate) {
-      const result = cache.get(cachingKey);
-      if (result) {
-        setReviewData(result);
-        setIsLoading(false);
-        debug(`Product #${productId} is already processed returning from cache`, "Worker::reviewsSummaryWorker");
-        return;
-      }
-    }
-
-    try {
-      let reviewsResponse: ReviewsResponse = {
-        reviewsSummary: [],
-        error: null,
-        reviewsImages: [],
-        ver: VERSION,
-        totalReviews: null,
-        rating: null
-      };
-
-      switch (productStore) {
-        case ProductStore.ALI_EXPRESS:
-        case ProductStore.ALI_EXPRESS_RUSSIA:
-          reviewsResponse = await AliExpressReviewsService.analyze(data);
-          break;
-        case ProductStore.AMAZON:
-          reviewsResponse = await AmazonReviewsService.analyze(data);
-          break;
-        case ProductStore.EBAY:
-          reviewsResponse = await EbayReviewsService.analyze(data);
-          break;
-        case ProductStore.ALIBABA:
-          reviewsResponse = await AlibabaReviewsService.analyze(data);
-          break;
-        default:
-          debug(`Unsupported product store: ${productStore}`);
-      }
-
-      if (reviewsResponse.error) {
-        logError(
-          new Error(
-            JSON.stringify(
-              {
-                productStore,
-                productId,
-                error: reviewsResponse.error
-              },
-              null,
-              2
-            )
-          ),
-          `reviewsSummaryWorker:: ${reviewsResponse.error}`
-        );
-        setError(reviewsResponse.error);
-      } else {
-        debug(
-          `reviewsSummaryWorker:: reviewsSummary worker Response: reviewsSummary's -> ${reviewsResponse?.reviewsSummary?.length ?? 0}`
-        );
-        cache.set(cachingKey, reviewsResponse);
-        setReviewData(reviewsResponse);
-      }
-    } catch (error) {
-      const errorMessage = error instanceof Error ? error.message : "Unknown error";
-      setError(`Error in reviewsSummaryWorker: ${errorMessage}`);
-      logError(error, `reviewsSummaryWorker:: Error in reviewsSummaryWorker: ${errorMessage}`);
-    } finally {
-      setIsLoading(false);
-    }
-  });
+  onMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, reviewsSummaryWorker);
 };

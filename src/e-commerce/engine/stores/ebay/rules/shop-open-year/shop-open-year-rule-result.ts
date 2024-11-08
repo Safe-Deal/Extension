@@ -10,7 +10,7 @@ import eBayProductDownloader from "../../product/ebay-product-downloader";
 import { calculateShopOpenYearValueAlgorithm } from "./rule-shop-open-year-algorithm";
 import { getRuleShopOpenYearSummaryTooltip } from "./rule-shop-open-year-summary-tooltip";
 
-export const shopOpenYearSelector = ".d-stores-info-categories__container__details";
+export const shopOpenYearSelector = "#STORE_INFORMATION .x-store-information__info span";
 
 export const getRuleShopOpenYearResultValue = async (
   product: IProduct,

@@ -1,9 +1,7 @@
-import { PaintUtils } from "../paint-utils";
 import tippy from "tippy.js";
+import { PaintUtils } from "../paint-utils";
 
-jest.mock("tippy.js", () => {
-  return jest.fn();
-});
+jest.mock("tippy.js", () => jest.fn());
 
 jest.mock("../../../constants/messages", () => ({
   t: jest.fn((key) => key),

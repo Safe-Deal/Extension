@@ -176,9 +176,8 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
               </div>
             </Tooltips>
           );
-        } else {
-          return <MinimalWrapper>{Minimal}</MinimalWrapper>;
         }
+        return <MinimalWrapper>{Minimal}</MinimalWrapper>;
 
       default:
         return null;

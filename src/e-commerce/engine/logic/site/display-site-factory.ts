@@ -1,3 +1,4 @@
+import { debug } from "@utils/analytics/logger";
 import { DONE_PRODUCT_CONTAINER_CSS_CLASS, LOADER_ELEMENT_ID } from "../../../../constants/display";
 import { IConclusionResponse } from "../../../../data/rules-conclusion/conclusion-response.interface";
 import { Site } from "../../../../data/sites/site";
@@ -9,7 +10,6 @@ import { WalmartDisplaySiteFactory } from "../../stores/walmart/walmart-display-
 import { ProductStore } from "../conclusion/conclusion-product-entity.interface";
 import { SiteUtil } from "../utils/site-utils";
 import { DisplaySite } from "./display-site";
-import { debug } from "@utils/analytics/logger";
 
 export class DisplaySiteFactory {
   public create(conclusionResponse: IConclusionResponse): DisplaySite {

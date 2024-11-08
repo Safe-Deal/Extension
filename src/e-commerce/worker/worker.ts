@@ -158,7 +158,7 @@ export const initCommerce = async () => {
         });
       }
     } catch (error) {
-      //error process product already being reported
+      // error process product already being reported
       debug(error, "EcommerceWorker:: Error!");
     }
   });

@@ -29,8 +29,8 @@ export const usePostMessaging = (thisContext: "window" | "content-script") => {
       }
 
       ensureNamespaceSet(allocatedNamespace);
-
-      return (await portP).postMessage(msg);
+      const port = await portP;
+      return port?.postMessage(msg);
     },
     setNamespace: (nsps: string) => {
       if (allocatedNamespace) {

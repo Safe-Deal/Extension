@@ -23,7 +23,6 @@ const FavoriteProduct = ({ tab, action }: IFavoriteProductProps) => {
 
   const toggleFavorite = async () => {
     await setFlag();
-    tab(TabValue.Lists);
     setIsFavorite(!isFavorite);
   };
 

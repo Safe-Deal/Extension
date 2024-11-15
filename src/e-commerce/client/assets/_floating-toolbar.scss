@@ -78,7 +78,8 @@
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
 
-    &--list {
+    &--list,
+    &--alibaba {
       border-bottom-left-radius: 0px;
     }
   }

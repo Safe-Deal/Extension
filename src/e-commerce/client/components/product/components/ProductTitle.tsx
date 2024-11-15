@@ -10,7 +10,6 @@ import {
 } from "../../../../engine/logic/site/paint/product-paint";
 import AccountMenu from "../../shared/AccountMenu/AccountMenu";
 import { TabValue } from "../ProductFull";
-import FavoriteProduct from "./FavoriteProduct/FavoriteProduct";
 import ProductResearch from "./Research/ProductResearch";
 
 interface IProductTitle {
@@ -42,7 +41,7 @@ export function ProductTitle({ rules, product, store, tab, favoriteAction }: IPr
           "sd-product-full__header__research--ltr": !isRtl()
         })}
       >
-        <FavoriteProduct action={favoriteAction} tab={tab} />
+        {/* <FavoriteProduct action={favoriteAction} tab={tab} /> */}
         <ProductResearch productId={product?.product?.id} store={store} />
         <AccountMenu />
       </div>

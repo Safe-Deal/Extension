@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
-import "./FavoriteProduct.scss";
 import { useAuthStore } from "@store/AuthState";
-import { TabValue } from "../../ProductFull";
 import { ShoppingAppAction, useShoppingAppStore } from "@store/ShoppingAppState";
+import React from "react";
+import { TabValue } from "../../ProductFull";
+import "./FavoriteProduct.scss";
 
 interface IFavoriteProductProps {
   tab: (value: TabValue) => void;

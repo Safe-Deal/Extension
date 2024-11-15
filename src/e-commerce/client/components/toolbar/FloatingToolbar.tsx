@@ -3,11 +3,12 @@ import CloseIcon from "@mui/icons-material/Close";
 import DragIndicatorIcon from "@mui/icons-material/DragIndicator";
 import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Paper from "@mui/material/Paper";
+import { useAuthStore } from "@store/AuthState";
 import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
-import { useAuthStore } from "@store/AuthState";
 import { isRtl, messages, t } from "../../../../constants/messages";
 import { SdDealsCouponsApp } from "../../../apps/deals-amazon/ui/DealsCouponsApp";
+import ShoppingApp from "../../../apps/shopping/ui/ShoppingApp";
 import { ProductStore } from "../../../engine/logic/conclusion/conclusion-product-entity.interface";
 import { SiteUtil } from "../../../engine/logic/utils/site-utils";
 import { useDraggable } from "../../hooks/useDraggable";
@@ -17,7 +18,6 @@ import { InitialLoader } from "../shared/InitialLoader";
 import { Tooltips } from "../shared/Tooltip";
 import { PinButton } from "./components/PinButton";
 import LoginPrompt from "./LoginPrompt";
-import ShoppingApp from "../../../apps/shopping/ui/ShoppingApp";
 
 const DELAY_BEFORE_OPEN_AGAIN = 250;
 const IS_PINNED_STORAGE_KEY = "safe_deal_pinned_toolbar";
@@ -182,6 +182,7 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
               >
                 {Minimal}
               </div>
+              {session && isAlibabaSite && isPremium && <ShoppingApp />}
             </Tooltips>
           );
         }

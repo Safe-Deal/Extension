@@ -1,5 +1,6 @@
 import { isRtl } from "@constants/messages";
 import { ProductStore } from "@e-commerce/engine/logic/conclusion/conclusion-product-entity.interface";
+import { useAuthStore } from "@store/AuthState";
 import classNames from "classnames";
 import React from "react";
 import { getReliabilityProductsSummaryTooltip } from "../../../../../constants/rule-reliability-messages";
@@ -8,12 +9,11 @@ import {
   getProductConclusionText,
   getProductIconImage
 } from "../../../../engine/logic/site/paint/product-paint";
+import { SiteUtil } from "../../../../engine/logic/utils/site-utils";
 import AccountMenu from "../../shared/AccountMenu/AccountMenu";
 import { TabValue } from "../ProductFull";
-import ProductResearch from "./Research/ProductResearch";
 import FavoriteProduct from "./FavoriteProduct/FavoriteProduct";
-import { useAuthStore } from "@store/AuthState";
-import { SiteUtil } from "../../../../engine/logic/utils/site-utils";
+import ProductResearch from "./Research/ProductResearch";
 
 interface IProductTitle {
   rules: any;

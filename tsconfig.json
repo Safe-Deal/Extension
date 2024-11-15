@@ -25,7 +25,8 @@
       "@constants/*": ["src/constants/*"],
       "@utils/*": ["src/utils/*"],
       "@store/*": ["src/store/*"],
-      "@pegasus/*": ["src/utils/pegasus/*"]
+      "@pegasus/*": ["src/utils/pegasus/*"],
+      "@auth/*": ["src/auth/*"]
     }
   },
   "exclude": ["node_modules", "dist", "webpack", "tools", ".vscode"]

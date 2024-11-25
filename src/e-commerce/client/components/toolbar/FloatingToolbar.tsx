@@ -102,7 +102,12 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
     setIsPinned(!isPinned);
   };
 
-  const handleClickAway = () => {
+  const handleClickAway = (event: MouseEvent | TouchEvent) => {
+    const isShoppingDialog = (event.target as Element)?.closest(".MuiDialog-root");
+    if (isShoppingDialog) {
+      return;
+    }
+
     if (!isPinned && !isLoading) {
       handleMinimize();
     }
@@ -138,7 +143,6 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
       return (
         <>
           <InitialLoader coupons={showCoupons} isMinimal={isMinimalList} data-testid="initial-loader" />
-          {session && isAlibabaSite && isPremium && <ShoppingApp />}
         </>
       );
     }
@@ -178,7 +182,6 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
               >
                 {Minimal}
               </div>
-              {session && isAlibabaSite && isPremium && <ShoppingApp />}
             </Tooltips>
           );
         }
@@ -212,9 +215,7 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
         <div className="floating-toolbar__content">
           {renderContent()}
           {showCoupons && <SdDealsCouponsApp />}
-          {/*
-		  // need to fix according to deals new structure
-		  {showDeals && <AliSuperDealsApp />} */}
+          {session && isAlibabaSite && isPremium && <ShoppingApp />}
         </div>
       </Paper>
     </ClickAwayListener>

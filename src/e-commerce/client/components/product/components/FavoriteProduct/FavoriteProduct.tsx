@@ -1,29 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import "./FavoriteProduct.scss";
 import { useAuthStore } from "@store/AuthState";
 import { TabValue } from "../../ProductFull";
+import { ShoppingAppAction, useShoppingAppStore } from "@store/ShoppingAppState";
 
 interface IFavoriteProductProps {
   tab: (value: TabValue) => void;
-  action: (value: string) => void;
+  productId: string;
 }
 
-const FavoriteProduct = ({ tab, action }: IFavoriteProductProps) => {
-  const [isFavorite, setIsFavorite] = useState(false);
-  const { isPremiumUser, loading, session } = useAuthStore((state) => ({
-    isPremiumUser: state.isPremium,
-    loading: state.loading,
-    session: state.session
-  }));
+const FavoriteProduct = ({ tab, productId }: IFavoriteProductProps) => {
+  const {
+    open: openShoppingApp,
+    setOpen: setOpenShoppingApp,
+    setAction: setActionShoppingApp,
+    action: actionShoppingApp
+  } = useShoppingAppStore();
 
-  const setFlag = async () => {
-    if (loading || !session) return;
-    action("favorite_product");
-  };
+  const { isPremium: isPremiumUser, user } = useAuthStore();
 
   const toggleFavorite = async () => {
-    await setFlag();
-    setIsFavorite(!isFavorite);
+    setActionShoppingApp(
+      actionShoppingApp === ShoppingAppAction.FAVORITE ? ShoppingAppAction.UNFAVORITE : ShoppingAppAction.FAVORITE
+    );
+    setOpenShoppingApp(!openShoppingApp);
   };
 
   return (
@@ -31,7 +31,7 @@ const FavoriteProduct = ({ tab, action }: IFavoriteProductProps) => {
       {isPremiumUser && (
         <div className="sd-favorite-product">
           <button type="button" onClick={toggleFavorite} className="sd-favorite-product__button">
-            {isFavorite ? "★" : "☆"}
+            {actionShoppingApp === ShoppingAppAction.FAVORITE ? "★" : "☆"}
           </button>
         </div>
       )}

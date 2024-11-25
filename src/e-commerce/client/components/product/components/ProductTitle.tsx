@@ -11,18 +11,22 @@ import {
 import AccountMenu from "../../shared/AccountMenu/AccountMenu";
 import { TabValue } from "../ProductFull";
 import ProductResearch from "./Research/ProductResearch";
+import FavoriteProduct from "./FavoriteProduct/FavoriteProduct";
+import { useAuthStore } from "@store/AuthState";
+import { SiteUtil } from "../../../../engine/logic/utils/site-utils";
 
 interface IProductTitle {
   rules: any;
   product: any;
   store: ProductStore;
   tab: (value: TabValue) => void;
-  favoriteAction: (value: string) => void;
 }
 
-export function ProductTitle({ rules, product, store, tab, favoriteAction }: IProductTitle) {
+export function ProductTitle({ rules, product, store, tab }: IProductTitle) {
   const [reliabilityProductSummary] = getReliabilityProductsSummaryTooltip(rules);
   const productIconImage = getProductIconImage(product);
+  const { isPremium } = useAuthStore();
+  const isAlibabaSite = SiteUtil.getStore() === ProductStore.ALIBABA;
 
   return (
     <div className={`${getProductClass(product)} sd-product-full__header`}>
@@ -41,7 +45,7 @@ export function ProductTitle({ rules, product, store, tab, favoriteAction }: IPr
           "sd-product-full__header__research--ltr": !isRtl()
         })}
       >
-        {/* <FavoriteProduct action={favoriteAction} tab={tab} /> */}
+        {isPremium && isAlibabaSite && <FavoriteProduct tab={tab} productId={product?.product?.id} />}
         <ProductResearch productId={product?.product?.id} store={store} />
         <AccountMenu />
       </div>

@@ -32,15 +32,10 @@ export function ProductFull({ product = DEFAULT_PRODUCT, isSupplier = false }: I
   const [tabValue, setTabValue] = useState<TabValue>(TabValue.Analyze);
   const { rules } = product || {};
   const productId = product?.product?.id || "";
-  const [listsAction, setListsAction] = useState<string | null>(null);
   const storeFeedbackUrl = product?.product?.storeFeedbackUrl || "";
   const isPrime = AmazonSiteUtils.isAmazonVideoItemDetail();
   const bg = getProductBg(product);
   const store = SiteUtil.getStore();
-
-  useEffect(() => {
-    setListsAction(null);
-  }, []);
 
   const handleChange = (event: React.SyntheticEvent, newValue: TabValue) => {
     setTabValue(newValue);
@@ -60,7 +55,7 @@ export function ProductFull({ product = DEFAULT_PRODUCT, isSupplier = false }: I
       data-sd-item={productId}
       style={{ direction: isRtl() ? "rtl" : "ltr" }}
     >
-      <ProductTitle favoriteAction={setListsAction} tab={setTabValue} rules={rules} product={product} store={store} />
+      <ProductTitle tab={setTabValue} rules={rules} product={product} store={store} />
       <div className="sd-product-full__body">
         <Tabs
           value={tabValue}

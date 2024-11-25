@@ -31,17 +31,15 @@ export const initSupplier = async () => {
   const { onMessage } = definePegasusMessageBus<ISupplierMessageBus>();
 
   onMessage(SupplierMessageType.ANALYZE_SUPPLIER, async (request) => {
-    const { setLoading, setAnalyzedItems } = store.getState();
+    const { setLoading, setAnalyzedItems, setSupplierAiDTO } = store.getState();
     try {
       if (!request || !request.data) {
-        // It is expected, no need to log error
         debug("Invalid request or missing data");
         setLoading(false);
         return;
       }
       const { url } = request.data;
       if (!url) {
-        // It is expected, no need to log error
         debug("Missing required data: url");
         setLoading(false);
         return;
@@ -50,10 +48,10 @@ export const initSupplier = async () => {
       const SupplierStoreData = preprocessAlibabaData(dom);
       const supplierAiDTO = prepareDTO(SupplierStoreData);
       const storeFeedbackUrl = get(SupplierStoreData, "globalData.seller.feedbackUrl");
-
+      setSupplierAiDTO(supplierAiDTO);
+      // TODO: Tackle the problem of tab ids
       const aiResult = await analyzeSupplierProductByAI(supplierAiDTO);
       const safeDealAiResult = convertedAlibabaProduct(aiResult, url, storeFeedbackUrl);
-
       setAnalyzedItems(safeDealAiResult);
     } catch (error) {
       logError(error, "::SupplierStore Error!");

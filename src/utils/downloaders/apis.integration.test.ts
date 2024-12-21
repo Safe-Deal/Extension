@@ -6,7 +6,7 @@ describe("API downloader test", () => {
   it("should download pricing", async () => {
     const downloader = new ApiDownloader("/price");
     const data = {
-      products: ["3256804196942110"],
+      products: ["3256805834276261"],
       type: "AliExpress"
     };
     const response = await downloader.post(data);

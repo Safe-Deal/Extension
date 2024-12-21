@@ -15,32 +15,18 @@
   "background": {
     "service_worker": "scripts/service_worker.js"
   },
-  "permissions": [
-    "tabs"
-  ],
+  "permissions": ["tabs"],
   "content_scripts": [
     {
       "run_at": "document_end",
-      "matches": [
-        "http://localhost/*",
-        "https://localhost/*",
-        "https://www.joinsafedeal.com/*"
-      ],
-      "js": [
-        "scripts/content-script-auth.js"
-      ],
+      "matches": ["http://localhost/*", "https://localhost/*", "https://www.joinsafedeal.com/*"],
+      "js": ["scripts/content-script-auth.js"],
       "all_frames": true
     },
     {
       "run_at": "document_end",
-      "matches": [
-        "http://*/*",
-        "https://*/*"
-      ],
-      "js": [
-        "scripts/content-script-shutaf.js",
-        "scripts/content-script-anti-scam.js"
-      ],
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["scripts/content-script-shutaf.js", "scripts/content-script-anti-scam.js"],
       "all_frames": false
     },
     {
@@ -90,19 +76,13 @@
         "https://www.amazon.eg/*",
         "https://www.amazon.co.il/*"
       ],
-      "js": [
-        "scripts/content-script-ecommerce.js"
-      ],
+      "js": ["scripts/content-script-ecommerce.js"],
       "all_frames": false
     },
     {
       "run_at": "document_end",
-      "matches": [
-        "https://*.alibaba.com/*"
-      ],
-      "js": [
-        "scripts/content-script-supplier.js"
-      ],
+      "matches": ["https://*.alibaba.com/*"],
+      "js": ["scripts/content-script-supplier.js"],
       "all_frames": false
     }
   ],
@@ -118,8 +98,5 @@
     "default_popup": "popup.html"
   },
   "content_security_policy": {},
-  "host_permissions": [
-    "http://*/*",
-    "https://*/*"
-  ]
+  "host_permissions": ["http://*/*", "https://*/*"]
 }

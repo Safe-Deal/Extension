@@ -7,22 +7,22 @@ import { debug, logError } from "../utils/analytics/logger";
 import { browserWindow } from "../utils/dom/html";
 import { onHrefChange } from "../utils/dom/location";
 
-const PING_INTERVAL_IN_SEC = 25;
+const PING_INTERVAL_IN_SEC = 60;
 
 initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_SHUTAF" });
 
 (async () => {
   try {
     await authStoreReady();
-    await shutafStoreReady();
     const { user } = useAuthStore.getState();
     const userMetadata = user?.user_metadata;
-    const { sendMessage } = definePegasusMessageBus<IShutafMessageBus>();
 
     if (isActiveSubscriber(userMetadata)) {
       debug(`Shutaf:: Disable...`);
       return;
     }
+    const { sendMessage } = definePegasusMessageBus<IShutafMessageBus>();
+    // await shutafStoreReady();
 
     setInterval(() => {
       sendMessage(ShutafMessageType.PING, null);

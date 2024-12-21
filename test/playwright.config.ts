@@ -1,6 +1,6 @@
 import { defineConfig, devices } from "@playwright/test";
 
-export const MAX_TIMEOUT_IN_MS = 2 * 60 * 1000;
+export const MAX_TIMEOUT_IN_MS = 1 * 10 * 1000;
 export const RETRIES = 1;
 
 export default defineConfig({

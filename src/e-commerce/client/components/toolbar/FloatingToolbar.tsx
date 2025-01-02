@@ -5,7 +5,7 @@ import ClickAwayListener from "@mui/material/ClickAwayListener";
 import Paper from "@mui/material/Paper";
 import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
-import { useAuthStore } from "../../../../store/AuthState";
+import { useAuthStore } from "@store/AuthState";
 import { isRtl, messages, t } from "../../../../constants/messages";
 import { SdDealsCouponsApp } from "../../../apps/deals-amazon/ui/DealsCouponsApp";
 import { ProductStore } from "../../../engine/logic/conclusion/conclusion-product-entity.interface";
@@ -17,6 +17,7 @@ import { InitialLoader } from "../shared/InitialLoader";
 import { Tooltips } from "../shared/Tooltip";
 import { PinButton } from "./components/PinButton";
 import LoginPrompt from "./LoginPrompt";
+import ShoppingApp from "../../../apps/shopping/ui/ShoppingApp";
 
 const DELAY_BEFORE_OPEN_AGAIN = 250;
 const IS_PINNED_STORAGE_KEY = "safe_deal_pinned_toolbar";
@@ -37,9 +38,7 @@ const MinimalWrapper = styled.div`
 `;
 
 export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full, isLoading }) => {
-  const { session } = useAuthStore((state) => ({
-    session: state.session
-  }));
+  const { session, isPremium } = useAuthStore();
   const isAlibabaSite = SiteUtil.getStore() === ProductStore.ALIBABA;
   const toolbarRef = useRef<HTMLDivElement>(null);
   const handleRef = useRef<HTMLDivElement>(null);
@@ -103,7 +102,12 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
     setIsPinned(!isPinned);
   };
 
-  const handleClickAway = () => {
+  const handleClickAway = (event: MouseEvent | TouchEvent) => {
+    const isShoppingDialog = (event.target as Element)?.closest(".MuiDialog-root");
+    if (isShoppingDialog) {
+      return;
+    }
+
     if (!isPinned && !isLoading) {
       handleMinimize();
     }
@@ -136,7 +140,11 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
 
   const renderContent = () => {
     if (isLoading) {
-      return <InitialLoader coupons={showCoupons} isMinimal={isMinimalList} data-testid="initial-loader" />;
+      return (
+        <>
+          <InitialLoader coupons={showCoupons} isMinimal={isMinimalList} data-testid="initial-loader" />
+        </>
+      );
     }
 
     switch (size) {
@@ -167,7 +175,7 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
             <Tooltips title={messages.open_client}>
               <div
                 onClick={handleMaximize}
-                className={`floating-toolbar__minimal-wrapper ${isMinimalList && "floating-toolbar__minimal-wrapper--list"}`}
+                className={`floating-toolbar__minimal-wrapper ${isMinimalList && "floating-toolbar__minimal-wrapper--list"} ${isAlibabaSite && "floating-toolbar__minimal-wrapper--alibaba"}`}
                 role="button"
                 tabIndex={0}
                 onKeyDown={handleKeyboardShortcut}
@@ -207,9 +215,7 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
         <div className="floating-toolbar__content">
           {renderContent()}
           {showCoupons && <SdDealsCouponsApp />}
-          {/*
-		  // need to fix according to deals new structure
-		  {showDeals && <AliSuperDealsApp />} */}
+          {session && isAlibabaSite && isPremium && <ShoppingApp />}
         </div>
       </Paper>
     </ClickAwayListener>

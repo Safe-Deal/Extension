@@ -1,5 +1,3 @@
-import { SiteUtil } from "../../../logic/utils/site-utils";
-import { getDomainCurrency } from "../../../../../utils/multilang/languages";
 import { IProduct } from "../../../../../data/entities/product.interface";
 import { debug } from "../../../../../utils/analytics/logger";
 import {
@@ -13,8 +11,10 @@ import {
   querySelectorTextContent
 } from "../../../../../utils/dom/html";
 import { HeadersType } from "../../../../../utils/downloaders/remote/remoteFetcher";
+import { getDomainCurrency } from "../../../../../utils/multilang/languages";
 import { castAsNumber, replaceAll } from "../../../../../utils/text/strings";
 import { BaseProductDownloader } from "../../../logic/product/baseProductDownloader";
+import { SiteUtil } from "../../../logic/utils/site-utils";
 import { EMPTY_PRODUCT } from "./constants";
 
 const MIN_DELAY_SECONDS = 0;
@@ -344,7 +344,9 @@ const getProductDetailsFromDom = (htmlString, domain): AliExpressProductDetails 
 
   const productRatingAverage = querySelectorAsNumber(["[data-pl=product-reviewer] strong"], html) || 0;
   const productRatingsAmount = querySelectorAsNumber(["[data-pl=product-reviewer] a"], html) || 0;
-  const productPurchases = querySelectorAsNumber(["[data-pl=product-reviewer] > span:last-of-type"], html, false) || 0;
+  const productPurchases =
+    querySelectorAsNumber(['[data-pl=product-reviewer] span[class*="reviewer--sold"]'], html, false) || 0;
+
   let storePositiveRate = querySelectorAsNumber(['[class*="store-info--desc"] strong'], html);
   let followers = querySelectorAsNumber(['[class*="store-info--desc"] strong:last-of-type'], html);
 

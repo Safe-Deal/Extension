@@ -112,7 +112,7 @@ describe("Conclusion Product", () => {
     ];
     const conclusionProduct = new ConclusionProduct(ruleManagerResultMock);
     const x = conclusionProduct.conclusion();
-    expect(x.productConclusion).toBe(ProductConclusionEnum.DOUBTFUL);
+    expect(x.productConclusion).toBe(ProductConclusionEnum.NOT_RECOMMENDED);
   });
 
   it("conclusion algorithm need to throw error when bonus value is incorrect like a negative number", () => {

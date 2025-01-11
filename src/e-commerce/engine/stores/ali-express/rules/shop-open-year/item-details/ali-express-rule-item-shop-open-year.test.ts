@@ -54,7 +54,7 @@ describe("Ali Express Rule List Shop Open Year", () => {
           yearsInBusinessIndicator: {
             i18n: "years_label"
           },
-          shopOpenedYearValue: 5
+          shopOpenedYearValue: 6
         }
       }
     };

@@ -2,11 +2,11 @@ import { IProduct } from "../../../../../../data/entities/product.interface";
 import { IRuleResult } from "../../../../../../data/entities/rule-result.interface";
 import { IRuleSummaryTooltip } from "../../../../../../data/entities/rule-summary-tooltip.interface";
 import { isExist } from "../../../../../../utils/general/general";
+import { AliExpressProductDownloader } from "../../product/ali-express-product-downloader";
 import { calculateProductFeedbackValueAlgorithm } from "./rule-product-feedback-algorithm";
 import { getProductFeedbackSummaryTooltip } from "./rule-product-feedback-summary-tooltip";
-import { AliExpressProductDownloader } from "../../product/ali-express-product-downloader";
 
-const DEFAULT_ORDERS_VALUE_IF_NOT_PROVIDED = 22;
+const DEFAULT_ORDERS_VALUE_IF_NOT_PROVIDED = 0;
 
 export const getRuleProductFeedbackResultValue = async (
   product: IProduct,

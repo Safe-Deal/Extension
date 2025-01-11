@@ -5,8 +5,8 @@ import { IRule } from "../../../../data/entities/rule.interface";
 import { debug, IS_DEBUG } from "../../../../utils/analytics/logger";
 import { IConclusionProductEntity, ProductConclusionEnum } from "./conclusion-product-entity.interface";
 
-const GREEN_SAFE_LIMIT = 0.455;
-const DOUBTFUL_MIN_LIMIT = 0.276; // 60% of bad deals are medium risk
+const GREEN_SAFE_LIMIT = 0.65;
+const DOUBTFUL_MIN_LIMIT = 0.4; // Threshold for medium risk deals
 const MIN_LIMIT_FOR_CONCLUSION = 1;
 
 export class ConclusionProduct {

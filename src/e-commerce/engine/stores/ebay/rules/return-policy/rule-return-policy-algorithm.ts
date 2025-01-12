@@ -9,7 +9,7 @@ const paidReturnPolicy = (returnPolicyValue: string): boolean => isContainedIn(r
 const timedReturnPolicy = (returnPolicyValue: string): boolean =>
   isContainedIn(returnPolicyValue, DAY) && !isFreeShipping(returnPolicyValue);
 
-export const calculateReturnPolicyValueAlgorhtim = (text: string): number => {
+export const calculateReturnPolicyValueAlgorithm = (text: string): number => {
   if (!text) {
     return BONUS_POINTS.NONE;
   }
@@ -25,8 +25,8 @@ export const calculateReturnPolicyValueAlgorhtim = (text: string): number => {
     return BONUS_POINTS.NEGATIVE_SMALL;
   }
 
-  if (paidReturnPolicy(text)) {
-    return BONUS_POINTS.NONE;
+  if (paidReturnPolicy(text) && !noReturnPolicy(text)) {
+    return BONUS_POINTS.THREE;
   }
 
   if (timedReturnPolicy(text)) {

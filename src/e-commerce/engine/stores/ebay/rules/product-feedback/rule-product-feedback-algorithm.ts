@@ -10,7 +10,7 @@ export const calculateProductFeedbackValueAlgorithm = (
   }
 
   // Excellent sellers with high volume and high ratings
-  if (feedbacksAmount >= 10000) {
+  if (feedbacksAmount >= 5000) {
     if (feedbackRatingSumPercentage >= 98) return RULE_VALUE.RULE_VAL_10;
     if (feedbackRatingSumPercentage >= 95) return RULE_VALUE.RULE_VAL_9;
     if (feedbackRatingSumPercentage >= 90) return RULE_VALUE.RULE_VAL_8;
@@ -18,7 +18,7 @@ export const calculateProductFeedbackValueAlgorithm = (
   }
 
   // Very established sellers
-  if (feedbacksAmount >= 5000) {
+  if (feedbacksAmount >= 1000) {
     if (feedbackRatingSumPercentage >= 98) return RULE_VALUE.RULE_VAL_9;
     if (feedbackRatingSumPercentage >= 95) return RULE_VALUE.RULE_VAL_8;
     if (feedbackRatingSumPercentage >= 90) return RULE_VALUE.RULE_VAL_7;
@@ -26,7 +26,7 @@ export const calculateProductFeedbackValueAlgorithm = (
   }
 
   // Established sellers
-  if (feedbacksAmount >= 1000) {
+  if (feedbacksAmount >= 500) {
     if (feedbackRatingSumPercentage >= 98) return RULE_VALUE.RULE_VAL_8;
     if (feedbackRatingSumPercentage >= 95) return RULE_VALUE.RULE_VAL_7;
     if (feedbackRatingSumPercentage >= 90) return RULE_VALUE.RULE_VAL_6;
@@ -34,27 +34,27 @@ export const calculateProductFeedbackValueAlgorithm = (
   }
 
   // Growing sellers
-  if (feedbacksAmount >= 500) {
+  if (feedbacksAmount >= 200) {
+    if (feedbackRatingSumPercentage >= 98) return RULE_VALUE.RULE_VAL_8;
+    if (feedbackRatingSumPercentage >= 95) return RULE_VALUE.RULE_VAL_7;
+    if (feedbackRatingSumPercentage >= 90) return RULE_VALUE.RULE_VAL_6;
+    return RULE_VALUE.RULE_VAL_5;
+  }
+
+  // New but active sellers
+  if (feedbacksAmount >= 50) {
     if (feedbackRatingSumPercentage >= 98) return RULE_VALUE.RULE_VAL_7;
     if (feedbackRatingSumPercentage >= 95) return RULE_VALUE.RULE_VAL_6;
     if (feedbackRatingSumPercentage >= 90) return RULE_VALUE.RULE_VAL_5;
     return RULE_VALUE.RULE_VAL_4;
   }
 
-  // New but active sellers
-  if (feedbacksAmount >= 100) {
+  // Very new sellers
+  if (feedbacksAmount >= 10) {
     if (feedbackRatingSumPercentage >= 98) return RULE_VALUE.RULE_VAL_6;
     if (feedbackRatingSumPercentage >= 95) return RULE_VALUE.RULE_VAL_5;
     if (feedbackRatingSumPercentage >= 90) return RULE_VALUE.RULE_VAL_4;
     return RULE_VALUE.RULE_VAL_3;
-  }
-
-  // Very new sellers
-  if (feedbacksAmount >= 25) {
-    if (feedbackRatingSumPercentage >= 98) return RULE_VALUE.RULE_VAL_5;
-    if (feedbackRatingSumPercentage >= 95) return RULE_VALUE.RULE_VAL_4;
-    if (feedbackRatingSumPercentage >= 90) return RULE_VALUE.RULE_VAL_3;
-    return RULE_VALUE.RULE_VAL_2;
   }
 
   // Beginners

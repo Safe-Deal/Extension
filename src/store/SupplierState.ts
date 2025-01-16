@@ -9,6 +9,8 @@ interface SupplierState {
   analyzedItems: AnalyzedItem[];
   loading: boolean;
   progress: Progress;
+  supplierAiDTO: any;
+  setSupplierAiDTO: (data: any) => void;
   setProgress: (progress: Progress) => void;
   setAnalyzedItems: (data: any) => void;
   setLoading: (loading: boolean) => void;
@@ -19,6 +21,8 @@ export const useSupplierStore = create<SupplierState>()(
     analyzedItems: null,
     loading: true,
     progress: DEFAULT_PROGRESS,
+    supplierAiDTO: null,
+    setSupplierAiDTO: (data: any) => set({ supplierAiDTO: data }),
     setProgress: (progress: Progress) => set({ progress }),
     setAnalyzedItems: (data: AnalyzedItem[]) => set({ analyzedItems: data }),
     setLoading: (loading) => set({ loading })

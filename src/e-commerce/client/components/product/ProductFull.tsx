@@ -1,14 +1,12 @@
 import Tab from "@mui/material/Tab";
 import Tabs from "@mui/material/Tabs";
 import React, { useEffect, useState } from "react";
-import { useAuthStore } from "@store/AuthState";
 import { DONE_PRODUCT_CONTAINER_CSS_CLASS, DONE_PRODUCT_CSS_CLASS } from "../../../../constants/display";
 import { isRtl, t } from "../../../../constants/messages";
 import { getProductBg } from "../../../engine/logic/site/paint/product-paint";
 import { SiteUtil } from "../../../engine/logic/utils/site-utils";
 import { AmazonSiteUtils } from "../../../engine/stores/amazon/utils/amazon-site-utils";
 import { ProductEvaluation } from "../pro/ProductEvaluation";
-import { Lists } from "./components/Lists/Lists";
 import { Opinions } from "./components/Opinions/Opinions";
 import { ProductTitle } from "./components/ProductTitle";
 import { Reviews } from "./components/Reviews/Reviews";
@@ -18,8 +16,7 @@ import { DEFAULT_PRODUCT } from "./utils/constants";
 export enum TabValue {
   Analyze = "analyze",
   Reviews = "reviews",
-  Opinions = "opinions",
-  Lists = "lists"
+  Opinions = "opinions"
 }
 
 interface IProductFullProps {
@@ -35,16 +32,10 @@ export function ProductFull({ product = DEFAULT_PRODUCT, isSupplier = false }: I
   const [tabValue, setTabValue] = useState<TabValue>(TabValue.Analyze);
   const { rules } = product || {};
   const productId = product?.product?.id || "";
-  const [listsAction, setListsAction] = useState<string | null>(null);
   const storeFeedbackUrl = product?.product?.storeFeedbackUrl || "";
   const isPrime = AmazonSiteUtils.isAmazonVideoItemDetail();
-  const isPremiumUser = useAuthStore((state) => state.isPremium);
   const bg = getProductBg(product);
   const store = SiteUtil.getStore();
-
-  useEffect(() => {
-    setListsAction(null);
-  }, []);
 
   const handleChange = (event: React.SyntheticEvent, newValue: TabValue) => {
     setTabValue(newValue);
@@ -64,7 +55,7 @@ export function ProductFull({ product = DEFAULT_PRODUCT, isSupplier = false }: I
       data-sd-item={productId}
       style={{ direction: isRtl() ? "rtl" : "ltr" }}
     >
-      <ProductTitle favoriteAction={setListsAction} tab={setTabValue} rules={rules} product={product} store={store} />
+      <ProductTitle tab={setTabValue} rules={rules} product={product} store={store} />
       <div className="sd-product-full__body">
         <Tabs
           value={tabValue}
@@ -75,13 +66,11 @@ export function ProductFull({ product = DEFAULT_PRODUCT, isSupplier = false }: I
           {!isPrime && <Tab label={t("tab_header_analyze")} value={TabValue.Analyze} />}
           <Tab label={t("tab_header_reviews")} value={TabValue.Reviews} />
           <Tab label={t("tab_header_opinions")} value={TabValue.Opinions} />
-          {isPremiumUser && <Tab label={t("tab_header_lists")} value={TabValue.Lists} />}
         </Tabs>
         <div className="sd-product-full__body__content">
           {!isPrime && tabValue === TabValue.Analyze && productAnalyzingView}
           {tabValue === (isPrime ? TabValue.Analyze : TabValue.Reviews) && reviewsAnalyzingView}
           {tabValue === TabValue.Opinions && <Opinions productId={productId} store={store} />}
-          {isPremiumUser && tabValue === TabValue.Lists && <Lists product={product} action={listsAction} />}
         </div>
       </div>
     </div>

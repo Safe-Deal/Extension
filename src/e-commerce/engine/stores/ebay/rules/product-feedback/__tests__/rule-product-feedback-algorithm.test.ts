@@ -7,14 +7,14 @@ describe("Ebay - Rule product feedback algorithm", () => {
       const feedbackAmount = 92;
       const feedbackRatingSumPercentage = 99;
       expect(calculateProductFeedbackValueAlgorithm(feedbackAmount, feedbackRatingSumPercentage)).toBe(
-        RULE_VALUE.RULE_VAL_8
+        RULE_VALUE.RULE_VAL_7
       );
     });
     it("should fail on low amount of purchases and poor feedback", () => {
       const feedbackAmount = 92;
       const feedbackRatingSumPercentage = 90;
       expect(calculateProductFeedbackValueAlgorithm(feedbackAmount, feedbackRatingSumPercentage)).toBe(
-        RULE_VALUE.RULE_VAL_1
+        RULE_VALUE.RULE_VAL_5
       );
     });
 
@@ -22,7 +22,7 @@ describe("Ebay - Rule product feedback algorithm", () => {
       const feedbackAmount = 40;
       const feedbackRatingSumPercentage = 91.7;
       expect(calculateProductFeedbackValueAlgorithm(feedbackAmount, feedbackRatingSumPercentage)).toBe(
-        RULE_VALUE.RULE_VAL_1
+        RULE_VALUE.RULE_VAL_4
       );
     });
 
@@ -30,7 +30,7 @@ describe("Ebay - Rule product feedback algorithm", () => {
       const feedbackAmount = 40000000;
       const feedbackRatingSumPercentage = 91.7;
       expect(calculateProductFeedbackValueAlgorithm(feedbackAmount, feedbackRatingSumPercentage)).toBe(
-        RULE_VALUE.RULE_VAL_1
+        RULE_VALUE.RULE_VAL_8
       );
     });
   });
@@ -60,7 +60,7 @@ describe("Ebay - Rule product feedback algorithm", () => {
       const feedbackAmount = 45;
       const feedbackRatingSumPercentage = 100;
       expect(calculateProductFeedbackValueAlgorithm(feedbackAmount, feedbackRatingSumPercentage)).toBe(
-        RULE_VALUE.RULE_VAL_8
+        RULE_VALUE.RULE_VAL_6
       );
     });
 
@@ -68,7 +68,7 @@ describe("Ebay - Rule product feedback algorithm", () => {
       const feedbackAmount = 25;
       const feedbackRatingSumPercentage = 100;
       expect(calculateProductFeedbackValueAlgorithm(feedbackAmount, feedbackRatingSumPercentage)).toBe(
-        RULE_VALUE.RULE_VAL_1
+        RULE_VALUE.RULE_VAL_6
       );
     });
   });

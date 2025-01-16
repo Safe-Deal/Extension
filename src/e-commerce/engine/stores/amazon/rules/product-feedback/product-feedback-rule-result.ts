@@ -1,15 +1,15 @@
-import { debug } from "../../../../../../utils/analytics/logger";
 import { IProduct } from "../../../../../../data/entities/product.interface";
 import { IRuleResult } from "../../../../../../data/entities/rule-result.interface";
 import { IRuleSummaryTooltip } from "../../../../../../data/entities/rule-summary-tooltip.interface";
+import { debug } from "../../../../../../utils/analytics/logger";
 import { getAvailableSelector } from "../../../../../../utils/dom/html";
 import { castAsNumber } from "../../../../../../utils/text/strings";
 import AmazonFeedbackDownloader from "../../product/amazon-feedback-downloader";
 
 import { getProductPrimeVideoRuleResult, isProductPrimeVideo } from "../amazon-rules-utils";
+import { getAsin } from "../shared/amazon-utils";
 import { calculateProductFeedbackValueAlgorithm } from "./rule-product-feedback-algorithm";
 import { getProductFeedbackSummaryTooltip } from "./rule-product-feedback-summary-tooltip";
-import { getAsin } from "../shared/amazon-utils";
 
 export const getRuleProductFeedbackResultValue = async (
   product: IProduct,
@@ -31,6 +31,17 @@ export const getRuleProductFeedbackResultValue = async (
   const productRatingValue = getRating(html);
   const globalRatingsValue = ratings(html);
   const globalReviewsValue = reviews(html);
+
+  // Check if all feedback values are 0
+  if (productRatingValue === 0 && globalRatingsValue === 0 && globalReviewsValue === 0) {
+    return {
+      name: ruleName,
+      value: 0,
+      weight,
+      isValidRule: false,
+      tooltipSummary: getProductFeedbackSummaryTooltip(0, productRatingValue, globalReviewsValue, globalRatingsValue)
+    };
+  }
 
   const normalizeValue = calculateProductFeedbackValueAlgorithm(
     productRatingValue,

@@ -85,7 +85,10 @@ const createReviewsSummary = (reviewData: any[]): any[] => {
     return [
       {
         header: t("reviews_no_reviews_header"),
-        items: [{ text: t("reviews_no_reviews_text"), className: "sd-reason-neutral" }]
+        items: [
+          { text: t("reviews_no_reviews_text"), className: "sd-reason-neutral" },
+          { text: t("reviews_no_logged_in"), className: "sd-reason-bad" }
+        ]
       }
     ];
   }

@@ -474,6 +474,9 @@
   "reviews_no_reviews_text": {
     "message": "No customer reviews yet. This product may be new or not popular."
   },
+  "reviews_no_logged_in": {
+    "message": "Make sure you are logged in to see reviews."
+  },
   "reviews_pros": {
     "message": "Pros"
   },

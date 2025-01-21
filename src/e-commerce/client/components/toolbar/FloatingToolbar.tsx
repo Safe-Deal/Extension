@@ -1,3 +1,4 @@
+import { SdDealsCouponsApp } from "@e-commerce/apps/deals-amazon/ui/DealsCouponsApp";
 import styled from "@emotion/styled";
 import CloseIcon from "@mui/icons-material/Close";
 import DragIndicatorIcon from "@mui/icons-material/DragIndicator";
@@ -7,7 +8,6 @@ import { useAuthStore } from "@store/AuthState";
 import classNames from "classnames";
 import React, { useEffect, useRef, useState } from "react";
 import { isRtl, messages, t } from "../../../../constants/messages";
-import { SdDealsCouponsApp } from "../../../apps/deals-amazon/ui/DealsCouponsApp";
 import ShoppingApp from "../../../apps/shopping/ui/ShoppingApp";
 import { ProductStore } from "../../../engine/logic/conclusion/conclusion-product-entity.interface";
 import { SiteUtil } from "../../../engine/logic/utils/site-utils";
@@ -216,7 +216,6 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
         <div className="floating-toolbar__content">
           {renderContent()}
           {showCoupons && <SdDealsCouponsApp />}
-          {session && isAlibabaSite && isPremium && <ShoppingApp />}
         </div>
       </Paper>
     </ClickAwayListener>

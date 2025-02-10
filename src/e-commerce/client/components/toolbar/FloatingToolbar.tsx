@@ -182,7 +182,6 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
               >
                 {Minimal}
               </div>
-              {session && isAlibabaSite && isPremium && <ShoppingApp />}
             </Tooltips>
           );
         }
@@ -202,20 +201,27 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
         style={{ top: location.y, zIndex: Z_INDEX_TOP }}
         data-testid="floating-toolbar"
       >
-        <div
-          className="floating-toolbar__drag-handle"
-          ref={handleRef}
-          onMouseDown={handleMouseDown}
-          data-testid="drag-handle"
-          role="button"
-          aria-label="Drag Handle"
-          tabIndex={0}
-        >
-          <DragIndicatorIcon />
-        </div>
-        <div className="floating-toolbar__content">
-          {renderContent()}
-          {showCoupons && <SdDealsCouponsApp />}
+        <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+          <div
+            className="floating-toolbar__drag-handle"
+            ref={handleRef}
+            onMouseDown={handleMouseDown}
+            data-testid="drag-handle"
+            role="button"
+            aria-label="Drag Handle"
+            tabIndex={0}
+          >
+            <DragIndicatorIcon />
+          </div>
+          <div className="floating-toolbar__content">
+            {renderContent()}
+            {showCoupons && <SdDealsCouponsApp />}
+          </div>
+          {session && isAlibabaSite && isPremium && (
+            <div style={{ marginTop: "2px" }}>
+              <ShoppingApp />
+            </div>
+          )}
         </div>
       </Paper>
     </ClickAwayListener>

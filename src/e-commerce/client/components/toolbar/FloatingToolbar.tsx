@@ -18,6 +18,7 @@ import { InitialLoader } from "../shared/InitialLoader";
 import { Tooltips } from "../shared/Tooltip";
 import { PinButton } from "./components/PinButton";
 import LoginPrompt from "./LoginPrompt";
+import TalkWithPageMini from "../talk/TalkWithPageMini";
 
 const DELAY_BEFORE_OPEN_AGAIN = 250;
 const IS_PINNED_STORAGE_KEY = "safe_deal_pinned_toolbar";
@@ -140,11 +141,7 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
 
   const renderContent = () => {
     if (isLoading) {
-      return (
-        <>
-          <InitialLoader coupons={showCoupons} isMinimal={isMinimalList} data-testid="initial-loader" />
-        </>
-      );
+      return <InitialLoader coupons={showCoupons} isMinimal={isMinimalList} data-testid="initial-loader" />;
     }
 
     switch (size) {
@@ -216,6 +213,7 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
         <div className="floating-toolbar__content">
           {renderContent()}
           {showCoupons && <SdDealsCouponsApp />}
+          <TalkWithPageMini />
         </div>
       </Paper>
     </ClickAwayListener>

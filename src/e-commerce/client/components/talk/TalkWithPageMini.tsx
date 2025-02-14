@@ -5,11 +5,9 @@ import { t } from "../../../../constants/messages";
 import { Z_INDEX_MAX } from "../constants";
 import ProductChat from "../product/ProductChat";
 
-interface TalkWithPageMiniProps {
-  product: any;
-}
+interface TalkWithPageMiniProps {}
 
-const TalkWithPageMini: React.FC<TalkWithPageMiniProps> = ({ product }) => {
+const TalkWithPageMini: React.FC<TalkWithPageMiniProps> = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { session } = useAuthStore();
 
@@ -50,7 +48,7 @@ const TalkWithPageMini: React.FC<TalkWithPageMiniProps> = ({ product }) => {
         }}
         sx={{ zIndex: Z_INDEX_MAX }}
       >
-        <ProductChat product={product} />
+        <ProductChat product={null} />
       </Dialog>
     </>
   );

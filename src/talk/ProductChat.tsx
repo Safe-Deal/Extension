@@ -1,5 +1,6 @@
 import React, { useMemo } from "react";
 import { useAuthStore } from "@store/AuthState";
+import Iframe from "react-iframe";
 
 interface ProductChatProps {
   product: any;
@@ -20,7 +21,15 @@ const ProductChat: React.FC<ProductChatProps> = ({ product, width = "100%", heig
 
   return (
     <div className="product-chat-container" style={{ width, height }}>
-      <iframe src={chatUrl} title="Product Chat" width="100%" height="100%" frameBorder="0" allowFullScreen />
+      <Iframe
+        url={chatUrl}
+        width="100%"
+        height="100%"
+        title="Product Chat"
+        frameBorder={0}
+        allowFullScreen
+        styles={{ border: "none" }}
+      />
     </div>
   );
 };

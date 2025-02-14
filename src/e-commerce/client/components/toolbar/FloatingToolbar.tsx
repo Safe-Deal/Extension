@@ -18,7 +18,7 @@ import { InitialLoader } from "../shared/InitialLoader";
 import { Tooltips } from "../shared/Tooltip";
 import { PinButton } from "./components/PinButton";
 import LoginPrompt from "./LoginPrompt";
-import TalkWithPageMini from "../talk/TalkWithPageMini";
+import TalkWithPageMini from "../../../../talk/TalkWithPageMini";
 
 const DELAY_BEFORE_OPEN_AGAIN = 250;
 const IS_PINNED_STORAGE_KEY = "safe_deal_pinned_toolbar";

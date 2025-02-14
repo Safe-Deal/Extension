@@ -16,7 +16,8 @@ module.exports = {
     "content-script-anti-scam": "./src/anti-scam/content-script-anti-scam.ts",
     "content-script-shutaf": "./src/shutaf/content-script-shutaf.tsx",
     "content-script-supplier": "./src/supplier/content-script-supplier.tsx",
-    "content-script-auth": "./src/auth/content-script-auth.tsx"
+    "content-script-auth": "./src/auth/content-script-auth.tsx",
+    "content-script-talk": "./src/talk/content/chatSidebar.ts"
   },
   output: {
     clean: true,

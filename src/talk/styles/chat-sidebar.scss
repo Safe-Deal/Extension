@@ -1,0 +1,34 @@
+$sidebar-width: 400px;
+$transition-duration: 0.3s;
+$shadow-color: rgba(0, 0, 0, 0.1);
+$border-color: #e5e7eb;
+
+#safe-deal-chat-sidebar-container {
+  box-shadow: 2px 0 8px $shadow-color;
+  transition: transform $transition-duration ease-in-out;
+  z-index: 2147483647 !important;
+
+  // Ensure all child elements maintain high z-index
+  * {
+    z-index: 2147483647 !important;
+  }
+}
+
+// Page content adjustments
+body {
+  &.sidebar-open {
+    margin-left: $sidebar-width !important;
+    width: calc(100% - #{$sidebar-width}) !important;
+  }
+
+  transition: {
+    property: margin-left, width;
+    duration: $transition-duration;
+    timing-function: ease-in-out;
+  }
+
+  // Reset any max-width constraints
+  > * {
+    max-width: none !important;
+  }
+}

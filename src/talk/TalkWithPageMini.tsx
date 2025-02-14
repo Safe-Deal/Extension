@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { Button, Dialog } from "@mui/material";
-import { useAuthStore } from "../../../../store/AuthState";
-import { t } from "../../../../constants/messages";
-import { Z_INDEX_MAX } from "../constants";
-import ProductChat from "../product/ProductChat";
+import { useAuthStore } from "../store/AuthState";
+import { t } from "../constants/messages";
+import { Z_INDEX_MAX } from "../e-commerce/client/components/constants";
+import ProductChat from "./ProductChat";
 
 interface TalkWithPageMiniProps {}
 

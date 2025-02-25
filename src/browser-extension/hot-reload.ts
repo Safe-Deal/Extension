@@ -93,47 +93,8 @@ async function initializeTimestamps(): Promise<void> {
   }
 }
 
-/**
- * Save active tab IDs before reloading the extension
- * We'll use this to reload tabs after extension is reloaded
- */
-function saveActiveTabsForReload(): Promise<void> {
-  return new Promise((resolve) => {
-    try {
-      ext.tabs.query({ active: true }, (tabs) => {
-        if (tabs && tabs.length > 0) {
-          const tabIds = tabs.map((tab) => tab.id).filter(Boolean) as number[];
-          if (tabIds.length > 0) {
-            // Store tab IDs in local storage for retrieval after reload
-            ext.storage.local.set({ hotReloadActiveTabs: tabIds }, () => {
-              debug(`${LOG_PREFIX} Saved ${tabIds.length} active tabs for reload`);
-              resolve();
-            });
-          } else {
-            resolve();
-          }
-        } else {
-          resolve();
-        }
-      });
-    } catch (error) {
-      debug(`${LOG_PREFIX} Error saving active tabs: ${error}`);
-      resolve();
-    }
-  });
-}
-
-/**
- * Reload the extension and prepare for tab reloading
- */
 async function reloadExtension(): Promise<void> {
   try {
-    debug(`${LOG_PREFIX} Preparing to reload extension`);
-
-    // Save active tabs before reloading
-    await saveActiveTabsForReload();
-
-    // Reload the extension
     debug(`${LOG_PREFIX} Reloading extension now`);
     ext.runtime.reload();
   } catch (error) {
@@ -142,18 +103,12 @@ async function reloadExtension(): Promise<void> {
   }
 }
 
-/**
- * Check for and reload active tabs after extension reload
- * This is called when the extension starts up
- */
 function reloadActiveTabsAfterExtensionReload(): void {
   try {
-    ext.storage.local.get(["hotReloadActiveTabs"], (result) => {
-      const tabIds = result.hotReloadActiveTabs as number[] | undefined;
-
-      if (tabIds && tabIds.length > 0) {
+    ext.tabs.query({ active: true }, (tabs) => {
+      if (tabs && tabs.length > 0) {
+        const tabIds = tabs.map((tab) => tab.id).filter(Boolean) as number[];
         debug(`${LOG_PREFIX} Reloading ${tabIds.length} tabs after extension reload`);
-
         tabIds.forEach((tabId) => {
           ext.tabs.reload(tabId, {}, () => {
             if (ext.runtime.lastError) {
@@ -161,12 +116,10 @@ function reloadActiveTabsAfterExtensionReload(): void {
             }
           });
         });
-
-        ext.storage.local.remove("hotReloadActiveTabs");
       }
     });
   } catch (error) {
-    debug(`${LOG_PREFIX} Error reloading tabs: ${error}`);
+    debug(`${LOG_PREFIX} Error reloading tabs:`, error);
   }
 }
 
@@ -216,8 +169,6 @@ async function startMonitoring(): Promise<void> {
 
 export const initHotReload = (): void => {
   debug(`${LOG_PREFIX} Initializing`);
-
-  // Check if we need to reload tabs from previous extension reload
   reloadActiveTabsAfterExtensionReload();
 
   startMonitoring().catch((error) => {

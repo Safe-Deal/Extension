@@ -26,7 +26,11 @@
     {
       "run_at": "document_end",
       "matches": ["http://*/*", "https://*/*"],
-      "js": ["scripts/content-script-shutaf.js", "scripts/content-script-anti-scam.js"],
+      "js": [
+        "scripts/content-script-shutaf.js",
+        "scripts/content-script-anti-scam.js",
+        "scripts/content-script-talk.js"
+      ],
       "all_frames": false
     },
     {
@@ -83,24 +87,6 @@
       "run_at": "document_end",
       "matches": ["https://*.alibaba.com/*"],
       "js": ["scripts/content-script-supplier.js"],
-      "all_frames": false
-    },
-    {
-      "run_at": "document_end",
-      "matches": [
-        "https://*.aliexpress.com/*",
-        "https://*.aliexpress.us/*",
-        "https://*.ebay.com/*",
-        "https://*.amazon.com/*",
-        "https://*.amazon.co.uk/*",
-        "https://*.amazon.de/*",
-        "https://*.amazon.fr/*",
-        "https://*.amazon.it/*",
-        "https://*.amazon.es/*",
-        "https://*.amazon.co.jp/*"
-      ],
-      "js": ["scripts/chat-sidebar.js"],
-      "css": ["styles/chat-sidebar.css"],
       "all_frames": false
     }
   ],

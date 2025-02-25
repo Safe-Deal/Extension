@@ -4,6 +4,7 @@ import { useAuthStore } from "../store/AuthState";
 import { t } from "../constants/messages";
 import { Z_INDEX_MAX } from "../e-commerce/client/components/constants";
 import ProductChat from "./ProductChat";
+import "./styles/chat-sidebar.scss";
 
 interface TalkWithPageMiniProps {}
 

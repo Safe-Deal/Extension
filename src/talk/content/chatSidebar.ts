@@ -14,19 +14,16 @@ function initialize() {
 chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
   if (message.action === "TOGGLE_CHAT_SIDEBAR") {
     const container = document.getElementById("safe-deal-chat-sidebar-container");
-    if (container) {
-      // If sidebar exists, toggle it
-      const isVisible = container.style.display !== "none";
-      container.style.display = isVisible ? "none" : "block";
-      document.body.classList.toggle("sidebar-open", !isVisible);
-    } else {
+
+    if (!container) {
       // If sidebar doesn't exist, create it
       initialize();
-      document.body.classList.add("sidebar-open");
     }
+
+    // The toggle functionality is now handled by the TalkWithPageMini component
+    // We just need to make sure the sidebar is injected
     sendResponse({ success: true });
   }
 });
 
-// Initialize on script load
 initialize();

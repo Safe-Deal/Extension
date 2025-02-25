@@ -5,10 +5,14 @@ import { initAmazonCouponsWorker } from "../e-commerce/apps/deals-amazon/backgro
 import { initReviewsSummarizeWorker } from "../e-commerce/reviews/reviews-worker";
 import { initCommerce } from "../e-commerce/worker/worker";
 import { initShutafWorker } from "../shutaf/shutaf-worker";
-import { initLog, logError } from "../utils/analytics/logger";
+import { initLog, logError, debug } from "../utils/analytics/logger";
 import { initExtensionSetup } from "./extension/life-cycle";
 import { initSupplier } from "../supplier/worker/worker";
 import { initAuthWorker } from "../auth/auth-worker";
+import { initHotReload } from "./hot-reload";
+
+// @ts-ignore
+const isDebuggerOn = typeof IS_DEBUGGER_ON !== "undefined" ? IS_DEBUGGER_ON : false;
 
 initPegasusTransport();
 
@@ -24,6 +28,11 @@ initPegasusTransport();
     initShutafWorker();
     initAmazonCouponsWorker();
     initAliExpressSuperDealsWorker();
+
+    if (isDebuggerOn) {
+      debug("[HotReload] Enabled - in development mode (will reload extension and active tabs)");
+      initHotReload();
+    }
   } catch (error) {
     logError(error);
   }

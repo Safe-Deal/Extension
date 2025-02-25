@@ -30,7 +30,7 @@ initPegasusTransport();
     initAliExpressSuperDealsWorker();
 
     if (isDebuggerOn) {
-      debug("[HotReload] Enabled - in development mode (will reload extension and active tabs)");
+      debug("[HotReload] Enabled - in development mode (will reload extension and active tab)");
       initHotReload();
     }
   } catch (error) {

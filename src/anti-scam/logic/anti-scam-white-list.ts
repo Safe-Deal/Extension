@@ -769,5 +769,17 @@ export const WHITELISTED_DOMAINS = [
   "kayak.com",
   "orbitz.com",
   "travelocity.com",
-  "www.aliexpress.us"
+  "aliexpress.com",
+  "aliexpress.us",
+  "aliexpress.cn",
+  "aliexpress.ru",
+  "aliexpress.fr",
+  "aliexpress.de",
+  "aliexpress.it",
+  "aliexpress.es",
+  "aliexpress.co.uk",
+  "aliexpress.com.au",
+  "aliexpress.com.br",
+  "aliexpress.com.mx",
+  "aliexpress.com.tr"
 ];

@@ -4,7 +4,7 @@ import { getAllAvailableSelectors } from "../../../../../../utils/dom/html";
 import { EBAY_PAGE_SELECTORS } from "../../ebay-site-selector";
 
 describe("Remote Fetch eBay Integration test should correctly fetch", () => {
-  const productId = "205049591451";
+  const productId = "116281321847";
   const url = `https://www.ebay.com/itm/${productId}`;
 
   it(`should correctly fetch delivery info for product`, async () => {

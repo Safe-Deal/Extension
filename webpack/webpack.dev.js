@@ -2,6 +2,8 @@ const webpack = require("webpack");
 const { resolve } = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
+// https://www.npmjs.com/package/webpack-ext-reloader
+const ExtReloader = require("webpack-ext-reloader");
 
 module.exports = merge(common, {
   mode: "development",
@@ -35,6 +37,21 @@ module.exports = merge(common, {
   plugins: [
     new webpack.DefinePlugin({
       IS_DEBUGGER_ON: true
+    }),
+    new ExtReloader({
+      port: 9090,
+      reloadPage: true,
+      entries: {
+        contentScript: [
+          "content-script-ecommerce",
+          "content-script-anti-scam",
+          "content-script-shutaf",
+          "content-script-supplier",
+          "content-script-auth"
+        ],
+        background: "service_worker",
+        extensionPage: "popup"
+      }
     })
   ]
 });

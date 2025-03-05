@@ -1,5 +1,4 @@
-import { initPegasusZustandStoreBackend } from "@utils/pegasus/store-zustand";
-import { pegasusZustandStoreReady } from "@utils/pegasus/store-zustand";
+import { initPegasusZustandStoreBackend, pegasusZustandStoreReady } from "@utils/pegasus/store-zustand";
 import { create } from "zustand";
 import { subscribeWithSelector } from "zustand/middleware";
 

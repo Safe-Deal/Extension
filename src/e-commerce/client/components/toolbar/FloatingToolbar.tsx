@@ -179,7 +179,6 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
               >
                 {Minimal}
               </div>
-              {session && isAlibabaSite && isPremium && <ShoppingApp />}
             </Tooltips>
           );
         }

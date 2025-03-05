@@ -1,4 +1,3 @@
-import { ApiDownloader } from "../../utils/downloaders/apiDownloader";
 import { debug } from "../../utils/analytics/logger";
 import { ApiScamNorton } from "../scam-rater/api-scam-norton";
 import { ApiScamVoidUrl } from "../scam-rater/api-scam-void-url";
@@ -43,10 +42,6 @@ export class ApiScamPartners {
         }
       }
 
-      if (tabId) {
-        reportAverages(evaluateResults, domain);
-      }
-
       if (result.type === ScamSiteType.SAFE) {
         return result;
       }
@@ -59,51 +54,5 @@ export class ApiScamPartners {
       debug(`ApiScamPartners:: ${e.toString()}`);
       return { type: ScamSiteType.NO_DATA, tabId };
     }
-  }
-}
-
-const report = (data) => {
-  if (data?.trustworthiness || data?.childSafety) {
-    const reporter = new ApiDownloader("/domain");
-    reporter.post(data);
-    debug(`ApiScamPartners :: ${JSON.stringify(data)} -> Reported successfully.`);
-  } else {
-    debug(`ApiScamPartners :: Nothing to report skipped sending.`);
-  }
-};
-
-function reportAverages(evaluateResults, domain) {
-  debug(`ApiScamPartners :: ReportAverages :: reporting ${JSON.stringify(evaluateResults)} .... `);
-
-  let trustworthiness = 0;
-  let childSafety = 0;
-  let countChildSafety = 0;
-  let countTrustworthiness = 0;
-  for (const judgment of evaluateResults) {
-    if (judgment.trustworthiness) {
-      trustworthiness += judgment.trustworthiness;
-      countTrustworthiness++;
-    }
-
-    if (judgment.childSafety) {
-      childSafety += judgment.childSafety;
-      countChildSafety++;
-    }
-  }
-
-  if (countTrustworthiness > 0) {
-    trustworthiness = Math.round(trustworthiness / countTrustworthiness);
-  }
-
-  if (countChildSafety > 0) {
-    childSafety = Math.round(childSafety / countChildSafety);
-  }
-
-  if (trustworthiness || childSafety) {
-    report({
-      domain,
-      trustworthiness: String(trustworthiness),
-      childSafety: String(childSafety)
-    });
   }
 }

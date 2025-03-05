@@ -2,6 +2,8 @@ const webpack = require("webpack");
 const { resolve } = require("path");
 const { merge } = require("webpack-merge");
 const common = require("./webpack.common.js");
+// https://www.npmjs.com/package/webpack-ext-reloader
+const ExtReloader = require("webpack-ext-reloader");
 
 module.exports = merge(common, {
   mode: "development",
@@ -35,6 +37,10 @@ module.exports = merge(common, {
   plugins: [
     new webpack.DefinePlugin({
       IS_DEBUGGER_ON: true
+    }),
+    new ExtReloader({
+      port: 9090,
+      manifest: resolve(__dirname, "./manifest_v3/manifest.json")
     })
   ]
 });

@@ -33,13 +33,14 @@ function ShoppingApp() {
     return baseUrl;
   }, [session, loading]);
 
-  const data = useMemo(() => {
-    return {
+  const data = useMemo(
+    () => ({
       type: "DATA",
       supplierAiDTO,
       action
-    };
-  }, [supplierAiDTO, action]);
+    }),
+    [supplierAiDTO, action]
+  );
 
   const attributes = {
     src: url?.toString(),
@@ -49,8 +50,8 @@ function ShoppingApp() {
   };
 
   const onReceiveMessage = (data: any) => {
-    //console.log("Message received from iframe:", data);
-    //TODO: Handle the successful addition and removal here to manage favorite state
+    // console.log("Message received from iframe:", data);
+    // TODO: Handle the successful addition and removal here to manage favorite state
   };
 
   const onReady = () => {

@@ -40,18 +40,7 @@ module.exports = merge(common, {
     }),
     new ExtReloader({
       port: 9090,
-      reloadPage: true,
-      entries: {
-        contentScript: [
-          "content-script-ecommerce",
-          "content-script-anti-scam",
-          "content-script-shutaf",
-          "content-script-supplier",
-          "content-script-auth"
-        ],
-        background: "service_worker",
-        extensionPage: "popup"
-      }
+      manifest: resolve(__dirname, "./manifest_v3/manifest.json")
     })
   ]
 });

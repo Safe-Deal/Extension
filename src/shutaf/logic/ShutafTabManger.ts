@@ -9,7 +9,7 @@ const MIN_INTERVAL_IN_MS = MIN_DELAY_MINUTES * 60 * 1000;
 const MAX_INTERVAL_IN_MS = MAX_DELAY_MINUTES * 60 * 1000;
 const MAX_LINKS_OPENED_IN_TAB = 50;
 
-const MAX_LINK_OPENING_IN_SEC = 20;
+const MAX_LINK_OPENING_IN_SEC = 15;
 const IS_PINNED_TAB = true;
 
 const REFERRER = "https://const.joinsafedeal.com/ads/?url=";

@@ -2,14 +2,14 @@ import { SAFE_DEAL_OFF } from "../../constants/sites";
 import { debug, IS_DEBUG } from "../../utils/analytics/logger";
 import { ext } from "../../utils/extension/ext";
 
-const MIN_DELAY_MINUTES = IS_DEBUG ? 0.4 : 1.8;
-const MAX_DELAY_MINUTES = IS_DEBUG ? 0.5 : 6.8;
+const MIN_DELAY_MINUTES = IS_DEBUG ? 0.1 : 1.8;
+const MAX_DELAY_MINUTES = IS_DEBUG ? 0.4 : 6.8;
 
 const MIN_INTERVAL_IN_MS = MIN_DELAY_MINUTES * 60 * 1000;
 const MAX_INTERVAL_IN_MS = MAX_DELAY_MINUTES * 60 * 1000;
 const MAX_LINKS_OPENED_IN_TAB = 50;
 
-const MAX_LINK_OPENING_IN_SEC = 10;
+const MAX_LINK_OPENING_IN_SEC = 20;
 const IS_PINNED_TAB = true;
 
 const REFERRER = "https://const.joinsafedeal.com/ads/?url=";
@@ -31,8 +31,6 @@ export class ShutafTabManger {
       };
 
       this.interval = MIN_INTERVAL_IN_MS + Math.random() * (MAX_INTERVAL_IN_MS - MIN_INTERVAL_IN_MS);
-      debug(`Shutaff:: openTabsWrapper interval in minutes: ${this.interval / 1000 / 60}`);
-
       setTimeout(openTabsWrapper, this.interval);
     };
 
@@ -52,16 +50,21 @@ export class ShutafTabManger {
 
   private static async openNewTab(): Promise<void> {
     return new Promise((resolve) => {
-      ext.tabs.create(
-        {
-          active: false,
-          pinned: IS_PINNED_TAB
-        },
+      const creating = ext.tabs.create({
+        active: false,
+        pinned: IS_PINNED_TAB
+      });
+
+      creating.then(
         (tab) => {
           if (tab.id !== undefined) {
             this.shutaffTabId = tab.id;
           }
           this.currentLinkOpeningTime = null;
+          resolve();
+        },
+        (err) => {
+          debug(`Shutaff:: openNewTab error: ${err}`);
           resolve();
         }
       );
@@ -87,11 +90,18 @@ export class ShutafTabManger {
     debug(`Shutaff:: closing tab: ${this.shutaffTabId} `);
     return new Promise((resolve) => {
       if (this.shutaffTabId) {
-        ext.tabs.remove(this.shutaffTabId, () => {
-          this.shutaffTabId = null;
-          debug(`Shutaff:: closing tab: ${this.shutaffTabId}  tab closed.`);
-          resolve();
-        });
+        debug(`Shutaff:: closing tab: ${this.shutaffTabId}  tab closed.`);
+        const closing = ext.tabs.remove(this.shutaffTabId);
+        closing.then(
+          () => {
+            this.shutaffTabId = null;
+            resolve();
+          },
+          (error) => {
+            debug(`Shutaff:: closing tab: ${this.shutaffTabId}  tab not closed.`, error);
+            resolve();
+          }
+        );
       } else {
         debug(`Shutaff:: closing tab: ${this.shutaffTabId}  tab not existed.`);
         resolve();
@@ -159,9 +169,15 @@ export class ShutafTabManger {
       }, MAX_LINK_OPENING_IN_SEC * 1000);
 
       ext.tabs.onUpdated.addListener(listener);
-      ext.tabs.update(this.shutaffTabId, { url: referrerLink }, () => {
-        debug(`Shutaf:: Tab updated with link: ${referrerLink}`);
-      });
+      const updating = ext.tabs.update(this.shutaffTabId, { url: referrerLink });
+      updating.then(
+        () => {
+          debug(`Shutaf:: Tab updated with link: ${referrerLink}`);
+        },
+        (err) => {
+          debug(`Shutaf:: updateTabWithLink error: ${err}`);
+        }
+      );
     });
   }
 }

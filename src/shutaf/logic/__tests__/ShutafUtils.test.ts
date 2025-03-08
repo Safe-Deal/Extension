@@ -121,6 +121,31 @@ describe("Shutaf ShutafUtils", () => {
   });
 });
 
+describe("AliBaba Shutaf", () => {
+  const targetUrlsVsShutaf = [
+    {
+      url: "https://www.alibaba.com/product-detail/40oz-Adventure-Quencher-Insulated-Vacuum-Travel_1600918776668.html?xp=OD5XmT7d65z5MzF0MvMRWc5QGreuMcpO-b2j7exRYi6gzI8YgYew_6cuIAHPrvNXFlkh7Xrjxptl4hiocD3RxEYU3MQTOwvMyJ3BgdZfsgk&cps_sk=tg1u2unl&bm=cps&src=saf&productId=1600918776668",
+      shutaf: "https://offer.alibaba.com/cps/tg1u2unl?bm=cps&src=saf&productId=1600918776668"
+    },
+    {
+      url: "https://www.alibaba.com/product-detail/3-Axle-70-Ton-40-Ft_1601076348942.html?spm=a2700.galleryofferlist.wending_right.i7.3aa613a0oNLFhQ",
+      shutaf: "https://offer.alibaba.com/cps/tg1u2unl?bm=cps&src=saf&productId=1601076348942"
+    }
+  ];
+
+  it("should extract product ID using regex pattern and update shutaf URL with targetParamName", () => {
+    for (const targetUrl of targetUrlsVsShutaf) {
+      const result = getUrlFromShutafParams(
+        "https://offer.alibaba.com/cps/tg1u2unl?bm=cps&src=saf&",
+        targetUrl.url,
+        "regexp:(?<=\\/product-detail\\/[a-zA-Z0-9\\-]+_)\\d+(?=\\.html)",
+        "productId"
+      );
+      expect(result).toBe(targetUrl.shutaf);
+    }
+  });
+});
+
 describe("getUrlFromShutafParams", () => {
   const targetUrls = [
     "https://www.alibaba.com/product-detail/40oz-Adventure-Quencher-Insulated-Vacuum-Travel_1600918776668.html?xp=OD5XmT7d65z5MzF0MvMRWc5QGreuMcpO-b2j7exRYi6gzI8YgYew_6cuIAHPrvNXFlkh7Xrjxptl4hiocD3RxEYU3MQTOwvMyJ3BgdZfsgk&cps_sk=tg1u2unl&bm=cps&src=saf&productId=1600918776668",

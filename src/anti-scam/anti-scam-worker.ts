@@ -31,7 +31,7 @@ export const initAntiScamWorker = async () => {
       }
 
       const domain = request.data;
-      const sender = request.sender;
+      const { sender } = request;
 
       if (!domain || !sender) {
         // It is expected, no need to log error
@@ -41,9 +41,8 @@ export const initAntiScamWorker = async () => {
       }
       if (domain === CLOSE_TAB) {
         const tabId = sender?.tabId;
-        ext.tabs.remove(tabId, () => {
-          debug(`AntiScamWorker :: Closed dangerous tab ${tabId} `);
-        });
+        ext.tabs.remove(tabId);
+        debug(`AntiScamWorker :: Closed dangerous tab ${tabId} `);
         return;
       }
 

@@ -40,7 +40,7 @@ describe("ShutafTabManger", () => {
   });
 
   it("should create a new tab and set shutaffTabId", async () => {
-    (ext.tabs.create as jest.Mock).mockImplementation((_, callback) => callback({ id: 1 }));
+    (ext.tabs.create as jest.Mock).mockImplementation((_) => Promise.resolve({ id: 1 }));
     await (ShutafTabManger as any).openNewTab();
 
     expect(ext.tabs.create).toHaveBeenCalled();

@@ -170,5 +170,6 @@
   "[xml]": {
     "editor.defaultFormatter": "DotJoshJohnson.xml"
   },
-  "testing.openTesting": "neverOpen"
+"testing.openTesting": "neverOpen",
+"testing.automaticallyOpenTestResults": "neverOpen"
 }

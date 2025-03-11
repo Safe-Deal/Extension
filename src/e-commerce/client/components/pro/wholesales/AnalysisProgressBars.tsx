@@ -1,4 +1,3 @@
-import { SERIES_COLORS } from "@utils/react/theme";
 import React from "react";
 import "./AnalysisProgressBars.scss";
 import { CircularProgressBar } from "./components/CircularProgressBar";
@@ -18,19 +17,13 @@ const AnalysisWholesaleResult = ({ product }: { product: Product }) => (
     <div className="progress-bar__container">
       <LinearProgressBar
         title={product.summary?.title}
-        value={product.summary?.value}
+        value={product.summary?.value * 10}
         reason={product.summary?.reason}
       />
     </div>
     <div className="progress-bar__container progress-bar__container--gauges">
       {Object.entries(product.analysis).map(([key, value], index) => (
-        <CircularProgressBar
-          key={key}
-          title={value.title}
-          value={value.value * 10}
-          reason={value.reason}
-          color={SERIES_COLORS[index % SERIES_COLORS.length]}
-        />
+        <CircularProgressBar key={key} title={value.title} value={value.value * 10} reason={value.reason} />
       ))}
     </div>
   </section>

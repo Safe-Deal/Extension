@@ -1,6 +1,6 @@
+import { SERIES_COLORS } from "@utils/react/theme";
 import React from "react";
 import "./AnalysisProgressBars.scss";
-import { SERIES_COLORS } from "@utils/react/theme";
 import { CircularProgressBar } from "./components/CircularProgressBar";
 import { LinearProgressBar } from "./components/LinearProgressBar";
 
@@ -27,7 +27,7 @@ const AnalysisWholesaleResult = ({ product }: { product: Product }) => (
         <CircularProgressBar
           key={key}
           title={value.title}
-          value={value.value}
+          value={value.value * 10}
           reason={value.reason}
           color={SERIES_COLORS[index % SERIES_COLORS.length]}
         />

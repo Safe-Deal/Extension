@@ -1,12 +1,12 @@
-import { get } from "lodash";
-import { debug, logError } from "@utils/analytics/logger";
 import { initSupplierStoreBackend } from "@store/SupplierState";
+import { debug, logError } from "@utils/analytics/logger";
 import { definePegasusMessageBus } from "@utils/pegasus/transport";
-import { SiteMetadata } from "../../utils/site/site-information";
+import { get } from "lodash";
 import { ParsedHtml } from "../../utils/dom/html";
+import { SiteMetadata } from "../../utils/site/site-information";
+import { convertedAlibabaProduct } from "../mocks/alibaba-product-mock";
 import { prepareDTO, preprocessAlibabaData } from "../stores/alibaba/alibaba-store";
 import { analyzeSupplierProductByAI } from "../supplier-ai-api-service";
-import { convertedAlibabaProduct } from "../mocks/alibaba-product-mock";
 
 export enum SupplierMessageType {
   ANALYZE_SUPPLIER = "analyzeSupplier"
@@ -48,10 +48,16 @@ export const initSupplier = async () => {
       const SupplierStoreData = preprocessAlibabaData(dom);
       const supplierAiDTO = prepareDTO(SupplierStoreData);
       const storeFeedbackUrl = get(SupplierStoreData, "globalData.seller.feedbackUrl");
-      setSupplierAiDTO(supplierAiDTO);
+
+      // setSupplierAiDTO(supplierAiDTO);
       // TODO: Tackle the problem of tab ids
       const aiResult = await analyzeSupplierProductByAI(supplierAiDTO);
       const safeDealAiResult = convertedAlibabaProduct(aiResult, url, storeFeedbackUrl);
+
+      if (safeDealAiResult?.length > 0) {
+        supplierAiDTO["safeDealAiAnalysis"] = safeDealAiResult[0]?.data;
+      }
+      setSupplierAiDTO(supplierAiDTO);
       setAnalyzedItems(safeDealAiResult);
     } catch (error) {
       logError(error, "::SupplierStore Error!");

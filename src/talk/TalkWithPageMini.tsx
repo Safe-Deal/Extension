@@ -1,14 +1,12 @@
 import React, { useState } from "react";
-import { Button, Dialog } from "@mui/material";
+import { Button, Drawer } from "@mui/material";
 import { useAuthStore } from "../store/AuthState";
 import { t } from "../constants/messages";
 import { Z_INDEX_MAX } from "../e-commerce/client/components/constants";
 import ProductChat from "./ProductChat";
 import "./styles/chat-sidebar.scss";
 
-interface TalkWithPageMiniProps {}
-
-const TalkWithPageMini: React.FC<TalkWithPageMiniProps> = () => {
+const TalkWithPageMini: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { session } = useAuthStore();
 
@@ -36,21 +34,26 @@ const TalkWithPageMini: React.FC<TalkWithPageMiniProps> = () => {
         {t("talk_with_page")}
       </Button>
 
-      <Dialog
+      <Drawer
+        anchor="right"
         open={isOpen}
         onClose={handleClose}
-        fullWidth
-        maxWidth="md"
-        PaperProps={{
-          sx: {
-            height: "80vh",
-            maxHeight: "80vh"
+        variant="persistent"
+        sx={{
+          "& .MuiDrawer-paper": {
+            position: "relative",
+            width: "400px",
+            height: "100vh",
+            borderLeft: "1px solid rgba(0, 0, 0, 0.12)",
+            boxShadow: "none"
+          },
+          "& .MuiBackdrop-root": {
+            display: "none"
           }
         }}
-        sx={{ zIndex: Z_INDEX_MAX }}
       >
         <ProductChat product={null} />
-      </Dialog>
+      </Drawer>
     </>
   );
 };

@@ -4,7 +4,7 @@ import { useAuthStore } from "../store/AuthState";
 import { t } from "../constants/messages";
 import { Z_INDEX_MAX } from "../e-commerce/client/components/constants";
 import ProductChat from "./ProductChat";
-
+/// https://www.npmjs.com/package/react-modern-drawer
 const TalkWithPageMini: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { session } = useAuthStore();

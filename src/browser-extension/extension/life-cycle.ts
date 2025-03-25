@@ -16,7 +16,7 @@ const INSTALL_EVENTS = Object.freeze({
 const setUninstallUrl = () => {
   const installTimestamp = DateUtils.getUtcTimestamp();
   const finalUrl = `${UNINSTALL_URL()}?timestamp=${installTimestamp}`;
-  ext.runtime.setUninstallURL(finalUrl, () => {
+  ext.runtime.setUninstallURL(finalUrl).then(() => {
     if (ext.runtime.lastError) {
       logError(new Error(`Error setting uninstall URL: ${ext.runtime?.lastError?.message}`));
     } else {

@@ -4,18 +4,13 @@ import { useAuthStore } from "../store/AuthState";
 import { t } from "../constants/messages";
 import { Z_INDEX_MAX } from "../e-commerce/client/components/constants";
 import ProductChat from "./ProductChat";
-import "./styles/chat-sidebar.scss";
 
 const TalkWithPageMini: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { session } = useAuthStore();
 
   const handleOpen = () => {
-    setIsOpen(true);
-  };
-
-  const handleClose = () => {
-    setIsOpen(false);
+    setIsOpen(!isOpen);
   };
 
   return (
@@ -24,9 +19,8 @@ const TalkWithPageMini: React.FC = () => {
         variant="contained"
         color="primary"
         onClick={handleOpen}
-        size="medium"
+        size="small"
         sx={{
-          minWidth: "120px",
           textTransform: "none",
           fontWeight: "bold"
         }}
@@ -37,7 +31,7 @@ const TalkWithPageMini: React.FC = () => {
       <Drawer
         anchor="right"
         open={isOpen}
-        onClose={handleClose}
+        onClose={handleOpen}
         variant="persistent"
         sx={{
           "& .MuiDrawer-paper": {

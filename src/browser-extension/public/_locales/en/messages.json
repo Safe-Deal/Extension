@@ -569,5 +569,8 @@
   },
   "welcome_safe_deal": {
     "message": "Welcome to Safe Deal"
+  },
+  "talk_with_page": {
+    "message": "Ask"
   }
 }

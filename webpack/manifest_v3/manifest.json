@@ -26,11 +26,7 @@
     {
       "run_at": "document_end",
       "matches": ["http://*/*", "https://*/*"],
-      "js": [
-        "scripts/content-script-shutaf.js",
-        "scripts/content-script-anti-scam.js",
-        "scripts/content-script-talk.js"
-      ],
+      "js": ["scripts/content-script-shutaf.js", "scripts/content-script-anti-scam.js"],
       "all_frames": false
     },
     {

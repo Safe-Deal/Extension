@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Button, Drawer } from "@mui/material";
+import { Button, IconButton } from "@mui/material";
+import Drawer from "react-modern-drawer";
+import "react-modern-drawer/dist/index.css";
+import CloseIcon from "@mui/icons-material/Close";
 import { useAuthStore } from "../store/AuthState";
 import { t } from "../constants/messages";
-import { Z_INDEX_MAX } from "../e-commerce/client/components/constants";
 import ProductChat from "./ProductChat";
-/// https://www.npmjs.com/package/react-modern-drawer
+
 const TalkWithPageMini: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { session } = useAuthStore();
@@ -28,25 +30,25 @@ const TalkWithPageMini: React.FC = () => {
         {t("talk_with_page")}
       </Button>
 
-      <Drawer
-        anchor="right"
-        open={isOpen}
-        onClose={handleOpen}
-        variant="persistent"
-        sx={{
-          "& .MuiDrawer-paper": {
-            position: "relative",
-            width: "400px",
-            height: "100vh",
-            borderLeft: "1px solid rgba(0, 0, 0, 0.12)",
-            boxShadow: "none"
-          },
-          "& .MuiBackdrop-root": {
-            display: "none"
-          }
-        }}
-      >
-        <ProductChat product={null} />
+      <Drawer open={isOpen} onClose={handleOpen} direction="right" size={400} enableOverlay={false}>
+        <div className="relative h-full">
+          <IconButton
+            onClick={handleOpen}
+            sx={{
+              position: "absolute",
+              right: 8,
+              top: 8,
+              color: "text.secondary",
+              "&:hover": {
+                backgroundColor: "action.hover"
+              }
+            }}
+            aria-label="close drawer"
+          >
+            <CloseIcon />
+          </IconButton>
+          <ProductChat url={window.location.href} />
+        </div>
       </Drawer>
     </>
   );

@@ -89,6 +89,7 @@
     "react-iframe": "^1.8.5",
     "react-iframe-comm": "^1.2.2",
     "react-magnifier": "^3.0.4",
+    "react-modern-drawer": "^1.4.0",
     "react-share": "^5.1.0",
     "react-slick": "^0.30.2",
     "serialize-error": "^11.0.3",

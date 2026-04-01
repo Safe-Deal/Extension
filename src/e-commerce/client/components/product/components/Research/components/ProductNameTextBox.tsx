@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import TextField from "@mui/material/TextField";
 import Box from "@mui/material/Box";
 import { useDebounce } from "../../../../../hooks/useDebounce";
@@ -13,59 +13,43 @@ const TYPING_DEBOUNCE_MS = 450;
 const ProductNameTextBox = ({ text, setText }: ProductNameTextBoxProps) => {
   const [inputValue, setInputValue] = useState(text);
   const debouncedInputValue = useDebounce(inputValue, TYPING_DEBOUNCE_MS);
-  const [inputWidth, setInputWidth] = useState("250px");
-  const spanRef = useRef(null);
 
   const handleTextChange = (event) => {
     setInputValue(event.target.value);
   };
 
   useEffect(() => {
+    setInputValue(text);
+  }, [text]);
+
+  useEffect(() => {
     setText(debouncedInputValue);
   }, [debouncedInputValue, setText]);
 
-  useEffect(() => {
-    if (spanRef.current) {
-      setInputWidth(`${spanRef.current.offsetWidth + 28}px`);
-    }
-  }, [inputValue]);
-
   return (
-    <Box sx={{ display: "inline-block" }}>
+    <Box sx={{ width: "min(420px, 52vw)", maxWidth: "100%" }}>
       <TextField
         variant="outlined"
+        size="small"
         value={inputValue}
         onChange={handleTextChange}
         sx={{
-          width: inputWidth,
-          ml: 1,
-          marginBottom: "2px",
+          width: "100%",
           "& .MuiOutlinedInput-root": {
-            borderRadius: "8px",
+            borderRadius: "12px",
+            backgroundColor: "#fff",
             "& fieldset": {
-              borderColor: "grey"
+              borderColor: "#d8dee7"
             },
             "&:hover fieldset": {
-              borderColor: "darkgrey"
+              borderColor: "#b8c2cf"
             },
             "&.Mui-focused fieldset": {
-              borderColor: "grey"
+              borderColor: "#1f6feb"
             }
           }
         }}
       />
-      <span
-        ref={spanRef}
-        style={{
-          position: "absolute",
-          visibility: "hidden",
-          whiteSpace: "pre",
-          fontSize: "18px",
-          fontFamily: "Roboto, Helvetica, Arial, sans-serif"
-        }}
-      >
-        {inputValue || " "}
-      </span>
     </Box>
   );
 };

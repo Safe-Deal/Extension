@@ -11,7 +11,7 @@ import { Reviews } from "../../Reviews/Reviews";
 
 interface IResearchComponents {
   Label: string;
-  Link: string;
+  Link: string | null;
   Icon: JSX.Element;
   Component: JSX.Element;
 }

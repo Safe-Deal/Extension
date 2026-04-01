@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { SyntheticEvent, useState } from "react";
 import Dialog from "@mui/material/Dialog";
 import DialogTitle from "@mui/material/DialogTitle";
 import Tabs from "@mui/material/Tabs";
@@ -34,8 +34,9 @@ export const ProductResearchLightbox = ({ open, onClose, productId, store }: IPr
   const [productName, setProductName] = useProductName({ productId, store, isSmall });
   const [activeTab, setActiveTab] = useState(0);
   const researchTabs = useProductResearch({ productId, productName, store, isSmall });
+  const activeResearchTab = researchTabs[activeTab];
 
-  const handleChange = (event, selectedTab) => {
+  const handleChange = (_event: SyntheticEvent, selectedTab: number) => {
     setActiveTab(selectedTab);
   };
 
@@ -65,17 +66,29 @@ export const ProductResearchLightbox = ({ open, onClose, productId, store }: IPr
       maxWidth="lg"
       sx={{ zIndex: Z_INDEX_MAX }}
     >
-      <DialogTitle sx={{ display: "flex", flex: 1, alignItems: "center", gap: "14px" }}>
+      <DialogTitle className="sd-product-research__header">
         <IconButton aria-label="close" onClick={onClose} sx={closeStyle}>
           <CloseIcon />
         </IconButton>
-        {t("research_online")}
-        <div>
+        <div className="sd-product-research__header-main">
+          <div className="sd-product-research__header-title">{t("research_online")}</div>
           <ProductNameTextBox text={productName} setText={setProductName} />
         </div>
+        {activeResearchTab?.Link && (
+          <IconButton
+            component={Link}
+            href={`${activeResearchTab.Link}`}
+            target="_blank"
+            rel="noopener"
+            className="sd-product-research__header-link"
+            aria-label="open active research tab"
+          >
+            <OpenInNewIcon fontSize="small" />
+          </IconButton>
+        )}
       </DialogTitle>
-      <AppBar position="sticky" color="secondary">
-        <Toolbar>
+      <AppBar position="sticky" color="transparent" elevation={0} className="sd-product-research__app-bar">
+        <Toolbar className="sd-product-research__toolbar">
           <Tabs
             value={activeTab}
             onChange={handleChange}
@@ -92,17 +105,6 @@ export const ProductResearchLightbox = ({ open, onClose, productId, store }: IPr
                   <Box className="sd-product-research__tabs-tab-label">
                     <div className="sd-product-research__tabs-tab-label-icon">{tab.Icon}</div>
                     <div className="sd-product-research__tabs-tab-label-title">{tab.Label}</div>
-                    {tab.Link && (
-                      <IconButton
-                        component={Link}
-                        href={`${tab.Link}`}
-                        target="_blank"
-                        rel="noopener"
-                        className="sd-product-research__tabs-tab-label-link"
-                      >
-                        <OpenInNewIcon fontSize="small" />
-                      </IconButton>
-                    )}
                   </Box>
                 }
               />
@@ -110,7 +112,7 @@ export const ProductResearchLightbox = ({ open, onClose, productId, store }: IPr
           </Tabs>
         </Toolbar>
       </AppBar>
-      {researchTabs[activeTab].Component}
+      <div className="sd-product-research__content">{activeResearchTab?.Component}</div>
     </Dialog>
   );
 };

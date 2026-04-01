@@ -4,24 +4,89 @@
   &__dialog {
     &-paper {
       z-index: $z-index-max !important;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+      border-radius: 20px !important;
+      background: #f5f7fb !important;
     }
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 18px 64px 12px 24px !important;
+    background: linear-gradient(180deg, #ffffff 0%, #f8faff 100%);
+    border-bottom: 1px solid #e5eaf1;
+
+    &-main {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      min-width: 0;
+      flex: 1;
+    }
+
+    &-title {
+      flex-shrink: 0;
+      font-size: 18px;
+      font-weight: 700;
+      color: #18212f;
+      white-space: nowrap;
+    }
+
+    &-link {
+      flex-shrink: 0;
+      color: #5b6472 !important;
+      background: rgba(255, 255, 255, 0.9) !important;
+      border: 1px solid #d8dee7 !important;
+
+      &:hover {
+        background: #fff !important;
+      }
+    }
+  }
+
+  &__app-bar {
+    background: transparent !important;
+  }
+
+  &__toolbar {
+    padding: 12px 20px 0 !important;
+    min-height: auto !important;
   }
 
   &__tabs {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     width: 100%;
+    min-height: 0 !important;
+    gap: 8px;
 
     &-tab {
       display: flex;
-      flex-grow: 1;
       text-align: center;
       vertical-align: middle;
       align-items: center;
       justify-content: center;
       max-width: none;
-      min-width: 150px !important;
+      min-width: auto !important;
+      min-height: 0 !important;
+      padding: 0 !important;
+      margin-bottom: 12px !important;
+      border-radius: 999px !important;
+      background: #e9edf4 !important;
+      color: #506074 !important;
+      text-transform: none !important;
+
+      &.Mui-selected {
+        background: #ffffff !important;
+        color: #16202d !important;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+      }
 
       &-label {
         display: flex;
@@ -30,19 +95,37 @@
         align-items: center;
         justify-content: center;
         column-gap: 8px;
+        padding: 10px 16px;
 
         &-icon {
-          display: inline-block;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
         }
 
         &-title {
-          font-weight: bold;
-        }
-
-        &-link {
-          margin-top: -1px !important;
+          font-weight: 700;
+          font-size: 13px;
+          line-height: 1;
         }
       }
+    }
+
+    .MuiTabs-indicator {
+      display: none;
+    }
+  }
+
+  &__content {
+    flex: 1;
+    min-height: 0;
+    padding: 0 20px 20px;
+    box-sizing: border-box;
+
+    .sd-embedded_container,
+    iframe {
+      border-radius: 18px;
+      background: #fff;
     }
   }
 }

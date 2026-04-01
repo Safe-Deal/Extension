@@ -23,7 +23,7 @@ initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_ANTI_SC
 
     await sendMessage(AntiScamMessageTypes.ANALYZE_DOMAIN, domain);
 
-    useAntiScamStore.subscribe((state) => {
+    const unsubscribe = useAntiScamStore.subscribe((state) => {
       const conclusion = state?.conclusion;
       debug(`AntiScam :: Analysis of ${domain} started....`);
       debug(`AntiScam :: Sending ${domain} for analysis`);
@@ -41,6 +41,8 @@ initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_ANTI_SC
         debug(`AntiScam :: No data returned nothing to paint!! result:${JSON.stringify(conclusion)}`);
       }
     });
+
+    window.addEventListener('beforeunload', () => unsubscribe());
   } catch (error) {
     logError(error, "AntiScam Error::");
   }

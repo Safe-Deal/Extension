@@ -1,12 +1,12 @@
 {
   "name": "safe-deal",
   "private": true,
-  "version": "5.8.17",
+  "version": "5.8.18",
   "author": "Safe Deal",
   "license": "MIT",
   "description": "Safe Deal Extension",
   "scripts": {
-    "rel": "run-s dist:pretty test:dist dist:clean dist:bump:version dist:rel dist:rel:ff dist:build dist:rel:tag ",
+    "rel": "run-s dist:pretty dist:clean dist:bump:version dist:rel dist:rel:ff dist:build dist:rel:tag ",
     "translate": "yarn --cwd ./tools run translate",
     "dev": "run-s dev:clean conf:chrome dev:run:webpack",
     "dev:ff": "run-s dev:clean conf:firefox dev:run:ff",

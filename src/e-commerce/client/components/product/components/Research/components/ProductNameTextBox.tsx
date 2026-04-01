@@ -27,7 +27,7 @@ const ProductNameTextBox = ({ text, setText }: ProductNameTextBoxProps) => {
   }, [debouncedInputValue, setText]);
 
   return (
-    <Box sx={{ width: "min(420px, 52vw)", maxWidth: "100%" }}>
+    <Box sx={{ width: "min(360px, 46vw)", maxWidth: "100%" }}>
       <TextField
         variant="outlined"
         size="small"
@@ -35,8 +35,12 @@ const ProductNameTextBox = ({ text, setText }: ProductNameTextBoxProps) => {
         onChange={handleTextChange}
         sx={{
           width: "100%",
+          "& .MuiInputBase-input": {
+            fontSize: "13px",
+            padding: "9px 10px"
+          },
           "& .MuiOutlinedInput-root": {
-            borderRadius: "12px",
+            borderRadius: "10px",
             backgroundColor: "#fff",
             "& fieldset": {
               borderColor: "#d8dee7"

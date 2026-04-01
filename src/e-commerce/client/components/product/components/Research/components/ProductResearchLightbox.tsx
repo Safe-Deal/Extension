@@ -43,7 +43,7 @@ export const ProductResearchLightbox = ({ open, onClose, productId, store }: IPr
   const closePosition = isRtl() ? { left: 8 } : { right: 8 };
   const closeStyle = {
     position: "absolute",
-    top: 8,
+    top: 4,
     color: (theme) => theme.palette.grey[500],
     ...closePosition
   };

@@ -13,7 +13,7 @@
     &__reason {
       &__title {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 17px;
         color: $grey-700;
       }
 
@@ -55,8 +55,8 @@
         align-items: center;
         gap: 4px;
         border-radius: 5px;
-        padding: 2px 8px;
-        font-size: 12px;
+        padding: 3px 10px;
+        font-size: 14px;
         font-weight: 600;
         line-height: 1.6;
         white-space: nowrap;
@@ -65,12 +65,12 @@
           opacity: 0.65;
           text-transform: uppercase;
           letter-spacing: 0.03em;
-          font-size: 10px;
+          font-size: 12px;
         }
 
         &__value {
           font-weight: 700;
-          font-size: 12px;
+          font-size: 14px;
         }
       }
 
@@ -83,7 +83,7 @@
       }
 
       .sd-rules__star-rating {
-        font-size: 11px;
+        font-size: 13px;
         letter-spacing: 1px;
         line-height: 1;
       }
@@ -92,7 +92,7 @@
         display: flex;
         align-items: center;
         gap: 8px;
-        font-size: $font-smaller-size;
+        font-size: 14px;
 
         &-good {
           &-bullet {

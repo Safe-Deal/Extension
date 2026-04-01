@@ -41,7 +41,7 @@ describe("Ali Express Rule List Shop Open Year", () => {
       weight: 0,
       bonus: {
         isBonusRule: true,
-        value: 12
+        value: 15
       },
       isValidRule: true,
       tooltipSummary: {
@@ -54,7 +54,7 @@ describe("Ali Express Rule List Shop Open Year", () => {
           yearsInBusinessIndicator: {
             i18n: "years_label"
           },
-          shopOpenedYearValue: 6
+          shopOpenedYearValue: 7
         }
       }
     };

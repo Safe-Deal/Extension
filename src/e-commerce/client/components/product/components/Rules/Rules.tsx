@@ -28,14 +28,15 @@ function extractMetricBadges(text: string): MetricBadge[] {
 
   // "Key: value" patterns
   const keyValuePattern = /(\w+):\s*([\d.]+)/g;
-  let match;
-  while ((match = keyValuePattern.exec(text)) !== null) {
+  let match = keyValuePattern.exec(text);
+  while (match !== null) {
     const label = match[1];
     const value = match[2];
     const numericValue = parseFloat(value);
     const lowerLabel = label.toLowerCase();
     const type = lowerLabel === "stars" ? "stars" : lowerLabel === "orders" ? "orders" : "generic";
     badges.push({ label, value, numericValue, type });
+    match = keyValuePattern.exec(text);
   }
 
   // Any percentage: trailing ", 90.90%" or mid-sentence "43% lower"
@@ -44,7 +45,7 @@ function extractMetricBadges(text: string): MetricBadge[] {
   if (percentMatch) {
     badges.push({
       label: "percent",
-      value: percentMatch[1] + "%",
+      value: `${percentMatch[1]}%`,
       numericValue: parseFloat(percentMatch[1]),
       type: "percent"
     });
@@ -52,12 +53,19 @@ function extractMetricBadges(text: string): MetricBadge[] {
 
   // "number unit" patterns like "8 years", "-20544 days" (only known units)
   const unitPattern = /(-?[\d]+)\s+(days?|years?|months?)/gi;
-  while ((match = unitPattern.exec(text)) !== null) {
-    const num = parseInt(match[1]);
-    const unit = match[2].toLowerCase();
+  let unitMatch = unitPattern.exec(text);
+  while (unitMatch !== null) {
+    const num = parseInt(unitMatch[1], 10);
+    const unit = unitMatch[2].toLowerCase();
     if (num > 0) {
-      badges.push({ label: unit, value: match[1] + " " + match[2], numericValue: num, type: "generic" });
+      badges.push({
+        label: unit,
+        value: `${unitMatch[1]} ${unitMatch[2]}`,
+        numericValue: num,
+        type: "generic"
+      });
     }
+    unitMatch = unitPattern.exec(text);
   }
 
   return badges;
@@ -78,9 +86,9 @@ function getVerdictText(text: string, badges: MetricBadge[]): string {
       result = result.replace(/,\s*[\d.]+%/, "");
     } else if (badge.label.match(/^(days?|years?|months?)$/i)) {
       // Strip "number unit" like "8 years" or "-20544 days"
-      result = result.replace(new RegExp(",?\\s*-?\\d+\\s+" + badge.label, "gi"), "");
+      result = result.replace(new RegExp(`,?\\s*-?\\d+\\s+${badge.label}`, "gi"), "");
     } else {
-      result = result.replace(new RegExp(",?\\s*" + badge.label + ":\\s*[\\d.]+", "g"), "");
+      result = result.replace(new RegExp(`,?\\s*${badge.label}:\\s*[\\d.]+`, "g"), "");
     }
   }
   return result.replace(/[,.]?\s*$/, ".").trim();
@@ -160,7 +168,7 @@ export function Rules({ rules, bg }: IRulesProps) {
                           <span
                             key={badge.label}
                             className="sd-rules__explanation__reason__badge sd-rules__explanation__reason__badge--stars"
-                            style={{ backgroundColor: color + "1a", color }}
+                            style={{ backgroundColor: `${color}1a`, color }}
                           >
                             <StarRating value={badge.numericValue} />
                             <span className="sd-rules__explanation__reason__badge__value">{badge.value}</span>
@@ -173,7 +181,7 @@ export function Rules({ rules, bg }: IRulesProps) {
                           <span
                             key={badge.label}
                             className="sd-rules__explanation__reason__badge"
-                            style={{ backgroundColor: color + "1a", color }}
+                            style={{ backgroundColor: `${color}1a`, color }}
                           >
                             <span className="sd-rules__explanation__reason__badge__label">😊</span>
                             <span className="sd-rules__explanation__reason__badge__value">{badge.value}</span>

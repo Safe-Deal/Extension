@@ -42,7 +42,7 @@ initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_ANTI_SC
       }
     });
 
-    window.addEventListener('beforeunload', () => unsubscribe());
+    window.addEventListener("beforeunload", () => unsubscribe());
   } catch (error) {
     logError(error, "AntiScam Error::");
   }

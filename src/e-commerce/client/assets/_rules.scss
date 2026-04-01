@@ -13,7 +13,7 @@
     &__reason {
       &__title {
         font-weight: 400;
-        font-size: 16px;
+        font-size: 17px;
         color: $grey-700;
       }
 
@@ -41,20 +41,75 @@
         }
       }
 
+      &__badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        margin-left: auto;
+        align-self: center;
+        flex-shrink: 0;
+      }
+
+      &__badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        border-radius: 5px;
+        padding: 3px 10px;
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.6;
+        white-space: nowrap;
+
+        &__label {
+          opacity: 0.65;
+          text-transform: uppercase;
+          letter-spacing: 0.03em;
+          font-size: 12px;
+        }
+
+        &__value {
+          font-weight: 700;
+          font-size: 14px;
+        }
+      }
+
+      &__title {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-wrap: wrap;
+      }
+
+      .sd-rules__star-rating {
+        font-size: 13px;
+        letter-spacing: 1px;
+        line-height: 1;
+      }
+
       .sd-reason {
         display: flex;
-        align-items: flex-start;
+        align-items: center;
         gap: 8px;
-        font-size: $font-smaller-size;
+        font-size: 14px;
 
         &-good {
           &-bullet {
             background-color: $reason-good-bg;
           }
+          &-badge {
+            background-color: rgba(16, 186, 145, 0.12);
+            color: darken(rgba(16, 186, 145, 1), 20%);
+          }
         }
         &-bad {
           &-bullet {
             background-color: $reason-bad-bg;
+          }
+          &-badge {
+            background-color: rgba(203, 3, 37, 0.1);
+            color: darken(rgba(203, 3, 37, 1), 10%);
           }
         }
       }

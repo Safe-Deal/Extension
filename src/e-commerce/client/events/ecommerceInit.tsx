@@ -1,12 +1,12 @@
+import { debug } from "@utils/analytics/logger";
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { debug } from "@utils/analytics/logger";
-import { SiteMetadata } from "../../../utils/site/site-information";
-import { ECommerceClient } from "../ECommerceClient";
 import { Tour } from "../../../browser-extension/app-tour/tour-tutorial";
 import { MODIFIED_PAGES_CSS_CLASS } from "../../../constants/display";
 import { ErrorBoundary } from "../../../utils/analytics/ErrorBoundary";
+import { SiteMetadata } from "../../../utils/site/site-information";
 import { SiteUtil } from "../../engine/logic/utils/site-utils";
+import { ECommerceClient } from "../ECommerceClient";
 
 const JUST_INSTALLED_PARAM = "safe_deal_installed";
 

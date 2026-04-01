@@ -81,7 +81,7 @@
     height: 100%;
 
     &__tabs {
-      margin-bottom: 24px;
+      margin-bottom: 16px;
       border-bottom: 1px solid #eaecf0;
 
       .MuiTabs-flexContainer {
@@ -89,13 +89,18 @@
 
         button {
           flex: 1;
-          color: $grey-600;
-          font-size: 16px;
-          font-weight: 600;
+          color: $grey-500;
+          font-size: 13px;
+          font-weight: 500;
           text-transform: capitalize;
+          min-height: 36px;
+          padding: 6px 12px;
+          letter-spacing: 0.01em;
 
-          &[aria-selected="true"] {
+          &[aria-selected="true"],
+          &.Mui-selected {
             color: $grey-800;
+            font-weight: 700;
             background-color: $grey-100;
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
@@ -104,6 +109,7 @@
       }
       .MuiTabs-indicator {
         background-color: $grey-800;
+        height: 2px;
       }
     }
 

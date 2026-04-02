@@ -10,12 +10,24 @@ const SAFETY_RANGE = [
   { start: 11, end: 100, value: ScamSiteType.SAFE }
 ];
 
-const convertResult = (str) => {
+const convertResult = (str?: string | null) => {
+  if (!str) {
+    return null;
+  }
   const number = str.split("/");
   if (number.length > 0) {
     return castAsNumber(number[0]);
   }
   return null;
+};
+
+const isTrustedByWot = (html?: Document | Element | null): boolean => {
+  const text =
+    (html instanceof Document
+      ? (html.documentElement?.textContent ?? html.body?.textContent)
+      : html?.textContent
+    )?.toLowerCase() ?? "";
+  return text.includes("trusted by wot");
 };
 
 export class ApiScamWOT implements ScamRater {
@@ -38,6 +50,9 @@ export class ApiScamWOT implements ScamRater {
       const childSafetyField = html?.querySelector("[data-automation=child-safety-score]")?.textContent;
       const childSafety = convertResult(childSafetyField);
       debug(`ApiScamWOT :: ${domain} -> trustworthiness: ${trustworthiness} - childSafety ${childSafety}`);
+      if (isTrustedByWot(html)) {
+        return { type: ScamSiteType.SAFE, trustworthiness, childSafety, tabId };
+      }
       if (trustworthiness) {
         const type = selectFromRange(SAFETY_RANGE, trustworthiness);
         return { type, trustworthiness, childSafety, tabId };

@@ -1,5 +1,6 @@
 export enum ScamSiteType {
   SAFE = "SAFE",
+  SUSPICIOUS = "SUSPICIOUS",
   DANGEROUS = "DANGEROUS",
   NO_DATA = "NO_DATA"
 }
@@ -9,6 +10,8 @@ export interface ScamConclusion {
   trustworthiness?: number;
   childSafety?: number;
   tabId: number;
+  explanation?: string;
+  engineBreakdown?: { name: string; result: ScamSiteType }[];
 }
 
 export type ScamRequest = {

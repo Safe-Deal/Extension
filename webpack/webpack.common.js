@@ -14,6 +14,7 @@ module.exports = {
     service_worker: "./src/browser-extension/service_worker.ts",
     "content-script-ecommerce": "./src/e-commerce/content-script-ecommerce.tsx",
     "content-script-anti-scam": "./src/anti-scam/content-script-anti-scam.ts",
+    "content-script-link-scan": "./src/anti-scam/link-scan/link-scan-content.ts",
     "content-script-shutaf": "./src/shutaf/content-script-shutaf.tsx",
     "content-script-supplier": "./src/supplier/content-script-supplier.tsx",
     "content-script-auth": "./src/auth/content-script-auth.tsx"

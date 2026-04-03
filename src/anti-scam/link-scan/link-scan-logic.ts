@@ -17,18 +17,31 @@ const isLinkWhitelisted = (hostname: string): boolean => {
 };
 
 const KNOWN_SHORTENERS = [
+  "amzn.to",
   "bit.ly",
+  "bit.do",
   "tinyurl.com",
+  "tiny.one",
   "t.co",
   "goo.gl",
   "ow.ly",
   "buff.ly",
   "short.link",
+  "shorturl.at",
+  "shorturl.ac",
   "rb.gy",
+  "rebrand.ly",
   "cutt.ly",
   "is.gd",
+  "s.id",
+  "soo.gd",
+  "trib.al",
   "tiny.cc",
-  "bl.ink"
+  "bl.ink",
+  "clicky.me",
+  "ift.tt",
+  "lnk.to",
+  "urlzs.com"
 ];
 
 const EXPLANATIONS: Record<string, string> = {

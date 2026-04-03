@@ -11,11 +11,13 @@ initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_LINK_SC
 
 const HOVER_DELAY_MS = 500;
 const DISMISS_DELAY_MS = 200;
+const RESULT_AUTO_DISMISS_MS = 5000;
 
 const cache = new Map<string, LinkScanResult>();
 
 let hoverTimer: ReturnType<typeof setTimeout> | null = null;
 let dismissTimer: ReturnType<typeof setTimeout> | null = null;
+let resultDismissTimer: ReturnType<typeof setTimeout> | null = null;
 let activeAnchor: HTMLAnchorElement | null = null;
 let activeHostname: string | null = null;
 let floatingContainer: HTMLDivElement | null = null;
@@ -66,6 +68,10 @@ const positionFloat = () => {
 };
 
 const removePopover = () => {
+  if (resultDismissTimer) {
+    clearTimeout(resultDismissTimer);
+    resultDismissTimer = null;
+  }
   if (floatingRoot) {
     floatingRoot.unmount();
     floatingRoot = null;
@@ -82,6 +88,17 @@ const removePopover = () => {
 const render = (state: LinkScanState, result?: LinkScanResult, onScan?: () => void) => {
   if (!floatingRoot) return;
   floatingRoot.render(React.createElement(LinkScanPopover, { state, result, onScan: onScan ?? (() => {}) }));
+
+  if (resultDismissTimer) {
+    clearTimeout(resultDismissTimer);
+    resultDismissTimer = null;
+  }
+
+  if (["safe", "suspicious", "dangerous", "no_data", "error"].includes(state)) {
+    resultDismissTimer = setTimeout(() => {
+      removePopover();
+    }, RESULT_AUTO_DISMISS_MS);
+  }
 };
 
 const mountPopover = (anchor: HTMLAnchorElement, hostname: string) => {

@@ -5,8 +5,7 @@ export const useContentModifiedObserver = (
   callback,
   options = {
     childList: true,
-    subtree: true,
-    attributes: true
+    subtree: true
   },
   delay = 4 * 1000
 ) => {

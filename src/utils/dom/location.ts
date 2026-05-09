@@ -32,7 +32,7 @@ export const onHrefChange = (callback: (href: string) => void) => {
     observer.observe(bodyList, config);
   });
 
-  const EFFECTED_EVENTS = ["hashchange", "popstate", "beforeunload", "click"];
+  const EFFECTED_EVENTS = ["hashchange", "popstate", "beforeunload"];
   EFFECTED_EVENTS.forEach((event) => {
     browserWindow().addEventListener(event, () => {
       isUrlChanged(document.location.href, callback);

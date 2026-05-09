@@ -5,4 +5,5 @@ export interface ISiteSpec {
   pathName?: string;
   queryParams?: string;
   dom?: any;
+  routingHint?: string; // pre-extracted routing signal from the content script live DOM
 }

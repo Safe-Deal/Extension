@@ -34,9 +34,9 @@ export const sendNextRequest = () => {
 
   const isItemDetails = SiteUtil.isItemDetails();
   const type = isItemDetails ? ECommerceProductType.PRODUCT : ECommerceProductType.WHOLESALE;
-  const html = SiteMetadata.getDomOuterHTML(browserWindow().document);
-  const payload = {
-    document: html,
+  const isAliExpress = store === ProductStore.ALI_EXPRESS || store === ProductStore.ALI_EXPRESS_RUSSIA;
+
+  const payload: any = {
     url: {
       domain: SiteMetadata.getDomain(),
       domainURL: SiteMetadata.getDomainURL(),
@@ -45,7 +45,13 @@ export const sendNextRequest = () => {
       url: SiteMetadata.getURL()
     },
     product: currentProduct,
-    type
+    type,
+    ...(isAliExpress && { document: SiteMetadata.getDomOuterHTML(browserWindow().document) }),
+    ...(store === ProductStore.EBAY && {
+      routingHint: browserWindow().document.querySelector(".expand-btn__cell .icon--filter-list-small")
+        ? "list"
+        : "gallery"
+    })
   };
 
   debug(`=> sendNextRequest productQue: ${currentProduct.id}`);

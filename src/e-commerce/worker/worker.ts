@@ -39,7 +39,8 @@ const queue = new PQueue({ concurrency: MAX_PARALLEL_PROCESSING });
 const cash = new MemoryCache();
 
 export interface IBackgroundListenerMessage {
-  document: string;
+  document?: string;      // present only for AliExpress
+  routingHint?: string;   // pre-extracted routing signal from content script (eBay list/gallery)
   url: {
     domain: string;
     domainURL: string;
@@ -85,10 +86,11 @@ const processProduct = async (
       return;
     }
 
-    const dom = SiteMetadata.getDom(data);
+    const dom = data.document ? SiteMetadata.getDom(data) : null;
     const site: Site = new SiteFactory().create({
       url: data?.url?.url,
       pathName: data?.url?.pathName,
+      routingHint: data?.routingHint,
       dom
     });
     siteResponse = convertSiteToSiteResponse(site);

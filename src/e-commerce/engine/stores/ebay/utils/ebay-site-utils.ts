@@ -10,11 +10,9 @@ export const isEbayWholesaleProducts = (url: string): boolean => isEbayWholesale
 export const isEbayWholesale = (url: string): boolean => SiteUtil.containsAny(url, Urls.EBAY_WHOLESALE_PATH_URL);
 
 export const isEbayWholesaleList = (url: string, siteSpec: ISiteSpec): boolean => {
-  let isEBayWholesaleList = url?.includes(Urls.EBAY_WHOLESALE_LIST_MODE_QP);
-  if (!isEBayWholesaleList) {
-    isEBayWholesaleList = siteSpec?.dom?.querySelector(".expand-btn__cell .icon--filter-list-small");
-  }
-  return isEBayWholesaleList;
+  if (url?.includes(Urls.EBAY_WHOLESALE_LIST_MODE_QP)) return true;
+  if (siteSpec?.routingHint !== undefined) return siteSpec.routingHint === "list";
+  return !!siteSpec?.dom?.querySelector(".expand-btn__cell .icon--filter-list-small");
 };
 
 export const isEbayWholesaleGallery = (url: string): boolean =>

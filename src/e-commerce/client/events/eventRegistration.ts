@@ -3,10 +3,14 @@ import { PROCESSING_UPDATE_INTERVAL } from "../components/constants";
 import { sendNextRequest } from "../processing/queHandler";
 import { ClientQue } from "../processing/que";
 
-let processingIntervalHandle = null;
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+let processingIntervalHandle: any = null;
 
 export const stopProcessingInterval = () => {
-  browserWindow().clearInterval(processingIntervalHandle);
+  if (processingIntervalHandle !== null) {
+    browserWindow().clearInterval(processingIntervalHandle);
+    processingIntervalHandle = null;
+  }
 };
 
 export const registerEvents = () => {
@@ -16,8 +20,11 @@ export const registerEvents = () => {
 };
 
 export const startProcessingInterval = () => {
+  if (processingIntervalHandle !== null) return; // already running
   processingIntervalHandle = browserWindow().setInterval(() => {
-    if (!ClientQue.isAllDone()) {
+    if (ClientQue.isAllDone()) {
+      stopProcessingInterval(); // auto-stop when queue is drained
+    } else {
       sendNextRequest();
     }
   }, PROCESSING_UPDATE_INTERVAL);

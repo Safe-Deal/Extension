@@ -29,7 +29,12 @@ export const DEFAULT_PROGRESS: Progress = {
   totalLeft: 0
 };
 
-export const processProducts = (site, siteURL: string, updateProgress: (progress: Progress) => void) => {
+export const processProducts = (
+  site,
+  siteURL: string,
+  updateProgress: (progress: Progress) => void,
+  onEnqueue: () => void = () => {}
+) => {
   if (AmazonSiteUtils.isAmazonVideoItemDetail()) {
     updateProgress({
       justStarted: false,
@@ -57,6 +62,7 @@ export const processProducts = (site, siteURL: string, updateProgress: (progress
   notProcessesProducts.forEach((product) => {
     setTimeout(() => {
       ClientQue.addProductToQue(product);
+      onEnqueue(); // restart interval if it stopped after queue drained
     }, PROCESSING_UPDATE_INTERVAL / 10);
   });
 

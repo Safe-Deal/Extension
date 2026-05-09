@@ -7,11 +7,12 @@ import { ebayLazy } from "../../engine/stores/ebay/ebay-lazy-loading-handler";
 import { EbaySiteUtils } from "../../engine/stores/ebay/utils/ebay-site-utils";
 import { getAllAvailableSelectors } from "../../../utils/dom/html";
 import { Progress, processProducts } from "../processing/productHandler";
+import { startProcessingInterval } from "./eventRegistration";
 
 export const registerLazyLoaders = (site, siteURL: string, updateProgress: (progress: Progress) => void) => {
   if (AliExpressSiteUtils.isAliExpressSite(siteURL)) {
     aliExpressWholeSaleLazy.manageLazyLoadingOnAliExpress(
-      () => processProducts(site, siteURL, updateProgress),
+      () => processProducts(site, siteURL, updateProgress, startProcessingInterval),
       siteURL
     );
 
@@ -20,18 +21,18 @@ export const registerLazyLoaders = (site, siteURL: string, updateProgress: (prog
       products.forEach((product) => {
         product?.classList?.remove(DONE_PRODUCT_CSS_CLASS);
       });
-      processProducts(site, siteURL, updateProgress);
+      processProducts(site, siteURL, updateProgress, startProcessingInterval);
     }, siteURL);
   }
 
   if (EbaySiteUtils.isEbaySite(siteURL)) {
-    ebayLazy.manageLazyLoadingOneBay(() => processProducts(site, siteURL, updateProgress), siteURL);
+    ebayLazy.manageLazyLoadingOneBay(() => processProducts(site, siteURL, updateProgress, startProcessingInterval), siteURL);
   }
 
   if (AmazonSiteUtils.isAmazonSite(siteURL)) {
-    amazonLazy.manageLazyLoadingOnAmazon(() => processProducts(site, siteURL, updateProgress), siteURL);
+    amazonLazy.manageLazyLoadingOnAmazon(() => processProducts(site, siteURL, updateProgress, startProcessingInterval), siteURL);
     if (AmazonSiteUtils.isAmazonItemDetails(siteURL)) {
-      handleVariantOnAmazon(() => processProducts(site, siteURL, updateProgress));
+      handleVariantOnAmazon(() => processProducts(site, siteURL, updateProgress, startProcessingInterval));
     }
   }
 };

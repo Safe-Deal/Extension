@@ -11,6 +11,8 @@ class ClientProcessingQue {
 
   private inProgressing = new MemoryCache(EXPIRATION_MINUTES);
 
+  private _inProgressCount = 0;
+
   getStats() {
     return {
       alreadyProcessedLength: [...this.alreadyProcessed.keys()].length,
@@ -19,13 +21,10 @@ class ClientProcessingQue {
     };
   }
 
-  getProcessingAmount = () => [...this.inProgressing.keys()].length;
+  getProcessingAmount = () => this._inProgressCount;
 
-  isAllDone: () => boolean = () => {
-    const amount = [...this.inProgressing.keys()];
-    const result = this.productsQue.length === 0 && amount.length === 0;
-    return result;
-  };
+  isAllDone: () => boolean = () =>
+    this.productsQue.length === 0 && this._inProgressCount === 0;
 
   isProcessed: (product: IProduct) => boolean = (product: IProduct) =>
     this.alreadyProcessed.get(product.id) != null || this.inProgressing.get(product.id) != null;
@@ -35,12 +34,14 @@ class ClientProcessingQue {
 
   progressingDone: (productId: string) => void = (productId: string) => {
     this.inProgressing.delete(productId);
+    if (this._inProgressCount > 0) this._inProgressCount--;
   };
 
   getNextProductFromQue: () => IProduct = () => {
     const product: IProduct = this.productsQue.pop();
     if (product?.id) {
       debug(`=> Pop out from Client productQue: ${product.id}`);
+      this._inProgressCount++;
       this.inProgressing.set(product.id, product);
       return product;
     }

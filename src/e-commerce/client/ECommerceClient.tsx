@@ -78,7 +78,7 @@ export function ECommerceClient(): JSX.Element {
     );
 
     startProcessingInterval();
-    processProducts(site, siteURL, updateStatus);
+    processProducts(site, siteURL, updateStatus, startProcessingInterval);
 
     return () => {
       stopProcessingInterval();
@@ -86,7 +86,7 @@ export function ECommerceClient(): JSX.Element {
   }, []);
 
   useContentModifiedObserver(() => {
-    processProducts(site, siteURL, updateStatus);
+    processProducts(site, siteURL, updateStatus, startProcessingInterval);
   });
 
   useEffect(() => {

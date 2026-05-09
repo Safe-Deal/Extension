@@ -81,6 +81,50 @@ describe("isEbayItemDetails", () => {
   });
 });
 
+describe("isEbayWholesaleList", () => {
+  const BASE_URL = "https://www.ebay.com/sch/i.html?_nkw=shirt";
+  const LIST_MODE_URL = "https://www.ebay.com/sch/i.html?_nkw=shirt&_dmd=1";
+
+  test("returns true when URL contains the list-mode query param (_dmd=1)", () => {
+    expect(EbaySiteUtils.isEbayWholesaleList(LIST_MODE_URL, {})).toBe(true);
+  });
+
+  test("URL match wins even when routingHint says gallery", () => {
+    expect(EbaySiteUtils.isEbayWholesaleList(LIST_MODE_URL, { routingHint: "gallery" })).toBe(true);
+  });
+
+  test("returns true when routingHint is 'list' and URL has no signal", () => {
+    expect(EbaySiteUtils.isEbayWholesaleList(BASE_URL, { routingHint: "list" })).toBe(true);
+  });
+
+  test("returns false when routingHint is 'gallery' and URL has no signal", () => {
+    expect(EbaySiteUtils.isEbayWholesaleList(BASE_URL, { routingHint: "gallery" })).toBe(false);
+  });
+
+  test("does NOT query the DOM when routingHint is present", () => {
+    const mockDom = { querySelector: jest.fn() };
+    EbaySiteUtils.isEbayWholesaleList(BASE_URL, { routingHint: "list", dom: mockDom });
+    expect(mockDom.querySelector).not.toHaveBeenCalled();
+  });
+
+  test("falls back to DOM querySelector when no routingHint and URL has no signal", () => {
+    const mockDom = { querySelector: jest.fn(() => ({ nodeType: 1 })) };
+    const result = EbaySiteUtils.isEbayWholesaleList(BASE_URL, { dom: mockDom });
+    expect(mockDom.querySelector).toHaveBeenCalledWith(".expand-btn__cell .icon--filter-list-small");
+    expect(result).toBe(true);
+  });
+
+  test("returns false when no routingHint and DOM finds nothing", () => {
+    const mockDom = { querySelector: jest.fn(() => null) };
+    const result = EbaySiteUtils.isEbayWholesaleList(BASE_URL, { dom: mockDom });
+    expect(result).toBe(false);
+  });
+
+  test("handles undefined siteSpec gracefully", () => {
+    expect(EbaySiteUtils.isEbayWholesaleList(BASE_URL, undefined)).toBe(false);
+  });
+});
+
 describe("getWholesaleEbayProductIdFromHref", () => {
   it("should return an empty string if link is not provided", () => {
     const link = undefined;

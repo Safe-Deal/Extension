@@ -3,8 +3,7 @@ import { PROCESSING_UPDATE_INTERVAL } from "../components/constants";
 import { sendNextRequest } from "../processing/queHandler";
 import { ClientQue } from "../processing/que";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-let processingIntervalHandle: any = null;
+let processingIntervalHandle: number | null = null;
 
 export const stopProcessingInterval = () => {
   if (processingIntervalHandle !== null) {

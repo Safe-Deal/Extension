@@ -40,7 +40,7 @@ const cash = new MemoryCache();
 
 export interface IBackgroundListenerMessage {
   document?: string;      // present only for AliExpress
-  routingHint?: string;   // pre-extracted routing signal from content script (eBay list/gallery)
+  routingHint?: "list" | "gallery"; // pre-extracted routing signal from content script
   url: {
     domain: string;
     domainURL: string;
@@ -87,10 +87,15 @@ const processProduct = async (
     }
 
     const dom = data.document ? SiteMetadata.getDom(data) : null;
+    const VALID_ROUTING_HINTS = new Set<string>(["list", "gallery"]);
+    const routingHint =
+      data.routingHint !== undefined && VALID_ROUTING_HINTS.has(data.routingHint)
+        ? data.routingHint
+        : undefined;
     const site: Site = new SiteFactory().create({
       url: data?.url?.url,
       pathName: data?.url?.pathName,
-      routingHint: data?.routingHint,
+      routingHint,
       dom
     });
     siteResponse = convertSiteToSiteResponse(site);

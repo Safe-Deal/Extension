@@ -1,5 +1,6 @@
 import {
   IEcommerceMessageBus,
+  IBackgroundListenerMessage,
   EcommerceMessageTypes,
   ECommerceProductType,
   IEcommerceEventBus
@@ -36,7 +37,7 @@ export const sendNextRequest = () => {
   const type = isItemDetails ? ECommerceProductType.PRODUCT : ECommerceProductType.WHOLESALE;
   const isAliExpress = store === ProductStore.ALI_EXPRESS || store === ProductStore.ALI_EXPRESS_RUSSIA;
 
-  const payload: any = {
+  const payload: IBackgroundListenerMessage = {
     url: {
       domain: SiteMetadata.getDomain(),
       domainURL: SiteMetadata.getDomainURL(),
@@ -48,9 +49,9 @@ export const sendNextRequest = () => {
     type,
     ...(isAliExpress && { document: SiteMetadata.getDomOuterHTML(browserWindow().document) }),
     ...(store === ProductStore.EBAY && {
-      routingHint: browserWindow().document.querySelector(".expand-btn__cell .icon--filter-list-small")
+      routingHint: (browserWindow().document.querySelector(".expand-btn__cell .icon--filter-list-small")
         ? "list"
-        : "gallery"
+        : "gallery") as "list" | "gallery"
     })
   };
 
@@ -104,6 +105,7 @@ export const registerGetResponse = (
         }, 0);
       }
     } else {
+      ClientQue.progressingDone(productId); // keep _inProgressCount accurate on SPA navigation
       debug(`=> Site URL Mismatch. Expected: ${url} Got: ${site.url}`, "Client::registerGetResponse");
     }
   });

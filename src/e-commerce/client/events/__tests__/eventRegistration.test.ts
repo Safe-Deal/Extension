@@ -60,6 +60,67 @@ describe("eventRegistration — lazy interval", () => {
     expect(sendNextRequest).toHaveBeenCalledTimes(1); // still just 1
   });
 
+  test("startProcessingInterval can be restarted after auto-stop (onEnqueue restart path)", () => {
+    const { ClientQue } = require("../../processing/que");
+    const { sendNextRequest } = require("../../processing/queHandler");
+    const { startProcessingInterval } = require("../eventRegistration");
+
+    (ClientQue.isAllDone as jest.Mock).mockReturnValue(false);
+    startProcessingInterval();
+
+    // Tick 1: queue has work → sendNextRequest fires
+    jest.advanceTimersByTime(200);
+    expect(sendNextRequest).toHaveBeenCalledTimes(1);
+
+    // Queue drains — interval auto-stops on next tick
+    (ClientQue.isAllDone as jest.Mock).mockReturnValue(true);
+    jest.advanceTimersByTime(200);
+
+    // onEnqueue arrives with new work — must create a fresh interval
+    (ClientQue.isAllDone as jest.Mock).mockReturnValue(false);
+    startProcessingInterval(); // must NOT be a no-op (handle was set to null by auto-stop)
+
+    jest.advanceTimersByTime(200);
+    expect(sendNextRequest).toHaveBeenCalledTimes(2); // proves a new interval is running
+  });
+
+  test("stopProcessingInterval is idempotent — calling it twice does not throw", () => {
+    const { ClientQue } = require("../../processing/que");
+    const { startProcessingInterval, stopProcessingInterval } = require("../eventRegistration");
+
+    (ClientQue.isAllDone as jest.Mock).mockReturnValue(false);
+    startProcessingInterval();
+
+    expect(() => {
+      stopProcessingInterval();
+      stopProcessingInterval(); // second call must not throw
+    }).not.toThrow();
+  });
+
+  test("beforeunload event stops the interval; subsequent startProcessingInterval creates a fresh one", () => {
+    const { ClientQue } = require("../../processing/que");
+    const { sendNextRequest } = require("../../processing/queHandler");
+    const { registerEvents, startProcessingInterval } = require("../eventRegistration");
+
+    (ClientQue.isAllDone as jest.Mock).mockReturnValue(false);
+    registerEvents();
+    startProcessingInterval();
+
+    jest.advanceTimersByTime(200);
+    expect(sendNextRequest).toHaveBeenCalledTimes(1);
+
+    // Simulate SPA beforeunload — stops the interval
+    window.dispatchEvent(new Event("beforeunload"));
+
+    jest.advanceTimersByTime(400); // no more ticks
+    expect(sendNextRequest).toHaveBeenCalledTimes(1);
+
+    // onEnqueue restarts — must create a new interval
+    startProcessingInterval();
+    jest.advanceTimersByTime(200);
+    expect(sendNextRequest).toHaveBeenCalledTimes(2);
+  });
+
   test("calling startProcessingInterval multiple times only fires sendNextRequest once per tick", () => {
     const { ClientQue } = require("../../processing/que");
     const { sendNextRequest } = require("../../processing/queHandler");

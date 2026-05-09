@@ -15,7 +15,6 @@ import { AnalyzedItem, Progress } from "./productHandler";
 import { ClientQue } from "./que";
 import { comparePaths } from "../../../utils/dom/location";
 import { SiteUtil } from "../../engine/logic/utils/site-utils";
-import { onDocumentInactivity } from "../../../utils/browser/browser";
 import { ProductStore } from "../../engine/logic/conclusion/conclusion-product-entity.interface";
 
 const store = SiteUtil.getStore();
@@ -29,30 +28,32 @@ const STORE_DELAY_TIMES_MAP = {
 const renderDelay = STORE_DELAY_TIMES_MAP[store] || 0;
 
 export const sendNextRequest = () => {
-  onDocumentInactivity(() => {
-    const { sendMessage } = definePegasusMessageBus<IEcommerceMessageBus>();
-    const currentProduct: IProduct = ClientQue.getNextProductFromQue();
-    const isItemDetails = SiteUtil.isItemDetails();
-    const type = isItemDetails ? ECommerceProductType.PRODUCT : ECommerceProductType.WHOLESALE;
-    const html = SiteMetadata.getDomOuterHTML(browserWindow().document);
-    const product = {
-      document: html,
-      url: {
-        domain: SiteMetadata.getDomain(),
-        domainURL: SiteMetadata.getDomainURL(),
-        pathName: SiteMetadata.getPathName(),
-        queryParams: SiteMetadata.getQueryParams(),
-        url: SiteMetadata.getURL()
-      },
-      product: currentProduct,
-      type
-    };
+  const { sendMessage } = definePegasusMessageBus<IEcommerceMessageBus>();
+  const currentProduct: IProduct = ClientQue.getNextProductFromQue();
+  if (!currentProduct) return;
 
-    if (currentProduct) {
-      debug(`=> sendNextRequest productQue: ${currentProduct.id}`);
-      sendMessage(EcommerceMessageTypes.PROCESS_PRODUCT, product);
-    }
-  }, renderDelay);
+  const isItemDetails = SiteUtil.isItemDetails();
+  const type = isItemDetails ? ECommerceProductType.PRODUCT : ECommerceProductType.WHOLESALE;
+  const html = SiteMetadata.getDomOuterHTML(browserWindow().document);
+  const payload = {
+    document: html,
+    url: {
+      domain: SiteMetadata.getDomain(),
+      domainURL: SiteMetadata.getDomainURL(),
+      pathName: SiteMetadata.getPathName(),
+      queryParams: SiteMetadata.getQueryParams(),
+      url: SiteMetadata.getURL()
+    },
+    product: currentProduct,
+    type
+  };
+
+  debug(`=> sendNextRequest productQue: ${currentProduct.id}`);
+  if (renderDelay > 0) {
+    setTimeout(() => sendMessage(EcommerceMessageTypes.PROCESS_PRODUCT, payload), renderDelay);
+  } else {
+    sendMessage(EcommerceMessageTypes.PROCESS_PRODUCT, payload);
+  }
 };
 
 export const registerGetResponse = (

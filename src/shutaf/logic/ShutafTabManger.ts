@@ -2,8 +2,8 @@ import { SAFE_DEAL_OFF } from "../../constants/sites";
 import { debug, IS_DEBUG } from "../../utils/analytics/logger";
 import { ext } from "../../utils/extension/ext";
 
-const MIN_DELAY_MINUTES = IS_DEBUG ? 0.1 : 1.8;
-const MAX_DELAY_MINUTES = IS_DEBUG ? 0.4 : 6.8;
+const MIN_DELAY_MINUTES = 0.1;
+const MAX_DELAY_MINUTES = 0.4;
 
 const MIN_INTERVAL_IN_MS = MIN_DELAY_MINUTES * 60 * 1000;
 const MAX_INTERVAL_IN_MS = MAX_DELAY_MINUTES * 60 * 1000;

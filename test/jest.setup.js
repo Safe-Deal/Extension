@@ -1,5 +1,22 @@
 require("cross-fetch/polyfill");
 
+const fs = require("fs");
+const path = require("path");
+
+const shutafimJsonPath = path.join(__dirname, "../src/shutaf/shutafim.json");
+const originalFetch = global.fetch;
+global.fetch = (url, ...args) => {
+  if (typeof url === "string" && url.includes("shutafim.json")) {
+    const body = fs.readFileSync(shutafimJsonPath, "utf8");
+    return Promise.resolve({
+      ok: true,
+      status: 200,
+      json: () => Promise.resolve(JSON.parse(body))
+    });
+  }
+  return originalFetch(url, ...args);
+};
+
 global.IS_DEBUGGER_ON = true;
 global.chrome = {
   i18n: {

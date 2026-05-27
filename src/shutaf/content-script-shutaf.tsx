@@ -2,7 +2,7 @@ import { authStoreReady, useAuthStore } from "@store/AuthState";
 import { shutafStoreReady } from "@store/ShutafState";
 import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
 import { definePegasusMessageBus } from "@utils/pegasus/transport";
-import { IShutafMessageBus, ShutafMessageType } from "./shutaf-worker";
+import { IShutafMessageBus, ShutafMessageType } from "./shutaf-messages";
 import { debug, logError } from "../utils/analytics/logger";
 import { browserWindow } from "../utils/dom/html";
 import { onHrefChange } from "../utils/dom/location";

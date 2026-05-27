@@ -4,15 +4,7 @@ import { debug, logError } from "../utils/analytics/logger";
 import { hideBadge, showBadge } from "../utils/extension/badges";
 import { ShutafTabManger } from "./logic/ShutafTabManger";
 import { ProductShutaf } from "./logic/product-shutaff";
-
-export enum ShutafMessageType {
-  PING = "ping",
-  GENERATE_AFFILIATE_LINK = "generateAffiliateLink"
-}
-export interface IShutafMessageBus {
-  [ShutafMessageType.PING]: () => Promise<void>;
-  [ShutafMessageType.GENERATE_AFFILIATE_LINK]: (url: string) => Promise<void>;
-}
+import { ShutafMessageType, IShutafMessageBus } from "./shutaf-messages";
 
 export const initShutafWorker = async () => {
   const store = await initShutafStoreBackend();

@@ -1,6 +1,6 @@
 import React from "react";
 import { useShutafStore, shutafStoreReady } from "@store/ShutafState";
-import { ShutafMessageType, IShutafMessageBus } from "@shutaf/shutaf-worker";
+import { ShutafMessageType, IShutafMessageBus } from "@shutaf/shutaf-messages";
 import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { ext } from "../../../../utils/extension/ext";
 import { hideBadge } from "../../../../utils/extension/badges";

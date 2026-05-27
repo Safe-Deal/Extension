@@ -26,7 +26,8 @@ module.exports = {
   performance: {
     hints: "error",
     maxEntrypointSize: MAX_FILE_SIZE,
-    maxAssetSize: MAX_FILE_SIZE
+    maxAssetSize: MAX_FILE_SIZE,
+    assetFilter: (assetFilename) => !assetFilename.endsWith("/shutafim.json")
   },
   cache: {
     type: "filesystem"
@@ -97,6 +98,10 @@ module.exports = {
           globOptions: {
             ignore: ["**/.DS_Store"]
           }
+        },
+        {
+          from: "./src/shutaf/shutafim.json",
+          to: "shutaf/shutafim.json"
         }
       ]
     }),

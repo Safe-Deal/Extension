@@ -8,6 +8,7 @@ import { IConclusionProductEntity, ProductConclusionEnum } from "./conclusion-pr
 const GREEN_SAFE_LIMIT = 0.65;
 const DOUBTFUL_MIN_LIMIT = 0.4; // Threshold for medium risk deals
 const MIN_LIMIT_FOR_CONCLUSION = 1;
+const MIN_REGULAR_RULES_FOR_CONCLUSION = 1;
 
 export class ConclusionProduct {
   constructor(public ruleManagerResult: IRuleManagerResult) {}
@@ -20,12 +21,12 @@ export class ConclusionProduct {
   public conclusion(): IConclusionProductEntity {
     const numOfValidRules = this.getNumOfValidRulesWithoutPricingAndBonusAmount();
     debug(`numOfValidRules: ${numOfValidRules}`);
-    if (numOfValidRules <= MIN_LIMIT_FOR_CONCLUSION) {
+    const numOfRegularRules: number = this.getNumOfValidAndRegularRulesAmount();
+    if (numOfValidRules <= MIN_LIMIT_FOR_CONCLUSION || numOfRegularRules < MIN_REGULAR_RULES_FOR_CONCLUSION) {
       const noData = this.getInsufficientDataResponse();
       return noData;
     }
 
-    const numOfRegularRules: number = this.getNumOfValidAndRegularRulesAmount();
     const maxValuePerRule: number = WEIGHT.TEN * RULE_VALUE.RULE_VAL_10;
     const normalizationDividerValue: number = numOfRegularRules * maxValuePerRule;
     const bonuses: number = this.accumulateRulesBonus(this.ruleManagerResult);

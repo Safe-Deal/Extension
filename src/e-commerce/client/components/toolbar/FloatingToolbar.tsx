@@ -43,7 +43,11 @@ export const FloatingToolbar: React.FC<FloatingToolbarProps> = ({ Minimal, Full,
   const toolbarRef = useRef<HTMLDivElement>(null);
   const handleRef = useRef<HTMLDivElement>(null);
   const dialogueRef = useRef<HTMLDivElement>(null);
-  const [size, setSize] = useState<ToolbarSize>(ToolbarSize.MINIMAL);
+  const initialSize =
+    typeof window !== "undefined" && window.localStorage?.getItem("sd_force_full") === "1"
+      ? ToolbarSize.MAXIMAL
+      : ToolbarSize.MINIMAL;
+  const [size, setSize] = useState<ToolbarSize>(initialSize);
   const [isPinned, setIsPinned] = usePersistentState(IS_PINNED_STORAGE_KEY, false);
   const { position, handleMouseDown } = useDraggable(handleRef);
   const [location, setLocation] = useState<{ y: number }>(position);

@@ -4,7 +4,7 @@ import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { useAmazonCouponsStore, amazonCouponsStoreReady } from "@store/AmazonCouponsState";
 import { ErrorBoundary } from "../../../../utils/analytics/ErrorBoundary";
 import { browserWindow } from "../../../../utils/dom/html";
-import { SafeDealTheme } from "../../../../utils/react/theme";
+import { getSafeDealTheme } from "../../../../utils/react/theme";
 import { SiteMetadata } from "../../../../utils/site/site-information";
 import { SdDealsCouponsStickyBadgeRoot } from "./components/SdDealsCouponsRoot";
 import { IAmazonCouponsDealsBus, AmazonCouponsMessageType } from "../background/deals-coupons-worker";
@@ -26,8 +26,8 @@ export function SdDealsCouponsApp(): JSX.Element {
 
   return (
     <ErrorBoundary>
-      <ThemeProvider theme={SafeDealTheme}>
-        <SdDealsCouponsStickyBadgeRoot theme={SafeDealTheme} deals={coupons} loadingDeals={loading} />
+      <ThemeProvider theme={getSafeDealTheme("light")}>
+        <SdDealsCouponsStickyBadgeRoot theme={getSafeDealTheme("light")} deals={coupons} loadingDeals={loading} />
       </ThemeProvider>
     </ErrorBoundary>
   );

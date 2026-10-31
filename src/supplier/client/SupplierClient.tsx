@@ -4,7 +4,7 @@ import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { useSupplierStore, supplierStoreReady } from "@store/SupplierState";
 import { MODIFIED_PAGES_CSS_CLASS } from "../../constants/display";
 import { browserWindow } from "../../utils/dom/html";
-import { SafeDealTheme } from "../../utils/react/theme";
+import { getSafeDealTheme } from "../../utils/react/theme";
 import { SiteMetadata } from "../../utils/site/site-information";
 import { FloatingToolbar } from "../../e-commerce/client/components/toolbar/FloatingToolbar";
 import { ProductMinimal } from "../../e-commerce/client/components/product/ProductMinimal";
@@ -46,7 +46,7 @@ const SupplierClient = (): ReactNode => {
   const { Full } = ItemPage;
   const { Minimal } = ItemPage;
   return (
-    <ThemeProvider theme={SafeDealTheme}>
+    <ThemeProvider theme={getSafeDealTheme("light")}>
       <FloatingToolbar Full={Full} Minimal={Minimal} isLoading={loading} />;
     </ThemeProvider>
   );

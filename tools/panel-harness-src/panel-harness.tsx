@@ -3,6 +3,9 @@ import { createRoot } from "react-dom/client";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import { getSafeDealTheme } from "../../src/utils/react/theme";
 import { ProductFull } from "../../src/e-commerce/client/components/product/ProductFull";
+import { useThemeStore } from "../../src/store/ThemeState";
+import en from "../../src/browser-extension/public/_locales/en/messages.json";
+import { ext } from "../../src/utils/extension/ext";
 import { ProductConclusionEnum, IConclusionProductEntity } from "../../src/e-commerce/engine/logic/conclusion/conclusion-product-entity.interface";
 import { PRICING_ITEM_DETAILS } from "../../src/e-commerce/engine/logic/utils/const";
 
@@ -61,7 +64,39 @@ function makeMockProduct(): IConclusionProductEntity {
 function App() {
   const params = new URLSearchParams(window.location.search);
   const theme = (params.get("theme") as "light" | "dark") || "light";
+  const verdict = params.get("verdict") || "good";
   const mock = makeMockProduct();
+  if (verdict === "bad") {
+    mock.productConclusion = ProductConclusionEnum.NOT_RECOMMENDED;
+    // add a red rule text
+    mock.rules.push({
+      name: "Low rating",
+      isValidRule: true,
+      weight: 1,
+      value: 1,
+      tooltipSummary: {
+        // @ts-ignore
+        type: "UNSAFE",
+        description: "Store has low positive feedback",
+        i18n: "store_negative",
+        ruleExplanation: "Positive rate below threshold",
+        i18nExplanation: "store_negative_expl"
+      }
+    } as any);
+  }
+  // Stub i18n for t()
+  (ext as any).i18n = {
+    getMessage: (key: string) => {
+      if (key === "@@bidi_dir") return "ltr";
+      if (key === "@@ui_locale") return "en";
+      // @ts-ignore
+      return (en as any)[key]?.message || key;
+    }
+  };
+  // Align chart theme store with requested theme
+  try {
+    useThemeStore.getState().setEffective(theme);
+  } catch {}
   return (
     <ThemeProvider theme={getSafeDealTheme(theme)}>
       <div id="safe-deal-react-toolbar" className="safe-deal-page-container" data-theme={theme}>

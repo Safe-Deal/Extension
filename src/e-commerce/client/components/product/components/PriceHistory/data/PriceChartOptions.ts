@@ -12,19 +12,22 @@ type GetOptionsArgs = {
 
 export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency, theme }: GetOptionsArgs) => {
   const isDark = theme === "dark";
-  const labelColor = isDark ? "#cbd5e1" : "#475467";
-  const yLabelColor = isDark ? "#cbd5e1" : "#344054";
-  const gridColor = isDark ? "#334155" : "#e5e7eb";
+  const labelColor = isDark ? "#e5e7eb" : "#475467";
+  const yLabelColor = isDark ? "#f1f5f9" : "#344054";
+  const gridColor = isDark ? "#3b4252" : "#e5e7eb";
   const chartOptions: ApexOptions = {
     noData: {
       text: t("no_data"),
       align: "center",
       verticalAlign: "middle",
       style: {
-        color: isDark ? "#cbd5e1" : "#495057",
+        color: isDark ? "#e5e7eb" : "#495057",
         fontSize: "15px",
         fontFamily: "'Plus Jakarta Sans', sans-serif"
       }
+    },
+    theme: {
+      mode: isDark ? "dark" : "light"
     },
     grid: {
       borderColor: gridColor,
@@ -43,6 +46,7 @@ export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency
     ],
     chart: {
       type: "area",
+      animations: { enabled: false },
       zoom: {
         enabled: false
       },
@@ -55,6 +59,10 @@ export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency
       enabled: hasData,
       inverseOrder: true,
       theme: isDark ? "dark" : "light",
+      style: {
+        fontSize: "12px",
+        fontFamily: "'Plus Jakarta Sans', sans-serif"
+      },
       x: {
         show: false
       },
@@ -70,10 +78,10 @@ export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency
     fill: {
       type: "gradient",
       gradient: {
-        shadeIntensity: 1,
-        opacityFrom: 0.4,
-        opacityTo: 0.7,
-        stops: [0, 70, 100]
+        shadeIntensity: 0.9,
+        opacityFrom: isDark ? 0.35 : 0.45,
+        opacityTo: isDark ? 0.05 : 0.25,
+        stops: [0, 60, 100]
       }
     },
     dataLabels: {
@@ -81,7 +89,7 @@ export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency
     },
     stroke: {
       curve: "smooth",
-      width: 2
+      width: 2.5
     },
     xaxis: hasData && {
       type: "datetime",
@@ -96,7 +104,7 @@ export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency
       }
     },
     yaxis: {
-      max: Math.max(...data[1]) + 1,
+      max: Math.max(...data[1]) + 2,
       labels: {
         show: true,
         align: "center",

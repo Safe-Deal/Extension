@@ -46,6 +46,7 @@ export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency
     ],
     chart: {
       type: "area",
+      background: "transparent",
       animations: { enabled: false },
       zoom: {
         enabled: false

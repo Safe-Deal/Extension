@@ -1,33 +1,22 @@
 import React from "react";
 import { createRoot } from "react-dom/client";
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
-import { getSafeDealTheme } from "../../src/utils/react/theme";
-import { ProductFull } from "../../src/e-commerce/client/components/product/ProductFull";
-import { useThemeStore } from "../../src/store/ThemeState";
-import en from "../../src/browser-extension/public/_locales/en/messages.json";
-import { ext } from "../../src/utils/extension/ext";
-import { ProductConclusionEnum, IConclusionProductEntity } from "../../src/e-commerce/engine/logic/conclusion/conclusion-product-entity.interface";
-import { PRICING_ITEM_DETAILS } from "../../src/e-commerce/engine/logic/utils/const";
 
-// Styles: tokens + panel styles
-import "../../src/e-commerce/client/assets/_theme.scss";
-import "../../src/e-commerce/client/assets/_product-full.scss";
-import "../../src/e-commerce/client/assets/_rules.scss";
-import "../../src/e-commerce/client/components/product/components/PriceHistory/PriceChart.scss";
+// Defer loading extension modules until i18n is stubbed
 
-function makeMockProduct(): IConclusionProductEntity {
+function makeMockProduct(): any {
   const url = "https://www.aliexpress.com/item/3256803371913623.html";
   return {
-    productConclusion: ProductConclusionEnum.RECOMMENDED,
+    productConclusion: "RECOMMENDED",
     product: { id: "3256803371913623", domain: "www.aliexpress.com", url } as any,
     rules: [
       {
-        name: PRICING_ITEM_DETAILS,
+        name: "Pricing Item Details",
         isValidRule: true,
         weight: 1,
         value: 1,
         tooltipSummary: {
-          type: "SAFE" as any,
+          type: "SAFE",
           description: "Price trend looks stable",
           i18n: "price_trend_stable",
           ruleExplanation: "Recent prices are consistent",
@@ -50,7 +39,7 @@ function makeMockProduct(): IConclusionProductEntity {
         weight: 1,
         value: 1,
         tooltipSummary: {
-          type: "SAFE" as any,
+          type: "SAFE",
           description: "Store has high positive feedback",
           i18n: "store_positive",
           ruleExplanation: "Positive rate above threshold",
@@ -67,7 +56,7 @@ function App() {
   const verdict = params.get("verdict") || "good";
   const mock = makeMockProduct();
   if (verdict === "bad") {
-    mock.productConclusion = ProductConclusionEnum.NOT_RECOMMENDED;
+    mock.productConclusion = "NOT_RECOMMENDED";
     // add a red rule text
     mock.rules.push({
       name: "Low rating",
@@ -75,7 +64,6 @@ function App() {
       weight: 1,
       value: 1,
       tooltipSummary: {
-        // @ts-ignore
         type: "UNSAFE",
         description: "Store has low positive feedback",
         i18n: "store_negative",
@@ -84,17 +72,30 @@ function App() {
       }
     } as any);
   }
-  // Stub i18n for t()
-  (ext as any).i18n = {
+  // Stub chrome.i18n BEFORE loading any extension modules
+  const messages = require("../../src/browser-extension/public/_locales/en/messages.json");
+  (window as any).chrome = (window as any).chrome || {};
+  (window as any).chrome.i18n = {
     getMessage: (key: string) => {
       if (key === "@@bidi_dir") return "ltr";
       if (key === "@@ui_locale") return "en";
-      // @ts-ignore
-      return (en as any)[key]?.message || key;
+      return (messages as any)[key]?.message || key;
     }
   };
+  (window as any).browser = (window as any).browser || {};
+  (window as any).browser.i18n = (window as any).chrome.i18n;
+
+  // Now require real modules (after stubbing i18n)
+  const { getSafeDealTheme } = require("../../src/utils/react/theme");
+  const { ProductFull } = require("../../src/e-commerce/client/components/product/ProductFull");
+  // Styles: tokens + panel styles
+  require("../../src/e-commerce/client/assets/_theme.scss");
+  require("../../src/e-commerce/client/assets/_product-full.scss");
+  require("../../src/e-commerce/client/assets/_rules.scss");
+  require("../../src/e-commerce/client/components/product/components/PriceHistory/PriceChart.scss");
   // Align chart theme store with requested theme
   try {
+    const { useThemeStore } = require("../../src/store/ThemeState");
     useThemeStore.getState().setEffective(theme);
   } catch {}
   return (

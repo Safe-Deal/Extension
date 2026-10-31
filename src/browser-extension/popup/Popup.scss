@@ -214,4 +214,26 @@
       accent-color: var(--sd-text-primary);
     }
   }
+
+  /* Dark-mode specific readability tweaks */
+  &[data-theme="dark"] {
+    /* Brighten small inline icons in dark */
+    .safe-deal-popup__home__share__feedback img {
+      filter: invert(1) brightness(1.15) contrast(1.1);
+    }
+    /* MUI menu/popover surface and items */
+    .MuiPopover-paper,
+    .MuiMenu-paper {
+      background-color: var(--sd-surface) !important;
+      color: var(--sd-text-primary) !important;
+      border: 1px solid var(--sd-border);
+    }
+    .MuiMenuItem-root {
+      color: var(--sd-text-primary) !important;
+      svg,
+      img {
+        filter: invert(0.9) brightness(1.15);
+      }
+    }
+  }
 }

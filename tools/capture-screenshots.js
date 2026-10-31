@@ -66,6 +66,37 @@ async function screenshotPopup(context, extensionId, theme, outPath) {
 }
 
 async function screenshotPanel(context, extensionId, theme, outPath) {
+  // Context-level routes (cover background/service worker too)
+  await context.route("https://api.joinsafedeal.com/product", (route) => route.fulfill({ status: 200, body: "{}" }));
+  await context.route("https://api.joinsafedeal.com/price", async (route) => {
+    const json = [
+      {
+        currency: "USD",
+        price: [
+          { minPrice: 12, maxPrice: 15, date: "2024-08-01T00:00:00.000Z" },
+          { minPrice: 13, maxPrice: 16, date: "2024-09-01T00:00:00.000Z" },
+          { minPrice: 14, maxPrice: 18, date: "2024-10-01T00:00:00.000Z" }
+        ]
+      }
+    ];
+    await route.fulfill({
+      status: 200,
+      contentType: "application/json",
+      body: JSON.stringify(json)
+    });
+  });
+  const aliUrl = "https://www.aliexpress.com/item/3256803371913623.html";
+  const fixturePath = path.join(__dirname, "fixtures", "aliexpress-item.html");
+  const fixtureHtml = fs.readFileSync(fixturePath, "utf8");
+  await context.route(/https:\/\/www\.aliexpress\.com\/item\/\d+\.html.*/, async (route) => {
+    await route.fulfill({
+      status: 200,
+      headers: { "content-type": "text/html" },
+      body: fixtureHtml
+    });
+  });
+  await context.route(/https?:\/\/(www\.)?(google|gstatic|youtube|facebook|reddit)\./, (route) => route.abort());
+
   const page = await context.newPage();
   page.on("console", (msg) => console.log("panel:", msg.type(), msg.text()));
   page.on("pageerror", (err) => console.log("panel pageerror:", err.message));
@@ -78,9 +109,6 @@ async function screenshotPanel(context, extensionId, theme, outPath) {
     } catch {}
   });
   // Mock all needed network
-  const aliUrl = "https://www.aliexpress.com/item/3256803371913623.html";
-  const fixturePath = path.join(__dirname, "fixtures", "aliexpress-item.html");
-  const fixtureHtml = fs.readFileSync(fixturePath, "utf8");
   // Provide a fixture product for the content script to render
   const fixtureProduct = {
     productConclusion: "RECOMMENDED",
@@ -127,36 +155,7 @@ async function screenshotPanel(context, extensionId, theme, outPath) {
       localStorage.setItem("sd_fixture_product", JSON.stringify(p));
     } catch {}
   }, fixtureProduct);
-  await page.route("https://api.joinsafedeal.com/product", (route) => route.fulfill({ status: 200, body: "{}" }));
-  await page.route("https://api.joinsafedeal.com/price", async (route) => {
-    const json = [
-      {
-        currency: "USD",
-        price: [
-          { minPrice: 12, maxPrice: 15, date: "2024-08-01T00:00:00.000Z" },
-          { minPrice: 13, maxPrice: 16, date: "2024-09-01T00:00:00.000Z" },
-          { minPrice: 14, maxPrice: 18, date: "2024-10-01T00:00:00.000Z" }
-        ]
-      }
-    ];
-    await route.fulfill({
-      status: 200,
-      contentType: "application/json",
-      body: JSON.stringify(json)
-    });
-  });
-  await page.route(/https:\/\/www\.aliexpress\.com\/item\/\d+\.html.*/, async (route) => {
-    await route.fulfill({
-      status: 200,
-      headers: { "content-type": "text/html" },
-      body: fixtureHtml.replace(
-        "</body>",
-        `<script id="sd-fixture-product" type="application/json">${JSON.stringify(fixtureProduct)}</script></body>`
-      )
-    });
-  });
-  // Prevent external calls
-  await page.route(/https?:\/\/(www\.)?(google|gstatic|youtube|facebook|reddit)\./, (route) => route.abort());
+  // (Context-level routes above already intercept all network)
   // Go to fixture URL
   await page.goto(aliUrl, { waitUntil: "domcontentloaded" });
   // Wait for injected toolbar root to appear
@@ -270,9 +269,9 @@ async function screenshotPanel(context, extensionId, theme, outPath) {
     console.log("minimal bbox:", boxMin);
     await minimal.first().click({ force: true }).catch(() => {});
   }
-  // Wait for render
-  await page.waitForSelector(".sd-product-full", { timeout: 20000 });
-  await page.waitForSelector(".sd-price_chart__apexchart svg", { timeout: 20000 });
+  // Wait for render (allow generous time for worker + rules)
+  await page.waitForSelector(".sd-product-full", { timeout: 60000 });
+  await page.waitForSelector(".sd-price_chart__apexchart svg", { timeout: 60000 });
   const fullCount = await page.locator(".sd-product-full").count();
   console.log("sd-product-full count:", fullCount);
   // Narrow screenshot to the panel container root
@@ -321,6 +320,15 @@ async function main() {
     await page.goto(`chrome-extension://${extensionId}/popup.html`);
     const root = page.locator(".safe-deal-popup");
     await root.waitFor({ state: "visible", timeout: 20000 });
+    // Ensure Dark selected via Settings
+    const settingsBtn = page.locator(".safe-deal-popup__navigation__link", { hasText: /Settings/i });
+    await settingsBtn.first().click().catch(() => {});
+    const darkRadio = page.locator("#sd-theme-dark");
+    await darkRadio.check().catch(() => {});
+    await page.waitForFunction(() => document.querySelector(".safe-deal-popup")?.getAttribute("data-theme") === "dark");
+    // Navigate back to Home
+    const homeBtn = page.locator(".safe-deal-popup__navigation__link", { hasText: /Home/i });
+    await homeBtn.first().click().catch(() => {});
     // Open user menu (avatar)
     const avatarBtn = page.locator('button[aria-haspopup="true"]').first();
     await avatarBtn.click().catch(() => {});

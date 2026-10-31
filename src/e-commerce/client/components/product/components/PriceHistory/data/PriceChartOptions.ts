@@ -1,19 +1,33 @@
 import { ApexOptions } from "apexcharts";
 import { t } from "../../../../../../../constants/messages";
 
-export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency }) => {
+type GetOptionsArgs = {
+  hasData: boolean;
+  data: any[];
+  bg: string;
+  currency: string;
+  displayedCurrency: string;
+  theme: "light" | "dark";
+};
+
+export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency, theme }: GetOptionsArgs) => {
+  const isDark = theme === "dark";
+  const labelColor = isDark ? "#cbd5e1" : "#475467";
+  const yLabelColor = isDark ? "#cbd5e1" : "#344054";
+  const gridColor = isDark ? "#334155" : "#e5e7eb";
   const chartOptions: ApexOptions = {
     noData: {
       text: t("no_data"),
       align: "center",
       verticalAlign: "middle",
       style: {
-        color: "#495057",
+        color: isDark ? "#cbd5e1" : "#495057",
         fontSize: "15px",
         fontFamily: "'Plus Jakarta Sans', sans-serif"
       }
     },
     grid: {
+      borderColor: gridColor,
       yaxis: {
         lines: {
           show: hasData
@@ -34,6 +48,20 @@ export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency
       },
       toolbar: {
         show: false
+      },
+      foreColor: labelColor
+    },
+    tooltip: {
+      enabled: hasData,
+      inverseOrder: true,
+      theme: isDark ? "dark" : "light",
+      x: {
+        show: false
+      },
+      y: {
+        formatter(val) {
+          return val ? `${val}` : "";
+        }
       }
     },
     markers: {
@@ -60,7 +88,7 @@ export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency
       categories: data[0],
       labels: {
         style: {
-          colors: "#475467",
+          colors: labelColor,
           fontSize: "12px",
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontWeight: 400
@@ -73,7 +101,7 @@ export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency
         show: true,
         align: "center",
         style: {
-          colors: "#344054",
+          colors: yLabelColor,
           fontSize: "12px",
           fontFamily: "'Plus Jakarta Sans', sans-serif",
           fontWeight: 400
@@ -82,18 +110,6 @@ export const getChartOptions = ({ hasData, data, bg, currency, displayedCurrency
       decimalsInFloat: 0,
       forceNiceScale: false,
       min: () => 0
-    },
-    tooltip: {
-      enabled: hasData,
-      inverseOrder: true,
-      x: {
-        show: false
-      },
-      y: {
-        formatter(val) {
-          return val ? `${val}` : "";
-        }
-      }
     }
   };
   return chartOptions;

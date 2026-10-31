@@ -1,5 +1,6 @@
 import ThemeProvider from "@mui/material/styles/ThemeProvider";
 import React, { useEffect, useState } from "react";
+import { useThemeStore, initThemeStoreBackend, themeStoreReady, registerSystemThemeListener } from "@store/ThemeState";
 import { MODIFIED_PAGES_CSS_CLASS } from "../../constants/display";
 import { SiteFactory } from "../../data/sites/site-factory";
 import { debug } from "../../utils/analytics/logger";
@@ -26,6 +27,7 @@ export function ECommerceClient(): JSX.Element {
   });
   const [isWorking, setIsWorking] = useTimedState<boolean>(true, false);
   const [productData, setProductData] = useState<AnalyzedItem | null>(null);
+  const effectiveTheme = useThemeStore((s) => s.effective);
 
   const url = SiteMetadata.getURL();
   const isItemDetail = SiteUtil.isItemDetails(url);
@@ -48,6 +50,15 @@ export function ECommerceClient(): JSX.Element {
       progress: newProgress
     }));
   };
+
+  useEffect(() => {
+    // Ensure theme store backend is initialized in this context
+    (async () => {
+      await initThemeStoreBackend();
+      await themeStoreReady();
+      registerSystemThemeListener();
+    })();
+  }, []);
 
   useEffect(() => {
     if (!site) {
@@ -112,12 +123,12 @@ export function ECommerceClient(): JSX.Element {
 
   const ItemPage = {
     Full: (
-      <div id="safe-deal-react-toolbar" className={MODIFIED_PAGES_CSS_CLASS}>
+      <div id="safe-deal-react-toolbar" className={MODIFIED_PAGES_CSS_CLASS} data-theme={effectiveTheme}>
         <ProductFull product={productData} />
       </div>
     ),
     Minimal: (
-      <div id="safe-deal-react-toolbar" className={MODIFIED_PAGES_CSS_CLASS}>
+      <div id="safe-deal-react-toolbar" className={MODIFIED_PAGES_CSS_CLASS} data-theme={effectiveTheme}>
         <ProductMinimal product={productData} />
       </div>
     )

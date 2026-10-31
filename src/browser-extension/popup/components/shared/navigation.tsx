@@ -3,7 +3,12 @@ import { t } from "../../../../constants/messages";
 import { ICON_CLOSE_POPUP } from "../../../../constants/visual";
 import User from "./user";
 
-export default function Navigation() {
+type NavigationProps = {
+  onOpenSettings: () => void;
+  onOpenHome: () => void;
+};
+
+export default function Navigation({ onOpenSettings, onOpenHome }: NavigationProps) {
   const navigationItems = [
     { href: "https://shop.joinsafedeal.com/", text: t("popup_shop_tab") },
     { href: "https://www.joinsafedeal.com/#benefits", text: t("popup_benefits_tab") },
@@ -17,6 +22,16 @@ export default function Navigation() {
   };
   return (
     <ul className="safe-deal-popup__navigation">
+      <li className="safe-deal-popup__navigation__item">
+        <button type="button" className="safe-deal-popup__navigation__link" onClick={onOpenHome}>
+          {t("home") || "Home"}
+        </button>
+      </li>
+      <li className="safe-deal-popup__navigation__item">
+        <button type="button" className="safe-deal-popup__navigation__link" onClick={onOpenSettings}>
+          {t("settings") || "Settings"}
+        </button>
+      </li>
       {navigationItems.map((item) => (
         <li key={item.href} className="safe-deal-popup__navigation__item">
           <a href={item.href} target="_blank" rel="noreferrer" className="safe-deal-popup__navigation__link">

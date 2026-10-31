@@ -33,15 +33,15 @@
     flex: 1;
     align-items: center;
     justify-content: center;
-    background-color: #fff;
-    border: 1px solid rgba(16, 186, 145, 0.15);
+    background-color: var(--sd-drag-handle-bg);
+    border: 1px solid var(--sd-drag-handle-border);
     cursor: grab;
     &:active {
       cursor: grabbing;
     }
     svg {
       font-size: 18px;
-      color: #888;
+      color: var(--sd-drag-handle-icon);
     }
   }
 

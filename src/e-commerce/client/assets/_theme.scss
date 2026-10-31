@@ -1,0 +1,27 @@
+/* Theme variables scoped to injected UI root only */
+#safe-deal-react-toolbar[data-theme="light"] {
+  --sd-surface: #ffffff;
+  --sd-surface-2: #f8fafc;
+  --sd-border: #e2e8f0;
+  --sd-text-primary: #1e293b; /* grey-800 */
+  --sd-text-secondary: #475569; /* grey-600 */
+  --sd-drag-handle-bg: #ffffff;
+  --sd-drag-handle-border: rgba(16, 186, 145, 0.15);
+  --sd-drag-handle-icon: #888888;
+  --sd-chart-grid: #e5e7eb;
+  --sd-chart-label: #475467;
+}
+
+#safe-deal-react-toolbar[data-theme=\"dark\"] {
+  --sd-surface: #0f172a;        /* slate-900/800 */
+  --sd-surface-2: #111827;      /* slate-800 */
+  --sd-border: #1f2937;         /* slate-700 */
+  --sd-text-primary: #e5e7eb;   /* gray-200 */
+  --sd-text-secondary: #94a3b8; /* slate-400 */
+  --sd-drag-handle-bg: #0f172a;
+  --sd-drag-handle-border: #1f2937;
+  --sd-drag-handle-icon: #9ca3af;
+  --sd-chart-grid: #334155;     /* slate-700 */
+  --sd-chart-label: #cbd5e1;    /* slate-300 */
+}
+

@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import { useThemeStore } from "@store/ThemeState";
 import ReactApexChart from "react-apexcharts";
 import { LOCALE_DIRECTION } from "../../../../../../utils/extension/locale";
 import { currencySign } from "../../../../../../utils/general/general";
@@ -17,7 +18,8 @@ interface IPriceChartArguments {
 export const PriceChart = ({ prices, currency, bg }: IPriceChartArguments) => {
   const displayedCurrency = useMemo(() => currencySign(currency) || "USD", [currency]);
   const { chartData, isLoaded } = useProcessedData(prices);
-  const chartOptions = useChartOptions(chartData, bg, currency, displayedCurrency);
+  const effectiveTheme = useThemeStore((s) => s.effective);
+  const chartOptions = useChartOptions(chartData, bg, currency, displayedCurrency, effectiveTheme);
 
   return (
     <div className="sd-price_chart">

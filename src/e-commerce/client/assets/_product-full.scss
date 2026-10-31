@@ -7,7 +7,7 @@
   flex-direction: column;
   height: 640px !important;
   width: 700px !important;
-  background-color: #fff;
+  background-color: var(--sd-surface);
   border-radius: 8px;
   box-shadow: 0px 0px 10px #00000052;
 
@@ -82,14 +82,14 @@
 
     &__tabs {
       margin-bottom: 16px;
-      border-bottom: 1px solid #eaecf0;
+      border-bottom: 1px solid var(--sd-border);
 
       .MuiTabs-flexContainer {
         justify-content: center;
 
         button {
           flex: 1;
-          color: $grey-500;
+          color: var(--sd-text-secondary);
           font-size: 13px;
           font-weight: 500;
           text-transform: capitalize;
@@ -99,16 +99,16 @@
 
           &[aria-selected="true"],
           &.Mui-selected {
-            color: $grey-800;
+            color: var(--sd-text-primary);
             font-weight: 700;
-            background-color: $grey-100;
+            background-color: var(--sd-surface-2);
             border-top-left-radius: 4px;
             border-top-right-radius: 4px;
           }
         }
       }
       .MuiTabs-indicator {
-        background-color: $grey-800;
+        background-color: var(--sd-text-primary);
         height: 2px;
       }
     }
@@ -124,22 +124,22 @@
       padding-right: 4px;
 
       scrollbar-width: thin;
-      scrollbar-color: #e0e0e0 #fafafa;
+      scrollbar-color: #4b5563 #1f2937;
 
       &::-webkit-scrollbar {
         width: 1px;
       }
       &::-webkit-scrollbar-track {
-        background: #fafafa;
+        background: var(--sd-surface-2);
         border-radius: 8px;
       }
       &::-webkit-scrollbar-thumb {
-        background-color: #e0e0e0;
+        background-color: #4b5563;
         border-radius: 8px;
-        border: 1px solid #fafafa;
+        border: 1px solid var(--sd-surface-2);
       }
       &::-webkit-scrollbar-thumb:hover {
-        background-color: #c0c0c0;
+        background-color: #6b7280;
         border-radius: 8px;
       }
     }

@@ -1,0 +1,29 @@
+/* Theme variables scoped to popup only */
+.safe-deal-popup[data-theme="light"] {
+  --sd-bg: #ffffff;
+  --sd-surface: #ffffff;
+  --sd-surface-2: #f8fafc;
+  --sd-border: #cbd5e1;
+  --sd-text-primary: #1e293b;
+  --sd-text-secondary: #475569;
+  --sd-text-footer: #003720;
+  --sd-nav-link: #0b3d2a; /* close to $text-navigation on brand */
+  --sd-icon-bg: #f1f5f9;
+  --sd-why-bg: #f8fafc;
+  --sd-brand: #00a660;
+}
+
+.safe-deal-popup[data-theme="dark"] {
+  --sd-bg: #0b1220; /* near slate-900 */
+  --sd-surface: #0f172a; /* slate-900/800 */
+  --sd-surface-2: #111827;
+  --sd-border: #1f2937;
+  --sd-text-primary: #e5e7eb;
+  --sd-text-secondary: #94a3b8;
+  --sd-text-footer: #9cc9b2;
+  --sd-nav-link: #d1fae5;
+  --sd-icon-bg: #111827;
+  --sd-why-bg: #0f172a;
+  --sd-brand: #00a660; /* keep brand */
+}
+

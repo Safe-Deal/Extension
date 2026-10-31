@@ -87,7 +87,7 @@ const initSupabaseSession = async () => {
 const handleSupabaseAuthStateChange = () => {
   supabase.auth.onAuthStateChange(async (event: SupabaseAuthEvents, session: Session) => {
     const { setPremiumStatus, setSession, setUser } = useAuthStore.getState();
-    if (event === SupabaseAuthEvents.SIGNED_IN || event === SupabaseAuthEvents.TOKEN_REFRESHED) {
+    if ((event === SupabaseAuthEvents.SIGNED_IN || event === SupabaseAuthEvents.TOKEN_REFRESHED) && session) {
       setSession(session);
       setUser(session.user);
       setPremiumStatus(session.user?.user_metadata?.subscription_status === SubscriptionStatus.Active);
@@ -98,6 +98,10 @@ const handleSupabaseAuthStateChange = () => {
 
 export const initAuthWorker = async () => {
   await initStore();
-  await initSupabaseSession();
+  // Subscribe BEFORE restoring the session: when the stored access token has expired,
+  // setSession() refreshes it and Supabase rotates the refresh token. That TOKEN_REFRESHED
+  // event must reach the store, otherwise the store keeps the already-used refresh token
+  // and a later restart presents it again, which Supabase treats as reuse and revokes the session.
   handleSupabaseAuthStateChange();
+  await initSupabaseSession();
 };

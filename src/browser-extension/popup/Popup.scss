@@ -4,6 +4,7 @@
 .safe-deal-popup {
   &__container {
     background-color: var(--sd-bg);
+    color: var(--sd-text-primary);
     width: 600px;
   }
 
@@ -35,6 +36,11 @@
       font-size: 15px;
       font-weight: 700;
     }
+
+    /* Ensure header nav links are readable over brand background */
+    .safe-deal-popup__navigation__link {
+      color: #fff;
+    }
   }
 
   &__navigation {
@@ -54,6 +60,9 @@
       font-weight: 500;
       color: var(--sd-nav-link);
       text-decoration: none;
+      background: transparent;
+      border: none;
+      cursor: pointer;
 
       &--close {
         display: flex;
@@ -67,6 +76,7 @@
         }
       }
     }
+
   }
 
   &__home {
@@ -186,6 +196,22 @@
       width: 100%;
       max-width: 520px;
       margin: auto;
+    }
+  }
+
+  &__content {
+    color: var(--sd-text-primary);
+    label {
+      color: var(--sd-text-primary);
+    }
+    h3, h4, h5 {
+      color: var(--sd-text-primary);
+    }
+    p, span {
+      color: var(--sd-text-secondary);
+    }
+    input[type="radio"] {
+      accent-color: var(--sd-text-primary);
     }
   }
 }

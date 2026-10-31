@@ -21,23 +21,12 @@ import { isRtl } from "../../constants/messages";
 import { ProductsListMinimal } from "./components/product/wholesale/ProductsListMinimal";
 
 export function ECommerceClient(): JSX.Element {
-  // Detect fixture-provided product for screenshots
-  let fixtureProduct: AnalyzedItem["data"] | null = null;
-  try {
-    const rawEl = typeof window !== "undefined" ? document.getElementById("sd-fixture-product")?.textContent : null;
-    const rawLocal = typeof window !== "undefined" ? window.localStorage?.getItem("sd_fixture_product") : null;
-    const raw = rawEl || rawLocal;
-    fixtureProduct = raw ? (JSON.parse(raw) as AnalyzedItem["data"]) : null;
-  } catch {
-    fixtureProduct = null;
-  }
-
   const [state, setState] = useState<{ processedItems: AnalyzedItem[]; progress: Progress }>({
     processedItems: [],
     progress: DEFAULT_PROGRESS
   });
   const [isWorking, setIsWorking] = useTimedState<boolean>(true, false);
-  const [productData, setProductData] = useState<AnalyzedItem | null>(fixtureProduct as any);
+  const [productData, setProductData] = useState<AnalyzedItem | null>(null);
   const effectiveTheme = useThemeStore((s) => s.effective);
 
   const url = SiteMetadata.getURL();
@@ -72,11 +61,6 @@ export function ECommerceClient(): JSX.Element {
   }, []);
 
   useEffect(() => {
-    if (fixtureProduct) {
-      // In fixture mode, skip analysis and render immediately
-      setIsWorking(false);
-      return;
-    }
     if (!site) {
       debug(`No Supported site for url: ${siteURL}`);
       return null;
@@ -117,7 +101,6 @@ export function ECommerceClient(): JSX.Element {
   });
 
   useEffect(() => {
-    if (fixtureProduct) return;
     if (state.progress.justStarted) {
       return;
     }
@@ -127,22 +110,6 @@ export function ECommerceClient(): JSX.Element {
       setIsWorking(true);
     }
   }, [state]);
-
-  // Fixture support for screenshots: when sd_fixture_product is present, show it immediately
-  useEffect(() => {
-    try {
-      const rawLocal = window.localStorage?.getItem("sd_fixture_product");
-      const rawEl = document.getElementById("sd-fixture-product")?.textContent;
-      const raw = rawEl || rawLocal;
-      if (raw) {
-        const parsed = JSON.parse(raw);
-        setProductData(parsed);
-        setIsWorking(false);
-      }
-    } catch {
-      // ignore
-    }
-  }, []);
 
   useEffect(() => {
     if (isItemDetail && state?.processedItems?.length > 0 && !isWorking) {

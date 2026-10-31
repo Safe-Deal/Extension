@@ -3,12 +3,13 @@ const path = require("path");
 const fs = require("fs");
 const { chromium } = require("@playwright/test");
 
-async function withContext(fn) {
+async function withContext(fn, { deviceScaleFactor } = {}) {
   const pathToExtension = path.join(__dirname, "..", "dist");
   const args = [`--disable-extensions-except=${pathToExtension}`, `--load-extension=${pathToExtension}`];
   const context = await chromium.launchPersistentContext("", {
     headless: false,
-    args
+    args,
+    deviceScaleFactor: deviceScaleFactor || 1
   });
   try {
     // Determine extension id
@@ -170,6 +171,89 @@ async function screenshotPanel(context, extensionId, theme, outPath) {
     () => document.querySelector(".floating-toolbar__content")?.outerHTML?.slice(0, 500) || ""
   );
   console.log("content snippet:", contentSnippet);
+  // Emit synthetic conclusion event via Pegasus window bridge (repeat to ensure listener ready)
+  await page.waitForTimeout(500);
+  for (let i = 0; i < 3; i += 1) {
+    // eslint-disable-next-line no-await-in-loop
+    await page.evaluate(
+      (payload) => {
+        const channel = new MessageChannel();
+        channel.port1.onmessage = (e) => {
+          if (e.data === "port-accepted") {
+            const event = {
+              messageType: "broadcastEvent",
+              id: "ecommerce:conclusionResponse",
+              data: payload,
+              timestamp: Date.now(),
+              hops: [],
+              transactionId: String(Date.now())
+            };
+            channel.port1.postMessage(event);
+          }
+        };
+        window.postMessage(
+          { cmd: "webext-port-offer", context: "window", scope: "CONTENT_SCRIPT_ECOMMERCE" },
+          "*",
+          [channel.port2]
+        );
+      },
+      {
+        conclusionProductEntity: [
+          {
+            productConclusion: "RECOMMENDED",
+            product: { id: "3256803371913623", domain: "www.aliexpress.com", url: aliUrl },
+            rules: [
+              {
+                name: "Pricing Item Details",
+                isValidRule: true,
+                weight: 1,
+                value: 1,
+                tooltipSummary: {
+                  type: "SAFE",
+                  description: "Price trend looks stable",
+                  i18n: "price_trend_stable",
+                  ruleExplanation: "Recent prices are consistent",
+                  i18nExplanation: "price_trend_stable_expl"
+                },
+                dataset: {
+                  currency: "USD",
+                  price: [
+                    { date: "2024-08-01T00:00:00.000Z", price: 12.5 },
+                    { date: "2024-09-01T00:00:00.000Z", price: 14.0 },
+                    { date: "2024-10-01T00:00:00.000Z", price: 15.2 }
+                  ]
+                }
+              },
+              {
+                name: "Store positive feedback",
+                isValidRule: true,
+                weight: 1,
+                value: 1,
+                tooltipSummary: {
+                  type: "SAFE",
+                  description: "Store has high positive feedback",
+                  i18n: "store_positive",
+                  ruleExplanation: "Positive rate above threshold",
+                  i18nExplanation: "store_positive_expl"
+                }
+              }
+            ]
+          }
+        ],
+        site: {
+          url: aliUrl,
+          domain: "www.aliexpress.com",
+          domainURL: "https://www.aliexpress.com",
+          pathName: new URL(aliUrl).pathname,
+          queryParams: "",
+          siteDomSelector: { displayDomSelector: {} }
+        },
+        productId: "3256803371913623"
+      }
+    );
+    // eslint-disable-next-line no-await-in-loop
+    await page.waitForTimeout(300);
+  }
   // Try to toggle to maximal view via keyboard shortcut (Alt+D)
   await page.locator(".floating-toolbar").first().click({ trial: false }).catch(() => {});
   await page.keyboard.press("Alt+D").catch(() => {});
@@ -186,9 +270,9 @@ async function screenshotPanel(context, extensionId, theme, outPath) {
     console.log("minimal bbox:", boxMin);
     await minimal.first().click({ force: true }).catch(() => {});
   }
-  // Wait a bit for render
-  await page.waitForTimeout(300);
-  // ensure price chart rendered
+  // Wait for render
+  await page.waitForSelector(".sd-product-full", { timeout: 20000 });
+  await page.waitForSelector(".sd-price_chart__apexchart svg", { timeout: 20000 });
   const fullCount = await page.locator(".sd-product-full").count();
   console.log("sd-product-full count:", fullCount);
   // Narrow screenshot to the panel container root
@@ -229,6 +313,23 @@ async function main() {
     await fs.promises.copyFile(popupLight, path.join(outRepo, "popup-light.png"));
     await fs.promises.copyFile(popupDark, path.join(outRepo, "popup-dark.png"));
   });
+  // Dark-mode 2x detail shots
+  await withContext(async ({ context, extensionId }) => {
+    // Popup dark detail with MUI menu open
+    const page = await context.newPage();
+    await page.emulateMedia({ colorScheme: "dark" });
+    await page.goto(`chrome-extension://${extensionId}/popup.html`);
+    const root = page.locator(".safe-deal-popup");
+    await root.waitFor({ state: "visible", timeout: 20000 });
+    // Open user menu (avatar)
+    const avatarBtn = page.locator('button[aria-haspopup="true"]').first();
+    await avatarBtn.click().catch(() => {});
+    const darkDetailPopup = path.join(outArtifacts, "dark-detail-popup.png");
+    const box = await root.boundingBox();
+    await page.screenshot({ path: darkDetailPopup, clip: box });
+    await fs.promises.copyFile(darkDetailPopup, path.join(outRepo, "dark-detail-popup.png"));
+    await page.close();
+  }, { deviceScaleFactor: 2 });
   console.log("Screenshots saved to /opt/cursor/artifacts/screenshots and docs/screenshots");
 }
 

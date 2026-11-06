@@ -1,10 +1,13 @@
 import { useAuthStore, authStoreReady } from "@store/AuthState";
 import { logError, debug } from "@utils/analytics/logger";
 import { browserWindow } from "@utils/dom/html";
-import { AuthMessagesEvents, SubscriptionStatus } from "@constants/supabase";
+import { SUPABASE, SubscriptionStatus } from "@constants/supabase";
 import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
+import { isTrustedAuthMessage } from "./auth-message";
 
 initPegasusTransport();
+
+const TRUSTED_AUTH_ORIGIN = new URL(SUPABASE.EXTENSION_AUTH_PATH).origin;
 
 (async () => {
   const win = browserWindow();
@@ -13,13 +16,12 @@ initPegasusTransport();
       debug("Auth Content Script::  initializing.... Auth store is ready!", store);
     });
     const authStore = useAuthStore.getState();
-    win.addEventListener("message", (event) => {
-      if (event.data.type === AuthMessagesEvents.AUTH_SESSION && event.data?.payload?.session) {
-        authStore.setSession(event.data?.payload?.session);
-        authStore.setUser(event.data?.payload?.session?.user);
-        authStore.setPremiumStatus(
-          event.data?.payload?.session?.user?.user_metadata?.subscription_status === SubscriptionStatus.Active
-        );
+    win.addEventListener("message", (event: MessageEvent<unknown>) => {
+      if (isTrustedAuthMessage(event, TRUSTED_AUTH_ORIGIN)) {
+        const { session } = event.data.payload;
+        authStore.setSession(session);
+        authStore.setUser(session.user);
+        authStore.setPremiumStatus(session.user?.user_metadata?.subscription_status === SubscriptionStatus.Active);
         authStore.clearLoginRequest();
         authStore.setCloseAuthWindow(true);
       }

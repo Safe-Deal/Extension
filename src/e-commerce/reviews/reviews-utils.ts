@@ -98,4 +98,14 @@ const createReviewsSummary = (reviewData: any[]): any[] => {
   return reviews;
 };
 
-export { createReviewsSummary, getReviewImagesUrls, getReviewsFeedbackText };
+const createUnavailableReviewsSummary = (): any[] => [
+  {
+    header: t("reviews_unavailable_header"),
+    items: [
+      { text: t("reviews_unavailable_text"), className: "sd-reason-neutral" },
+      { text: t("reviews_no_logged_in"), className: "sd-reason-bad" }
+    ]
+  }
+];
+
+export { createReviewsSummary, createUnavailableReviewsSummary, getReviewImagesUrls, getReviewsFeedbackText };

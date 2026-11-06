@@ -146,6 +146,24 @@
     }
   }
 
+  &__retry {
+    align-self: flex-start;
+    margin: 0 8px 16px;
+    padding: 6px 16px;
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    color: $grey-800;
+    background-color: transparent;
+    border: 1px solid $grey-400;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $grey-100;
+    }
+  }
+
   &__list {
     &__section {
       margin-bottom: 16px;

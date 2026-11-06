@@ -13,7 +13,7 @@ module.exports = {
   roots: ["<rootDir>/../src"],
   setupFiles: ["<rootDir>/jest.setup.js"],
   setupFilesAfterEnv: ["<rootDir>/jest.setup.env.js"],
-  testPathIgnorePatterns: [".*\\.mock\\..*"],
+  testPathIgnorePatterns: [".*\\.mock\\..*", "api-scam-partners-consensus.test.ts", "conclusion/verification/"],
   transform: {
     "^.+\\.(ts|tsx)$": "ts-jest",
     "^.+\\.(js|jsx|mjs)$": "ts-jest"

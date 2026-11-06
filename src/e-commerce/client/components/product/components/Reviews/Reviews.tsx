@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
 import { t } from "@constants/messages";
 import { browserWindow } from "@utils/dom/html";
 import { SiteMetadata } from "@utils/site/site-information";
@@ -6,7 +6,7 @@ import { useReviewSummaryStore, reviewSummaryStoreReady } from "@store/ReviewSum
 import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { IReviewSummaryMessageBus, ReviewSummaryMessageType } from "@e-commerce/reviews/reviews-worker";
 import { ProductStore } from "../../../../../engine/logic/conclusion/conclusion-product-entity.interface";
-import { createReviewsSummary } from "../../../../../reviews/reviews-utils";
+import { createReviewsSummary, createUnavailableReviewsSummary } from "../../../../../reviews/reviews-utils";
 import { LoaderSpinner } from "../../../shared/Loader";
 import { ReviewsDetails } from "./ReviewsDetails";
 import { ReviewsImages } from "./ReviewsImages";
@@ -29,24 +29,34 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
   const [totalReviews, setTotalReviews] = React.useState<string | null>(null);
   const [rating, setRating] = React.useState<string | null>(null);
 
+  const requestReviewSummary = useCallback(
+    (regenerate = false) => {
+      if (!store || !productId) return;
+      const data = {
+        productId,
+        document: SiteMetadata.getDomOuterHTML(browserWindow().document),
+        siteUrl: SiteMetadata.getURL(),
+        store,
+        ...(regenerate && { regenerate }),
+        ...(isSupplier !== undefined && { isSupplier }),
+        ...(storeFeedbackUrl !== undefined && { storeFeedbackUrl })
+      };
+      reviewSummaryStoreReady().then(() => {
+        sendMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, data);
+      });
+    },
+    [productId, store, isSupplier, storeFeedbackUrl]
+  );
+
   useEffect(() => {
-    if (!store || !productId) return;
-    const data = {
-      productId,
-      document: SiteMetadata.getDomOuterHTML(browserWindow().document),
-      siteUrl: SiteMetadata.getURL(),
-      store,
-      ...(isSupplier !== undefined && { isSupplier }),
-      ...(storeFeedbackUrl !== undefined && { storeFeedbackUrl })
-    };
-    reviewSummaryStoreReady().then(() => {
-      sendMessage(ReviewSummaryMessageType.GENERATE_REVIEW_SUMMARY, data);
-    });
+    requestReviewSummary();
   }, [productId, store]);
 
   useEffect(() => {
     if (!reviewData) return;
-    const reviewsSummary = createReviewsSummary(reviewData?.reviewsSummary || []);
+    const reviewsSummary = reviewData.unavailable
+      ? createUnavailableReviewsSummary()
+      : createReviewsSummary(reviewData?.reviewsSummary || []);
     setGallery(reviewData?.reviewsImages || []);
     setReviews(reviewsSummary || []);
     setTotalReviews(reviewData?.totalReviews?.toString() || null);
@@ -96,6 +106,11 @@ export const Reviews = ({ productId, store, isGalleryOnly = false, isSupplier, s
       <ReviewsDetails totalReviews={totalReviews} rating={rating} isSupplier={isSupplier} />
       <ReviewsImages gallery={gallery} />
       <ul className="sd-review-summary__list">{memoizedReviews}</ul>
+      {reviewData?.unavailable && (
+        <button type="button" className="sd-review-summary__retry" onClick={() => requestReviewSummary(true)}>
+          {t("reviews_retry")}
+        </button>
+      )}
     </div>
   );
 };

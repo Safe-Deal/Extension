@@ -27,8 +27,6 @@
     {
       "run_at": "document_end",
       "matches": [
-        "http://localhost/*",
-        "https://localhost/*",
         "https://www.joinsafedeal.com/*"
       ],
       "js": [

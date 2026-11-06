@@ -18,9 +18,12 @@ export class ApiScamNorton implements ScamRater {
 
       const rating = response?.response;
 
-      const isSafe = rating.rating == "r" || rating.rating == "g" || rating.rating == "b" || rating.rating == "w";
-      if (isSafe) {
+      // Norton also answers "g" for unrated and unknown domains, so a "g" is only a weak SAFE vote.
+      if (rating.rating === "g") {
         return { type: ScamSiteType.SAFE, trustworthiness: 100, childSafety, tabId };
+      }
+      if (rating.rating === "b") {
+        return { type: ScamSiteType.DANGEROUS, trustworthiness: 0, childSafety, tabId };
       }
 
       return { type: ScamSiteType.NO_DATA, trustworthiness, childSafety, tabId };

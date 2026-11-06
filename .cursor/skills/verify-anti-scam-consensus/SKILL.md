@@ -1,6 +1,6 @@
 ---
 name: verify-anti-scam-consensus
-description: Side check. Use when a change touches ApiScamPartners.evaluate, SCAM_ENGINES_IN_PRIORITY, or MIN_DANGEROUS_VOTES in the Safe Deal extension. The core product and seller verdict is verify-safe-to-buy. This skill has a Jest vote-function check only and no extension validation.
+description: Side check. Use when a change touches ApiScamPartners.evaluate, concludeFromVotes, SCAM_ENGINES_IN_PRIORITY, MIN_DANGEROUS_VOTES, or ApiScamNorton rating codes in the Safe Deal extension. The core product and seller verdict is verify-safe-to-buy. This skill has a Jest vote-function check only and no extension validation.
 ---
 
 # Verify anti-scam partner consensus
@@ -9,69 +9,54 @@ Side check. The extension's main job is the product and seller verdict, covered 
 
 ## Property
 
-`ApiScamPartners.evaluate` returns `DANGEROUS` when at least two of `ApiScamWOT`, `ApiScamNorton`, and `ApiScamVoidUrl` returned `DANGEROUS` and none of them returned `SAFE`. Otherwise it does not return `DANGEROUS`. The open tab does not change the conclusion.
+Only `ApiScamWOT`, `ApiScamNorton`, and `ApiScamVoidUrl` vote, and only a fulfilled `SAFE` or `DANGEROUS` is a vote. `NO_DATA` and a rejected engine are not votes. With no votes, `evaluate` returns `NO_DATA`. It returns `DANGEROUS` when at least two engines voted `DANGEROUS` and they outnumber the `SAFE` votes. It returns `SAFE` when `SAFE` votes outnumber `DANGEROUS` votes. Every other tally, a tie or one lone `DANGEROUS`, returns `NO_DATA`. The open tab does not change the conclusion.
+
+Norton votes `SAFE` on rating `g` and `DANGEROUS` on rating `b`. Every other rating, or none, is `NO_DATA`.
 
 ## Harm
 
-A shopper misses a scam warning when two partner engines agree the site is dangerous, or gets a scam warning from the tab's title, favicon, and HTTPS score instead of those engines.
+A shopper misses a scam warning when two engines agree the site is dangerous and a weak `SAFE` (the tab score, or Norton's `g`) vetoes them. Or the extension whitelists a site because no engine answered, since the content script calls `markAsSafe()` on `SAFE`.
 
 ## Why this promise replaced the old one
 
-Old property: `evaluate` returns `DANGEROUS` exactly when all three engines returned `DANGEROUS`.
+Old property: `evaluate` returns `DANGEROUS` when at least two engines returned `DANGEROUS` and none returned `SAFE`. Any `SAFE` wins, and no `SAFE` with fewer than two dangers is `SAFE`.
 
-That matched `dangerousAmount === ENGINES_COUNT` only if the tab was not counted. Norton's `get` never returns `DANGEROUS`, so a count of exactly 3 never happened without the tab. Removing the tab and keeping "all three" would have turned scam warnings off. The tab score is not an engine. Two agreeing engines, with no `SAFE` vote, is the warning that path was approximating. The user asked for that recommendation.
+New property: the majority rule above, with `NO_DATA` for no votes or an inconclusive tally.
+
+Evidence, from the anti-scam verdict bug fix (bug 2 in `BUG_REPORT.md`). All three engines unreachable returned `SAFE` and whitelisted the site. Norton returns `g` for google.com, amazon.com, unrated and nonexistent domains, and wicar.org (a malware test site), so one `g` must not veto two dangers. Norton's `b` means blocked and was counted as `SAFE`. The tab heuristic is no longer consulted, and `tab-content-rater.ts` is unchanged.
 
 ## Covered code
 
-Describes the working tree of `src/anti-scam/logic/anti-scam-logic.ts` after the tab stopped voting. Base commit `c3875ad6d8071bc205efd3dc53ae5177fc051ba5` does not contain that edit. Move the sync commit forward only after a commit contains this description and you confirm the steps below still match `evaluate`. A passing run is not that confirmation.
-
 - `src/anti-scam/logic/anti-scam-logic.ts`
-  - `SCAM_ENGINES_IN_PRIORITY` — `ApiScamWOT`, `ApiScamNorton`, `ApiScamVoidUrl`, in that order
-  - `MIN_DANGEROUS_VOTES` — 2
-  - `ApiScamPartners.evaluate` — one call is one check. The indivisible steps are: `Promise.allSettled` on the three `get` calls, the fulfilled-result loop that increments `dangerousAmount`, the `hasSafe` return, the `dangerousAmount >= MIN_DANGEROUS_VOTES` return, the final `SAFE` return, and the `catch` that returns `NO_DATA`. `examineTab` is not called.
+  - `SCAM_ENGINES_IN_PRIORITY` lists `ApiScamWOT`, `ApiScamNorton`, `ApiScamVoidUrl`, in that order.
+  - `MIN_DANGEROUS_VOTES` is 2.
+  - `concludeFromVotes({ dangerous, safe })` is the pure vote rule.
+  - `ApiScamPartners.evaluate` runs `Promise.allSettled` on the three `get` calls, tallies fulfilled `SAFE` and `DANGEROUS`, and returns `concludeFromVotes(tally)`. Its `catch` returns `NO_DATA`. `examineTab` is not called.
+- `src/anti-scam/scam-rater/api-scam-norton.ts` maps the rating code to a verdict.
 
-If an engine is added, removed, or reordered, or `evaluate` calls `examineTab` again, update the harness before you move the sync commit.
+If an engine is added, removed, or reordered, or `evaluate` calls `examineTab` again, update the tests.
 
-## Bounds and assumptions
+## Logic check, not extension validation
 
-The harness calls the real `evaluate`. It stubs `examineTab` and each engine `get`, so no network runs. Every combination is checked (5 × 4 × 4 × 4 = 320):
+The check is Jest, run by `yarn test`:
 
-- tab: `absent` (tabId `0`), `SAFE`, `DANGEROUS`, `NO_DATA`, `throw`
-- each engine: `SAFE`, `DANGEROUS`, `NO_DATA`, `reject`
+```bash
+npx jest --config ./test/jest.config.js --coverage=false src/anti-scam/__tests__/anti-scam-logic.test.ts src/anti-scam/scam-rater/__tests__/api-scam-norton.test.ts
+```
 
-Assumptions that match the code:
+`anti-scam-logic.test.ts` checks `concludeFromVotes` on a tally table and drives the real `evaluate` through all 64 WOT x Norton x VoidURL outcomes (`SAFE`, `DANGEROUS`, `NO_DATA`, `reject`) with each engine's `get` stubbed on its prototype and `examineTab` mocked, so no network runs. `api-scam-norton.test.ts` stubs `Remote.getJson` and checks each rating code, a missing body, and a failed request.
 
-- `evaluate` does not call `examineTab`. A tab outcome, including a throw from the stub, must not change the conclusion. If a throw makes the conclusion `NO_DATA` while two engines returned `DANGEROUS`, `evaluate` is calling `examineTab` inside its `try` again.
-- A rejected engine is not a vote. `NO_DATA` is a fulfilled verdict and is not `DANGEROUS` or `SAFE`.
-- Any fulfilled `SAFE` returns `SAFE` before the danger count is checked.
+The `yarn verify:anti-scam-consensus` script and `test/jest.anti-scam-consensus.config.js` point at `src/anti-scam/verification/api-scam-partners-consensus.test.ts`, which does not exist. Use the command above.
 
-This does not cover `validateTab` scoring, the WOT, Norton, or VoidURL parsers, the whitelist, or `initAntiScamWorker`. Norton's `get` today returns only `SAFE` or `NO_DATA`. The harness still feeds it `DANGEROUS`, because `evaluate` accepts that verdict.
+A pass does not cover the WOT and VoidURL parsers, the whitelist, `initAntiScamWorker`, or the modal on a page.
 
 ## Extension validation
 
 None yet. A Playwright lane needs `PW_EXPERIMENTAL_SERVICE_WORKER_NETWORK_EVENTS=1`, because the engines are fetched from the service worker and Playwright 1.48 does not route those requests otherwise. An earlier attempt without the flag never saw the three engine requests. Retry with the flag before building anything else.
 
-## Logic check, not extension validation
-
-`yarn verify:anti-scam-consensus` calls `evaluate` in Jest and stubs `get` on the three engine classes. It does not build the extension, open Chrome, or paint the warning. Exit 0 means the vote function holds for 320 scripted combinations. Exit 1 means the received list is the violations. A pass here is not validation of the extension. Config: `test/jest.anti-scam-consensus.config.js`. Jest 29.7.0 and ts-jest 29.2.5. The file is ignored by `yarn test`.
-
 ## How to read a failure
 
-Each violation is one sequence: what the tab did, what each engine returned, what `evaluate` returned, and which side of the property broke.
-
-Replay it on `ApiScamPartners.evaluate`:
-
-1. The three `get` calls run. The tab is not consulted.
-2. Only `fulfilled` results are pushed. Only a `DANGEROUS` fulfilled result increments `dangerousAmount`.
-3. Any pushed `SAFE` returns `SAFE`.
-4. `dangerousAmount >= 2` returns `DANGEROUS`. Any smaller count returns `SAFE`.
-5. A throw from an engine `get` is absorbed by `Promise.allSettled`. A throw outside that returns `NO_DATA`.
-
-If a step cannot happen in that function, the harness is wrong. Fix the harness, not the property. If every step can happen, it is a bug in `evaluate`. Do not change product code unless the user asks. Do not drop a case to make the command pass.
-
-## Known finding
-
-Logic check: none. The previous failure was the tab being added into `dangerousAmount` and compared with 3. That code is gone. A new logic-check violation is a regression or a harness that no longer describes `evaluate`.
+A failing combination names what each engine returned. Count the fulfilled `SAFE` and `DANGEROUS` results, apply the property, and compare with `evaluate`'s result. If the property gives the received value, the test oracle is wrong. Otherwise it is a bug in `evaluate` or `concludeFromVotes`. Do not drop a case to make the run pass.
 
 ## When the promise changes on purpose
 

@@ -4,13 +4,7 @@ import { getReliabilityProductsSummaryTooltip } from "../../../../../../constant
 import { PRICING_ITEM_DETAILS } from "../../../../../engine/logic/utils/const";
 import { Explanation } from "../../../shared/Explanation";
 import { PriceChart } from "../PriceHistory/PriceChart";
-
-interface MetricBadge {
-  label: string;
-  value: string;
-  numericValue: number | null;
-  type: "stars" | "orders" | "percent" | "generic";
-}
+import { extractMetricBadges, getVerdictText } from "./rule-metrics";
 
 const UNIT_LABELS: Record<string, string> = {
   days: "📅",
@@ -21,77 +15,11 @@ const UNIT_LABELS: Record<string, string> = {
   month: "📅"
 };
 
-// Extracts key:value pairs like "Stars: 4.9", trailing percentages "90.90%",
-// and "number unit" patterns like "8 years", "-20544 days"
-function extractMetricBadges(text: string): MetricBadge[] {
-  const badges: MetricBadge[] = [];
-
-  // "Key: value" patterns
-  const keyValuePattern = /(\w+):\s*([\d.]+)/g;
-  let match = keyValuePattern.exec(text);
-  while (match !== null) {
-    const label = match[1];
-    const value = match[2];
-    const numericValue = parseFloat(value);
-    const lowerLabel = label.toLowerCase();
-    const type = lowerLabel === "stars" ? "stars" : lowerLabel === "orders" ? "orders" : "generic";
-    badges.push({ label, value, numericValue, type });
-    match = keyValuePattern.exec(text);
-  }
-
-  // Any percentage: trailing ", 90.90%" or mid-sentence "43% lower"
-  const percentPattern = /,\s*([\d.]+)%/;
-  const percentMatch = text.match(percentPattern);
-  if (percentMatch) {
-    badges.push({
-      label: "percent",
-      value: `${percentMatch[1]}%`,
-      numericValue: parseFloat(percentMatch[1]),
-      type: "percent"
-    });
-  }
-
-  // "number unit" patterns like "8 years", "-20544 days" (only known units)
-  const unitPattern = /(-?[\d]+)\s+(days?|years?|months?)/gi;
-  let unitMatch = unitPattern.exec(text);
-  while (unitMatch !== null) {
-    const num = parseInt(unitMatch[1], 10);
-    const unit = unitMatch[2].toLowerCase();
-    if (num > 0) {
-      badges.push({
-        label: unit,
-        value: `${unitMatch[1]} ${unitMatch[2]}`,
-        numericValue: num,
-        type: "generic"
-      });
-    }
-    unitMatch = unitPattern.exec(text);
-  }
-
-  return badges;
-}
-
 // Returns satisfaction color: green ≥80%, yellow ≥60%, red below
 function getSatisfactionColor(value: number): string {
   if (value >= 80) return "#16a34a";
   if (value >= 60) return "#d97706";
   return "#dc2626";
-}
-
-// Strips extracted metrics from sentence, cleans up punctuation
-function getVerdictText(text: string, badges: MetricBadge[]): string {
-  let result = text;
-  for (const badge of badges) {
-    if (badge.type === "percent") {
-      result = result.replace(/,\s*[\d.]+%/, "");
-    } else if (badge.label.match(/^(days?|years?|months?)$/i)) {
-      // Strip "number unit" like "8 years" or "-20544 days"
-      result = result.replace(new RegExp(`,?\\s*-?\\d+\\s+${badge.label}`, "gi"), "");
-    } else {
-      result = result.replace(new RegExp(`,?\\s*${badge.label}:\\s*[\\d.]+`, "g"), "");
-    }
-  }
-  return result.replace(/[,.]?\s*$/, ".").trim();
 }
 
 // Returns star rating color: green ≥4.5, yellow ≥3.5, red below

@@ -10,7 +10,7 @@ import { SupplierClient } from "./client/SupplierClient";
 import "../e-commerce/client/assets/style.scss";
 import { SiteUtil } from "../e-commerce/engine/logic/utils/site-utils";
 
-initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_SUPPLIER" });
+initPegasusTransport();
 
 const initSupplierClient = (): void => {
   debug("isSupplier::  initializing.... Started");

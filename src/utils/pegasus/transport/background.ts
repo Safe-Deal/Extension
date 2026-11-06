@@ -14,6 +14,7 @@ import { decodeConnectionArgs } from "./src/utils/connection-args";
 import { createDeliveryLogger } from "./src/utils/delivery-logger";
 import { createFingerprint } from "./src/utils/endpoint-fingerprint";
 import { deserializeEndpoint, serializeEndpoint } from "./src/utils/endpoint-utils";
+import { isPageWindowPacket } from "./src/utils/internalPacketTypeGuards";
 import { internalPacketTypeRouter } from "./src/utils/internalPacketTypeRouter";
 
 interface PortConnection {
@@ -301,6 +302,14 @@ export function initPegasusTransport(): void {
       }
 
       if (msg.type === "deliver" && msg.message?.origin?.context) {
+        // any page script can answer a content script's window port offer, so window packets are untrusted
+        if (isPageWindowPacket(msg.message)) {
+          console.debug(
+            `[pegasus-transport] Dropped '${msg.message.id}' sent by a page window via ${connArgs.endpointName}`
+          );
+          return;
+        }
+
         // origin tab ID is resolved from the port identifier (also prevent "MITM attacks" of extensions)
         msg.message.origin.tabId = linkedTabId;
         msg.message.origin.frameId = linkedFrameId;

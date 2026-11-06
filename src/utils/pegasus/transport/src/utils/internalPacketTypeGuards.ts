@@ -4,6 +4,10 @@ export function isInternalBroadcastEvent(packet: InternalPacket): packet is Inte
   return packet.messageType === "broadcastEvent";
 }
 
+export function isPageWindowPacket(packet: InternalPacket): boolean {
+  return packet.origin.context === "window";
+}
+
 export function isInternalMessage(packet: InternalPacket): packet is InternalMessage {
   return packet.messageType === "message" || packet.messageType === "reply";
 }

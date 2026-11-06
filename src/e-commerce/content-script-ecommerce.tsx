@@ -9,7 +9,7 @@ import { initApps, initCommerceClient, initTour } from "./client/events/ecommerc
 
 import "./client/assets/style.scss";
 
-initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_ECOMMERCE" });
+initPegasusTransport();
 
 (async () => {
   try {

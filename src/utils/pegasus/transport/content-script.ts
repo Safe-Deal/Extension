@@ -35,7 +35,7 @@ export function initPegasusTransport({ allowWindowMessagingForNamespace }: Props
     async (event) => {
       port.postMessage(event);
     },
-    async (event) => win.postMessage(event)
+    allowWindowMessagingForNamespace ? async (event) => win.postMessage(event) : undefined
   );
 
   win.onMessage((message) => {

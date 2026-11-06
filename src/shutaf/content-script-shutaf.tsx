@@ -9,7 +9,7 @@ import { onHrefChange } from "../utils/dom/location";
 
 const PING_INTERVAL_IN_SEC = 60;
 
-initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_SHUTAF" });
+initPegasusTransport();
 
 (async () => {
   try {

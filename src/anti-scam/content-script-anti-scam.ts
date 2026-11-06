@@ -8,7 +8,7 @@ import { isWhitelisted, markAsSafe } from "./logic/anti-scam-persistance";
 import { ScamSiteType } from "./types/anti-scam";
 import { IAntiScamMessageBus, AntiScamMessageTypes } from "./anti-scam-worker";
 
-initPegasusTransport({ allowWindowMessagingForNamespace: "CONTENT_SCRIPT_ANTI_SCAM" });
+initPegasusTransport();
 
 (async () => {
   try {

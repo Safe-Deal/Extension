@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "hooks": {
+    "afterFileEdit": [
+      {
+        "command": ".cursor/hooks/track-sensitive-edit.sh"
+      }
+    ],
+    "stop": [
+      {
+        "command": ".cursor/hooks/remind-verify-on-stop.sh",
+        "loop_limit": 1
+      }
+    ],
+    "beforeShellExecution": [
+      {
+        "command": ".cursor/hooks/block-unverified-shell.sh"
+      }
+    ],
+    "afterShellExecution": [
+      {
+        "command": ".cursor/hooks/clear-verify-on-success.sh"
+      }
+    ]
+  }
+}

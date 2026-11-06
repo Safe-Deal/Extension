@@ -1,0 +1,19 @@
+---
+description: Pegasus-only cross-context messaging for content scripts, workers, and stores
+globs:
+  - src/**/content-script*.ts*
+  - src/**/content-script*.tsx
+  - src/utils/pegasus/**
+  - src/store/**
+  - src/browser-extension/service_worker.ts
+  - src/**/worker*.ts
+alwaysApply: false
+---
+
+# Pegasus messaging
+
+- Content scripts never call `chrome.runtime.sendMessage` / `browser.runtime` for feature traffic, and never import background-only modules.
+- Cross-context traffic goes through Pegasus (`definePegasusMessageBus` / RPC / Pegasus store).
+- Workers own Zustand stores in the service worker; content scripts and popup read/mutate via Pegasus-backed stores.
+- Dual-manifest: do not assume MV3-only APIs in shared paths without a Firefox path.
+- Prefer `@utils`, `@store`, feature aliases over deep relative imports.

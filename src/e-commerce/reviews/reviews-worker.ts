@@ -26,6 +26,8 @@ export interface ReviewsResponse {
   ver: string;
   totalReviews: string | number | null;
   rating: string | number | null;
+  /** The store reports reviews for this product, but their text could not be retrieved (sign-in wall, block, failed download). */
+  unavailable?: boolean;
   reviewCount?: string;
   reviewsValue?: string;
 }
@@ -110,7 +112,9 @@ export const reviewsSummaryWorker = async (dataRequest, store) => {
       debug(
         `reviewsSummaryWorker:: reviewsSummary worker Response: reviewsSummary's -> ${reviewsResponse?.reviewsSummary?.length ?? 0}`
       );
-      cache.set(cachingKey, reviewsResponse);
+      if (!reviewsResponse.unavailable) {
+        cache.set(cachingKey, reviewsResponse);
+      }
       setReviewData(reviewsResponse);
     }
   } catch (error) {

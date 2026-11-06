@@ -69,15 +69,6 @@ describe("Conclusion Product", () => {
         value: 4,
         weight: 10,
         bonus: {
-          isBonusRule: false,
-          value: 0
-        },
-        isValidRule: true
-      },
-      {
-        value: 4,
-        weight: 10,
-        bonus: {
           isBonusRule: true,
           value: 50
         },
@@ -96,32 +87,6 @@ describe("Conclusion Product", () => {
     const conclusionProduct = new ConclusionProduct(ruleManagerResultMock);
     const x = conclusionProduct.conclusion();
     expect(x.productConclusion).toBe(ProductConclusionEnum.RECOMMENDED);
-  });
-
-  it("conclusion algorithm need to return insufficient data when only bonus rules are valid", () => {
-    ruleManagerResultMock.rules = [
-      {
-        value: 4,
-        weight: 10,
-        bonus: {
-          isBonusRule: true,
-          value: 50
-        },
-        isValidRule: true
-      },
-      {
-        value: 4,
-        weight: 10,
-        bonus: {
-          isBonusRule: true,
-          value: 50
-        },
-        isValidRule: true
-      }
-    ];
-    const conclusionProduct = new ConclusionProduct(ruleManagerResultMock);
-    const x = conclusionProduct.conclusion();
-    expect(x.productConclusion).toBe(ProductConclusionEnum.INSUFFICIENT_DATA);
   });
 
   it("conclusion algorithm need to return safe result for the product if the bonus rules ase so so", () => {

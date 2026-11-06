@@ -474,6 +474,15 @@
   "reviews_no_reviews_text": {
     "message": "No customer reviews yet. This product may be new or not popular."
   },
+  "reviews_unavailable_header": {
+    "message": "Review Summary Unavailable"
+  },
+  "reviews_unavailable_text": {
+    "message": "Safe Deal could not read the written reviews for this product right now. The rating and review count above come from the product page."
+  },
+  "reviews_retry": {
+    "message": "Try again"
+  },
   "reviews_no_logged_in": {
     "message": "Make sure you are logged in to see reviews."
   },

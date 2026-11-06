@@ -28,14 +28,14 @@
 
   .safe-deal-image-wholesale-product {
     position: absolute;
-    bottom: 25px;
-    right: 25px;
+    top: 8px;
+    right: 8px;
     width: 30px;
     cursor: context-menu;
 
     &-rtl {
       right: initial;
-      left: 25px;
+      left: 8px;
     }
   }
 }

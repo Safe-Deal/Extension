@@ -1,3 +1,7 @@
+import { castAsNumber } from "@utils/text/strings";
+
+const METRIC_NUMBER_SOURCE = "[\\d.]+[kKmM]?";
+
 export interface MetricBadge {
   label: string;
   value: string;
@@ -8,12 +12,12 @@ export interface MetricBadge {
 export function extractMetricBadges(text: string): MetricBadge[] {
   const badges: MetricBadge[] = [];
 
-  const keyValuePattern = /(\w+):\s*([\d.]+)/g;
+  const keyValuePattern = new RegExp(`(\\w+):\\s*(${METRIC_NUMBER_SOURCE})`, "g");
   let match = keyValuePattern.exec(text);
   while (match !== null) {
     const label = match[1];
     const value = match[2];
-    const numericValue = parseFloat(value);
+    const numericValue = castAsNumber(value);
     const lowerLabel = label.toLowerCase();
     const type = lowerLabel === "stars" ? "stars" : lowerLabel === "orders" ? "orders" : "generic";
     badges.push({ label, value, numericValue, type });
@@ -58,7 +62,7 @@ export function getVerdictText(text: string, badges: MetricBadge[]): string {
     } else if (badge.label.match(/^(days?|years?|months?)$/i)) {
       result = result.replace(new RegExp(`,?\\s*-?\\d+\\s+${badge.label}`, "gi"), "");
     } else {
-      result = result.replace(new RegExp(`,?\\s*${badge.label}:\\s*[\\d.]+`, "g"), "");
+      result = result.replace(new RegExp(`,?\\s*${badge.label}:\\s*${METRIC_NUMBER_SOURCE}`, "g"), "");
     }
   }
   return result.replace(/[,.]?\s*$/, ".").trim();

@@ -36,7 +36,7 @@ export default class AmazonFeedbackDownloader extends BaseProductDownloader {
     const html = this.remoteResponse;
     this.document = null;
     if (html) {
-      const blocked = this?.document?.innerHTML?.includes("/captcha/");
+      const blocked = String(html).includes("/captcha/");
       if (blocked) {
         debug(`AmazonFeedbackDownloader::parse::blocked - ${this.productUrl}`);
       } else {

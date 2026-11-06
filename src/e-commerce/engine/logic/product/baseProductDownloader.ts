@@ -116,6 +116,12 @@ export abstract class BaseProductDownloader {
     Remote.setCachedGet(this.productUrl, null);
   }
 
+  /** Forget this URL in both the downloader and the fetcher caches so the next download hits the network. */
+  public invalidateCache() {
+    cache.delete(this.productUrl);
+    this.invalidateCash();
+  }
+
   private async fetchData() {
     const res = await Remote.get(this.productUrl, this.isFetchText, true, this.useBrowserHeaders);
     this.remoteResponse = res?.response;

@@ -1,5 +1,4 @@
-import React, { useEffect } from "react";
-import { useAntiScamStore, antiScamStoreReady } from "@store/AntiScamState";
+import React, { useState } from "react";
 import { definePegasusMessageBus } from "@utils/pegasus/transport";
 import { t } from "../../constants/messages";
 import { IMAGE_BAD } from "../../constants/visual";
@@ -14,15 +13,9 @@ interface AntiScamProps {
   conclusion: ScamConclusion;
 }
 
-export const AntiScamModal: React.FC<AntiScamProps> = () => {
-  const { conclusion, open, setOpen } = useAntiScamStore();
+export const AntiScamModal: React.FC<AntiScamProps> = ({ conclusion }) => {
+  const [open, setOpen] = useState(true);
   const { sendMessage } = definePegasusMessageBus<IAntiScamMessageBus>();
-
-  useEffect(() => {
-    antiScamStoreReady().then(() => {
-      setOpen(true);
-    });
-  }, [setOpen]);
 
   const percent: number = conclusion?.trustworthiness ? 100 - conclusion.trustworthiness : NaN;
   const data = Number.isNaN(percent)

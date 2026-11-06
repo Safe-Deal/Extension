@@ -24,9 +24,42 @@ interface PortConnection {
 
 export function initPegasusTransport(): void {
   const pendingResponses = createDeliveryLogger();
-  const connMap = new Map<string, PortConnection>();
+  // every content script in a frame connects as the same `content-script@tab.frame` endpoint, so one endpoint can hold several ports
+  const connMap = new Map<string, PortConnection[]>();
+  const packetSenders = new WeakMap<InternalPacket, EndpointFingerprint>();
+  const requesters = new Map<string, EndpointFingerprint>();
   const oncePortConnectedCbs = new Map<string, Set<() => void>>();
   const onceSessionEndCbs = new Map<EndpointFingerprint, Set<() => void>>();
+
+  const connectionOf = (endpoint: string, fingerprint: EndpointFingerprint | undefined) =>
+    connMap.get(endpoint)?.find((conn) => conn.fingerprint === fingerprint);
+
+  const latestConnectionOf = (endpoint: string) => {
+    const connections = connMap.get(endpoint);
+    return connections?.[connections.length - 1];
+  };
+
+  const addConnection = (endpoint: string, connection: PortConnection) => {
+    const others = (connMap.get(endpoint) ?? []).filter((conn) => conn.fingerprint !== connection.fingerprint);
+    connMap.set(endpoint, [...others, connection]);
+  };
+
+  const removeConnection = (endpoint: string, port: Runtime.Port) => {
+    const remaining = (connMap.get(endpoint) ?? []).filter((conn) => conn.port !== port);
+    if (remaining.length > 0) {
+      connMap.set(endpoint, remaining);
+    } else {
+      connMap.delete(endpoint);
+    }
+  };
+
+  const allConnections = () => ([] as PortConnection[]).concat(...connMap.values());
+
+  const takeRequester = (transactionId: string) => {
+    const requester = requesters.get(transactionId);
+    requesters.delete(transactionId);
+    return requester;
+  };
 
   const oncePortConnected = (endpointName: string, cb: () => void) => {
     oncePortConnectedCbs.set(endpointName, (oncePortConnectedCbs.get(endpointName) || new Set()).add(cb));
@@ -49,7 +82,7 @@ export function initPegasusTransport(): void {
 
       const notifications = {
         aboutIncomingMessage: (message: InternalPacket) => {
-          const recipient = connMap.get(endpoint);
+          const recipient = connectionOf(endpoint, fingerprint);
           if (recipient == null) {
             throw new Error("Unable to find recipient endpoint");
           }
@@ -63,8 +96,8 @@ export function initPegasusTransport(): void {
         },
 
         aboutMessageUndeliverability: (resolvedDestination: string, message: InternalPacket) => {
-          const sender = connMap.get(endpoint);
-          if (sender?.fingerprint === fingerprint) {
+          const sender = connectionOf(endpoint, fingerprint);
+          if (sender) {
             PortMessage.toExtensionContext(sender.port, {
               message,
               resolvedDestination,
@@ -76,8 +109,8 @@ export function initPegasusTransport(): void {
         },
 
         aboutSessionEnded: (endedSessionFingerprint: EndpointFingerprint) => {
-          const conn = connMap.get(endpoint);
-          if (conn?.fingerprint === fingerprint) {
+          const conn = connectionOf(endpoint, fingerprint);
+          if (conn) {
             PortMessage.toExtensionContext(conn.port, {
               fingerprint: endedSessionFingerprint,
               status: "terminated"
@@ -88,7 +121,7 @@ export function initPegasusTransport(): void {
         },
 
         aboutSuccessfulDelivery: (receipt: DeliveryReceipt) => {
-          const sender = connMap.get(endpoint);
+          const sender = connectionOf(endpoint, fingerprint);
           if (sender == null) {
             throw new Error("Unable to find sender endpoint");
           }
@@ -103,8 +136,8 @@ export function initPegasusTransport(): void {
 
         whenDeliverableTo: (targetEndpoint: string) => {
           const notifyDeliverability = () => {
-            const origin = connMap.get(endpoint);
-            if (origin?.fingerprint === fingerprint && connMap.has(targetEndpoint)) {
+            const origin = connectionOf(endpoint, fingerprint);
+            if (origin && connMap.has(targetEndpoint)) {
               PortMessage.toExtensionContext(origin.port, {
                 deliverableTo: targetEndpoint,
                 status: "deliverable"
@@ -157,20 +190,22 @@ export function initPegasusTransport(): void {
       message.destination.tabId = null;
       message.destination.frameId = undefined;
 
-      // TODO: fix "as" type casting below
-      const dest = () => connMap.get(resolvedDestination) as PortConnection;
-      const sender = () => connMap.get(resolvedSender) as PortConnection;
+      const sender = connectionOf(resolvedSender, packetSenders.get(message));
+      const recipient =
+        message.messageType === "reply"
+          ? connectionOf(resolvedDestination, takeRequester(message.transactionId))
+          : latestConnectionOf(resolvedDestination);
 
-      const deliver = () => {
-        notifyEndpoint(resolvedDestination).withFingerprint(dest().fingerprint).aboutIncomingMessage(message);
+      const deliver = (to: PortConnection) => {
+        notifyEndpoint(resolvedDestination).withFingerprint(to.fingerprint).aboutIncomingMessage(message);
 
         const receipt: DeliveryReceipt = {
           from: {
             endpointId: resolvedSender,
-            fingerprint: sender()?.fingerprint
+            fingerprint: sender?.fingerprint
           },
           message,
-          to: dest().fingerprint
+          to: to.fingerprint
         };
 
         if (message.messageType === "message") {
@@ -181,19 +216,19 @@ export function initPegasusTransport(): void {
           pendingResponses.remove(message.id);
         }
 
-        if (sender()) {
-          notifyEndpoint(resolvedSender).withFingerprint(sender().fingerprint).aboutSuccessfulDelivery(receipt);
+        if (sender) {
+          notifyEndpoint(resolvedSender).withFingerprint(sender.fingerprint).aboutSuccessfulDelivery(receipt);
         }
       };
 
-      if (dest()?.port) {
-        deliver();
+      if (recipient) {
+        deliver(recipient);
       } else if (message.messageType === "message") {
         if (message.origin.context === "background") {
-          oncePortConnected(resolvedDestination, deliver);
-        } else if (sender()) {
+          oncePortConnected(resolvedDestination, () => deliver(latestConnectionOf(resolvedDestination)));
+        } else if (sender) {
           notifyEndpoint(resolvedSender)
-            .withFingerprint(sender().fingerprint)
+            .withFingerprint(sender.fingerprint)
             .aboutMessageUndeliverability(resolvedDestination, message)
             .and()
             .whenDeliverableTo(resolvedDestination);
@@ -206,7 +241,7 @@ export function initPegasusTransport(): void {
         ...(message.origin.context === "window" && { context: "content-script" })
       });
 
-      const sender = connMap.get(resolvedSender);
+      const sender = connectionOf(resolvedSender, packetSenders.get(message));
       if (sender == null) {
         throw new Error("Unable to find sender endpoint");
       }
@@ -241,7 +276,7 @@ export function initPegasusTransport(): void {
     // literal tab id in case of content script, however tab id of inspected page in case of devtools context
     const { tabId: linkedTabId, frameId: linkedFrameId } = deserializeEndpoint(connArgs.endpointName);
 
-    connMap.set(connArgs.endpointName, {
+    addConnection(connArgs.endpointName, {
       fingerprint: connArgs.fingerprint,
       port: incomingPort
     });
@@ -268,10 +303,13 @@ export function initPegasusTransport(): void {
 
     incomingPort.onDisconnect.addListener(() => {
       // sometimes previous content script's onDisconnect is called *after* the fresh content-script's
-      // onConnect. So without this fingerprint equality check, we would remove the new port from map
-      if (connMap.get(connArgs.endpointName)?.fingerprint === connArgs.fingerprint) {
-        connMap.delete(connArgs.endpointName);
-      }
+      // onConnect. So we remove only this port, never the fresh one
+      removeConnection(connArgs.endpointName, incomingPort);
+      requesters.forEach((fingerprint, transactionId) => {
+        if (fingerprint === connArgs.fingerprint) {
+          requesters.delete(transactionId);
+        }
+      });
 
       onceSessionEndCbs.get(connArgs.fingerprint)?.forEach((cb) => cb());
       onceSessionEndCbs.delete(connArgs.fingerprint);
@@ -279,7 +317,7 @@ export function initPegasusTransport(): void {
 
     incomingPort.onMessage.addListener((msg: RequestMessage) => {
       if (msg.type === "sync") {
-        const allActiveSessions = [...connMap.values()].map((conn) => conn.fingerprint);
+        const allActiveSessions = allConnections().map((conn) => conn.fingerprint);
         const stillPending = msg.pendingResponses.filter((fp) => allActiveSessions.includes(fp.to));
 
         pendingResponses.add(...stillPending);
@@ -314,6 +352,11 @@ export function initPegasusTransport(): void {
         msg.message.origin.tabId = linkedTabId;
         msg.message.origin.frameId = linkedFrameId;
 
+        packetSenders.set(msg.message, connArgs.fingerprint);
+        if (msg.message.messageType === "message") {
+          requesters.set(msg.message.transactionId, connArgs.fingerprint);
+        }
+
         internalPacketTypeRouter(msg.message, { eventRuntime, messageRuntime });
       }
     });
@@ -336,8 +379,10 @@ export function initPegasusTransport(): void {
       return;
     }
 
-    connMap.forEach((port, endpoint) => {
-      notifyEndpoint(endpoint).withFingerprint(port.fingerprint).aboutIncomingMessage(event);
+    connMap.forEach((connections, endpoint) => {
+      connections.forEach((conn) =>
+        notifyEndpoint(endpoint).withFingerprint(conn.fingerprint).aboutIncomingMessage(event)
+      );
     });
 
     // So background listeners receive events from other contexts

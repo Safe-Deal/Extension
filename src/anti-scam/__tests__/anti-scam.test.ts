@@ -25,6 +25,8 @@ describe("Antiscam scenarios", () => {
     expect(isWhitelisted("contest.com")).toBe(false);
     expect(isWhitelisted("nott.me")).toBe(false);
     expect(isWhitelisted("google.com.evil.example")).toBe(false);
+    expect(isWhitelisted("test.com")).toBe(false);
+    expect(isWhitelisted("shop.test.com")).toBe(false);
   });
 
   it("trusts a subdomain of a listed site", () => {

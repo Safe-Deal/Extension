@@ -1,5 +1,4 @@
 export const WHITELISTED_DOMAINS = [
-  "localhost:3000", // TEMP TO TEST ON LOCALHOST
   "joinsafedeal.com",
   "google.com",
   "google.com.au",

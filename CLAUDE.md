@@ -57,7 +57,7 @@ Content Script ──Pegasus messages──▶ Worker (service_worker context)
 - `shutaf/` — Affiliate link generation & commission tracking
 - `supplier/` — B2B supplier intelligence (Alibaba)
 - `auth/` — Supabase OAuth + premium subscription state
-- `store/` — Zustand stores shared across contexts (AuthState, AntiScamState, ShutafState, EcommerceStore)
+- `store/` — Zustand stores shared across contexts (AuthState, ShutafState, EcommerceStore)
 - `utils/extension/` — Chrome API wrappers (`ext.*`)
 - `utils/site/` — Site detection & metadata helpers
 

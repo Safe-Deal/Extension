@@ -1,5 +1,4 @@
 import { definePegasusMessageBus } from "@utils/pegasus/transport";
-import { useAntiScamStore } from "@store/AntiScamState";
 import { initPegasusTransport } from "@utils/pegasus/transport/content-script";
 import { debug, logError } from "../utils/analytics/logger";
 import { SiteMetadata } from "../utils/site/site-information";
@@ -21,28 +20,20 @@ initPegasusTransport();
       return;
     }
 
-    await sendMessage(AntiScamMessageTypes.ANALYZE_DOMAIN, domain);
+    debug(`AntiScam :: Sending ${domain} for analysis`);
+    const conclusion = await sendMessage(AntiScamMessageTypes.ANALYZE_DOMAIN, domain);
 
-    const unsubscribe = useAntiScamStore.subscribe((state) => {
-      const conclusion = state?.conclusion;
-      debug(`AntiScam :: Analysis of ${domain} started....`);
-      debug(`AntiScam :: Sending ${domain} for analysis`);
+    debug(`AntiScam :: Received ${JSON.stringify(conclusion)}`);
 
-      if (conclusion) {
-        debug(`AntiScam :: Received ${JSON.stringify(conclusion)}`);
-        if (conclusion.type === ScamSiteType.DANGEROUS) {
-          paintAntiScam(conclusion);
-          debug(`AntiScam :: Painting.... Done.`);
-        } else if (conclusion.type === ScamSiteType.SAFE) {
-          markAsSafe();
-          debug(`AntiScam :: Marked as Safe.`);
-        }
-      } else {
-        debug(`AntiScam :: No data returned nothing to paint!! result:${JSON.stringify(conclusion)}`);
-      }
-    });
-
-    window.addEventListener("beforeunload", () => unsubscribe());
+    if (conclusion?.type === ScamSiteType.DANGEROUS) {
+      paintAntiScam(conclusion);
+      debug(`AntiScam :: Painting.... Done.`);
+    } else if (conclusion?.type === ScamSiteType.SAFE) {
+      markAsSafe();
+      debug(`AntiScam :: Marked as Safe.`);
+    } else {
+      debug(`AntiScam :: No data returned nothing to paint!!`);
+    }
   } catch (error) {
     logError(error, "AntiScam Error::");
   }

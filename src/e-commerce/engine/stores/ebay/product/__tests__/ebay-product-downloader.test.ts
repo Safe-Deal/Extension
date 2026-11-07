@@ -30,6 +30,21 @@ describe("eBayProductDownloader", () => {
     expect(fetchMock).not.toHaveBeenCalled();
   });
 
+  it("uses the item page fetched by the search page tab instead of downloading it", async () => {
+    const downloader = new eBayProductDownloader({
+      id: "398114108396",
+      domain: "www.ebay.com",
+      url: "https://www.ebay.com/sch/i.html?_nkw=soccer+ball",
+      document: PAGE_DOCUMENT,
+      itemPageDocument: `<html><body><h1 class="x-item-title">Tab fetched item page</h1></body></html>`
+    });
+
+    const doc = await downloader.download();
+
+    expect(titleOf(doc)).toBe("Tab fetched item page");
+    expect(fetchMock).not.toHaveBeenCalled();
+  });
+
   it("downloads items listed on a search page", async () => {
     const downloader = new eBayProductDownloader({
       id: "116281321847",

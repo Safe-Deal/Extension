@@ -3,22 +3,24 @@ import { ParsedHtml, parseAsHtml } from "../../../../../utils/dom/html";
 import { HeadersType } from "../../../../../utils/downloaders/remote/remoteFetcher";
 import { BaseProductDownloader } from "../../../logic/product/baseProductDownloader";
 import { getWholesaleEbayProductIdFromHref, isEbayItemDetails } from "../utils/ebay-site-utils";
+import { buildEbayItemUrl } from "./ebay-item-page-fetcher";
 
 const MIN_DELAY_SECONDS = 0.005;
 const MAX_DELAY_SECONDS = 0.9;
 
-const buildUrl = (id, domain) => `https://${domain}/itm/${id}`;
-
-const viewedItemPageDocuments = new WeakMap<IProduct, ParsedHtml>();
+const parsedItemPageDocuments = new WeakMap<IProduct, ParsedHtml>();
 
 const isViewedItemPage = ({ id, url, document }: IProduct): boolean =>
   Boolean(document && url) && isEbayItemDetails(url) && getWholesaleEbayProductIdFromHref(url) === id;
 
-const getViewedItemPageDocument = (product: IProduct): ParsedHtml => {
-  if (!viewedItemPageDocuments.has(product)) {
-    viewedItemPageDocuments.set(product, parseAsHtml(product.document));
+const getProvidedItemPageHtml = (product: IProduct): string | undefined =>
+  isViewedItemPage(product) ? product.document : product.itemPageDocument;
+
+const getParsedItemPageDocument = (product: IProduct, html: string): ParsedHtml => {
+  if (!parsedItemPageDocuments.has(product)) {
+    parsedItemPageDocuments.set(product, parseAsHtml(html));
   }
-  return viewedItemPageDocuments.get(product);
+  return parsedItemPageDocuments.get(product);
 };
 
 export default class eBayProductDownloader extends BaseProductDownloader {
@@ -26,7 +28,7 @@ export default class eBayProductDownloader extends BaseProductDownloader {
 
   constructor(product: IProduct) {
     super({
-      productUrl: buildUrl(product.id, product.domain),
+      productUrl: buildEbayItemUrl(product.id, product.domain),
       isFetchHtml: true,
       minDelay: MIN_DELAY_SECONDS,
       maxDelay: MAX_DELAY_SECONDS,
@@ -36,8 +38,9 @@ export default class eBayProductDownloader extends BaseProductDownloader {
   }
 
   public async download() {
-    if (isViewedItemPage(this.product)) {
-      return getViewedItemPageDocument(this.product);
+    const providedHtml = getProvidedItemPageHtml(this.product);
+    if (providedHtml) {
+      return getParsedItemPageDocument(this.product, providedHtml);
     }
     return super.download();
   }

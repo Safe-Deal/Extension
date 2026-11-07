@@ -69,6 +69,10 @@ Import using aliases instead of relative paths:
 - `@anti-scam` → `src/anti-scam`
 - (see `webpack/webpack.common.js` for full list)
 
+## Domain Language
+
+B2B (Alibaba) terms — Buyer, Company, Supplier, Deal, Report, Verdict, Signal — are defined in `../safe-deal-api/CONTEXT.md`. Use those names in code.
+
 ## Code Style
 
 - Functional React components only

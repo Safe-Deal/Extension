@@ -10,6 +10,9 @@ export const getEbayPriceSelector = (element) => element?.querySelector(EBAY_ITE
 /* ebay display selectors */
 export const EBAY_DISPLAY_SEL = {
   wholesaleDisplayContainerSelector: ".srp-main-content",
+  gridResultsSelector: ".srp-results.srp-grid",
+  productLinkSelector: (productId: string) =>
+    `.s-card__link[href*='${productId}'], .s-item__link[href*='${productId}']`,
   modeButtonSelector: ".btn__icon svg use",
   modeButtonAttributeSelector: "xlink:href",
   modeButtonGalleryText: "filter-gallery"

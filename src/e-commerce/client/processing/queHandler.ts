@@ -17,6 +17,7 @@ import { comparePaths } from "../../../utils/dom/location";
 import { SiteUtil } from "../../engine/logic/utils/site-utils";
 import { onDocumentInactivity } from "../../../utils/browser/browser";
 import { ProductStore } from "../../engine/logic/conclusion/conclusion-product-entity.interface";
+import { fetchEbayItemPageDocument } from "../../engine/stores/ebay/product/ebay-item-page-fetcher";
 
 const store = SiteUtil.getStore();
 const STORE_DELAY_TIMES_MAP = {
@@ -28,10 +29,21 @@ const STORE_DELAY_TIMES_MAP = {
 
 const renderDelay = STORE_DELAY_TIMES_MAP[store] || 0;
 
+const withEbayItemPageDocument = async (product: IProduct, type: ECommerceProductType): Promise<IProduct> => {
+  if (type !== ECommerceProductType.WHOLESALE || store !== ProductStore.EBAY) {
+    return product;
+  }
+  const itemPageDocument = await fetchEbayItemPageDocument({ ...product, domain: SiteMetadata.getDomain() });
+  return itemPageDocument ? { ...product, itemPageDocument } : product;
+};
+
 export const sendNextRequest = () => {
-  onDocumentInactivity(() => {
+  onDocumentInactivity(async () => {
     const { sendMessage } = definePegasusMessageBus<IEcommerceMessageBus>();
     const currentProduct: IProduct = ClientQue.getNextProductFromQue();
+    if (!currentProduct) {
+      return;
+    }
     const isItemDetails = SiteUtil.isItemDetails();
     const type = isItemDetails ? ECommerceProductType.PRODUCT : ECommerceProductType.WHOLESALE;
     const html = SiteMetadata.getDomOuterHTML(browserWindow().document);
@@ -44,14 +56,12 @@ export const sendNextRequest = () => {
         queryParams: SiteMetadata.getQueryParams(),
         url: SiteMetadata.getURL()
       },
-      product: currentProduct,
+      product: await withEbayItemPageDocument(currentProduct, type),
       type
     };
 
-    if (currentProduct) {
-      debug(`=> sendNextRequest productQue: ${currentProduct.id}`);
-      sendMessage(EcommerceMessageTypes.PROCESS_PRODUCT, product);
-    }
+    debug(`=> sendNextRequest productQue: ${currentProduct.id}`);
+    sendMessage(EcommerceMessageTypes.PROCESS_PRODUCT, product);
   }, renderDelay);
 };
 

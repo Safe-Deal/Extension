@@ -6,7 +6,11 @@ export class EbaySiteSelector extends SiteDomSelector {
     super(
       {
         // Gallery
-        wholesaleGalleryPageItemListSel: [".srp-results .s-item", ".b-list__items_nofooter .s-item"].join("|"),
+        wholesaleGalleryPageItemListSel: [
+          ".srp-results .s-card",
+          ".srp-results .s-item",
+          ".b-list__items_nofooter .s-item"
+        ].join("|"),
         wholesaleGalleryPageItemRatingSel: ".rating",
         wholesaleGalleryPageItemHref: ".s-item__info a",
         wholesaleGalleryPageItemTopSeller: ".ux-section-icon-with-details",
@@ -24,7 +28,7 @@ export class EbaySiteSelector extends SiteDomSelector {
         wholesaleListPageItemSoldByBrand: ".ux-section-icon-with-details",
 
         // Wholesale - General
-        wholesalePageProductId: ".s-item__link",
+        wholesalePageProductId: [".s-card__link", ".s-item__link"].join("|"),
 
         // Item Details
         itemPageProductSel: EBAY_PAGE_SELECTORS,
@@ -38,9 +42,9 @@ export class EbaySiteSelector extends SiteDomSelector {
       },
       {
         imageSel: ".ebay-image1",
-        wholesalePageItemListSel: ".s-item__wrapper",
-        wholesalePageProductListSel: ".s-item__info",
-        wholesalePagePriceSel: ".s-item__price",
+        wholesalePageItemListSel: ".s-card, .s-item__wrapper",
+        wholesalePageProductListSel: ".su-card-container__content, .s-item__info",
+        wholesalePagePriceSel: ".s-card__price, .s-item__price",
 
         itemPageProductSel: "#LeftSummaryPanel|#mainContent .x-price-section |#PicturePanel .merch-placement-layout",
         itemPageProductInfoActionsSel: ".x-buybox__section",

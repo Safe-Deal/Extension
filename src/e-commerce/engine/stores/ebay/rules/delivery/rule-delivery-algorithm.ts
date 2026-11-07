@@ -61,6 +61,9 @@ const deliveryTimeInDays = (deliveryDate) => {
 
 export const calculateDeliveryValueAlgorithm = (deliveryInfoTxt: string, internationalDelivery: boolean): any => {
   const deliveryDate: Date = ebayDeliveryTextToDate(deliveryInfoTxt);
+  if (!deliveryDate) {
+    return { score: null, days: NaN };
+  }
   const days = deliveryTimeInDays(deliveryDate);
   let score = selectFromRange(LOCAL_DELIVERY_BRACKETS, days);
   if (internationalDelivery) {

@@ -7,7 +7,7 @@ describe("Rules metric badges", () => {
 
     expect(badges.map(({ label, value }) => ({ label, value }))).toEqual([
       { label: "Stars", value: "5.0" },
-      { label: "Orders", value: "136K" }
+      { label: "Orders", value: "136K~" }
     ]);
     expect(getVerdictText(text, badges)).toBe("The shop is highly rated.");
   });
@@ -16,7 +16,7 @@ describe("Rules metric badges", () => {
     const text = "The shop is poorly rated. Stars: 3.2, Orders: 2M";
     const badges = extractMetricBadges(text);
 
-    expect(badges.find((badge) => badge.label === "Orders")?.value).toBe("2M");
+    expect(badges.find((badge) => badge.label === "Orders")?.value).toBe("2M~");
     expect(getVerdictText(text, badges)).toBe("The shop is poorly rated.");
   });
 

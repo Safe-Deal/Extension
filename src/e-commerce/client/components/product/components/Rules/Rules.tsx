@@ -27,11 +27,12 @@ export function extractMetricBadges(text: string): MetricBadge[] {
   const badges: MetricBadge[] = [];
 
   // "Key: value" patterns
-  const keyValuePattern = /(\w+):\s*([\d.]+[kmb]?)/gi;
+  const keyValuePattern = /(\w+):\s*([\d.]+)([kmb]?)/gi;
   let match = keyValuePattern.exec(text);
   while (match !== null) {
     const label = match[1];
-    const value = match[2].toUpperCase();
+    const suffix = match[3].toUpperCase();
+    const value = suffix ? `${match[2]}${suffix}~` : match[2];
     const numericValue = parseFloat(value);
     const lowerLabel = label.toLowerCase();
     const type = lowerLabel === "stars" ? "stars" : lowerLabel === "orders" ? "orders" : "generic";

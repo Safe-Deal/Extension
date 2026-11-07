@@ -23,18 +23,20 @@ const UNIT_LABELS: Record<string, string> = {
 
 // Extracts key:value pairs like "Stars: 4.9", trailing percentages "90.90%",
 // and "number unit" patterns like "8 years", "-20544 days"
-function extractMetricBadges(text: string): MetricBadge[] {
+export function extractMetricBadges(text: string): MetricBadge[] {
   const badges: MetricBadge[] = [];
 
   // "Key: value" patterns
-  const keyValuePattern = /(\w+):\s*([\d.]+)/g;
+  const keyValuePattern = /(\w+):\s*([\d.]+)([kmb]?)/gi;
   let match = keyValuePattern.exec(text);
   while (match !== null) {
     const label = match[1];
-    const value = match[2];
-    const numericValue = parseFloat(value);
+    const suffix = match[3].toUpperCase();
     const lowerLabel = label.toLowerCase();
     const type = lowerLabel === "stars" ? "stars" : lowerLabel === "orders" ? "orders" : "generic";
+    const isApproximate = suffix !== "" || type === "orders";
+    const value = `${match[2]}${suffix}${isApproximate ? "~" : ""}`;
+    const numericValue = parseFloat(value);
     badges.push({ label, value, numericValue, type });
     match = keyValuePattern.exec(text);
   }
@@ -79,7 +81,7 @@ function getSatisfactionColor(value: number): string {
 }
 
 // Strips extracted metrics from sentence, cleans up punctuation
-function getVerdictText(text: string, badges: MetricBadge[]): string {
+export function getVerdictText(text: string, badges: MetricBadge[]): string {
   let result = text;
   for (const badge of badges) {
     if (badge.type === "percent") {
@@ -88,7 +90,7 @@ function getVerdictText(text: string, badges: MetricBadge[]): string {
       // Strip "number unit" like "8 years" or "-20544 days"
       result = result.replace(new RegExp(`,?\\s*-?\\d+\\s+${badge.label}`, "gi"), "");
     } else {
-      result = result.replace(new RegExp(`,?\\s*${badge.label}:\\s*[\\d.]+`, "g"), "");
+      result = result.replace(new RegExp(`,?\\s*${badge.label}:\\s*[\\d.]+[kmb]?`, "gi"), "");
     }
   }
   return result.replace(/[,.]?\s*$/, ".").trim();

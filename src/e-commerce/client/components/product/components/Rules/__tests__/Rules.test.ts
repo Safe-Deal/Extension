@@ -20,11 +20,12 @@ describe("Rules metric badges", () => {
     expect(getVerdictText(text, badges)).toBe("The shop is poorly rated.");
   });
 
-  it("leaves plain numbers unchanged", () => {
+  it("marks exact orders approximate and leaves stars unchanged", () => {
     const text = "The shop is highly rated. Stars: 4.8, Orders: 136";
     const badges = extractMetricBadges(text);
 
-    expect(badges.find((badge) => badge.label === "Orders")?.value).toBe("136");
+    expect(badges.find((badge) => badge.label === "Orders")?.value).toBe("136~");
+    expect(badges.find((badge) => badge.label === "Stars")?.value).toBe("4.8");
     expect(getVerdictText(text, badges)).toBe("The shop is highly rated.");
   });
 });

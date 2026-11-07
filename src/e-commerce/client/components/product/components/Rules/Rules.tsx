@@ -32,10 +32,11 @@ export function extractMetricBadges(text: string): MetricBadge[] {
   while (match !== null) {
     const label = match[1];
     const suffix = match[3].toUpperCase();
-    const value = suffix ? `${match[2]}${suffix}~` : match[2];
-    const numericValue = parseFloat(value);
     const lowerLabel = label.toLowerCase();
     const type = lowerLabel === "stars" ? "stars" : lowerLabel === "orders" ? "orders" : "generic";
+    const isApproximate = suffix !== "" || type === "orders";
+    const value = `${match[2]}${suffix}${isApproximate ? "~" : ""}`;
+    const numericValue = parseFloat(value);
     badges.push({ label, value, numericValue, type });
     match = keyValuePattern.exec(text);
   }

@@ -24,7 +24,9 @@ export class EbayWholesalePaint implements IPaint {
 
     const display = getAvailableSelector(EBAY_DISPLAY_SEL.wholesaleDisplayContainerSelector, document);
     let isGridMode = false;
-    if (display) {
+    if (getAvailableSelector(EBAY_DISPLAY_SEL.gridResultsSelector, document)) {
+      isGridMode = true;
+    } else if (display) {
       const displayModeText = getAvailableSelector(EBAY_DISPLAY_SEL.modeButtonSelector, document)?.getAttribute(
         EBAY_DISPLAY_SEL.modeButtonAttributeSelector
       );
@@ -58,9 +60,13 @@ export class EbayWholesalePaint implements IPaint {
       const { rules } = conclusionProduct;
 
       const productId = conclusionProduct.product.id;
-      const productEls: any = getAllAvailableSelectors(`.s-item__link[href*='${productId}']`, document);
-      for (const productEl of productEls) {
-        const productDomEl = productEl.closest(wholesalePageItemListSel);
+      const productEls: HTMLElement[] = Array.from(
+        getAllAvailableSelectors(EBAY_DISPLAY_SEL.productLinkSelector(productId), document)
+      );
+      const productDomEls = new Set<Element>(
+        productEls.map((productEl) => productEl.closest(wholesalePageItemListSel)).filter(Boolean)
+      );
+      for (const productDomEl of productDomEls) {
         const borderContainer = document.createElement("div");
         borderContainer.style.pointerEvents = "none";
 
@@ -76,12 +82,12 @@ export class EbayWholesalePaint implements IPaint {
         priceEl.style.position = "relative";
         priceEl.style.display = "block";
 
-        productEl.style.position = "relative";
         const iconImage: HTMLElement = PaintUtils.createIconImage(conclusionProduct, rules);
         productInfo?.parentNode?.parentNode?.appendChild(iconImage);
-        if (productEl.classList) {
-          productEl.classList.add(DONE_PRODUCT_CSS_CLASS);
-        }
+      }
+      for (const productEl of productEls) {
+        productEl.style.position = "relative";
+        productEl.classList.add(DONE_PRODUCT_CSS_CLASS);
       }
     }
   }
